@@ -238,6 +238,14 @@ the tables below, or run `/plugin` to see them all.
 
 Then type your AI's name to load it, and it learns from there.
 
+### Working on Recall itself
+
+If you are pointing an AI agent at this repository to change it, read
+[AGENTS.md](AGENTS.md) — the cross-tool standard read natively by Codex,
+Cursor, Copilot, Gemini CLI and Windsurf. It carries the exact commands, the
+feature contract, and the boundaries not to cross. Humans should read
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
 ### Manual install (no marketplace)
 
 The marketplace is a convenience, not a requirement. Every feature still ships
