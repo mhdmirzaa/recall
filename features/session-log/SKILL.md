@@ -55,20 +55,43 @@ When this skill activates, output:
   - Looking forward (next steps)
 - [ ] APPEND entry to today's file (never overwrite existing content)
 
-### Step 4: Update Session Memory
+### Step 4: Update Working Memory
 - [ ] Update `memory/session.md` with:
   - Session recap and key achievements
   - Current working state for continuity
   - Next steps identified
 - [ ] Confirm diary entry saved with timestamp
 
+### Step 5: Resolve Durable Facts
+
+A session usually establishes one or two things that are true *beyond* this
+session — a preference, a tool choice, a constraint. Those do not belong in the
+history entry, which is a record of a day. They belong in `memory/profile.md`.
+
+Do not append them. Run the save protocol in `recall.md`:
+
+- [ ] Read `memory/profile.md` fully
+- [ ] For each durable fact, resolve to exactly one of **ADD**, **UPDATE**,
+      **DELETE** or **NOOP** by comparing it against what is already there
+- [ ] On UPDATE or DELETE, strike through the old line and date it — never
+      delete it outright
+- [ ] Tag every new line with provenance: `stated`, `inferred` or `external`
+- [ ] Report the counts: added, updated, deleted, already known
+
+Most sessions produce zero durable facts. Writing none is the correct outcome,
+not a skipped step.
+
 ## Mandatory Rules
-1. **Always APPEND** — never overwrite existing diary entries
-2. **One file per day** — multiple entries separated by `---`
-3. **Use real timestamps** — get current time via platform-appropriate command (`date +"%H:%M"` on bash, `Get-Date` on PowerShell, `time /T` on CMD)
-4. **Archive first** — run monthly archive check before every write
-5. **Evidence-based** — document actual session content, not generic summaries
-6. **Follow existing protocol** — use `memory/history/format.md` for entry structure
+1. **History is append-only** — a session that happened stays happened. Never
+   overwrite or edit an existing entry in `memory/history/`.
+2. **Durable facts are not appended** — anything written to `memory/profile.md`
+   goes through the ADD / UPDATE / DELETE / NOOP resolution in `recall.md`.
+   Appending there unconditionally is how contradictions accumulate.
+3. **One file per day** — multiple entries separated by `---`
+4. **Use real timestamps** — get current time via platform-appropriate command (`date +"%H:%M"` on bash, `Get-Date` on PowerShell, `time /T` on CMD)
+5. **Archive first** — run monthly archive check before every write
+6. **Evidence-based** — document actual session content, not generic summaries
+7. **Follow existing protocol** — use `memory/history/format.md` for entry structure
 
 ## Edge Cases
 
