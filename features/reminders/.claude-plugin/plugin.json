@@ -1,0 +1,17 @@
+{
+  "name": "reminders",
+  "version": "1.0.0",
+  "description": "Follow-ups that survive across sessions, with deadline tracking, kept separate from working memory so they are never overwritten.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/reminders",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "reminders",
+    "followup",
+    "deadlines"
+  ]
+}

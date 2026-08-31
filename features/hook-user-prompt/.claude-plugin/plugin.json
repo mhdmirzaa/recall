@@ -1,0 +1,18 @@
+{
+  "name": "hook-user-prompt",
+  "version": "1.0.0",
+  "description": "One UserPromptSubmit hook that runs every script in an injectors directory and prepends their output to each prompt. The framework the inject-* features plug into.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/hook-user-prompt",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "hook",
+    "framework",
+    "injection",
+    "claude-code"
+  ]
+}

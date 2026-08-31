@@ -1,0 +1,18 @@
+{
+  "name": "session-brief",
+  "version": "1.0.0",
+  "description": "Delivers a short context brief at the start of every session: where you left off, open reminders, project health, time of day.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/session-brief",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "briefing",
+    "startup",
+    "context",
+    "summary"
+  ]
+}

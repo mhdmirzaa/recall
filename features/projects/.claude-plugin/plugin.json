@@ -1,0 +1,18 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "Ten active project slots with least-recently-used archival, so project context is tracked without unbounded growth.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/projects",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "projects",
+    "lru",
+    "tracking",
+    "management"
+  ]
+}

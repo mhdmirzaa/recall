@@ -1,0 +1,18 @@
+{
+  "name": "adventure",
+  "version": "1.0.0",
+  "description": "Visual-novel RPG sessions with duo or solo play, seven world types and cinematic combat.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/adventure",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "story",
+    "rpg",
+    "game",
+    "interactive"
+  ]
+}

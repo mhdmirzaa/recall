@@ -1,0 +1,18 @@
+{
+  "name": "trim",
+  "version": "1.0.0",
+  "description": "Budget-aware compaction. Summarises old entries into a dense history block instead of deleting them, with reversible snapshots.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/trim",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "compaction",
+    "budget",
+    "context",
+    "memory"
+  ]
+}

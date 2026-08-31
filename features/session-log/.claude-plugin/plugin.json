@@ -1,0 +1,18 @@
+{
+  "name": "session-log",
+  "version": "1.0.0",
+  "description": "Writes a dated entry into memory history at the end of a session, with monthly archival. The record everything else searches.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/session-log",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "diary",
+    "history",
+    "documentation",
+    "archive"
+  ]
+}

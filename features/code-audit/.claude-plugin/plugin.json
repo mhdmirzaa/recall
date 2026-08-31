@@ -1,0 +1,18 @@
+{
+  "name": "code-audit",
+  "version": "1.0.0",
+  "description": "Four-tier code review: survey, investigate, refine, audit. Assess project health before planning or after implementing.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/code-audit",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "review",
+    "audit",
+    "code-quality",
+    "analysis"
+  ]
+}

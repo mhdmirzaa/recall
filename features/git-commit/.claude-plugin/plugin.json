@@ -1,0 +1,18 @@
+{
+  "name": "git-commit",
+  "version": "1.0.0",
+  "description": "Structured git commits carrying session context, so history documents the work rather than just the file changes.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/git-commit",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "commit",
+    "automation",
+    "history"
+  ]
+}

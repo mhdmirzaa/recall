@@ -1,0 +1,18 @@
+{
+  "name": "postmortem",
+  "version": "1.0.0",
+  "description": "A failure log that detects, records and later references mistakes, so the same problem does not cost you twice.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/postmortem",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "postmortem",
+    "failures",
+    "learning",
+    "incidents"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "inject-tone",
+  "version": "1.0.0",
+  "description": "Injects the active tone into every prompt from a registry kept in memory. Add, set and list tones at runtime. Requires hook-user-prompt.",
+  "author": {
+    "name": "Muhd Mirza",
+    "url": "https://github.com/mhdmirzaaa"
+  },
+  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/inject-tone",
+  "repository": "https://github.com/mhdmirzaaa/recall",
+  "license": "MIT",
+  "keywords": [
+    "tone",
+    "injector",
+    "prompt",
+    "register"
+  ]
+}
