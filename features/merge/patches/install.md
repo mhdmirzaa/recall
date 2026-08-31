@@ -2,7 +2,7 @@
 *Systematic patch infrastructure setup for Recall companions*
 
 ## Purpose
-Executed when "Load patch-system" command is used — creates patch infrastructure, tracking system, and integrates with master memory.
+Executed when "Load patch-system" command is used — creates patch infrastructure, tracking system, and integrates with the index.
 
 ## Trigger Command
 ```
@@ -71,7 +71,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
   6. Confirm completion to user
   ```
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add patch system reference to `recall.md` Optional Components:
   ```markdown
   ### [PATCH_NAME]

@@ -77,7 +77,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
   - `workflow-format.md`
 - [ ] Verify all format files were copied successfully
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add library reference to `recall.md` Optional Components section:
   ```markdown
   ### [LIBRARY_SKILL_NAME]

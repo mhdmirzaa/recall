@@ -12,14 +12,14 @@
 - **Time Intelligence**: Dynamic greetings and behavior based on time of day
 - **Simple Setup**: 30-second automated setup or manual customization
 - **Markdown Database**: Human-readable `.md files` store all memory
-- **Session Continuity**: RAM-like working memory for smooth conversation flow
+- **Session Continuity**: Working memory for smooth conversation flow
 - **Self-Maintaining**: Updates memory through natural conversation
 
 ## 📊 **System Specifications**
 
 ### **Architecture Overview**
 - **Storage**: Markdown files (.md) as database
-- **Memory Types**: Essential files + optional components + session RAM
+- **Memory Types**: Essential files + optional components + working memory
 - **Setup**: 30 seconds automated or 2-5 minutes manual
 - **Core Files**: 4 essential files + optional diary system
 - **Updates**: Through natural conversation
@@ -207,11 +207,11 @@ recall/
 ```
 
 ### **Core Components**
-1. **Master Memory** - System entry point and command center
-2. **Identity Core** - AI personality and communication style
-3. **Relationship Memory** - User preferences and learning patterns
-4. **Current Session** - Temporary working memory (resets each session)
-5. **Daily Diary** - Optional conversation history with auto-archiving
+1. **Index** - System entry point and command center
+2. **Identity** - AI personality and communication style
+3. **Profile** - User preferences and learning patterns
+4. **Working memory** - What you are doing right now (resets each session)
+5. **History** - Optional conversation history with auto-archiving
 
 ## 🚀 **Quick Start**
 
@@ -241,7 +241,7 @@ Create a new `.md file` with your protocol rules:
 ## How It Works: [step-by-step process]
 ```
 
-**Step 2: Add to Master Memory**
+**Step 2: Add to Index**
 Edit `recall.md` and add your protocol to the "Optional Components" section:
 ```markdown
 ### My Custom Feature
@@ -288,7 +288,7 @@ Your AI companion can specialize in:
 ## 🛠️ **Advanced Features**
 
 - **Auto-Archive**: Diary files automatically archive at 1k lines
-- **Session RAM**: Temporary memory that resets each conversation
+- **Working memory**: Temporary memory that resets each conversation
 - **Protocol System**: Create custom AI behaviors and responses
 - **Self-Update**: AI modifies its own memory through conversation
 - **Modular Design**: Add or remove features as needed

@@ -51,7 +51,7 @@ Default budgets (the user can adjust):
 
 If the policy file exists, append a short installation note instead of replacing it.
 
-### Step 4: Add Master Memory References
+### Step 4: Add Index references
 
 Update `recall.md` with:
 

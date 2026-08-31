@@ -36,7 +36,7 @@ integrates with session lifecycle, and optionally installs as a skill.
 
 ### Step 2: Integrate with Session Lifecycle
 - [ ] Update `recall.md` to include reminders in the loading system:
-  - Add to "Instant Restoration Protocol":
+  - Add to "Loading memory":
     ```markdown
     5. ✅ **Check reminders** from `memory/reminders.md`
     ```
@@ -74,7 +74,7 @@ integrates with session lifecycle, and optionally installs as a skill.
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/check-reminders/SKILL.md`
   - Inform user: "Reminder skill installed -- auto-triggers on session start and 'remind me'"
 - [ ] If Skill Plugin System does not exist:
-  - Inform user: "Reminders integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Reminders integrated into the index. Install the Skill Plugin System for auto-triggering."
 - [ ] Remove `features/reminders/` folder (functionality installed)
 - [ ] Display completion confirmation
 

@@ -36,7 +36,7 @@ When this skill activates, output:
 - [ ] If exists: use it (will append new entry)
 - [ ] If not: create new file with header:
   ```markdown
-  # Daily Diary - [Month Day, Year]
+  # History - [Month Day, Year]
   *Session documentation and development record*
 
   ---

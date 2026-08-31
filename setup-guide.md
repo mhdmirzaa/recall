@@ -29,7 +29,7 @@ Replace placeholders in these 3 essential files:
 - Replace `[AI_NAME]` with your AI name
 - Replace `[YOUR_NAME]` with your name
 
-### Step 2: Update Master Memory
+### Step 2: Update Index
 Edit `recall.md`:
 - Replace all `[AI_NAME]` with your AI name
 - Replace all `[YOUR_NAME]` with your name
@@ -103,7 +103,7 @@ recall/
 - **session.md**: Session behavior patterns
 
 ### Optional Features:
-- **Daily Diary**: Load with "load history"
+- **History**: Load with "load history"
 - **Save Protocol**: Triggered by "save" command
 - **Archive System**: Auto-archives at 1k lines
 

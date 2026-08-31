@@ -33,9 +33,9 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 ## File: recall.md
 
-### Change 1: Add post-consolidation note to Instant Restoration Protocol
+### Change 1: Add post-consolidation note to Loading memory
 
-**Section**: Instant Restoration Protocol
+**Section**: Loading memory
 **Action**: insert-after
 
 #### FIND:
@@ -171,7 +171,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### FIND:
 ```
 ### **At Session End**
-- [ ] Create/update daily diary entry
+- [ ] Create/update history entry
 - [ ] Process queued memory updates
 - [ ] Update profile.md with new insights
 - [ ] Refine identity.md if communication evolved
@@ -291,5 +291,5 @@ To undo this patch, reverse each change above:
 
 ---
 
-**Addresses**: GitHub Issue #1 — "Outdated Instant Restoration Protocol in recall.md"
+**Addresses**: GitHub Issue #1 — "Outdated Loading memory in recall.md"
 **Breaking Changes**: None — pre-consolidation references preserved, post-consolidation notes are additive

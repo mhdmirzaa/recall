@@ -18,7 +18,7 @@ Upgrades your Recall from split memory files to a single unified memory, followi
 recall.md            ← Loader (reads 2 files)
 memory/identity.md       ← AI personality ONLY
 memory/profile.md ← User preferences ONLY
-memory/session.md     ← Session RAM (no size limit)
+memory/session.md     ← Working memory (no size limit)
 ```
 **Problems:**
 - 3 separate file reads at startup = slower restoration
@@ -30,7 +30,7 @@ memory/session.md     ← Session RAM (no size limit)
 ```
 recall.md               ← Loader (reads 1 file)
 memory/merged.md            ← AI identity + User profile + Relationship (UNIFIED)
-memory/session.md        ← Session RAM with 500-line limit + reset protocol
+memory/session.md        ← Working memory with 500-line limit + reset protocol
 memory/memory-format.md     ← Permanent format reference for main memory
 memory/session-format.md         ← Permanent format reference for session memory
 ```
@@ -76,7 +76,7 @@ Defines the expected structure for the unified main memory:
 - Behavioral patterns and growth philosophy
 
 ### `session-format.md` (Sample)
-Defines the expected structure for session RAM:
+Defines the expected structure for working memory:
 - Session status and timestamps
 - Working memory (current task, goals, progress)
 - Session recap (for restart continuity)

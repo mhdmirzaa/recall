@@ -50,7 +50,7 @@ subject or persona.
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/video-generation/SKILL.md`
   - Inform user: "Video Generation skill installed — auto-triggers on 'render a video', 'generate video', 'animate this image'"
 - [ ] If it does NOT exist:
-  - Inform user: "Video Generation integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Video Generation integrated into the index. Install the Skill Plugin System for auto-triggering."
 
 ### Step 5: Update memory system
 - [ ] Add to `recall.md`:

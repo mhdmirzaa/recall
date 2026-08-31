@@ -42,7 +42,7 @@ If `topic-diary/index.md` does not exist, create it using `index-format.md`.
 
 If it exists, append a short installation note instead of replacing it.
 
-### Step 4: Add Master Memory References
+### Step 4: Add Index references
 
 Update `recall.md` with:
 
@@ -51,13 +51,13 @@ Update `recall.md` with:
 *Load when user says: "save topic", "save to topic diary", "remember this under [topic]", or when reusable knowledge should be preserved by subject.*
 - Stores long-term knowledge in `topic-diary/topics/[topic].md`
 - Uses `topic-diary/index.md` for topic aliases and recall keywords
-- Complements Daily Diary and Session RAM
+- Complements History and Working memory
 ```
 
 Also add save routing guidance:
 
 ```markdown
-When user says "save" and the target is unclear, ask whether to save to session memory, daily diary, topic diary, or all relevant targets.
+When user says "save" and the target is unclear, ask whether to save to session memory, history, topic diary, or all relevant targets.
 ```
 
 ### Step 5: Install Skill Plugin
@@ -89,7 +89,7 @@ Topic Diary is installed. Do you want to create a first topic entry now, or leav
 | `remember this under [topic]` | Append to the named topic file |
 | `review topic [topic]` | Read and summarize the topic diary |
 | `list topics` | Show topics from `topic-diary/index.md` |
-| `save` | Ask target if ambiguous: session, daily diary, topic diary, or all |
+| `save` | Ask target if ambiguous: session, history, topic diary, or all |
 
 ## Safety Rules
 

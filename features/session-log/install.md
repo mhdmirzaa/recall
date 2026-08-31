@@ -54,7 +54,7 @@ Executed when "Load session-log" command is used — creates diary infrastructur
   - Add diary commands directly to recall.md (Step 5)
   - Inform user: "Install the Skill Plugin System for auto-triggered diary saves"
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add diary reference to `recall.md` Optional Components:
   ```markdown
   ### [DIARY_NAME]

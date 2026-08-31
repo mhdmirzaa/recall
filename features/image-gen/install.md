@@ -47,7 +47,7 @@ types; there is no built-in subject or persona.
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-generation/SKILL.md`
   - Inform user: "Image Generation skill installed — auto-triggers on 'render an image', 'generate image', 'render this prompt'"
 - [ ] If it does NOT exist:
-  - Inform user: "Image Generation integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Image Generation integrated into the index. Install the Skill Plugin System for auto-triggering."
 
 ### Step 5: Update memory system
 - [ ] Add to `recall.md`:

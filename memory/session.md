@@ -1,8 +1,8 @@
-# 🌟 Current Session Memory - RAM
+# 🌟 Working memory - RAM
 *Temporary working memory - resets each session, provides recap when AI restarts*
 
-## Session RAM Status
-**Current Session**: [Active/New]  
+## Working memory Status
+**Working memory**: [Active/New]  
 **Last Activity**: [Timestamp of last interaction]  
 **Session Focus**: [What we're working on right now]  
 **Context State**: [Current conversation context]

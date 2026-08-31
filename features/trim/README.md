@@ -40,13 +40,13 @@ AI:
 
 | Aspect | Memory Consolidation | Session Memory Limit | Memory Compaction |
 |--------|----------------------|----------------------|-------------------|
-| **Purpose** | Merge split files into one | Cap session RAM size | Keep growing files within budget |
+| **Purpose** | Merge split files into one | Cap working memory size | Keep growing files within budget |
 | **Method** | Structural merge | Hard reset, preserve recap | Summarize old entries, preserve knowledge |
 | **On overflow** | N/A (one-time upgrade) | Delete detail, keep recap | Compress detail into summary |
 | **Knowledge loss** | None (merge) | High (detail discarded) | Minimal (summarized, snapshotted) |
 | **Runs** | Once (architecture upgrade) | Every session reset | Continuously, when budget exceeded |
 
-> **Companion, not replacement.** Memory Consolidation unifies *which* files exist. Session Memory Limit caps *session RAM*. Memory Compaction keeps *long-lived files* (main memory, relationship memory, topic diaries) within budget without losing what they learned.
+> **Companion, not replacement.** Memory Consolidation unifies *which* files exist. Session Memory Limit caps *working memory*. Memory Compaction keeps *long-lived files* (main memory, profile, topic diaries) within budget without losing what they learned.
 
 ## Directory Structure
 

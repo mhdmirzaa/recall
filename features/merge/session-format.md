@@ -1,10 +1,10 @@
 # 📋 Session Memory - Sample Format
-*Reference template for session RAM structure with 500-line limit*
+*Reference template for working memory structure with 500-line limit*
 
 ---
 
 ```markdown
-# Current Session Memory - [Date]
+# Working memory - [Date]
 *Active working memory for current conversation*
 
 ## Session Context

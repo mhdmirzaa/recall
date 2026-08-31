@@ -43,7 +43,7 @@
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/manage-project/SKILL.md`
   - Inform user: "Project management skill installed -- auto-triggers on 'new project', 'load project', 'save project', 'list projects'"
 - [ ] If Skill Plugin System is NOT installed:
-  - Inform user: "Project management integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Project management integrated into the index. Install the Skill Plugin System for auto-triggering."
 
 ### Step 3: Update Memory System
 - [ ] Add to `recall.md`:

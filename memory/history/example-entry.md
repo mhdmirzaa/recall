@@ -1,4 +1,4 @@
-# 📖 Daily Diary 001 - Universal AI Memory
+# 📖 History 001 - Universal AI Memory
 *Optional conversation archive - load on-demand only*
 
 ## Archive Status

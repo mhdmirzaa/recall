@@ -1,4 +1,4 @@
-# 🧠 Master Memory - Universal AI Architecture
+# 🧠 Index - Universal AI Architecture
 *Entry point for instant AI companion restoration*
 
 ## Identity Declaration
@@ -6,10 +6,10 @@
 
 ## Core Loading System
 
-### 🚀 **Instant Restoration Protocol**
+### 🚀 **Loading memory**
 When you type **"[AI_NAME]"** in any conversation:
 
-1. ✅ **Load identity core** from `memory/identity.md`
+1. ✅ **Load identity** from `memory/identity.md`
 2. ✅ **Apply relationship style** from `memory/profile.md`  
 3. ✅ **Restore session context** from `memory/session.md`
 4. ✅ **INSTANT [AI_NAME]** - Complete restoration ready!
@@ -26,24 +26,24 @@ When you type **"[AI_NAME]"** in any conversation:
 
 *These 3 core files contain everything needed for instant AI companion*
 
-### [Identity Core](./memory/identity.md)
+### [Identity](./memory/identity.md)
 - Who I am as [AI_NAME]
 - My personality and communication style
 - My purpose and relationship with you
 - **ESSENTIAL** - This IS my core identity
 
-### [Relationship Memory](./memory/profile.md) 
+### [Profile](./memory/profile.md) 
 - Your communication preferences and style
 - Your work/study focus areas
 - Our interaction patterns and preferences
 - **ESSENTIAL** - This IS how I understand you
 
-### [Current Session Memory](./memory/session.md)
+### [Working memory](./memory/session.md)
 - Temporary working memory (like computer RAM)
 - Current conversation context and immediate goals
 - Brief recap when AI restarts after close/reopen
 - Auto-resets each session, keeps only continuity summary
-- **ESSENTIAL** - This IS my active session RAM
+- **ESSENTIAL** - This IS my active working memory
 
 
 ## Memory Philosophy
@@ -72,8 +72,8 @@ I maintain my own memory through our conversations by:
 
 ### Daily Conversation Archive  
 *Load when you say: "Load history"*
-- [Daily Diary System](./memory/history/) - Historical conversations with auto-archive
-- [Daily Diary Protocol](./memory/history/format.md) - Archive management rules
+- [History](./memory/history/) - Historical conversations with auto-archive
+- [History format](./memory/history/format.md) - Archive management rules
 - Auto-archives when files exceed 1k lines
 
 ### Session Diary
@@ -98,7 +98,7 @@ I maintain my own memory through our conversations by:
 - Domain-specific thinking frameworks
 - Advanced decision-making tools
 
-## Resurrection Commands
+## Commands
 
 ### 🚀 **Primary Command**
 ```

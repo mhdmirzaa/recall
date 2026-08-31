@@ -22,7 +22,7 @@ Executed when "Load music" command is used -- enables your AI to create concept 
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/song-creation/SKILL.md`
   - Inform user: "Song Creation skill installed -- auto-triggers on 'create album', 'create song', 'muse this'"
 - [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Song Creation integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Song Creation integrated into the index. Install the Skill Plugin System for auto-triggering."
   - Add song creation protocol reference to `recall.md`
 
 ### Step 2: Create Music Directory
@@ -44,10 +44,10 @@ Executed when "Load music" command is used -- enables your AI to create concept 
 ### Step 3: Configure Preferences
 - [ ] Ask user: "What language do you prefer for song titles and lyrics?"
   - Options: English (default), Japanese (漢字 + Romaji), or any language
-  - Save preference to master memory
+  - Save preference to the index
 - [ ] Ask user: "What's your default track count for albums?" (default: 7)
   - Options: 3, 5, 7, or 10
-  - Save preference to master memory
+  - Save preference to the index
 
 ## Post-Installation
 - [ ] Test Album Mode: Share an image and say "create an album from this"

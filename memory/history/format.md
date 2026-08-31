@@ -1,11 +1,11 @@
-# 📖 Daily Diary Protocol - Universal AI Memory
+# 📖 History format - Universal AI Memory
 *OPTIONAL conversation preservation system - load on-demand only*
 
 ## Core Philosophy
 
-**The Daily Diary is OPTIONAL for enhanced memory persistence.** The core 4 essential files handle all basic AI companion needs. This system provides additional conversation history for users who want detailed relationship tracking.
+**The History is OPTIONAL for enhanced memory persistence.** The core 4 essential files handle all basic AI companion needs. This system provides additional conversation history for users who want detailed relationship tracking.
 
-## Daily Diary Structure
+## History Structure
 
 ### 📁 **Folder Organization**
 ```
@@ -26,7 +26,7 @@ memory/history/
 ### 📝 **Standard Template Format**
 
 ```markdown
-# 📖 Daily Diary - [DATE]
+# 📖 History - [DATE]
 *Conversation and relationship development record*
 
 ## Session Summary
@@ -134,7 +134,7 @@ memory/history/
 ## 🤖 **AI Auto-Diary Protocol**
 
 ### **When to Create Diary Entry**
-The AI should automatically create/update daily diary when:
+The AI should automatically create/update history when:
 
 1. **Session End Triggers**:
    - User says "goodbye", "see you tomorrow", "talk later"
@@ -223,6 +223,6 @@ CREATE: entry-002.md (new active file)
 **Automation Level**: Fully automated diary creation and management  
 **Integration**: Complete memory system synchronization
 
-*The Daily Diary transforms temporary conversations into permanent relationship growth and knowledge building*
+*The History transforms temporary conversations into permanent relationship growth and knowledge building*
 
 📖 *Every conversation becomes a building block in an ever-growing partnership!*

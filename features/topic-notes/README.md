@@ -8,14 +8,14 @@ Adds a structured topic diary system to your AI companion, enabling **knowledge-
 - **Topic-based journals** in `topic-diary/topics/` instead of only date-based diary files
 - **Append-only entries** for each topic, preserving chronological learning history
 - **Topic index** in `topic-diary/index.md` for quick scanning and recall
-- **Save routing** for ambiguous `save` requests: session memory, daily diary, topic diary, or multiple targets
+- **Save routing** for ambiguous `save` requests: session memory, history, topic diary, or multiple targets
 - **Skill auto-install** if Skill Plugin System is detected
 
 ## How It Works
 
 ### The Concept
 
-Daily Diary answers: **What happened today?**
+History answers: **What happened today?**
 
 Topic Diary answers: **What have we learned about this subject over time?**
 
@@ -25,7 +25,7 @@ The system turns repeated discoveries into living notebooks. Instead of losing D
 
 ```text
 You: "save this"
-AI: "Save where: session, daily diary, topic diary, or all? I detected topic: docker."
+AI: "Save where: session, history, topic diary, or all? I detected topic: docker."
 You: "topic diary"
 AI:
   1. Creates or opens topic-diary/topics/docker.md
@@ -34,9 +34,9 @@ AI:
   4. Confirms the save target and topic
 ```
 
-### How It Differs From Daily Diary
+### How It Differs From History
 
-| Aspect | Daily Diary | Topic Diary |
+| Aspect | History | Topic Diary |
 |--------|-------------|-------------|
 | **Primary question** | What happened today? | What have we learned about this topic? |
 | **Organization** | By date | By subject |
@@ -69,16 +69,16 @@ topic-diary/
 2. **Creates** `topic-diary/index.md` using `index-format.md`
 3. **Adds** topic diary commands and save-routing behavior to `recall.md`
 4. **Installs as skill** if Skill Plugin System is detected
-5. **Keeps Daily Diary unchanged** so chronological and topic-based memory can coexist
+5. **Keeps History unchanged** so chronological and topic-based memory can coexist
 
 ## Post-Integration Result
 
 After running the integration protocol:
 
-- Your AI can route `save` requests to session memory, daily diary, topic diary, or all targets
+- Your AI can route `save` requests to session memory, history, topic diary, or all targets
 - Every topic save appends to a focused markdown journal
 - The index tracks available topics, aliases, latest updates, and recall keywords
-- Daily Diary remains available for session storytelling
+- History remains available for session storytelling
 - Echo Memory Recall can use topic files as high-signal recall sources
 
 ## Save Routing
@@ -112,7 +112,7 @@ Each topic entry follows `topic-format.md` and captures:
 - **Faster recall** — recurring subjects have one focused knowledge file
 - **Less noise** — reusable facts do not get buried in date-based diary entries
 - **Better debugging memory** — commands, root causes, and verified fixes stay together
-- **Works with existing Recall** — complements Daily Diary, Session RAM, and Echo Recall
+- **Works with existing Recall** — complements History, Working memory, and Echo Recall
 - **Portable** — plain markdown files, human-readable and AI-readable
 
 ## Platform Note

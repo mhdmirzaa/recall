@@ -67,7 +67,7 @@ Executed when "Load git-commit" command is used — creates an intelligent commi
 - [ ] Confirm the commit format is embedded in the SKILL.md (Step 2 section)
 - [ ] Inform user: "Commit format is built into the skill — no separate template needed"
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add commit reference to `recall.md` Optional Components section:
   ```markdown
   ### [COMMIT_SKILL_NAME]

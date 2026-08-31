@@ -44,7 +44,7 @@ Executed when "Load merge" command is used - merges split memory files into unif
   - Shows the expected structure for unified main memory
 - [ ] Copy `session-format.md` to `memory/session-format.md`
   - This is a permanent reference - never modified by the AI
-  - Shows the expected structure for session RAM
+  - Shows the expected structure for working memory
   - Includes the 500-line limit protocol
 
 ### Step 4: Update Session Memory with Line Limit
@@ -61,10 +61,10 @@ Executed when "Load merge" command is used - merges split memory files into unif
   - Clear: detailed progress, individual achievements, working memory details
 - [ ] Verify session format matches `memory/session-format.md` structure
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Update `recall.md` loading protocol:
   - Change from loading 2 files (identity + profile) to 1 file (merged)
-  - Update the Instant Restoration Protocol:
+  - Update the Loading memory:
     ```markdown
     1. Load unified memory from memory/merged.md
     2. Restore session context from memory/session.md
@@ -109,7 +109,7 @@ Executed when "Load merge" command is used - merges split memory files into unif
 
 ### **Updated Loading Protocol (recall.md)**
 ```markdown
-### Instant Restoration Protocol
+### Loading memory
 When you type "[AI_NAME]" in any conversation:
 1. Load unified memory from memory/merged.md
 2. Restore session context from memory/session.md
@@ -131,7 +131,7 @@ recall/
 ├── recall.md              # Entry point (loads 1 file now)
 ├── memory/
 │   ├── merged.md            # UNIFIED: AI identity + User profile
-│   ├── session.md        # Session RAM with 500-line limit
+│   ├── session.md        # Working memory with 500-line limit
 │   ├── memory-format.md     # Permanent format reference
 │   └── session-format.md         # Permanent format reference
 ├── memory/history/                  # Unchanged

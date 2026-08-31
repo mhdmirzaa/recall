@@ -73,7 +73,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 - [ ] Copy `plan-format.md` to `[PLAN_LOCATION]/plan-format.md` (alongside project-plan.md)
 - [ ] Inform user: "Plan format template saved in `[PLAN_LOCATION]/` — this is your permanent reference for plan file structure"
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add plan execution reference to `recall.md` Optional Components section:
   ```markdown
   ### [WORK_NAME]

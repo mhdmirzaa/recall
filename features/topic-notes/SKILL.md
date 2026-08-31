@@ -1,6 +1,6 @@
 ---
 name: topic-notes
-description: "MUST use when user says 'save topic', 'save to topic diary', 'remember this under', 'review topic', 'list topics', or when a generic 'save' request needs routing between session memory, daily diary, topic diary, or all targets."
+description: "MUST use when user says 'save topic', 'save to topic diary', 'remember this under', 'review topic', 'list topics', or when a generic 'save' request needs routing between session memory, history, topic diary, or all targets."
 ---
 
 # Topic Diary — Subject-Based Memory Skill
@@ -37,7 +37,7 @@ When the user says `save`, `save memory`, `remember this`, or another ambiguous 
 3. If unclear, ask:
 
 ```text
-Save where: session memory, daily diary, topic diary, or all?
+Save where: session memory, history, topic diary, or all?
 ```
 
 Use these rules:
@@ -142,7 +142,7 @@ When user says `list topics`:
 
 1. **Always append** — never overwrite topic entries
 2. **Ask when ambiguous** — generic `save` must route to the correct memory layer
-3. **Keep memory layers distinct** — session, daily diary, and topic diary have different purposes
+3. **Keep memory layers distinct** — session, history, and topic diary have different purposes
 4. **Use real timestamps** — do not invent dates or times
 5. **Prefer evidence** — save verified commands, paths, decisions, and lessons
 6. **Update index** — every topic write should keep recall metadata fresh

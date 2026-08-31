@@ -22,7 +22,7 @@ Executed when "Load new-skill" command is used -- enables your AI to detect impr
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/forge-skill/SKILL.md`
   - Inform user: "Forge skill installed -- auto-triggers on pattern detection and 'create skill', 'level up'"
 - [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Forge integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Forge integrated into the index. Install the Skill Plugin System for auto-triggering."
   - Add forge protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
@@ -48,7 +48,7 @@ Executed when "Load new-skill" command is used -- enables your AI to detect impr
   ```
 
 ### Step 3: Verify and Cleanup
-- [ ] Verify forge skill is accessible (via plugin or master memory)
+- [ ] Verify forge skill is accessible (via plugin or the index)
 - [ ] Test: user says "self improve" and AI acknowledges the command
 - [ ] Remove `features/new-skill/` folder (functionality installed)
 - [ ] Display completion message

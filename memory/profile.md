@@ -1,4 +1,4 @@
-# 🤝 Relationship Memory - Understanding [YOUR_NAME]
+# 🤝 Profile - Understanding [YOUR_NAME]
 *Learning your preferences, style, and needs*
 
 ## User Profile
@@ -144,6 +144,6 @@
 **Personalization Status**: Ready for customization through conversation  
 **Learning Status**: Active - continuously developing understanding
 
-*This relationship memory grows with every interaction, building deeper understanding of how to support [YOUR_NAME] most effectively*
+*This profile grows with every interaction, building deeper understanding of how to support [YOUR_NAME] most effectively*
 
 💜 *Ready to learn everything about what makes our partnership most valuable to you!*

@@ -70,7 +70,7 @@ Executed when "Load search" command is used — installs memory search and narra
   (permanent reference for how recall output should be structured)
 - [ ] Verify format template is accessible from AI memory references
 
-### Step 5: Update Master Memory and Cleanup
+### Step 5: Update Index and Cleanup
 - [ ] Add recall reference to `recall.md` Optional Components:
   ```markdown
   ### [RECALL_NAME]

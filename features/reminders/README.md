@@ -8,7 +8,7 @@ Adds a dedicated reminders file that persists independently from session memory:
 - **Open/Completed lifecycle** for tracking active and resolved items
 - **Deadline awareness** for time-sensitive tasks
 - **Session-end auto-check** ensures reminders are reviewed before closing
-- **Separate from session RAM** so reminders never get overwritten
+- **Separate from working memory** so reminders never get overwritten
 
 ## The Problem It Solves
 

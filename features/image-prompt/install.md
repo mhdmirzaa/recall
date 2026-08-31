@@ -22,7 +22,7 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-prompt/SKILL.md`
   - Inform user: "Image Prompt skill installed -- auto-triggers on 'create a prompt', 'midjourney prompt', 'image prompt'"
 - [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Image Prompt integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Image Prompt integrated into the index. Install the Skill Plugin System for auto-triggering."
   - Add prompt generation protocol reference to `recall.md`
 
 ### Step 2: Update Memory System

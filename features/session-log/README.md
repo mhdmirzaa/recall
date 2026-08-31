@@ -2,7 +2,7 @@
 *Automated daily session documentation with monthly archival*
 
 ## What This Feature Does
-Adds a structured daily diary system to your AI companion, enabling **session-by-session documentation** that captures achievements, collaboration moments, and growth — all automatically organized with monthly archival.
+Adds a structured history system to your AI companion, enabling **session-by-session documentation** that captures achievements, collaboration moments, and growth — all automatically organized with monthly archival.
 
 - **Daily session documentation** as structured diary entries in `memory/history/current/`
 - **Append-only entries** — one file per day, multiple session entries per file, never overwrite

@@ -93,7 +93,7 @@ Executed when "Load skill-plugin" command is used — creates a complete plugin 
 - [ ] Test the sample skill by saying "save" to trigger it
 - [ ] Confirm auto-discovery is working
 
-### Step 6: Update Master Memory and Cleanup
+### Step 6: Update Index and Cleanup
 - [ ] Add plugin reference to `recall.md`:
   ```markdown
   ### Skill Plugin System

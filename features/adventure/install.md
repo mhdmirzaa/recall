@@ -22,7 +22,7 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/interactive-story/SKILL.md`
   - Inform user: "Interactive Story skill installed -- auto-triggers on 'new adventure', 'load adventure', 'resume adventure'"
 - [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Interactive Story integrated into master memory. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Interactive Story integrated into the index. Install the Skill Plugin System for auto-triggering."
   - Add interactive story protocol reference to `recall.md`
 
 ### Step 2: Create Adventure Directory
@@ -46,7 +46,7 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
 - [ ] Ask user: "Default power level?" → OP or Balanced
 - [ ] Ask user: "Would you like to define your hero character now?"
   - If YES, collect: Character name, preferred class/archetype, special abilities
-  - Save to master memory under `## Hero Profile`
+  - Save to the index under `## Hero Profile`
   - If NO, inform: "No problem! You'll choose your character at the start of each adventure."
 
 ## Optional Companion Systems
