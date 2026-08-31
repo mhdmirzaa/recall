@@ -1,5 +1,5 @@
 ---
-name: observation
+name: code-audit
 description: "MUST use when user says 'survey project', 'scan project', 'check health',
              'investigate', 'deep dive', 'what's going on in', 'look into',
              'refine code', 'clean up code', 'review changes', 'sharpen',

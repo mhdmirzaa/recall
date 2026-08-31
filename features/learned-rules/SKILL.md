@@ -1,5 +1,5 @@
 ---
-name: mulahazah
+name: learned-rules
 description: "MUST use when user says 'continuous-improvement', 'instinct status',
              'what have you learned', 'show learned rules', 'mulahazah status',
              'what patterns have you noticed', 'behavioral learning', 'show rules',

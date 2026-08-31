@@ -1,5 +1,5 @@
 ---
-name: video-generation
+name: video-gen
 description: MUST use when the user wants to RENDER or GENERATE an actual video / MP4 from a description, or ANIMATE a local image. Triggers on "render a video", "generate video", "make a video", "create a video", "animate this", "animate this image", "bring this to life". Builds the motion prompt from what the user types (subject-agnostic, no built-in persona), optionally pulls a saved reference from the Library System, supports text-to-video and image-to-video, confirms cost (video is expensive), then calls the Seedance API (async submit/poll/download) and saves an MP4.
 ---
 

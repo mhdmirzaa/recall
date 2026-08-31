@@ -1,5 +1,5 @@
 ---
-name: log-decision
+name: decisions
 description: "Auto-triggers when a non-obvious decision is made during conversation.
              Also triggers on 'log decision', 'why did we choose', 'what was the
              trade-off', 'should we use A or B' (after resolution), or when user

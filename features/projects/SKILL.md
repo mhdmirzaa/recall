@@ -1,5 +1,5 @@
 ---
-name: manage-project
+name: projects
 description: "Auto-triggers on 'new project [name]', 'load project [name]',
              'save project', 'list projects'. Also triggers on 'create project',
              'resume project', 'open project', 'show projects', or when user

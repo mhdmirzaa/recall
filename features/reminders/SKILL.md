@@ -1,5 +1,5 @@
 ---
-name: check-reminders
+name: reminders
 description: "Auto-triggers at session start to review open reminders. Also triggers
              on 'remind me', 'check reminders', 'don't forget', 'follow up on',
              'next session we should', or when user mentions a deadline."

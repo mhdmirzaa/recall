@@ -1,5 +1,5 @@
 ---
-name: memory-compaction
+name: trim
 description: "MUST use when user says 'compact memory', 'compact [file]', 'check budgets', 'set budget', 'restore compaction', or before any 'save' whose target memory file exceeds its budget in compaction/compaction-policy.md."
 ---
 

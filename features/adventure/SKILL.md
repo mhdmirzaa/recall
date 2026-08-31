@@ -1,5 +1,5 @@
 ---
-name: interactive-story
+name: adventure
 description: "Auto-triggers when user says 'new adventure', 'start adventure', 'new fantasy',
              'save adventure', 'end adventure', 'load adventure', 'resume adventure',
              'continue adventure', 'let's play', 'VN mode', or on numbered choice input

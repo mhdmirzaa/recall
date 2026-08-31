@@ -1,5 +1,5 @@
 ---
-name: auto-commit
+name: git-commit
 description: "MUST use when committing code changes, when user says 'commit',
              'save changes', 'git commit', 'commit changes', when completing a
              task and code needs to be preserved, or when any git commit operation

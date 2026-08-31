@@ -1,5 +1,5 @@
 ---
-name: topic-diary
+name: topic-notes
 description: "MUST use when user says 'save topic', 'save to topic diary', 'remember this under', 'review topic', 'list topics', or when a generic 'save' request needs routing between session memory, daily diary, topic diary, or all targets."
 ---
 

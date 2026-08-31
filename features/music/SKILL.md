@@ -1,5 +1,5 @@
 ---
-name: song-creation
+name: music
 description: "Auto-triggers when user says 'create songs', 'new album', 'create album',
              'make music', 'muse this', 'write a song', 'create a song', 'compose',
              'song from image', 'album from image', 'generate album', 'write songs',

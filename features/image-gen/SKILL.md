@@ -1,5 +1,5 @@
 ---
-name: image-generation
+name: image-gen
 description: MUST use when the user wants to RENDER or GENERATE an actual image from a description (not just craft prompt text). Triggers on "render an image", "render this", "generate image", "render image", "make an image of", "render the prompt", "render this prompt". Builds the prompt from what the user types (subject-agnostic, no built-in persona), optionally pulls a saved reference from the Library System, confirms cost, then calls the OpenAI gpt-image API and saves a PNG.
 ---
 

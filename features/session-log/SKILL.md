@@ -1,5 +1,5 @@
 ---
-name: save-diary
+name: session-log
 description: "MUST use when user says 'save diary', 'write diary', 'diary entry',
              'update diary', 'document session', or when a significant session
              needs to be preserved as a diary entry."
