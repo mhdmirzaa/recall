@@ -12,7 +12,7 @@ Adds a dedicated reminders file that persists independently from session memory:
 
 ## The Problem It Solves
 
-Session memory (`current-session.md`) resets every session. If you tell your AI
+Session memory (`session.md`) resets every session. If you tell your AI
 "remind me to check the deployment tomorrow", that reminder is lost when the
 session ends. Important follow-ups, pending tasks, and deferred decisions
 disappear into the void.
@@ -79,10 +79,10 @@ Your AI automatically detects reminder-worthy phrases:
 
 ## Post-Integration Structure
 ```
-main/
-├── identity-core.md          # Existing
-├── relationship-memory.md    # Existing
-├── current-session.md        # Existing
+memory/
+├── identity.md          # Existing
+├── profile.md    # Existing
+├── session.md        # Existing
 └── reminders.md              # NEW: persistent reminders
 ```
 

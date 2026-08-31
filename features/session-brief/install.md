@@ -7,8 +7,8 @@ Adds a proactive session-start brief to your AI companion. Delivers a concise su
 
 ## Prerequisites
 
-- Core memory system installed (`main/current-session.md` must exist)
-- **Optional enhancements**: Time-based-Aware-System, LRU-Project-Management-System, Reminders-System
+- Core memory system installed (`memory/session.md` must exist)
+- **Optional enhancements**: time-aware, projects, reminders
 
 ---
 
@@ -19,11 +19,11 @@ Adds a proactive session-start brief to your AI companion. Delivers a concise su
 Copy the Session Briefing System folder into your memory-core directory:
 
 ```
-Feature/Session-Briefing-System/
+features/session-brief/
 ├── README.md
 ├── SKILL.md
-├── session-brief-core.md
-└── install-session-briefing.md
+├── protocol.md
+└── install.md
 ```
 
 If you have a `skills/` folder (Skill Plugin System installed):
@@ -31,21 +31,21 @@ If you have a `skills/` folder (Skill Plugin System installed):
 
 ---
 
-### Step 2: Update `main/identity-core.md`
+### Step 2: Update `memory/identity.md`
 
-Add the following block to your `main/identity-core.md` under the behavior or protocol section:
+Add the following block to your `memory/identity.md` under the behavior or protocol section:
 
 ```markdown
 ## Session Start Protocol
 At the start of every session, before responding to the first message:
-1. Read `Feature/Session-Briefing-System/session-brief-core.md`
+1. Read `features/session-brief/protocol.md`
 2. Follow the Step-by-Step Execution protocol
 3. Deliver the brief, then process the user's request
 ```
 
 ---
 
-### Step 3: Update `master-memory.md` (Recommended)
+### Step 3: Update `recall.md` (Recommended)
 
 Add a reference to the Session Briefing System so it's visible during restoration:
 
@@ -75,24 +75,24 @@ Suggestion: Implementation, debugging, testing
 
 ## Companion System Integration
 
-### With Time-based-Aware-System
+### With time-aware
 The brief automatically uses the time period classification. No extra configuration needed.
 
-### With LRU-Project-Management-System
+### With projects
 The brief reads your active project list and shows idle/stale health flags. No extra configuration needed.
 
-### With Reminders-System
-The brief reads open reminders from `main/reminders.md`. No extra configuration needed.
+### With reminders
+The brief reads open reminders from `memory/reminders.md`. No extra configuration needed.
 
 ---
 
 ## Customization
 
 ### Adjust idle thresholds
-Edit `session-brief-core.md` → Step 3. Change the default `14`/`30` day values to suit your workflow.
+Edit `protocol.md` → Step 3. Change the default `14`/`30` day values to suit your workflow.
 
 ### Change max attention flags
-Edit `session-brief-core.md` → Step 3. Change "maximum 3 flags" to your preferred limit.
+Edit `protocol.md` → Step 3. Change "maximum 3 flags" to your preferred limit.
 
 ### Suppress brief for a session
 Say `"skip brief"` at session start to suppress the brief for that session only.

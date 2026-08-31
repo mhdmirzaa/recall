@@ -60,14 +60,14 @@ topic-diary/
 ## Quick Integration
 
 ```text
-"Load topic-diary"
+"Load topic-notes"
 ```
 
 ## What Happens During Integration
 
 1. **Creates** `topic-diary/topics/` and `topic-diary/archived/` directories
 2. **Creates** `topic-diary/index.md` using `index-format.md`
-3. **Adds** topic diary commands and save-routing behavior to `master-memory.md`
+3. **Adds** topic diary commands and save-routing behavior to `recall.md`
 4. **Installs as skill** if Skill Plugin System is detected
 5. **Keeps Daily Diary unchanged** so chronological and topic-based memory can coexist
 
@@ -112,7 +112,7 @@ Each topic entry follows `topic-format.md` and captures:
 - **Faster recall** — recurring subjects have one focused knowledge file
 - **Less noise** — reusable facts do not get buried in date-based diary entries
 - **Better debugging memory** — commands, root causes, and verified fixes stay together
-- **Works with existing MemoryCore** — complements Daily Diary, Session RAM, and Echo Recall
+- **Works with existing Recall** — complements Daily Diary, Session RAM, and Echo Recall
 - **Portable** — plain markdown files, human-readable and AI-readable
 
 ## Platform Note

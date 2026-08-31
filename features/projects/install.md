@@ -3,12 +3,12 @@
 
 ## Quick Install Command
 ```
-"install lru projects"
+"Load projects"
 ```
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 - Skill Plugin System recommended for auto-triggering (optional)
 
 ## 4-Step Installation Process
@@ -46,7 +46,7 @@
   - Inform user: "Project management integrated into master memory. Install the Skill Plugin System for auto-triggering."
 
 ### Step 3: Update Memory System
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ## Project Management Commands
   - "new project [name]" - Create new project at position #1
@@ -61,7 +61,7 @@
 ### Step 4: Verify and Cleanup
 - [ ] Verify `projects/` folder structure exists
 - [ ] Verify `projects/project-list.md` is readable
-- [ ] Remove `Feature/LRU-Project-Management-System/` folder (functionality installed)
+- [ ] Remove `features/projects/` folder (functionality installed)
 - [ ] Display completion message
 
 ## Installation Complete Message

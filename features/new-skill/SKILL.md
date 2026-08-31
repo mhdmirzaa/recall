@@ -117,7 +117,7 @@ Draft ready -- approve to forge?
 ### Step 6: Update System Records
 
 After forging, update relevant system files:
-- `master-memory.md` -- add new skill command or update existing
+- `recall.md` -- add new skill command or update existing
 - Skill Plugin System manifest if applicable
 - Note the forge in current session memory
 

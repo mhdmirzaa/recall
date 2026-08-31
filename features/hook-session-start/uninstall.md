@@ -3,7 +3,7 @@
 
 ## Purpose
 
-Restores `~/.claude/settings.json` to its pre-install state, removes the personalized hook script, and clears the install record from `master-memory.md`. After uninstall, the AI requires manual `[ai-name]` command on startup again.
+Restores `~/.claude/settings.json` to its pre-install state, removes the personalized hook script, and clears the install record from `recall.md`. After uninstall, the AI requires manual `[ai-name]` command on startup again.
 
 > **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall auto-load-hook"`.
 
@@ -14,13 +14,13 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 
 ## Prerequisites
 - Auto-Load Hook was previously installed
-- The "Auto-Load Hook (Installed)" section exists in `master-memory.md`
+- The "Auto-Load Hook (Installed)" section exists in `recall.md`
 
 ## 5-Step Execution Process
 
-### Step 1: Read Install Record From `master-memory.md`
+### Step 1: Read Install Record From `recall.md`
 
-- [ ] Open `master-memory.md`
+- [ ] Open `recall.md`
 - [ ] Locate the `### Auto-Load Hook (Installed)` section
 - [ ] Extract:
   - The AI name (used in script filename)
@@ -49,9 +49,9 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
   - Unix: `rm "~/.claude/hooks/<ai-name-lower>-session-start.sh"`
 - [ ] If the file doesn't exist → continue silently (idempotent)
 
-### Step 4: Remove Install Record From `master-memory.md`
+### Step 4: Remove Install Record From `recall.md`
 
-- [ ] Open `master-memory.md`
+- [ ] Open `recall.md`
 - [ ] Delete the entire `### Auto-Load Hook (Installed)` section, from its heading line down to (but not including) the next `###` heading or end-of-Optional-Components section
 - [ ] Save the file
 
@@ -64,14 +64,14 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 
 settings.json:    restored from backup-pre-autoload
 hook script:      ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh} removed
-master-memory.md: Auto-Load Hook section removed
+recall.md: Auto-Load Hook section removed
 
 [AI_NAME] will now require manual "[ai-name-lower]" command on the next
 Claude Code session start.
 
-To reinstall later: restore Feature/Auto-Load-Hook-System/ from git
-(`git checkout HEAD -- Feature/Auto-Load-Hook-System`) and run
-"Load auto-load-hook" again.
+To reinstall later: restore features/hook-session-start/ from git
+(`git checkout HEAD -- features/hook-session-start`) and run
+"Load hook-session-start" again.
 ```
 
 ## Verification
@@ -80,7 +80,7 @@ After uninstall, verify:
 
 1. [ ] `~/.claude/settings.json` no longer contains a SessionStart entry referencing `<ai-name>-session-start`
 2. [ ] `~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}` no longer exists
-3. [ ] `master-memory.md` no longer contains the `### Auto-Load Hook (Installed)` section
+3. [ ] `recall.md` no longer contains the `### Auto-Load Hook (Installed)` section
 4. [ ] On next Claude Code launch, the AI does NOT auto-greet — it waits for the user to type the AI name first
 5. [ ] If preferred-path backup-restore was used: `settings.json` is byte-identical to the original `settings.json.backup-pre-autoload`
 
@@ -88,7 +88,7 @@ After uninstall, verify:
 
 If the user wants to reinstall after uninstalling:
 
-1. Run `"Load auto-load-hook"` again — full install protocol runs from scratch (Feature folder is already in the repo)
+1. Run `"Load hook-session-start"` again — full install protocol runs from scratch (Feature folder is already in the repo)
 2. A fresh `settings.json.backup-pre-autoload` will be created (since the previous one was either consumed or renamed)
 
 ## Edge Cases
@@ -97,7 +97,7 @@ If the user wants to reinstall after uninstalling:
 |-----------|----------|
 | Backup file missing | Use surgical removal fallback in Step 2 |
 | Hook script already deleted manually | Skip Step 3 silently |
-| `master-memory.md` section already removed | Skip Step 4 silently |
+| `recall.md` section already removed | Skip Step 4 silently |
 | `settings.json` doesn't exist at all | Inform user nothing to remove; abort early |
 | Multiple AIs auto-loaded (e.g. atlas + nova) | Only the AI matching the trigger name is uninstalled — the other stays |
 

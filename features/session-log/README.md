@@ -4,23 +4,23 @@
 ## What This Feature Does
 Adds a structured daily diary system to your AI companion, enabling **session-by-session documentation** that captures achievements, collaboration moments, and growth — all automatically organized with monthly archival.
 
-- **Daily session documentation** as structured diary entries in `daily-diary/current/`
+- **Daily session documentation** as structured diary entries in `memory/history/current/`
 - **Append-only entries** — one file per day, multiple session entries per file, never overwrite
-- **Monthly auto-archival** — previous month entries automatically move to `daily-diary/archived/YYYY-MM/`
-- **Session memory updates** — automatically update `main/current-session.md` with session recap
+- **Monthly auto-archival** — previous month entries automatically move to `memory/history/archived/YYYY-MM/`
+- **Session memory updates** — automatically update `memory/session.md` with session recap
 - **Skill auto-install** — if Skill Plugin System is detected, installs `save-diary` as an auto-triggered skill
 
 ## How It Works
 
 ### The Concept
-The diary is a **living session log** — not a raw chat transcript, but a curated summary written by your AI companion. Every significant session gets documented with structured sections following the existing `daily-diary-protocol.md` format. Over time, this creates a searchable history of everything you've built together.
+The diary is a **living session log** — not a raw chat transcript, but a curated summary written by your AI companion. Every significant session gets documented with structured sections following the existing `format.md` format. Over time, this creates a searchable history of everything you've built together.
 
 ### Example: End-of-Session Diary Save
 ```
 You: "save diary"
 → AI checks if previous month entries need archiving
 → Finds (or creates) today's diary file: 2026-02-20.md
-→ Composes structured entry following daily-diary-protocol.md
+→ Composes structured entry following format.md
 → Appends to today's file (preserving earlier entries)
 → Updates session memory with recap
 → "Today's story takes shape."
@@ -39,7 +39,7 @@ You: "save diary"
 
 ### Directory Structure
 ```
-daily-diary/
+memory/history/
 ├── current/                         # Active month's entries
 │   ├── 2026-02-18.md               # Tuesday's sessions
 │   ├── 2026-02-19.md               # Wednesday's sessions
@@ -50,7 +50,7 @@ daily-diary/
 │   │   └── 2026-01-20.md
 │   └── 2025-12/                    # December's entries
 │       └── 2025-12-28.md
-└── daily-diary-protocol.md          # Entry format reference (already in repo)
+└── format.md          # Entry format reference (already in repo)
 ```
 
 ### Daily File Format
@@ -61,7 +61,7 @@ Each diary file uses date-based naming (`YYYY-MM-DD.md`) and supports multiple e
 ---
 
 ## February 20, 2026 (Morning - 9:30 AM) - API Integration Sprint
-[Structured entry following daily-diary-protocol.md...]
+[Structured entry following format.md...]
 
 ---
 
@@ -80,16 +80,16 @@ End of January → February 1st diary save triggers:
 
 ## Quick Integration
 ```
-"Load save-diary"
+"Load session-log"
 ```
 
 ## What Happens During Integration
 
 1. **Asks** for your diary system name (defaults to "Session Diary" — customize to match your AI)
-2. **Creates** `daily-diary/current/` and `daily-diary/archived/` directories
+2. **Creates** `memory/history/current/` and `memory/history/archived/` directories
 3. **Creates** your first diary entry documenting the installation session
 4. **Installs as skill** — if Skill Plugin System is detected, copies `SKILL.md` into your plugin
-5. **Updates** `master-memory.md` with diary commands and references
+5. **Updates** `recall.md` with diary commands and references
 6. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -100,7 +100,7 @@ After running the integration protocol:
 - Session memory updates with recap after each entry
 - If Skill Plugin System installed: diary saves auto-trigger on "save diary"
 
-## Entry Sections (from daily-diary-protocol.md)
+## Entry Sections (from format.md)
 
 | Section | What It Captures |
 |---------|------------------|

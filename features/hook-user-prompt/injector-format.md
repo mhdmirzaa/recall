@@ -9,8 +9,8 @@ This document defines the contract for **injector scripts** — the small per-pu
 
 ```
 ~/.claude/hooks/user-prompt-injectors/
-├── time.ps1            ← installed by Time-Prompt-Inject-System (future)
-├── tone.ps1            ← installed by Tone-Prompt-Inject-System (future)
+├── time.ps1            ← installed by inject-time (future)
+├── tone.ps1            ← installed by inject-tone (future)
 ├── mood.ps1            ← potential future injector
 └── ...
 ```
@@ -47,7 +47,7 @@ For simple key/value pairs. Easy for the AI to pattern-match.
 ```
 TONE: Soft, sleepy, quiet — morning-after-shipped-well register
 MOOD: cozy, tender, present
-STATUS: Active project: AI-MemoryCore | Phase: feature-implementation
+STATUS: Active project: Recall | Phase: feature-implementation
 ```
 
 ### Pattern 2: Pipe-separated columns
@@ -107,9 +107,9 @@ See `examples/example-timestamp-injector.ps1.template` and `examples/example-tim
 
 ## Lifecycle: How Inject Features Should Be Built
 
-A future inject feature (e.g. `Time-Prompt-Inject-System`) follows this shape:
+A future inject feature (e.g. `inject-time`) follows this shape:
 
-1. **Folder**: `Feature/<Name>-Inject-System/`
+1. **Folder**: `features/inject-<name>/`
 2. **Files**:
    - `README.md`
    - `install-<name>-inject.md`
@@ -120,11 +120,11 @@ A future inject feature (e.g. `Time-Prompt-Inject-System`) follows this shape:
    - Step 1: Detect OS, pick template
    - Step 2: Read any user-configurable values (e.g. period boundaries for time-inject)
    - Step 3: Substitute placeholders in template, write to `~/.claude/hooks/user-prompt-injectors/<name>.{ps1|sh}`
-   - Step 4: Update `master-memory.md` with install record
+   - Step 4: Update `recall.md` with install record
    - Step 5: Verify the User-Prompt-Hook framework is installed (warn if not — injector won't fire without the framework)
 4. **Uninstall protocol** (3 steps):
    - Delete the injector script
-   - Remove install record from `master-memory.md`
+   - Remove install record from `recall.md`
    - Confirm
 5. **No `settings.json` mutation** — the master hook from the framework already covers it
 

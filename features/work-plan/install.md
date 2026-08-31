@@ -1,5 +1,5 @@
 # 📋 Work Plan Installation Protocol
-*Systematic plan execution setup for AI MemoryCore companions*
+*Systematic plan execution setup for Recall companions*
 
 ## Purpose
 Executed when "Load work-plan" command is used — creates a plan execution skill, configures plan storage and source paths, and integrates with your AI companion.
@@ -11,7 +11,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 *Automatically creates plan execution skill, configures paths, and registers with your AI*
 
 ## Prerequisites
-- Core memory system installed (`master-memory.md` exists)
+- Core memory system installed (`recall.md` exists)
 - Skill Plugin System recommended for auto-triggering (but not required)
 - Auto-Commit System optional but recommended for per-task commit discipline
 
@@ -50,7 +50,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
   - Inform user: "The Skill Plugin System is not installed. Work Plan can still work as a manual protocol."
   - Offer two choices:
     1. "Install Skill Plugin System first" (recommended)
-    2. "Continue without auto-triggering" (protocol added to master-memory.md directly)
+    2. "Continue without auto-triggering" (protocol added to recall.md directly)
   - If continuing without plugin: skip Step 3, add protocol in Step 5
 - [ ] Check if Auto-Commit skill exists in the plugin:
   - If found: note `[COMMIT_CHAIN] = Yes` (per-task commits will be automatic)
@@ -74,7 +74,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 - [ ] Inform user: "Plan format template saved in `[PLAN_LOCATION]/` — this is your permanent reference for plan file structure"
 
 ### Step 5: Update Master Memory and Cleanup
-- [ ] Add plan execution reference to `master-memory.md` Optional Components section:
+- [ ] Add plan execution reference to `recall.md` Optional Components section:
   ```markdown
   ### [WORK_NAME]
   *Auto-triggers on: "copy plan", "append plan", "resume plan"*
@@ -108,7 +108,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
   Plan location: [PLAN_LOCATION]/project-plan.md
   Line limit: [LINE_LIMIT] lines
   ```
-- [ ] Remove `Feature/Work-Plan-Execution/` folder (functionality installed)
+- [ ] Remove `features/work-plan/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
   Work Plan Execution installed successfully!
@@ -132,7 +132,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 ```
 
 ## Manual Usage (Without Skill Plugin System)
-If the Skill Plugin System is not installed, add these instructions directly to `master-memory.md`:
+If the Skill Plugin System is not installed, add these instructions directly to `recall.md`:
 
 ```markdown
 ### Plan Execution

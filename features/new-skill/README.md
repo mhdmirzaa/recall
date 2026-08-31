@@ -23,7 +23,7 @@ Without Forge, these patterns go unnoticed. The AI handles each case ad-hoc, nev
 ## Quick Integration
 ```bash
 # Load this feature into your AI companion:
-"Load forge"
+"Load new-skill"
 ```
 
 ## How It Works After Integration

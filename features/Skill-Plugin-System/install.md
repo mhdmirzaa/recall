@@ -94,7 +94,7 @@ Executed when "Load skill-plugin" command is used — creates a complete plugin 
 - [ ] Confirm auto-discovery is working
 
 ### Step 6: Update Master Memory and Cleanup
-- [ ] Add plugin reference to `master-memory.md`:
+- [ ] Add plugin reference to `recall.md`:
   ```markdown
   ### Skill Plugin System
   - Plugin: [plugin-name] (Claude Code plugin)
@@ -106,12 +106,12 @@ Executed when "Load skill-plugin" command is used — creates a complete plugin 
   ```markdown
   "create skill [name]" → Create a new skill from template
   ```
-- [ ] Remove `Feature/Skill-Plugin-System/` folder (functionality installed)
+- [ ] Remove `features/Skill-Plugin-System/` folder (functionality installed)
 - [ ] Document successful installation with completion timestamp
 
 ## Post-Installation Structure
 ```
-ai-memorycore/
+recall/
 ├── plugins/
 │   └── [plugin-name]/
 │       ├── .claude-plugin/

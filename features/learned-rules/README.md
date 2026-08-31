@@ -31,7 +31,7 @@ Without Mulahazah, corrections vanish between sessions. Your AI makes the same m
 | **How it starts** | You notice a pattern and create a skill | Hooks observe your sessions automatically |
 | **Effort** | Deliberate -- you write the skill | Automatic -- rules extracted without input |
 | **Output** | Structured skill with full protocol | Lightweight rules in `rules.md` |
-| **Trigger** | You say "Load forge" | Fires silently on every tool call |
+| **Trigger** | You say "Load new-skill" | Fires silently on every tool call |
 | **Best for** | Deep, reusable skills | Behavioral corrections and preferences |
 
 ## Quick Integration
@@ -40,7 +40,7 @@ Without Mulahazah, corrections vanish between sessions. Your AI makes the same m
 # Option 1: npx (recommended -- installs hooks, observer, and command)
 npx continuous-improvement install --target claude
 
-# Option 2: Manual (see install-mulahazah.md for full protocol)
+# Option 2: Manual (see install.md for full protocol)
 ```
 
 ## How It Works After Integration

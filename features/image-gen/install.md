@@ -2,19 +2,19 @@
 *Setup for rendering images from descriptions via the OpenAI gpt-image API*
 
 ## Purpose
-Executed when "Load image-generation" is used — enables your AI to render an actual PNG from a
+Executed when "Load image-gen" is used — enables your AI to render an actual PNG from a
 typed description by calling the OpenAI gpt-image API. The prompt is always built from what the user
 types; there is no built-in subject or persona.
 
 ## Trigger Command
 ```
-"Load image-generation"
+"Load image-gen"
 ```
 
 ## Prerequisites
 - An **OpenAI account + API key** with image access
 - **PowerShell** (Windows) *or* **bash + `curl` + `jq`** (Mac/Linux/Git Bash)
-- Core memory system installed (`main/` directory, `master-memory.md` accessible)
+- Core memory system installed (`memory/` directory, `recall.md` accessible)
 - Skill Plugin System recommended for auto-triggering (optional)
 - *(Optional)* Library System — lets users pull saved style/subject references into a render
 
@@ -35,7 +35,7 @@ types; there is no built-in subject or persona.
 ### Step 3: Create the output folder
 - [ ] Create **`media-generation/image-generation/`** inside your own memory root — this is the
   single fixed home for every rendered image.
-- [ ] Record its path in `master-memory.md` so the skill always resolves the same default output
+- [ ] Record its path in `recall.md` so the skill always resolves the same default output
   location:
   ```markdown
   ### Image Generation Output
@@ -50,7 +50,7 @@ types; there is no built-in subject or persona.
   - Inform user: "Image Generation integrated into master memory. Install the Skill Plugin System for auto-triggering."
 
 ### Step 5: Update memory system
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ### Image Generation
   *Render images from descriptions via the OpenAI gpt-image API*

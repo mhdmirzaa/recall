@@ -1,7 +1,7 @@
 # 🔥 Post-Mortem — Core Protocol
 
 ## Storage File
-All entries are appended to: `main/post-mortems.md`
+All entries are appended to: `memory/post-mortems.md`
 
 Create this file if it doesn't exist:
 
@@ -72,7 +72,7 @@ If yes, the AI:
 1. Asks clarifying questions to fill the format (What happened? Why? How long did it take?)
 2. Drafts the entry
 3. Shows it to the user for review
-4. Appends to `main/post-mortems.md` after confirmation
+4. Appends to `memory/post-mortems.md` after confirmation
 
 If no, nothing is logged — no follow-up.
 
@@ -81,7 +81,7 @@ If no, nothing is logged — no follow-up.
 ## Domain Reference Protocol
 
 When starting work in a domain (deployment, testing, database, security, etc.):
-1. Scan `main/post-mortems.md` for entries matching the current domain
+1. Scan `memory/post-mortems.md` for entries matching the current domain
 2. If found, flag the most relevant lesson:
    > "⚠️ Reminder: [lesson] — see post-mortem [YYYY-MM-DD]"
 3. If the same failure type has occurred more than once, escalate:

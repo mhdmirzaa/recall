@@ -44,7 +44,7 @@ Before writing any `save` to a budgeted file:
 
 - [ ] Run `date` to get the current timestamp.
 - [ ] Copy the target file to `compaction/snapshots/[basename]-[YYYY-MM-DD].md`
-      (use only the filename without its directory — e.g. `main-memory`, not `main/main-memory` —
+      (use only the filename without its directory — e.g. `merged`, not `memory/merged` —
       so snapshots never create nested subdirectories inside `compaction/snapshots/`).
 - [ ] If a snapshot for today already exists, append `-HHMMSS` (seconds included) to avoid
       overwriting. If a same-second collision is still possible, use a sequential suffix

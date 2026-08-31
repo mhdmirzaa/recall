@@ -78,7 +78,7 @@ The AI performs a **RAM-style reset**:
 
 ### Auto-Reset Behavior
 ```
-IF current-session.md line count > 500:
+IF session.md line count > 500:
     1. Read current Session Recap section
     2. Summarize key achievements into recap
     3. Clear file and rebuild from session-format.md template

@@ -28,7 +28,7 @@ You describe a scene (+ optional local image to animate)
         │
         ▼
 Prompt built from YOUR words   ──(optional)──►  pull a saved reference
-(no built-in subject/persona)                   from your Library-System
+(no built-in subject/persona)                   from your library
         │
         ▼
  PHASE 1: SUBMIT   POST  …/contents/generations/tasks   ──►  task id
@@ -45,8 +45,8 @@ Prompt built from YOUR words   ──(optional)──►  pull a saved reference
 ## Quick Start
 
 1. Set up your BytePlus ModelArk key — see `credential-setup.md`
-2. Install the render script — see `install-video-generation.md`
-3. Type: `"Load video-generation"`
+2. Install the render script — see `install.md`
+3. Type: `"Load video-gen"`
 4. Render: `"render a video of a paper boat drifting down a rainy street"`
 
 ---
@@ -103,7 +103,7 @@ never echoed**. The render scripts strip any `ark-`/`sk-` key pattern from error
 
 ## Installation
 
-See `install-video-generation.md` for step-by-step setup.
+See `install.md` for step-by-step setup.
 
 **Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any
 platform without the plugin (load the install protocol manually).

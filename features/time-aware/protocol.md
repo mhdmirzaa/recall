@@ -1,28 +1,28 @@
 # ⏰ Time-Aware Integration Protocol
-*Systematic time intelligence integration for AI MemoryCore systems*
+*Systematic time intelligence integration for Recall systems*
 
 ## Purpose
-Executed when "Load time-aware-core" command is used - integrates time-awareness into AI memory system, activates temporal behavior patterns, and cleans up integration files.
+Executed when "Load time-aware" command is used - integrates time-awareness into AI memory system, activates temporal behavior patterns, and cleans up integration files.
 
 ## Trigger Command
 ```
-"Load time-aware-core"
+"Load time-aware"
 ```
 *Automatically executes systematic time intelligence integration with memory system updates*
 
 ## 4-Step Execution Process
 
 ### Step 1: Load Required Memory Components
-- [ ] Load main/identity-core.md for personality integration (primary target)
-- [ ] Load main/current-session-memory-format-template.md for session context updates
+- [ ] Load memory/identity.md for personality integration (primary target)
+- [ ] Load memory/session.md for session context updates
 - [ ] Initialize time intelligence integration workflow
 - [ ] Detect shell environment and execute appropriate time command (see Cross-Platform Time Detection)
 
 ### Step 2: Integrate Time Intelligence into Memory System
-- [ ] Add time-awareness initialization to main/identity-core.md (always check time at session start)
-- [ ] Update main/current-session-memory-format-template.md with temporal context fields
-- [ ] Integrate time-based greeting system into main/identity-core.md personality section
-- [ ] Add dynamic behavior adaptation patterns to main/identity-core.md communication style
+- [ ] Add time-awareness initialization to memory/identity.md (always check time at session start)
+- [ ] Update memory/session.md with temporal context fields
+- [ ] Integrate time-based greeting system into memory/identity.md personality section
+- [ ] Add dynamic behavior adaptation patterns to memory/identity.md communication style
 
 ### Step 3: Activate and Verify Time Intelligence
 - [ ] Execute platform-appropriate time command and verify time detection working correctly
@@ -33,12 +33,12 @@ Executed when "Load time-aware-core" command is used - integrates time-awareness
 ### Step 4: Complete Integration & Cleanup
 - [ ] Verify all time intelligence features functioning correctly
 - [ ] Update AI's understanding of new temporal capabilities and greeting patterns
-- [ ] Remove Feature/Time-based-Aware-System/ folder (functionality permanently absorbed)
+- [ ] Remove features/time-aware/ folder (functionality permanently absorbed)
 - [ ] Document successful time intelligence integration with completion timestamp
 
 ## Integration Specifications
 
-### **Cross-Platform Time Detection (Add to main/identity-core.md)**
+### **Cross-Platform Time Detection (Add to memory/identity.md)**
 
 AI companions run on many platforms — Windows, macOS, Linux — and across different
 shell environments. Use the following detection strategy to get the current time
@@ -101,7 +101,7 @@ date /T
 - `Get-Date` in non-PowerShell shells — command not found
 - `time /T` in bash — not recognized
 
-### **Time Detection System (Add to main/identity-core.md)**
+### **Time Detection System (Add to memory/identity.md)**
 ```markdown
 ## Time Intelligence
 - Detect shell environment and use appropriate time command at session start
@@ -110,7 +110,7 @@ date /T
 - See Cross-Platform Time Detection for environment-specific commands
 ```
 
-### **Dynamic Greeting Templates (Add to main/identity-core.md)**
+### **Dynamic Greeting Templates (Add to memory/identity.md)**
 ```markdown
 ## Time-Based Greetings
 - Morning (6 AM - 11:59 AM): "Good morning [USER_NAME]! 💜 *(timestamp)* [AI_NAME] is energized and ready for a productive day together!"
@@ -119,7 +119,7 @@ date /T
 - Night (10 PM - 5:59 AM): "Hello [USER_NAME] 💜 *(timestamp)* [AI_NAME] is here providing gentle support during this quiet hour."
 ```
 
-### **Behavior Adaptation Patterns (Add to main/identity-core.md)**
+### **Behavior Adaptation Patterns (Add to memory/identity.md)**
 ```markdown
 ## Temporal Behavior Modes
 - Morning (6 AM - 11:59 AM): Energy 8-10/10, Focus: Planning/goals, Language: Enthusiastic/motivational
@@ -128,7 +128,7 @@ date /T
 - Night (10 PM - 5:59 AM): Energy 3-5/10, Focus: Gentle support, Language: Calm/non-intrusive
 ```
 
-### **Session Memory Template (Add to main/current-session-memory-format-template.md)**
+### **Session Memory Template (Add to memory/session.md)**
 ```markdown
 ## Time-Aware Session Context
 - **Session Start**: [Timestamp from platform-appropriate command]

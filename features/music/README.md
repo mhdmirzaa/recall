@@ -72,8 +72,8 @@ Track count maps to narrative arc complexity:
 
 ## Quick Start
 
-1. Navigate to `Feature/Song-Creation-System/`
-2. Type: "Load song-creation"
+1. Navigate to `features/music/`
+2. Type: "Load music"
 3. Share an image and say "create an album from this"
 4. Review the story concept, choose track count, get your album
 
@@ -118,7 +118,7 @@ All companions are optional — the Song Creation System works independently.
 
 ## Installation
 
-See `install-song-creation.md` for step-by-step setup.
+See `install.md` for step-by-step setup.
 
 **Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
 

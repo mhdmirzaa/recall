@@ -58,7 +58,7 @@ When this skill activates, silently determine which command was triggered and ex
 - [ ] Note any auto-archived project
 
 ### Step 6: Update Session Memory
-- [ ] Add to current-session.md:
+- [ ] Add to session.md:
   ```markdown
   ## Active Project
   - Name: [project name]
@@ -108,7 +108,7 @@ When this skill activates, silently determine which command was triggered and ex
 - [ ] Regenerate `projects/project-list.md`
 
 ### Step 7: Load into Session Memory
-- [ ] Update current-session.md:
+- [ ] Update session.md:
   ```markdown
   ## Active Project
   - Name: [project name]
@@ -128,7 +128,7 @@ When this skill activates, silently determine which command was triggered and ex
 **Trigger**: `"save project"` -- saves current project only, NOT AI memory
 
 ### Step 1: Identify Active Project
-- [ ] Check current-session.md for active project
+- [ ] Check session.md for active project
 - [ ] If no active project: inform user, suggest loading or creating one
 - [ ] If project exists: proceed to save
 

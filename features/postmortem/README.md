@@ -64,11 +64,11 @@ You always decide whether to log it. The AI only asks.
 | System | Integration |
 |--------|-------------|
 | **Session Briefing System** | Flags recent post-mortems when starting work in the same domain |
-| **Decision-Log-System** | Post-mortems complement decisions — one records why, the other records what went wrong |
-| **Save-Diary-System** | Post-mortem entries can be referenced in diary entries |
+| **decisions** | Post-mortems complement decisions — one records why, the other records what went wrong |
+| **session-log** | Post-mortem entries can be referenced in diary entries |
 
 ---
 
 ## Installation
 
-See `install-post-mortem.md` for setup instructions.
+See `install.md` for setup instructions.

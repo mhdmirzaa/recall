@@ -1,5 +1,5 @@
 # 🩹 Patch System Installation Protocol
-*Systematic patch infrastructure setup for AI MemoryCore companions*
+*Systematic patch infrastructure setup for Recall companions*
 
 ## Purpose
 Executed when "Load patch-system" command is used — creates patch infrastructure, tracking system, and integrates with master memory.
@@ -11,8 +11,8 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
 *Automatically creates patch infrastructure and integrates with your AI companion*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` exists as entry point
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` exists as entry point
 
 ## 5-Step Execution Process
 
@@ -28,7 +28,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
 - [ ] Create `patches/applied.md` with initial content:
   ```markdown
   # [PATCH_NAME] - Applied Patches Log
-  *Tracks all patches applied to this AI MemoryCore instance*
+  *Tracks all patches applied to this Recall instance*
 
   ## Applied Patches
 
@@ -45,7 +45,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
 - [ ] Copy `patch-format.md` to `patches/patch-format.md` (permanent format reference)
 
 ### Step 3: Detect and Apply Bundled Patches
-- [ ] Check if patch files exist in `Feature/Memory-Consolidation-System/patches/`
+- [ ] Check if patch files exist in `features/merge/patches/`
 - [ ] If patches found (e.g., `PATCH-001.md`):
   - Present list to user: **"Found [N] pending patch(es). Would you like to apply them now?"**
   - Display each patch's title and priority from frontmatter
@@ -54,7 +54,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
 - [ ] If no patches found: Inform user the system is ready for future patches
 
 ### Step 4: Add Patch Commands to AI Memory
-- [ ] Add patch protocol to the AI's main memory file (`identity-core.md`, `main-memory.md`, or equivalent):
+- [ ] Add patch protocol to the AI's main memory file (`identity.md`, `merged.md`, or equivalent):
   ```markdown
   ### [PATCH_NAME] Protocol
   **Commands:**
@@ -72,7 +72,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
   ```
 
 ### Step 5: Update Master Memory and Cleanup
-- [ ] Add patch system reference to `master-memory.md` Optional Components:
+- [ ] Add patch system reference to `recall.md` Optional Components:
   ```markdown
   ### [PATCH_NAME]
   *Load when you say: "apply patch", "check patches", "patch status"*
@@ -86,7 +86,7 @@ Executed when "Load patch-system" command is used — creates patch infrastructu
   "apply patch [ID]" → Apply a specific patch to fix/update files
   "check patches" → List available unapplied patches
   ```
-- [ ] Remove patch-related files from `Feature/Memory-Consolidation-System/` (install-patch-system.md, patch-format.md, patches/ folder — consolidation core files remain)
+- [ ] Remove patch-related files from `features/merge/` (install.md, patch-format.md, patches/ folder — consolidation core files remain)
 - [ ] Display completion confirmation with timestamp
 
 ## Patch Application Protocol (AI Reference After Installation)

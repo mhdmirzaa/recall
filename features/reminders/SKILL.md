@@ -10,7 +10,7 @@ description: "Auto-triggers at session start to review open reminders. Also trig
 
 ## Activation
 
-When this skill activates, silently read `main/reminders.md`.
+When this skill activates, silently read `memory/reminders.md`.
 
 - If urgent/overdue items exist: mention them naturally
 - If no urgent items at session start: stay silent (don't announce "no reminders")
@@ -30,7 +30,7 @@ When this skill activates, silently read `main/reminders.md`.
 ## Protocol
 
 ### On Session Start
-- [ ] Read `main/reminders.md`
+- [ ] Read `memory/reminders.md`
 - [ ] Parse Open section for all active reminders
 - [ ] Check for deadlines: flag items due within 3 days or overdue
 - [ ] If urgent items exist: weave into greeting naturally
@@ -40,7 +40,7 @@ When this skill activates, silently read `main/reminders.md`.
 - [ ] Parse what the user wants to remember
 - [ ] Compose reminder: `- **Title**: Description`
 - [ ] If deadline mentioned: convert to absolute date, format as `- **Title** (by YYYY-MM-DD): Description`
-- [ ] APPEND to `## Open` section in `main/reminders.md`
+- [ ] APPEND to `## Open` section in `memory/reminders.md`
 - [ ] Confirm: "Added reminder: [title]"
 
 ### On Task Completion
@@ -50,7 +50,7 @@ When this skill activates, silently read `main/reminders.md`.
 - [ ] Confirm: "Marked complete: [title]"
 
 ### On Session End
-- [ ] Re-read `main/reminders.md`
+- [ ] Re-read `memory/reminders.md`
 - [ ] Review each Open item against session work
 - [ ] Move any resolved items to Completed with date
 - [ ] Add any new follow-ups discovered during the session

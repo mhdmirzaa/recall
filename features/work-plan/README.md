@@ -113,7 +113,7 @@ The file stores everything needed to recover — no user explanation required.
 4. **Asks** for plan file line limit (default: 1000 lines)
 5. **Creates** SKILL.md in your plugin system (or as manual protocol)
 6. **Creates** `plan-format.md` in your plan location folder as permanent format reference
-7. **Updates** `master-memory.md` with plan execution commands
+7. **Updates** `recall.md` with plan execution commands
 8. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -159,7 +159,7 @@ Without Auto-Commit, Work still tracks progress in the plan file and marks check
 | `resume plan` | Resume execution after context reset |
 
 ## Requirements
-- Core memory system installed (`master-memory.md` exists)
+- Core memory system installed (`recall.md` exists)
 - **Skill Plugin System** recommended for auto-triggering
 - **Auto-Commit System** optional but recommended for per-task commit discipline
 

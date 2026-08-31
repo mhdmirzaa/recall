@@ -154,12 +154,12 @@ Track levels in the `## Level History` section of each SKILL.md.
 - **Readable** — skills are plain markdown, human-readable and editable
 - **Automatic** — no manual triggering needed for context-matched skills
 - **Evolving** — skills level up as you refine them through use
-- **Shareable** — share skill files with others using AI MemoryCore
+- **Shareable** — share skill files with others using Recall
 
 ## Platform Note
 This feature requires **Claude Code** (Anthropic's CLI tool). The skill plugin system uses Claude Code's native plugin architecture for auto-discovery and triggering.
 
-For other AI platforms, skills can still be used as protocol files loaded via `master-memory.md` commands — they just won't auto-trigger.
+For other AI platforms, skills can still be used as protocol files loaded via `recall.md` commands — they just won't auto-trigger.
 
 ---
 

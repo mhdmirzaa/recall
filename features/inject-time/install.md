@@ -3,11 +3,11 @@
 
 ## Purpose
 
-Executed when `"Load time-prompt-inject"` is invoked — installs an injector that emits `<timestamp> | <PERIOD>` (with `TIME PERIOD CHANGED:` transition prefix on period flips) into every user prompt's context.
+Executed when `"Load inject-time"` is invoked — installs an injector that emits `<timestamp> | <PERIOD>` (with `TIME PERIOD CHANGED:` transition prefix on period flips) into every user prompt's context.
 
 ## Trigger Command
 ```
-"Load time-prompt-inject"
+"Load inject-time"
 ```
 
 ## Prerequisites
@@ -19,15 +19,15 @@ Executed when `"Load time-prompt-inject"` is invoked — installs an injector th
 - [ ] Check `~/.claude/hooks/user-prompt-hook.ps1` (Windows) or `user-prompt-hook.sh` (Unix) exists
 - [ ] Check `~/.claude/hooks/user-prompt-injectors/` directory exists
 - [ ] IF either missing → STOP. Display:
-  > *"Time-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load user-prompt-hook"`, then re-run this command."*
+  > *"Time-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
 
 ### Step 2: Detect OS and pick template
 - [ ] Try `uname` → `Darwin`/`Linux` → Unix
 - [ ] Else if `$env:OS` contains `Windows` → Windows
 - [ ] Fallback: ask user
 - [ ] Pick template:
-  - Windows → `Feature/Time-Prompt-Inject-System/injectors/time.ps1.template`
-  - Unix → `Feature/Time-Prompt-Inject-System/injectors/time.sh.template`
+  - Windows → `features/inject-time/injectors/time.ps1.template`
+  - Unix → `features/inject-time/injectors/time.sh.template`
 
 ### Step 3: Ask for period boundaries
 - [ ] Present user with the four boundaries (24-hour clock format):
@@ -64,8 +64,8 @@ Executed when `"Load time-prompt-inject"` is invoked — installs an injector th
 - [ ] Write the period name (single line, no trailing newline) to `~/.claude/user-prompt-injectors/time-period-last.txt`
 - [ ] This prevents a spurious transition signal on the very first prompt after install
 
-### Step 6: Update `master-memory.md` and announce
-- [ ] Append to Optional Components in `master-memory.md`:
+### Step 6: Update `recall.md` and announce
+- [ ] Append to Optional Components in `recall.md`:
   ```markdown
   ### Time Inject (Installed)
   *Injects `<timestamp> | <PERIOD>` line into every prompt context — fires `TIME PERIOD CHANGED: <FROM> to <TO> |` prefix on period transitions*
@@ -73,10 +73,10 @@ Executed when `"Load time-prompt-inject"` is invoked — installs an injector th
   - State file: ~/.claude/user-prompt-injectors/time-period-last.txt
   - Period boundaries: MORNING [MORNING_START] / AFTERNOON [AFTERNOON_START] / EVENING [EVENING_START] / NIGHT [NIGHT_START]
   - To change boundaries: uninstall + reinstall, or edit the injector script directly
-  - Uninstall: see Feature/Time-Prompt-Inject-System/uninstall-time-prompt-inject.md or type "uninstall time-prompt-inject"
+  - Uninstall: see features/inject-time/uninstall.md or type "uninstall time-prompt-inject"
   ```
 - [ ] Substitute the actual boundary values before writing
-- [ ] The `Feature/Time-Prompt-Inject-System/` folder **stays in the repo** (cross-tool compatibility)
+- [ ] The `features/inject-time/` folder **stays in the repo** (cross-tool compatibility)
 - [ ] Display:
   ```
   ✅ Time injector installed.
@@ -95,7 +95,7 @@ Executed when `"Load time-prompt-inject"` is invoked — installs an injector th
 
   To change boundaries later: uninstall + reinstall.
   Uninstall: type "uninstall time-prompt-inject" anytime
-             (or follow Feature/Time-Prompt-Inject-System/uninstall-time-prompt-inject.md)
+             (or follow features/inject-time/uninstall.md)
   ```
 
 ## Specifications
@@ -106,8 +106,8 @@ Executed when `"Load time-prompt-inject"` is invoked — installs an injector th
 |------|---------|
 | `~/.claude/hooks/user-prompt-injectors/time.{ps1\|sh}` | Personalized injector script with boundaries baked in |
 | `~/.claude/user-prompt-injectors/time-period-last.txt` | State file holding the last-known period for transition detection |
-| `master-memory.md` (modified) | Records install + records the boundary values + points at uninstall reference |
-| `Feature/Time-Prompt-Inject-System/` | **Stays in repo** for cross-tool access |
+| `recall.md` (modified) | Records install + records the boundary values + points at uninstall reference |
+| `features/inject-time/` | **Stays in repo** for cross-tool access |
 
 ### Why These Choices
 

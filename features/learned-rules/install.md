@@ -67,7 +67,7 @@ npx continuous-improvement install --target claude
 
 ### Step 5: Copy Config and Initialize Data Files (Manual Path)
 
-- [ ] Copy config: `cp Feature/Mulahazah-System/config.json ~/.claude/mulahazah/config.json`
+- [ ] Copy config: `cp features/learned-rules/config.json ~/.claude/mulahazah/config.json`
 - [ ] Initialize: `touch ~/.claude/mulahazah/rules.md && echo '{}' > ~/.claude/mulahazah/projects.json`
 
 Default configuration:

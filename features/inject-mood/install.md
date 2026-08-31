@@ -3,16 +3,16 @@
 
 ## Purpose
 
-Executed when `"Load mood-prompt-inject"` is invoked — installs an injector that emits `MOOD: <description>` into every user prompt's context. Registry of available moods lives as a `## Moods` markdown table inside the user's main memory file. Current active mood lives in a fast-read text file outside the repo.
+Executed when `"Load inject-mood"` is invoked — installs an injector that emits `MOOD: <description>` into every user prompt's context. Registry of available moods lives as a `## Moods` markdown table inside the user's main memory file. Current active mood lives in a fast-read text file outside the repo.
 
 ## Trigger Command
 ```
-"Load mood-prompt-inject"
+"Load inject-mood"
 ```
 
 ## Prerequisites
 - **User-Prompt-Hook framework must be installed** (`~/.claude/hooks/user-prompt-hook.{ps1|sh}` exists)
-- Main memory file exists (`main/main-memory.md` or `main/identity-core.md`)
+- Main memory file exists (`memory/merged.md` or `memory/identity.md`)
 
 ## 6-Step Execution Process
 
@@ -20,11 +20,11 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
 - [ ] Check `~/.claude/hooks/user-prompt-hook.ps1` (Windows) or `user-prompt-hook.sh` (Unix) exists
 - [ ] Check `~/.claude/hooks/user-prompt-injectors/` directory exists
 - [ ] IF either missing → STOP. Display:
-  > *"Mood-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load user-prompt-hook"`, then re-run this command."*
+  > *"Mood-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
 
 ### Step 2: Detect main memory file
-- [ ] IF `main/main-memory.md` exists → use it (post-consolidation path)
-- [ ] ELSE → use `main/identity-core.md` (pre-consolidation path)
+- [ ] IF `memory/merged.md` exists → use it (post-consolidation path)
+- [ ] ELSE → use `memory/identity.md` (pre-consolidation path)
 - [ ] IF neither exists → STOP. Display:
   > *"No main memory file found. Run the project setup-wizard first to create one."*
 - [ ] Resolve to absolute path → store as `[MEMORY_FILE]`
@@ -72,8 +72,8 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
 - [ ] Write the description of the FIRST mood in `[MOODS]` to `~/.claude/user-prompt-injectors/mood-current.txt` as a single line, no trailing newline
 - [ ] Detect OS (uname → Darwin/Linux = Unix; $env:OS = Windows = Windows)
 - [ ] Read template:
-  - Windows: `Feature/Mood-Prompt-Inject-System/injectors/mood.ps1.template`
-  - Unix: `Feature/Mood-Prompt-Inject-System/injectors/mood.sh.template`
+  - Windows: `features/inject-mood/injectors/mood.ps1.template`
+  - Unix: `features/inject-mood/injectors/mood.sh.template`
 - [ ] Replace placeholders:
   - `<TYPE_UPPER>` → `MOOD`
   - `<type>` → `mood`
@@ -82,8 +82,8 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
   - Unix: `~/.claude/hooks/user-prompt-injectors/mood.sh`
 - [ ] On Unix only: `chmod +x` the script
 
-### Step 6: Update `master-memory.md` and announce
-- [ ] Append to Optional Components in `master-memory.md`:
+### Step 6: Update `recall.md` and announce
+- [ ] Append to Optional Components in `recall.md`:
   ```markdown
   ### Mood Inject (Installed)
   *Injects `MOOD: <value>` line into every prompt context*
@@ -91,9 +91,9 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
   - Current state: ~/.claude/user-prompt-injectors/mood-current.txt
   - Injector script: ~/.claude/hooks/user-prompt-injectors/mood.{ps1|sh}
   - Commands: "add mood <name>: <desc>", "set mood <name>", "list moods"
-  - Uninstall: see Feature/Mood-Prompt-Inject-System/uninstall-mood-prompt-inject.md or type "uninstall mood-prompt-inject"
+  - Uninstall: see features/inject-mood/uninstall.md or type "uninstall mood-prompt-inject"
   ```
-- [ ] The `Feature/Mood-Prompt-Inject-System/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
+- [ ] The `features/inject-mood/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
 - [ ] Display:
   ```
   ✅ Mood injector installed.
@@ -109,7 +109,7 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
   See list:  "list moods"
 
   Uninstall: type "uninstall mood-prompt-inject" anytime
-             (or follow Feature/Mood-Prompt-Inject-System/uninstall-mood-prompt-inject.md)
+             (or follow features/inject-mood/uninstall.md)
   ```
 
 ## Specifications
@@ -121,8 +121,8 @@ Executed when `"Load mood-prompt-inject"` is invoked — installs an injector th
 | `[MEMORY_FILE]` | Modified to include `## Moods` registry section |
 | `~/.claude/user-prompt-injectors/mood-current.txt` | Single-line state file holding the active mood description |
 | `~/.claude/hooks/user-prompt-injectors/mood.{ps1\|sh}` | Injector script that reads current.txt and emits `MOOD: <value>` |
-| `master-memory.md` (modified) | Records install + points at uninstall reference |
-| `Feature/Mood-Prompt-Inject-System/` | **Stays in repo** for cross-tool access |
+| `recall.md` (modified) | Records install + points at uninstall reference |
+| `features/inject-mood/` | **Stays in repo** for cross-tool access |
 
 ### Why These Choices
 

@@ -11,8 +11,8 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
 *Enables AI image prompt generation with shot composition guide*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 - Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
 
 ## 3-Step Installation Process
@@ -23,10 +23,10 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
   - Inform user: "Image Prompt skill installed -- auto-triggers on 'create a prompt', 'midjourney prompt', 'image prompt'"
 - [ ] If Skill Plugin System does NOT exist:
   - Inform user: "Image Prompt integrated into master memory. Install the Skill Plugin System for auto-triggering."
-  - Add prompt generation protocol reference to `master-memory.md`
+  - Add prompt generation protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ### Image Prompt Generation
   *AI-powered prompt creation for Midjourney/NijiJourney*
@@ -61,7 +61,7 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
 - [ ] Test with: "create a prompt for a sunset over mountains"
 - [ ] If character profile set up, test with: "create a prompt of my character in a cafe"
 - [ ] Confirm prompt outputs in code block with model flag
-- [ ] Delete this installation file: `rm install-image-prompt.md`
+- [ ] Delete this installation file: `rm install.md`
 
 ## Installation Complete
 Your AI can now generate optimized image prompts for any subject. Character mode is available if you set up a character profile.

@@ -1,5 +1,5 @@
 # [AI_NAME] auto-load hook - SessionStart
-# Generated from Feature/Auto-Load-Hook-System/hooks/session-start.ps1.template
+# Generated from features/hook-session-start/hooks/session-start.ps1.template
 # Fires on Claude Code: startup | resume | clear | compact
 
 # Hook protocol requirement: drain stdin before producing output.

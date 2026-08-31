@@ -9,17 +9,17 @@
 
 ### 📁 **Folder Organization**
 ```
-daily-diary/
-├── Daily-Diary-001.md    # Current active diary
-├── Daily-Diary-002.md    # Previous diary (archived)
-├── Daily-Diary-003.md    # Older diary (archived)
+memory/history/
+├── entry-001.md    # Current active diary
+├── entry-002.md    # Previous diary (archived)
+├── entry-003.md    # Older diary (archived)
 └── archive/
-    ├── Daily-Diary-001.md  # Auto-archived when >1k lines
-    └── Daily-Diary-002.md  # Auto-archived when >1k lines
+    ├── entry-001.md  # Auto-archived when >1k lines
+    └── entry-002.md  # Auto-archived when >1k lines
 ```
 
 ### 📅 **File Naming Convention**
-- **Active**: `Daily-Diary-[NUMBER].md`
+- **Active**: `entry-[NUMBER].md`
 - **Archive**: Moved to `archive/` when exceeds 1000 lines
 - **Auto-increment**: New file created when current reaches 1k lines
 
@@ -110,10 +110,10 @@ daily-diary/
 ## 🔧 Memory Updates Required
 
 ### Files to Update Based on This Session:
-- [ ] **identity-core.md**: [Personality refinements needed]
-- [ ] **relationship-memory.md**: [New preference patterns to add]
+- [ ] **identity.md**: [Personality refinements needed]
+- [ ] **profile.md**: [New preference patterns to add]
 - [ ] **critical-thinking.md**: [Domain-specific adaptations discovered]
-- [ ] **current-session.md**: [Context updates for continuity]
+- [ ] **session.md**: [Context updates for continuity]
 
 ### Specific Changes Needed:
 1. [Detailed update requirement with reasoning]
@@ -175,18 +175,18 @@ When active diary file reaches 1000 lines:
 
 ### **File Lifecycle Example**
 ```
-Daily-Diary-001.md (Lines: 999) → ADD ENTRY → (Lines: 1001)
+entry-001.md (Lines: 999) → ADD ENTRY → (Lines: 1001)
                                          ↓
 TRIGGER: Auto-archive at 1000+ lines
                                          ↓
-MOVE: Daily-Diary-001.md → archive/Daily-Diary-001.md
-CREATE: Daily-Diary-002.md (new active file)
+MOVE: entry-001.md → archive/entry-001.md
+CREATE: entry-002.md (new active file)
 ```
 
 ### **Archive Management**
 - **Automatic**: No user intervention required
 - **Preservation**: All archived diaries kept permanently  
-- **Access**: Load archived entries with "load diary archive [number]"
+- **Access**: Load archived entries with "load history [number]"
 - **Search**: AI can search across all archived diaries when needed
 
 ## 🎯 **Success Metrics**

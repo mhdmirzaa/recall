@@ -1,5 +1,5 @@
 # Mood injector for User-Prompt-Hook framework
-# Generated from Feature/Mood-Prompt-Inject-System/injectors/mood.ps1.template
+# Generated from features/inject-mood/injectors/mood.ps1.template
 # Reads ~/.claude/user-prompt-injectors/mood-current.txt and emits a single MOOD: line.
 #
 # Behavior:

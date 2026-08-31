@@ -53,13 +53,13 @@ Your AI companion is ready! Here's the recommended path to unlock more features:
 
 ### Recommended First Steps
 1. **Memory Consolidation** — Upgrade to unified memory architecture (faster loading)
-   → Navigate to `Feature/Memory-Consolidation-System/` and type: "Load memory-consolidation"
+   → Navigate to `features/merge/` and type: "Load merge"
 
 2. **Skill Plugin System** — Enable auto-triggered skills for your AI
-   → Navigate to `Feature/Skill-Plugin-System/` and type: "Load skill-plugin"
+   → Navigate to `features/Skill-Plugin-System/` and type: "Load skill-plugin"
 
 3. **Time-based Aware System** — Add time-intelligent greetings and behavior
-   → Navigate to `Feature/Time-based-Aware-System/` and type: "Load time-aware-core"
+   → Navigate to `features/time-aware/` and type: "Load time-aware"
 
 ### Then Explore More
 Check the **Available Feature Extensions** section in `README.md` for all features organized by installation tier. Each tier builds on the previous one — start from Tier 1 and work your way up!
@@ -80,12 +80,12 @@ Your AI follows this process during wizard:
 ```
 
 ### **Files Updated During Setup**
-✅ **master-memory.md**: AI name and loading commands  
-✅ **identity-core.md**: Name, relationship style, communication patterns  
-✅ **relationship-memory.md**: User profile and preferences  
+✅ **recall.md**: AI name and loading commands  
+✅ **identity.md**: Name, relationship style, communication patterns  
+✅ **profile.md**: User profile and preferences  
 ✅ **critical-thinking.md**: Domain focus if specified  
-✅ **current-session.md**: Setup session documentation  
-✅ **daily-diary/setup-[date].md**: Complete setup record  
+✅ **session.md**: Setup session documentation  
+✅ **memory/history/setup-[date].md**: Complete setup record  
 
 ## 🚨 **Critical Success Factors**
 

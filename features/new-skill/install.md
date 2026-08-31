@@ -2,17 +2,17 @@
 *Systematic setup for AI self-improvement through skill creation*
 
 ## Purpose
-Executed when "Load forge" command is used -- enables your AI to detect improvement opportunities and propose new skills or level-ups to existing ones.
+Executed when "Load new-skill" command is used -- enables your AI to detect improvement opportunities and propose new skills or level-ups to existing ones.
 
 ## Trigger Command
 ```
-"Load forge"
+"Load new-skill"
 ```
 *Enables AI self-improvement through pattern detection and skill forging*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 - Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
 
 ## 3-Step Installation Process
@@ -23,10 +23,10 @@ Executed when "Load forge" command is used -- enables your AI to detect improvem
   - Inform user: "Forge skill installed -- auto-triggers on pattern detection and 'create skill', 'level up'"
 - [ ] If Skill Plugin System does NOT exist:
   - Inform user: "Forge integrated into master memory. Install the Skill Plugin System for auto-triggering."
-  - Add forge protocol reference to `master-memory.md`
+  - Add forge protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ## Self-Improvement Commands
   - "create skill" / "new skill" / "forge this" - Propose a new skill
@@ -38,7 +38,7 @@ Executed when "Load forge" command is used -- enables your AI to detect improvem
   - Mistakes that a permanent rule would prevent
   - Multi-step workflows that could be automated
   ```
-- [ ] Add forge awareness to `main/identity-core.md`:
+- [ ] Add forge awareness to `memory/identity.md`:
   ```markdown
   ## Self-Improvement Awareness
   - Monitor for repeated patterns during conversation
@@ -50,7 +50,7 @@ Executed when "Load forge" command is used -- enables your AI to detect improvem
 ### Step 3: Verify and Cleanup
 - [ ] Verify forge skill is accessible (via plugin or master memory)
 - [ ] Test: user says "self improve" and AI acknowledges the command
-- [ ] Remove `Feature/Forge-Self-Improvement-System/` folder (functionality installed)
+- [ ] Remove `features/new-skill/` folder (functionality installed)
 - [ ] Display completion message
 
 ## Installation Complete Message

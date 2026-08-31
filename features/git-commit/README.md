@@ -78,7 +78,7 @@ After completing any task, the AI proactively checks `git status`. If uncommitte
 
 ## Quick Integration
 ```
-"Load auto-commit"
+"Load git-commit"
 ```
 
 ## What Happens During Integration
@@ -89,7 +89,7 @@ After completing any task, the AI proactively checks `git status`. If uncommitte
 4. **Asks** for author name and email (your identity on commits)
 5. **Creates** SKILL.md in your plugin system (or as manual protocol)
 6. **Embeds** commit format directly in SKILL.md — no separate template file needed
-7. **Updates** `master-memory.md` with commit commands
+7. **Updates** `recall.md` with commit commands
 8. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -121,7 +121,7 @@ After running the integration protocol:
 ## Requirements
 - **Git repository** in your project (initialized with `git init`)
 - **Skill Plugin System** recommended for auto-triggering (install first for best experience)
-- Works without Skill Plugin System as a manual protocol loaded via `master-memory.md`
+- Works without Skill Plugin System as a manual protocol loaded via `recall.md`
 
 ## Platform Note
 Requires **Claude Code** (Anthropic's CLI tool) with the Skill Plugin System for auto-triggering. On other AI platforms, the SKILL.md can be loaded as a manual protocol — the commit format and analysis workflow work the same way, just triggered manually instead of automatically.

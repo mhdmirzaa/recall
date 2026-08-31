@@ -1,5 +1,5 @@
 # User-Prompt-Hook master script - UserPromptSubmit
-# Generated from Feature/User-Prompt-Hook-System/master-hook/user-prompt-hook.ps1.template
+# Generated from features/hook-user-prompt/master-hook/user-prompt-hook.ps1.template
 # Fires on every user message before the AI sees the prompt.
 #
 # Behavior:

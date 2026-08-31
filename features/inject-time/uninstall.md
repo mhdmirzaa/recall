@@ -3,7 +3,7 @@
 
 ## Purpose
 
-Removes the time injector script and the period-state file, and clears the install record from `master-memory.md`. After uninstall, no `<timestamp> | <PERIOD>` line is injected into prompts.
+Removes the time injector script and the period-state file, and clears the install record from `recall.md`. After uninstall, no `<timestamp> | <PERIOD>` line is injected into prompts.
 
 ## Trigger Command
 ```
@@ -24,12 +24,12 @@ Removes the time injector script and the period-state file, and clears the insta
 
 ### Step 3: Optionally retain install record (boundary memory)
 - [ ] Ask user:
-  > *"Keep the Time Inject install record in `master-memory.md`? (y/N) — keeping it preserves your period boundary values so reinstall later can offer them as defaults."*
+  > *"Keep the Time Inject install record in `recall.md`? (y/N) — keeping it preserves your period boundary values so reinstall later can offer them as defaults."*
 - [ ] IF user says `y` / `yes` → leave the section as-is
 - [ ] IF user says `n` / `no` / blank (default) → remove
 
-### Step 4: Remove install record from `master-memory.md` (if Step 3 chose remove)
-- [ ] Open `master-memory.md`
+### Step 4: Remove install record from `recall.md` (if Step 3 chose remove)
+- [ ] Open `recall.md`
 - [ ] Delete the entire `### Time Inject (Installed)` section, from heading down to next `###` heading or end of Optional Components
 - [ ] Save
 - [ ] Display:
@@ -50,14 +50,14 @@ After uninstall, verify:
 
 1. [ ] `~/.claude/hooks/user-prompt-injectors/time.{ps1|sh}` no longer exists
 2. [ ] `~/.claude/user-prompt-injectors/time-period-last.txt` no longer exists
-3. [ ] `master-memory.md` no longer contains `### Time Inject (Installed)` section (if user chose remove)
+3. [ ] `recall.md` no longer contains `### Time Inject (Installed)` section (if user chose remove)
 4. [ ] Sending a user prompt produces NO timestamp/period line in the system-reminder
 5. [ ] User-Prompt-Hook framework master script still works (other injectors continue to fire)
 
 ## Reinstall
 
 If reinstalling later:
-1. Run `"Load time-prompt-inject"` again
+1. Run `"Load inject-time"` again
 2. Install protocol asks for period boundaries fresh — accept defaults or customize
 3. State file is recreated from scratch (no transition signal on first prompt)
 
@@ -67,7 +67,7 @@ If reinstalling later:
 |-----------|----------|
 | Injector script already deleted manually | Skip Step 1 silently |
 | State file already deleted | Skip Step 2 silently |
-| `master-memory.md` section already removed | Skip Step 4 silently |
+| `recall.md` section already removed | Skip Step 4 silently |
 | User-Prompt-Hook framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
 
 ---

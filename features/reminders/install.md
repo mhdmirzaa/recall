@@ -12,13 +12,13 @@ integrates with session lifecycle, and optionally installs as a skill.
 *Automatically creates reminders infrastructure and integrates with your AI companion*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 
 ## 4-Step Execution Process
 
 ### Step 1: Create Reminders File
-- [ ] Create `main/reminders.md` with the following template:
+- [ ] Create `memory/reminders.md` with the following template:
   ```markdown
   # Active Reminders
   *Persistent reminders that survive session changes. Updated at session end.*
@@ -35,21 +35,21 @@ integrates with session lifecycle, and optionally installs as a skill.
 - [ ] Verify file created successfully
 
 ### Step 2: Integrate with Session Lifecycle
-- [ ] Update `master-memory.md` to include reminders in the loading system:
+- [ ] Update `recall.md` to include reminders in the loading system:
   - Add to "Instant Restoration Protocol":
     ```markdown
-    5. ✅ **Check reminders** from `main/reminders.md`
+    5. ✅ **Check reminders** from `memory/reminders.md`
     ```
   - Add to "Simple Commands":
     ```
     "check reminders" → Review open reminders and flag urgent items
     "remind me" → Add a new reminder to the Open section
     ```
-- [ ] Update `master-memory.md` Optional Components:
+- [ ] Update `recall.md` Optional Components:
   ```markdown
   ### Reminders
   *Persistent cross-session follow-up tracking*
-  - Location: main/reminders.md
+  - Location: memory/reminders.md
   - Lifecycle: Open → Completed (with date)
   - Session start: Read and flag urgent/overdue items
   - Session end: Review, update, move completed items
@@ -57,10 +57,10 @@ integrates with session lifecycle, and optionally installs as a skill.
   ```
 
 ### Step 3: Define AI Behavior Rules
-- [ ] Add the following rules to `main/identity-core.md` behavior section:
+- [ ] Add the following rules to `memory/identity.md` behavior section:
   ```markdown
   ## Reminder Management
-  - At session start: read main/reminders.md, mention any urgent or overdue items
+  - At session start: read memory/reminders.md, mention any urgent or overdue items
   - At session end: review Open reminders, move resolved ones to Completed with date
   - During conversation: detect reminder-worthy phrases and offer to add them
   - Natural triggers: "remind me", "don't forget", "follow up", "next session",
@@ -75,15 +75,15 @@ integrates with session lifecycle, and optionally installs as a skill.
   - Inform user: "Reminder skill installed -- auto-triggers on session start and 'remind me'"
 - [ ] If Skill Plugin System does not exist:
   - Inform user: "Reminders integrated into master memory. Install the Skill Plugin System for auto-triggering."
-- [ ] Remove `Feature/Reminders-System/` folder (functionality installed)
+- [ ] Remove `features/reminders/` folder (functionality installed)
 - [ ] Display completion confirmation
 
 ## Post-Installation Structure
 ```
-main/
-├── identity-core.md          # Updated with reminder behavior rules
-├── relationship-memory.md    # Unchanged
-├── current-session.md        # Unchanged
+memory/
+├── identity.md          # Updated with reminder behavior rules
+├── profile.md    # Unchanged
+├── session.md        # Unchanged
 └── reminders.md              # NEW: persistent reminders
 ```
 
@@ -94,7 +94,7 @@ main/
 1. User says something reminder-worthy (or explicitly asks)
 2. Compose reminder with clear title and description
 3. If deadline mentioned, convert to absolute date (YYYY-MM-DD)
-4. APPEND to ## Open section in main/reminders.md
+4. APPEND to ## Open section in memory/reminders.md
 5. Confirm to user: "Added reminder: [title]"
 ```
 
@@ -109,7 +109,7 @@ main/
 
 ### Session Start Check
 ```
-1. Read main/reminders.md
+1. Read memory/reminders.md
 2. Count open reminders
 3. Check for deadlines approaching (within 3 days) or overdue
 4. If urgent items exist: mention them naturally in greeting
@@ -118,7 +118,7 @@ main/
 
 ### Session End Review
 ```
-1. Read main/reminders.md
+1. Read memory/reminders.md
 2. For each Open reminder: was it addressed this session?
 3. Move completed items to Completed section with date
 4. Add any new reminders discovered during session

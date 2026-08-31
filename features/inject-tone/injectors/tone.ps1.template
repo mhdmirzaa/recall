@@ -1,5 +1,5 @@
 # Tone injector for User-Prompt-Hook framework
-# Generated from Feature/Tone-Prompt-Inject-System/injectors/tone.ps1.template
+# Generated from features/inject-tone/injectors/tone.ps1.template
 # Reads ~/.claude/user-prompt-injectors/tone-current.txt and emits a single TONE: line.
 #
 # Behavior:

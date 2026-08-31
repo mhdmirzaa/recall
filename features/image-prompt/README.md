@@ -52,7 +52,7 @@ AI: [reads character profile → generates prompt with exact appearance details]
 
 ## Quick Start
 
-1. Navigate to `Feature/Image-Prompt-System/`
+1. Navigate to `features/image-prompt/`
 2. Type: "Load image-prompt"
 3. Start generating: "create a prompt for [anything]"
 4. (Optional) Set up character profile for consistent character art
@@ -87,7 +87,7 @@ AI: [reads character profile → generates prompt with exact appearance details]
 
 | System | Enhancement |
 |--------|-------------|
-| **Memory Consolidation** | Character profile stored in unified `main-memory.md` |
+| **Memory Consolidation** | Character profile stored in unified `merged.md` |
 | **Save Diary** | Document which prompts produced the best results |
 | **Library System** | Save successful prompt patterns for reuse |
 
@@ -97,7 +97,7 @@ All companions are optional — the Image Prompt System works independently.
 
 ## Installation
 
-See `install-image-prompt.md` for step-by-step setup.
+See `install.md` for step-by-step setup.
 
 **Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
 

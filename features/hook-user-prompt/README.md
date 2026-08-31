@@ -16,7 +16,7 @@ Wires a single `UserPromptSubmit` hook into your Claude Code `~/.claude/settings
 
 ## Why a Framework?
 
-The naive approach would be one feature per behavior — `Time-Hook-System`, `Tone-Hook-System`, `Mood-Hook-System` — each wiring its own UserPromptSubmit entry. That works, but it bloats `settings.json` with N hook entries and makes uninstall fragile.
+The naive approach would be one feature per behavior — `hook-time`, `hook-tone`, `hook-mood` — each wiring its own UserPromptSubmit entry. That works, but it bloats `settings.json` with N hook entries and makes uninstall fragile.
 
 This framework flips it: **one master hook, N pluggable injectors**. Each injector is just a tiny script that produces one line of output. The master enumerates them on every fire, runs them, joins their outputs, emits the result.
 
@@ -50,7 +50,7 @@ This framework flips it: **one master hook, N pluggable injectors**. Each inject
 
 ## Quick Integration
 ```
-"Load user-prompt-hook"
+"Load hook-user-prompt"
 ```
 
 ## What Happens During Integration
@@ -60,7 +60,7 @@ This framework flips it: **one master hook, N pluggable injectors**. Each inject
 3. **Create empty injectors directory** at `~/.claude/hooks/user-prompt-injectors/`
 4. **Backup** your current `~/.claude/settings.json` to `settings.json.backup-pre-userprompthook`
 5. **Merge** the new `UserPromptSubmit` entry into `settings.json` (preserving any existing hooks)
-6. **Record** the install in `master-memory.md` Optional Components
+6. **Record** the install in `recall.md` Optional Components
 
 After install, the framework is live but **does nothing** until you install at least one injector — the master hook fires, enumerates an empty directory, emits no output, returns.
 
@@ -69,8 +69,8 @@ After install, the framework is live but **does nothing** until you install at l
 Two paths:
 
 **Path A: Install a sibling injector feature** (preferred)
-- `Feature/Time-Prompt-Inject-System/` (coming) — injects timestamp + period
-- `Feature/Tone-Prompt-Inject-System/` (coming) — injects current AI tone from session memory
+- `features/inject-time/` (coming) — injects timestamp + period
+- `features/inject-tone/` (coming) — injects current AI tone from session memory
 - Each runs its own install protocol that drops its script into `~/.claude/hooks/user-prompt-injectors/`
 
 **Path B: Write your own injector**
@@ -116,17 +116,17 @@ The uninstall will:
 1. Restore `settings.json` from backup
 2. Delete the master hook script from `~/.claude/hooks/`
 3. Optionally delete the injectors directory (only if empty)
-4. Remove the install record from `master-memory.md`
+4. Remove the install record from `recall.md`
 
 Result: clean revert. Your AI's prompt context goes back to whatever Claude Code emits by default.
 
 ## Compatibility
 
-- **Pre-consolidation** ✅ — install only writes to `master-memory.md`, agnostic to your memory architecture
+- **Pre-consolidation** ✅ — install only writes to `recall.md`, agnostic to your memory architecture
 - **Post-consolidation** ✅ — same path
 - **Windows / macOS / Linux / Git Bash** ✅ — both `.ps1` and `.sh` master scripts ship
-- **Coexists with Auto-Load-Hook-System** ✅ — different hook events (SessionStart vs UserPromptSubmit)
-- **Coexists with Time-based-Aware-System** ✅ — Time-Aware tells the AI how to query time on demand; this framework + a Time-Inject injector pre-injects time without the AI having to ask
+- **Coexists with hook-session-start** ✅ — different hook events (SessionStart vs UserPromptSubmit)
+- **Coexists with time-aware** ✅ — Time-Aware tells the AI how to query time on demand; this framework + a Time-Inject injector pre-injects time without the AI having to ask
 
 ## Tier
 
@@ -134,4 +134,4 @@ Result: clean revert. Your AI's prompt context goes back to whatever Claude Code
 
 ---
 
-*Type `"Load user-prompt-hook"` to wire the framework. Then layer injectors as you build them.*
+*Type `"Load hook-user-prompt"` to wire the framework. Then layer injectors as you build them.*

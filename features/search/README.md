@@ -21,7 +21,7 @@ The key principle: **search before speaking, narrate from evidence, ask when unc
 ```
 You: "Do you remember when we set up the API integration?"
 → AI extracts keywords: "API", "integration", "set up"
-→ Searches daily-diary/current/ and archived/ files
+→ Searches memory/history/current/ and archived/ files
 → Finds match in 2026-02-15.md — API integration session
 → Responds naturally:
 
@@ -45,8 +45,8 @@ No raw file paths, no "Query returned 1 result" — just natural conversation ba
 
 ### Search Priority
 The recall system searches in order of relevance:
-1. `daily-diary/current/` — current month entries (most likely to match recent questions)
-2. `daily-diary/archived/*/` — past months (broader search if not found in current)
+1. `memory/history/current/` — current month entries (most likely to match recent questions)
+2. `memory/history/archived/*/` — past months (broader search if not found in current)
 3. **Ask user** — when nothing found anywhere (graceful fallback)
 
 ### Trigger Phrases
@@ -65,16 +65,16 @@ Your AI activates recall when it detects these patterns:
 
 ## Quick Integration
 ```
-"Load echo-recall"
+"Load search"
 ```
 
 ## What Happens During Integration
 
 1. **Asks** for your recall system name (defaults to "Memory Recall" — customize to match your AI)
-2. **Verifies** diary infrastructure exists (recommends Save-Diary-System if not)
+2. **Verifies** diary infrastructure exists (recommends session-log if not)
 3. **Installs** recall protocol with trigger detection and three-level system
-4. **Creates** `recall-format.md` as permanent output reference
-5. **Updates** `master-memory.md` with recall commands and references
+4. **Creates** `output-format.md` as permanent output reference
+5. **Updates** `recall.md` with recall commands and references
 6. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -106,8 +106,8 @@ All outputs end with natural conversation continuation — the recall flows into
 - **Searchable history** — all past sessions become accessible through conversation
 
 ## Requirements
-- Requires `daily-diary/` with dated entries to search through
-- **Recommended**: Install **Save-Diary-System** first for best results (date-based files with monthly archival)
+- Requires `memory/history/` with dated entries to search through
+- **Recommended**: Install **session-log** first for best results (date-based files with monthly archival)
 - **Also works with**: Existing diary files in any dated format (`YYYY-MM-DD.md` or older numbered format)
 - Recall quality depends on diary entry quality — richer entries produce better recall
 

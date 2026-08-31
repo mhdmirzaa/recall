@@ -13,8 +13,8 @@ Use this format to define which files are compacted, their budgets, and how much
 
 | File | Budget | Newest Tier (verbatim) | Notes |
 |------|--------|------------------------|-------|
-| main/main-memory.md | 500 lines | last 20 entries | core identity + user profile |
-| main/relationship-memory.md | 400 lines | last 15 entries | user preferences |
+| memory/merged.md | 500 lines | last 20 entries | core identity + user profile |
+| memory/profile.md | 400 lines | last 15 entries | user preferences |
 | topic-diary/topics/*.md | 300 lines each | last 10 entries | per-topic journals |
 
 ## Retention Tiers
@@ -68,7 +68,7 @@ ask the user how to handle it. Never merge a secret value into a shared summary.
 
 | File | Budget | Newest Tier (verbatim) | Notes |
 |------|--------|------------------------|-------|
-| main/main-memory.md | 450 lines | last 25 entries | keep identity dense |
+| memory/merged.md | 450 lines | last 25 entries | keep identity dense |
 | topic-diary/topics/docker.md | 250 lines | last 8 entries | high-churn topic |
 | topic-diary/topics/9router.md | 6000 chars | last 10 entries | char-based budget for notes-heavy topic |
 ```

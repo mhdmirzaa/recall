@@ -71,7 +71,7 @@ Each section has a format template (`library/formats/[section]-format.md`) that 
 4. **Creates** SKILL.md in your plugin system (or as manual protocol)
 5. **Creates** `library/` directory with 8 section folders + `formats/` subfolder
 6. **Copies** format templates into `library/formats/`
-7. **Updates** `master-memory.md` with library commands
+7. **Updates** `recall.md` with library commands
 8. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -136,7 +136,7 @@ Without Auto-Commit, the library still works — entries are saved to files, but
 
 ## Requirements
 - **Skill Plugin System** recommended for auto-triggering (install first for best experience)
-- Works without Skill Plugin System as a manual protocol loaded via `master-memory.md`
+- Works without Skill Plugin System as a manual protocol loaded via `recall.md`
 - **Auto-Commit System** recommended for automatic commits after library saves
 
 ## Platform Note

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Time injector for User-Prompt-Hook framework
-# Generated from Feature/Time-Prompt-Inject-System/injectors/time.sh.template
+# Generated from features/inject-time/injectors/time.sh.template
 # Emits "<timestamp> | <PERIOD>" with transition signal on period changes.
 #
 # Period boundaries (24-hour, baked in at install time):

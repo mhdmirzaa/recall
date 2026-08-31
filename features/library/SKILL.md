@@ -96,7 +96,7 @@ Matches Found (Suitable):
 - library/section/entry-name.md — [why it fits this project]
 
 Matches Found (Not Suitable):
-- library/section/entry-name.md — [why it doesn't fit: scale/domain/stack mismatch]
+- library/section/entry-name.md — [why it doesn't fit: scale/domemory/stack mismatch]
 
 No Match In:
 - [sections with no relevant entries]
@@ -167,7 +167,7 @@ Use the loaded template's structure:
 
 ## Item Install Protocol
 
-When installing a pre-made library entry from the `library-items/` catalog:
+When installing a pre-made library entry from the `features/library/items/` catalog:
 
 ### Trigger Commands
 - `"install item [name]"` — install a specific item by name
@@ -177,11 +177,11 @@ When installing a pre-made library entry from the `library-items/` catalog:
 ### Install Steps
 
 1. **Parse item name** from user command (e.g., "install item security-headers" → `security-headers`)
-2. **Scan `library-items/`** for matching entry — search by filename keyword across all section folders
+2. **Scan `features/library/items/`** for matching entry — search by filename keyword across all section folders
 3. **If found**: show item info (name, section, first few lines as description preview)
 4. **If multiple matches**: list all matches and ask user to pick one
 5. **Check for duplicates** in user's `library/[section]/` — match by filename
-6. **If no duplicate**: copy file from `library-items/[section]/[filename].md` to `library/[section]/[filename].md`
+6. **If no duplicate**: copy file from `features/library/items/[section]/[filename].md` to `library/[section]/[filename].md`
 7. **If duplicate exists**: warn user and ask — overwrite existing entry or skip
 8. **Trigger commit chain** (if Auto-Commit installed)
 
@@ -191,7 +191,7 @@ Item Install
 ------------
 Item: [item name]
 Section: [section name]
-Source: library-items/[section]/[filename].md
+Source: features/library/items/[section]/[filename].md
 Target: library/[section]/[filename].md
 Status: Installed / Skipped (duplicate) / Not found
 
@@ -228,7 +228,7 @@ If Auto-Commit is not installed, remind the user to commit manually.
 | **Entry name collision** | Append numeric suffix (e.g., `pattern-name-2.md`) |
 | **User wants new section** | Create the folder, note that no format template exists for it |
 | **Cross-section content** | Pick primary section, note secondary relevance in the entry |
-| **Item not found in catalog** | List all available items from `library-items/` |
+| **Item not found in catalog** | List all available items from `features/library/items/` |
 | **Library not installed** | Warn: "Library directory not found. Install Library System first." |
 | **Item already in library** | Ask user: overwrite existing entry or skip |
 
@@ -238,4 +238,4 @@ If Auto-Commit is not installed, remind the user to commit manually.
 - **Lv.2** — Project-Aware: Added suitability assessment — considers tech stack, domain, scale, and complexity when recommending library entries for the current project. Entries that exist but don't fit are flagged separately from matches.
 - **Lv.3** — Commit Chain: After saving/updating library entries, auto-triggers the Auto-Commit skill (if installed) to commit all changes. Library save exit becomes commit entrance.
 - **Lv.4** — Format-Aware Save: Auto-determines library section from content keywords, loads matching format template from `library/formats/[section]-format.md`, applies template structure to new entries. Trust-based section selection (no approval gate). Formats loaded on-demand, not embedded.
-- **Lv.5** — Item Install: Install pre-made library entries from `library-items/` catalog. New commands: "install item [name]", "install library item", "add item from catalog". Scans catalog by filename keyword, shows preview, checks for duplicates in user's library, copies to correct section, chains commit. Catalog persists at project root (not deleted during Library System installation). (Origin: Public knowledge sharing for AI MemoryCore community)
+- **Lv.5** — Item Install: Install pre-made library entries from `features/library/items/` catalog. New commands: "install item [name]", "install library item", "add item from catalog". Scans catalog by filename keyword, shows preview, checks for duplicates in user's library, copies to correct section, chains commit. Catalog persists at project root (not deleted during Library System installation). (Origin: Public knowledge sharing for Recall community)

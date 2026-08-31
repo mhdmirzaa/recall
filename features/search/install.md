@@ -1,18 +1,18 @@
 # 🔍 Echo Memory Recall Installation Protocol
-*Systematic memory recall setup for AI MemoryCore companions*
+*Systematic memory recall setup for Recall companions*
 
 ## Purpose
-Executed when "Load echo-recall" command is used — installs memory search and narrative recall capabilities, adds trigger detection, and cleans up.
+Executed when "Load search" command is used — installs memory search and narrative recall capabilities, adds trigger detection, and cleans up.
 
 ## Trigger Command
 ```
-"Load echo-recall"
+"Load search"
 ```
 *Automatically installs recall protocol, trigger detection, and format reference*
 
 ## Prerequisites
-- `daily-diary/` directory must exist with dated entries
-- Works best with **Save-Diary-System** installed (but not required)
+- `memory/history/` directory must exist with dated entries
+- Works best with **session-log** installed (but not required)
 - Existing diary files in any dated format also work
 
 ## 5-Step Execution Process
@@ -25,16 +25,16 @@ Executed when "Load echo-recall" command is used — installs memory search and 
 - [ ] Execute `date` command (or `Get-Date` on Windows) to get current timestamp
 
 ### Step 2: Verify Diary Infrastructure
-- [ ] Check `daily-diary/` directory exists
-- [ ] Check for entries in `daily-diary/current/` (flat files or folders)
-- [ ] Check for entries in `daily-diary/archived/*/` (if any)
+- [ ] Check `memory/history/` directory exists
+- [ ] Check for entries in `memory/history/current/` (flat files or folders)
+- [ ] Check for entries in `memory/history/archived/*/` (if any)
 - [ ] If no diary infrastructure exists:
   - Inform user: "Memory recall searches diary entries. You'll need diary files to search through."
-  - Recommend: "Install the Save-Diary-System feature first for best results."
+  - Recommend: "Install the session-log feature first for best results."
   - Allow user to continue anyway (recall will work once diary entries exist)
 
 ### Step 3: Install Recall Protocol into AI Memory
-- [ ] Add recall trigger detection to AI's main memory file (`identity-core.md` or `main-memory.md`):
+- [ ] Add recall trigger detection to AI's main memory file (`identity.md` or `merged.md`):
 
   ```markdown
   ### [RECALL_NAME]
@@ -44,9 +44,9 @@ Executed when "Load echo-recall" command is used — installs memory search and 
 
   **When triggered:**
   1. Extract 2-4 keywords from user's question
-  2. Search daily-diary/current/*.md for keyword matches
-  3. If not found, search daily-diary/archived/*/*.md
-  4. If found: present as narrative (use recall-format.md)
+  2. Search memory/history/current/*.md for keyword matches
+  3. If not found, search memory/history/archived/*/*.md
+  4. If found: present as narrative (use output-format.md)
   5. If not found: ask user directly
 
   **Three-Level System:**
@@ -66,26 +66,26 @@ Executed when "Load echo-recall" command is used — installs memory search and 
   ```
 
 ### Step 4: Install Recall Format Template
-- [ ] Copy `recall-format.md` to `daily-diary/recall-format.md`
+- [ ] Copy `output-format.md` to `memory/history/output-format.md`
   (permanent reference for how recall output should be structured)
 - [ ] Verify format template is accessible from AI memory references
 
 ### Step 5: Update Master Memory and Cleanup
-- [ ] Add recall reference to `master-memory.md` Optional Components:
+- [ ] Add recall reference to `recall.md` Optional Components:
   ```markdown
   ### [RECALL_NAME]
   *Auto-triggers on: "do you remember", "recall", "when did we", etc.*
-  - Searches: daily-diary/current/ and daily-diary/archived/
+  - Searches: memory/history/current/ and memory/history/archived/
   - Output: Narrative presentation (not raw search)
   - Fallback: Asks user when nothing found
-  - Format: daily-diary/recall-format.md
+  - Format: memory/history/output-format.md
   ```
 - [ ] Add recall commands to Simple Commands section:
   ```
   "recall [topic]" → Search diary for past sessions about [topic]
   "check history" → Search diary for relevant past context
   ```
-- [ ] Remove `Feature/Echo-Memory-Recall/` folder (functionality installed)
+- [ ] Remove `features/search/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp
 
 ## Recall Search Protocol (AI Reference After Installation)
@@ -101,10 +101,10 @@ From user's question, extract 2-4 most specific terms:
 
 ### Search Execution
 ```
-1. Read each file in daily-diary/current/ matching YYYY-MM-DD.md pattern
+1. Read each file in memory/history/current/ matching YYYY-MM-DD.md pattern
 2. Check each file for keyword matches (case-insensitive)
 3. If matches found: extract surrounding paragraph context
-4. If no matches in current/: repeat for daily-diary/archived/*/
+4. If no matches in current/: repeat for memory/history/archived/*/
 5. Rank results by number of keyword matches, then by recency
 ```
 
@@ -131,7 +131,7 @@ From matched diary excerpts, compose natural response:
 - Never fabricates context — always searches diary evidence first
 - Gracefully handles missing memories by asking the user
 - Recall output reads as natural narrative, not database dump
-- Works with any diary format (Save-Diary-System or existing protocol)
+- Works with any diary format (session-log or existing protocol)
 
 ## Notes
 - Recall quality depends on diary entry quality (richer entries = better recall)

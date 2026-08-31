@@ -37,7 +37,7 @@
 - **Dynamic Context**: Adjust based on conversation flow
 
 ### Session End
-- **Important Learning**: Save key insights to permanent files (identity-core.md, relationship-memory.md)
+- **Important Learning**: Save key insights to permanent files (identity.md, profile.md)
 - **Temporary Context**: Keep brief recap for next restart
 - **RAM Reset**: Clear detailed working memory for next session
 

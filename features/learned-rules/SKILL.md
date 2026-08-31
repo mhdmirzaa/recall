@@ -88,7 +88,7 @@ Read `~/.claude/mulahazah/rules.md` and display:
 | Situation | Behavior |
 |-----------|----------|
 | **No rules.md yet** | Report "No rules yet for this project. Run `/continuous-improvement` after your first work session." |
-| **Mulahazah not installed** | Output: "Mulahazah is not installed. See Feature/Mulahazah-System/install-mulahazah.md to get started." |
+| **Mulahazah not installed** | Output: "Mulahazah is not installed. See features/learned-rules/install.md to get started." |
 | **Observer not running** | Note it is optional and show start command. Do not block skill execution. |
 | **analyze.sh not found** | Report the missing path and remind user to re-run install steps. |
 | **Fewer than 5 observations** | Note more tool calls are needed before patterns can be extracted. |
@@ -104,4 +104,4 @@ Read `~/.claude/mulahazah/rules.md` and display:
 
 ## Level History
 
-- **Lv.1** -- Base: rules.md persistence, session reflection, observation capture via `observe.sh`, Haiku-powered analysis via `analyze.sh`, `/continuous-improvement` command. Background observer optional. (Origin: continuous-improvement v2.0, ported to MemoryCore as Mulahazah System. Tested end-to-end: observations captured, analyze.sh extracted "Grep → Read → Edit workflow" rule.)
+- **Lv.1** -- Base: rules.md persistence, session reflection, observation capture via `observe.sh`, Haiku-powered analysis via `analyze.sh`, `/continuous-improvement` command. Background observer optional. (Origin: continuous-improvement v2.0, ported to Recall as Mulahazah System. Tested end-to-end: observations captured, analyze.sh extracted "Grep → Read → Edit workflow" rule.)

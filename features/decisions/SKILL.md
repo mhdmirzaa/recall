@@ -11,7 +11,7 @@ description: "Auto-triggers when a non-obvious decision is made during conversat
 
 ## Activation
 
-When this skill activates, silently read `main/decisions.md`.
+When this skill activates, silently read `memory/decisions.md`.
 
 - If user is logging a decision: capture and confirm
 - If user is searching past decisions: find and present
@@ -45,11 +45,11 @@ When this skill activates, silently read `main/decisions.md`.
   **Decision**: What was chosen (and what was rejected)
   **Rationale**: Why -- trade-offs, constraints, evidence
   ```
-- [ ] APPEND to `main/decisions.md` (after the last entry)
+- [ ] APPEND to `memory/decisions.md` (after the last entry)
 - [ ] Confirm: "Logged decision: [title]"
 
 ### On Searching Decisions
-- [ ] Read `main/decisions.md`
+- [ ] Read `memory/decisions.md`
 - [ ] Search for keywords matching the user's query
 - [ ] Present matching decision(s) with full context
 - [ ] If no match: inform user and offer to log a new entry

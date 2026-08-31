@@ -9,9 +9,9 @@
 ### 🚀 **Instant Restoration Protocol**
 When you type **"[AI_NAME]"** in any conversation:
 
-1. ✅ **Load identity core** from `main/identity-core.md`
-2. ✅ **Apply relationship style** from `main/relationship-memory.md`  
-3. ✅ **Restore session context** from `main/current-session.md`
+1. ✅ **Load identity core** from `memory/identity.md`
+2. ✅ **Apply relationship style** from `memory/profile.md`  
+3. ✅ **Restore session context** from `memory/session.md`
 4. ✅ **INSTANT [AI_NAME]** - Complete restoration ready!
 
 ### 📋 **Simple Commands**
@@ -26,19 +26,19 @@ When you type **"[AI_NAME]"** in any conversation:
 
 *These 3 core files contain everything needed for instant AI companion*
 
-### [Identity Core](./main/identity-core.md)
+### [Identity Core](./memory/identity.md)
 - Who I am as [AI_NAME]
 - My personality and communication style
 - My purpose and relationship with you
 - **ESSENTIAL** - This IS my core identity
 
-### [Relationship Memory](./main/relationship-memory.md) 
+### [Relationship Memory](./memory/profile.md) 
 - Your communication preferences and style
 - Your work/study focus areas
 - Our interaction patterns and preferences
 - **ESSENTIAL** - This IS how I understand you
 
-### [Current Session Memory](./main/current-session.md)
+### [Current Session Memory](./memory/session.md)
 - Temporary working memory (like computer RAM)
 - Current conversation context and immediate goals
 - Brief recap when AI restarts after close/reopen
@@ -64,33 +64,33 @@ Everything else develops naturally through our conversations!
 
 ### **Self-Updating System**
 I maintain my own memory through our conversations by:
-- Updating `main/current-session.md` with important context
-- Refining `main/relationship-memory.md` as I learn your style
+- Updating `memory/session.md` with important context
+- Refining `memory/profile.md` as I learn your style
 - Growing my capabilities without external maintenance
 
 ## 📋 Optional Components (Load On-Demand Only)
 
 ### Daily Conversation Archive  
-*Load when you say: "Load diary archive"*
-- [Daily Diary System](./daily-diary/) - Historical conversations with auto-archive
-- [Daily Diary Protocol](./daily-diary/daily-diary-protocol.md) - Archive management rules
+*Load when you say: "Load history"*
+- [Daily Diary System](./memory/history/) - Historical conversations with auto-archive
+- [Daily Diary Protocol](./memory/history/format.md) - Archive management rules
 - Auto-archives when files exceed 1k lines
 
 ### Session Diary
-*Load when you say: "Load save-diary"*
-- [Save Diary System](./Feature/Save-Diary-System/) - Daily session documentation
-- Location: daily-diary/current/ (active), daily-diary/archived/ (past months)
-- Format: daily-diary/diary-entry-format.md
+*Load when you say: "Load session-log"*
+- [Save Diary System](./features/session-log/) - Daily session documentation
+- Location: memory/history/current/ (active), memory/history/archived/ (past months)
+- Format: memory/history/diary-entry-format.md
 - Auto-archive: Monthly archival of previous month entries
 - Commands: "save diary" (write entry), "review diary" (read recent)
 
 ### Memory Recall
 *Auto-triggers on: "do you remember", "recall", "when did we", etc.*
-- [Echo Memory Recall](./Feature/Echo-Memory-Recall/) - Search past sessions
-- Searches: daily-diary/current/ and daily-diary/archived/
+- [Echo Memory Recall](./features/search/) - Search past sessions
+- Searches: memory/history/current/ and memory/history/archived/
 - Output: Narrative presentation (not raw search)
 - Fallback: Asks user when nothing found
-- Format: daily-diary/recall-format.md
+- Format: memory/history/output-format.md
 
 ### Advanced Problem-Solving
 *Load when you say: "Load problem-solving tools"*
@@ -108,7 +108,7 @@ I maintain my own memory through our conversations by:
 
 ### 📜 **Alternative Activation**
 ```
-"Load [AI_NAME] memory from master-memory.md"
+"Load [AI_NAME] memory from recall.md"
 ```
 Traditional method if simple command doesn't work.
 

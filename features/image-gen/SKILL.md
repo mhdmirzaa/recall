@@ -29,7 +29,7 @@ persona, or stored identity**. Whatever the user describes is what gets drawn.
 
 4. **Resolve the output path.**
    - Default folder: `media-generation/image-generation/` inside the user's memory root (created at
-     install; its path is recorded in `master-memory.md`).
+     install; its path is recorded in `recall.md`).
    - Honor an explicit `to [path]` override.
    - Sanitize the filename (strip `< > : " / \ | ? *`, lowercase, hyphenate whitespace) and append a
      `-YYYYMMDD-HHmmss.png` timestamp suffix.

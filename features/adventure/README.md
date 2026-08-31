@@ -33,8 +33,8 @@ Mix and match — a solo balanced pirate adventure feels completely different fr
 
 ## Quick Start
 
-1. Navigate to `Feature/Interactive-Story-System/`
-2. Type: "Load interactive-story"
+1. Navigate to `features/adventure/`
+2. Type: "Load adventure"
 3. Say "new adventure" to start your first quest
 4. Choose your mode, power level, and world — the portal opens
 
@@ -147,7 +147,7 @@ All companions are optional — the Interactive Story System works independently
 
 ## Installation
 
-See `install-interactive-story.md` for step-by-step setup.
+See `install.md` for step-by-step setup.
 
 **Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
 

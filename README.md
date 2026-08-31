@@ -1,9 +1,9 @@
-# 🧠 **AI MemoryCore** - Universal AI Memory Architecture
+# 🧠 **Recall** - Universal AI Memory Architecture
 *A simple template for creating persistent AI companions that remember you*
 
 ## 🎯 **What This Does**
 
-**AI MemoryCore** helps you create AI companions that maintain memory across conversations. Using simple `.md files` as a database, your AI can remember your preferences, learn your communication style, and provide consistent interactions.
+**Recall** helps you create AI companions that maintain memory across conversations. Using simple `.md files` as a database, your AI can remember your preferences, learn your communication style, and provide consistent interactions.
 
 ## ✨ **Key Features**
 
@@ -27,162 +27,183 @@
 
 ### **File Structure**
 ```
-ai-memorycore/
-├── master-memory.md         # Entry point & loading system
-├── main/                    # Essential components
-│   ├── identity-core.md     # AI personality template
-│   ├── relationship-memory.md # User learning system
-│   └── current-session.md   # RAM-like working memory
-├── Feature/                 # Optional feature extensions
-│   ├── Time-based-Aware-System/ # Time intelligence feature
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   └── time-aware-core.md # Complete implementation
-│   ├── LRU-Project-Management-System/ # Smart project tracking
-│   │   ├── README.md        # System documentation
-│   │   ├── install-lru-projects-core.md # Auto-installation wizard
-│   │   └── SKILL.md         # Auto-triggered skill (all commands + LRU engine embedded)
-│   ├── Memory-Consolidation-System/ # Unified memory upgrade + patch system
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── consolidation-core.md # Integration protocol
-│   │   ├── main-memory-format.md # Sample format for unified memory
-│   │   ├── session-format.md # Sample format for session RAM
-│   │   └── patches/         # Bundled patch system
-│   │       ├── install-patch-system.md # Patch installation protocol
-│   │       ├── patch-format.md  # Sample format for patch files
-│   │       └── PATCH-001.md # Fix outdated file references
-│   ├── Skill-Plugin-System/ # Claude Code skill plugin
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── install-skill-plugin.md # Installation protocol
-│   │   └── skill-format.md  # Sample format for SKILL.md files
-│   ├── Save-Diary-System/   # Daily session diary system
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── install-save-diary.md # Installation protocol
-│   │   └── SKILL.md         # Auto-triggered skill (for Skill Plugin System)
-│   ├── Echo-Memory-Recall/  # Memory search and recall
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── install-echo-recall.md # Installation protocol
-│   │   └── recall-format.md # Sample format for recall output
-│   ├── Auto-Commit-System/  # Intelligent git commit system
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── install-auto-commit.md # Installation protocol
-│   │   └── SKILL.md         # Auto-triggered skill (format embedded)
-│   ├── Work-Plan-Execution/ # Project plan execution system
-│   │   ├── README.md        # Feature explanation & benefits
-│   │   ├── install-work-plan.md # Installation protocol
-│   │   ├── plan-format.md   # Sample format for plan files
-│   │   └── SKILL.md         # Auto-triggered skill (for Skill Plugin System)
-│   ├── Library-System/      # Knowledge library system
-│   │   ├── README.md         # Feature explanation & benefits
-│   │   ├── install-library.md # Installation protocol
-│   │   ├── SKILL.md          # Auto-triggered skill (format embedded)
-│   │   └── formats/          # Library entry format templates
-│   │       ├── architecture-format.md
-│   │       ├── component-format.md
-│   │       ├── database-format.md
-│   │       ├── diagram-format.md
-│   │       ├── integration-format.md
-│   │       ├── security-format.md
-│   │       ├── theme-format.md
-│   │       └── workflow-format.md
-│   ├── Reminders-System/     # Persistent cross-session reminders
-│   │   ├── README.md          # Feature explanation & benefits
-│   │   ├── install-reminders.md # Installation protocol
-│   │   └── SKILL.md           # Auto-triggered skill (for Skill Plugin System)
-│   ├── Decision-Log-System/  # Append-only decision tracking
-│   │   ├── README.md          # Feature explanation & benefits
-│   │   ├── install-decision-log.md # Installation protocol
-│   │   └── SKILL.md           # Auto-triggered skill (for Skill Plugin System)
-│   ├── Forge-Self-Improvement-System/ # AI self-improvement through skill creation
-│   │   ├── README.md          # Feature explanation & benefits
-│   │   ├── install-forge.md   # Installation protocol
-│   │   └── SKILL.md           # Auto-triggered skill (pattern detection + forging)
-│   ├── Session-Briefing-System/ # Proactive session-start intelligence brief
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-session-briefing.md # Installation protocol
-│   │   ├── session-brief-core.md # Briefing protocol core
-│   │   └── SKILL.md             # Auto-triggered skill (for Skill Plugin System)
-│   ├── Post-Mortem-System/      # Failure learning log
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-post-mortem.md # Installation protocol
-│   │   ├── post-mortem-core.md  # Post-mortem protocol core
-│   │   └── SKILL.md             # Auto-triggered skill (for Skill Plugin System)
-│   ├── Observation-System/      # Tiered code awareness
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   └── SKILL.md             # Auto-triggered skill (4-tier observation)
-│   ├── Image-Prompt-System/     # AI image prompt generation
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-image-prompt.md # Installation protocol
-│   │   └── SKILL.md             # Auto-triggered skill (composition-aware prompts)
-│   ├── Song-Creation-System/    # Visual-to-musical storytelling
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-song-creation.md # Installation protocol
-│   │   └── SKILL.md             # Auto-triggered skill (album + single song)
-│   ├── Interactive-Story-System/ # Visual Novel RPG adventures
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-interactive-story.md # Installation protocol
-│   │   └── SKILL.md             # Auto-triggered skill (VN RPG engine)
-│   ├── Mulahazah-System/        # Instinct-based behavioral learning
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-mulahazah.md # Installation protocol
-│   │   ├── config.json          # Hook configuration
-│   │   ├── rules-format.md      # Rule format template
-│   │   └── SKILL.md             # Auto-triggered skill (behavioral rules)
-│   ├── Auto-Load-Hook-System/   # SessionStart hook — auto-loads AI on Claude Code startup
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-auto-load-hook.md # 6-step install protocol
-│   │   ├── uninstall-auto-load-hook.md # Reversibility protocol
-│   │   └── hooks/               # Cross-platform script templates
-│   │       ├── session-start.ps1.template # PowerShell (Windows)
-│   │       └── session-start.sh.template  # Bash (Unix / Git Bash)
-│   ├── User-Prompt-Hook-System/ # UserPromptSubmit hook framework — plug-and-play injectors
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-user-prompt-hook.md # 5-step install protocol
-│   │   ├── uninstall-user-prompt-hook.md # Reversibility protocol
-│   │   ├── injector-format.md   # Canonical contract for any future injector
-│   │   ├── master-hook/         # Master script templates (enumerates injectors)
+recall/
+├── features/                 # Optional. Install only what you need.
+│   ├── adventure/            # Visual-novel RPG sessions
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── code-audit/           # Four-tier code review: survey, investigate, refine, audit
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── decisions/            # Append-only log of decisions and their reasoning
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── git-commit/           # Structured commits with session context
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── hook-session-start/   # Loads memory automatically when Claude Code starts
+│   │   ├── hooks/
+│   │   │   ├── session-start.ps1.template
+│   │   │   └── session-start.sh.template
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── uninstall.md
+│   ├── hook-user-prompt/     # UserPromptSubmit hook framework the inject-* features plug into
+│   │   ├── examples/
+│   │   │   ├── example-timestamp-injector.ps1.template
+│   │   │   └── example-timestamp-injector.sh.template
+│   │   ├── master-hook/
 │   │   │   ├── user-prompt-hook.ps1.template
 │   │   │   └── user-prompt-hook.sh.template
-│   │   └── examples/            # Hello-world reference injectors (opt-in by copy)
-│   │       ├── example-timestamp-injector.ps1.template
-│   │       └── example-timestamp-injector.sh.template
-│   ├── Tone-Prompt-Inject-System/ # Tone injector pack for User-Prompt Hook
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-tone-prompt-inject.md # 6-step install protocol
-│   │   ├── uninstall-tone-prompt-inject.md # Reversibility protocol
-│   │   ├── commands.md          # add/set/list runtime command reference
-│   │   └── injectors/           # Cross-platform injector templates
-│   │       ├── tone.ps1.template
-│   │       └── tone.sh.template
-│   ├── Mood-Prompt-Inject-System/ # Mood injector pack for User-Prompt Hook
-│   │   ├── README.md            # Feature explanation & benefits
-│   │   ├── install-mood-prompt-inject.md # 6-step install protocol
-│   │   ├── uninstall-mood-prompt-inject.md # Reversibility protocol
-│   │   ├── commands.md          # add/set/list runtime command reference
-│   │   └── injectors/           # Cross-platform injector templates
-│   │       ├── mood.ps1.template
-│   │       └── mood.sh.template
-│   └── Time-Prompt-Inject-System/ # Time + period injector pack with user-configurable boundaries
-│       ├── README.md            # Feature explanation & benefits
-│       ├── install-time-prompt-inject.md # 6-step install protocol
-│       ├── uninstall-time-prompt-inject.md # Reversibility protocol
-│       └── injectors/           # Cross-platform injector templates
-│           ├── time.ps1.template
-│           └── time.sh.template
-├── library-items/            # Pre-made knowledge entries for Library System
-│   ├── README.md             # Catalog and install instructions
-│   ├── integration/          # Integration section items
-│   │   └── toyyibpay-payment-gateway.md # ToyyibPay FPX/card gateway integration
-│   └── security/             # Security section items
-│       ├── security-headers.md # HTTP security headers with CSP
-│       └── toyyibpay-webhook-verification.md # ToyyibPay callback verification
-├── daily-diary/             # Optional conversation archive
-│   ├── daily-diary-protocol.md # Archive management rules
-│   ├── Daily-Diary-001.md   # Current active diary
-│   └── archive/             # Auto-archived files (>1k lines)
-└── projects/                # LRU managed projects (after install)
-    ├── active/              # Positions 1-10
-    ├── archived/            # Position 11+
-    └── project-list.md      # Auto-generated project index
+│   │   ├── injector-format.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── uninstall.md
+│   ├── image-gen/            # Render PNGs via the OpenAI image API — needs a key, costs money
+│   │   ├── .env.example
+│   │   ├── credential-setup.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── image-prompt/         # Write Midjourney / NijiJourney prompts
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── inject-mood/          # Adds MOOD: to every prompt — needs hook-user-prompt
+│   │   ├── injectors/
+│   │   │   ├── mood.ps1.template
+│   │   │   └── mood.sh.template
+│   │   ├── commands.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── uninstall.md
+│   ├── inject-time/          # Adds a timestamp and period to every prompt — needs hook-user-prompt
+│   │   ├── injectors/
+│   │   │   ├── time.ps1.template
+│   │   │   └── time.sh.template
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── uninstall.md
+│   ├── inject-tone/          # Adds TONE: to every prompt — needs hook-user-prompt
+│   │   ├── injectors/
+│   │   │   ├── tone.ps1.template
+│   │   │   └── tone.sh.template
+│   │   ├── commands.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── uninstall.md
+│   ├── learned-rules/        # Behavioural rules the AI accumulates from its own mistakes
+│   │   ├── config.json
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   ├── rules-format.md
+│   │   └── SKILL.md
+│   ├── library/              # Reusable knowledge entries in eight fixed formats
+│   │   ├── formats/          # One template per entry type
+│   │   │   ├── architecture-format.md
+│   │   │   ├── component-format.md
+│   │   │   ├── database-format.md
+│   │   │   ├── diagram-format.md
+│   │   │   ├── integration-format.md
+│   │   │   ├── security-format.md
+│   │   │   ├── theme-format.md
+│   │   │   └── workflow-format.md
+│   │   ├── items/            # Ready-made entries you can install
+│   │   │   ├── integration/
+│   │   │   │   └── toyyibpay-payment-gateway.md
+│   │   │   ├── security/
+│   │   │   │   ├── security-headers.md
+│   │   │   │   └── toyyibpay-webhook-verification.md
+│   │   │   └── README.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── merge/                # Collapse identity + profile into one file for faster loading
+│   │   ├── patches/          # Versioned fixes to memory files
+│   │   │   ├── install.md
+│   │   │   ├── PATCH-001.md
+│   │   │   └── patch-format.md
+│   │   ├── memory-format.md
+│   │   ├── protocol.md
+│   │   ├── README.md
+│   │   └── session-format.md
+│   ├── music/                # Turn an image into a concept album with Suno-ready lyrics
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── new-skill/            # The AI proposes new skills from patterns it notices
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── postmortem/           # Failure log — what broke and what prevents it next time
+│   │   ├── install.md
+│   │   ├── protocol.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── projects/             # Ten active project slots, least-recently-used archived
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── reminders/            # Follow-ups that survive across sessions
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── search/               # Search past sessions and answer in narrative
+│   │   ├── install.md
+│   │   ├── output-format.md
+│   │   └── README.md
+│   ├── session-brief/        # Context briefing delivered at session start
+│   │   ├── install.md
+│   │   ├── protocol.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── session-log/          # Write a dated entry into memory/history/
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── Skill-Plugin-System/  # Legacy manual skill installer — replaced by the marketplace
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── skill-format.md
+│   ├── time-aware/           # Time-of-day awareness in greetings and behaviour
+│   │   ├── protocol.md
+│   │   └── README.md
+│   ├── topic-notes/          # Subject-based notes that outlive the calendar
+│   │   ├── index-format.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   ├── SKILL.md
+│   │   └── topic-format.md
+│   ├── trim/                 # Budget-aware compaction — summarise instead of delete
+│   │   ├── install.md
+│   │   ├── policy-format.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── video-gen/            # Render MP4 via the Seedance API — needs a key, costs money
+│   │   ├── .env.example
+│   │   ├── credential-setup.md
+│   │   ├── install.md
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   └── work-plan/            # Plan-to-execution tracking with per-task commits
+│       ├── install.md
+│       ├── plan-format.md
+│       ├── README.md
+│       └── SKILL.md
+├── memory/                   # The four memory files. This is the whole database.
+│   ├── history/              # What happened — dated entries, archived monthly
+│   │   ├── example-entry.md  # A worked example
+│   │   └── format.md         # Entry structure and archive rules
+│   ├── identity.md           # How the AI behaves — permanent
+│   ├── profile.md            # What's true about you — grows over time
+│   └── session.md            # What you are doing right now — resets each session
+├── README.md                 # Start here
+├── recall.md                 # Entry point — loading order and the save protocol
+├── setup-guide.md            # Manual setup (2-5 min)
+└── setup-wizard.md           # Guided setup (30 sec)
 ```
 
 ### **Core Components**
@@ -221,7 +242,7 @@ Create a new `.md file` with your protocol rules:
 ```
 
 **Step 2: Add to Master Memory**
-Edit `master-memory.md` and add your protocol to the "Optional Components" section:
+Edit `recall.md` and add your protocol to the "Optional Components" section:
 ```markdown
 ### My Custom Feature
 *Load when you say: "load my feature"*
@@ -280,8 +301,8 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 
 | Path | What You Get | Features |
 |------|-------------|----------|
-| **Minimal** (10 min) | Foundation only | Memory Consolidation + Skill Plugin |
-| **Productive** (30 min) | Foundation + documentation + git | Tier 1 + Save Diary + Auto-Commit + Work Plan |
+| **Minimal** (10 min) | Foundation only | merge + Skill Plugin |
+| **Productive** (30 min) | Foundation + documentation + git | Tier 1 + session-log + git-commit + work-plan |
 | **Complete** (1-2 hrs) | Full AI companion | All tiers, top to bottom |
 
 > **New features from contributors** slot into the appropriate tier — no renumbering needed.
@@ -292,14 +313,14 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 
 | Feature | Description | Setup |
 |---------|-------------|-------|
-| 🔄 [Memory Consolidation](Feature/Memory-Consolidation-System/) | Unified memory architecture — merge split files into one, faster loading | `"Load memory-consolidation"` |
-| 🔌 [Skill Plugin System](Feature/Skill-Plugin-System/) | Auto-triggered skills for Claude Code — drop a SKILL.md and it's live | `"Load skill-plugin"` |
-| ⏰ [Time-based Aware](Feature/Time-based-Aware-System/) | Time-intelligent greetings, energy-adapted behavior | `"Load time-aware-core"` |
-| ⚡ [Auto-Load Hook](Feature/Auto-Load-Hook-System/) | Auto-loads your AI on Claude Code startup — no manual name-typing | `"Load auto-load-hook"` |
-| 💬 [User-Prompt Hook](Feature/User-Prompt-Hook-System/) | Generic UserPromptSubmit hook framework with plug-and-play injector pattern | `"Load user-prompt-hook"` |
-| 🎭 [Tone-Prompt Inject](Feature/Tone-Prompt-Inject-System/) | Injects `TONE: <description>` per prompt — registry in main memory, AI/user can switch — *requires User-Prompt Hook* | `"Load tone-prompt-inject"` |
-| 🌙 [Mood-Prompt Inject](Feature/Mood-Prompt-Inject-System/) | Injects `MOOD: <description>` per prompt — registry in main memory, AI/user can switch — *requires User-Prompt Hook* | `"Load mood-prompt-inject"` |
-| ⏱️ [Time-Prompt Inject](Feature/Time-Prompt-Inject-System/) | Injects `<timestamp> \| <PERIOD>` per prompt with transition signals on period flips — user-configurable boundaries — *requires User-Prompt Hook* | `"Load time-prompt-inject"` |
+| 🔄 [merge](features/merge/) | Unified memory architecture — merge split files into one, faster loading | `"Load merge"` |
+| 🔌 [Skill Plugin System](features/Skill-Plugin-System/) | Auto-triggered skills for Claude Code — drop a SKILL.md and it's live | `"Load skill-plugin"` |
+| ⏰ [time-aware](features/time-aware/) | Time-intelligent greetings, energy-adapted behavior | `"Load time-aware"` |
+| ⚡ [hook-session-start](features/hook-session-start/) | Auto-loads your AI on Claude Code startup — no manual name-typing | `"Load hook-session-start"` |
+| 💬 [hook-user-prompt](features/hook-user-prompt/) | Generic UserPromptSubmit hook framework with plug-and-play injector pattern | `"Load hook-user-prompt"` |
+| 🎭 [inject-tone](features/inject-tone/) | Injects `TONE: <description>` per prompt — registry in `memory/identity.md`, AI/user can switch — *requires hook-user-prompt* | `"Load inject-tone"` |
+| 🌙 [inject-mood](features/inject-mood/) | Injects `MOOD: <description>` per prompt — registry in `memory/identity.md`, AI/user can switch — *requires hook-user-prompt* | `"Load inject-mood"` |
+| ⏱️ [inject-time](features/inject-time/) | Injects `<timestamp> \| <PERIOD>` per prompt with transition signals on period flips — user-configurable boundaries — *requires hook-user-prompt* | `"Load inject-time"` |
 
 ---
 
@@ -307,12 +328,12 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 
 | Feature | Description | Setup |
 |---------|-------------|-------|
-| 📖 [Save Diary](Feature/Save-Diary-System/) | Daily session documentation with monthly auto-archival | `"Load save-diary"` |
-| 🗂️ [Topic Diary](Feature/Topic-Diary-System/) | Topic-based memory journals for discoveries, fixes, and lessons across sessions — *pairs well with Save Diary + Echo Recall* | `"Load topic-diary"` |
-| 🗜️ [Memory Compaction](Feature/Memory-Compaction-System/) | Budget-aware compression — summarizes old entries into a dense history block instead of deleting them, with reversible snapshots — *complements Memory Consolidation* | `"Load memory-compaction"` |
-| 🔍 [Echo Memory Recall](Feature/Echo-Memory-Recall/) | Search past sessions with narrative context — *requires Save Diary* | `"Load echo-recall"` |
-| 🔔 [Reminders](Feature/Reminders-System/) | Persistent cross-session reminders with deadline tracking | `"Load reminders"` |
-| 📋 [Decision Log](Feature/Decision-Log-System/) | Append-only record of decisions and their reasoning | `"Load decision-log"` |
+| 📖 [session-log](features/session-log/) | Daily session documentation with monthly auto-archival | `"Load session-log"` |
+| 🗂️ [topic-notes](features/topic-notes/) | Topic-based memory journals for discoveries, fixes, and lessons across sessions — *pairs well with session-log + search* | `"Load topic-notes"` |
+| 🗜️ [trim](features/trim/) | Budget-aware compression — summarizes old entries into a dense history block instead of deleting them, with reversible snapshots — *complements merge* | `"Load trim"` |
+| 🔍 [search](features/search/) | Search past sessions with narrative context — *requires session-log* | `"Load search"` |
+| 🔔 [reminders](features/reminders/) | Persistent cross-session reminders with deadline tracking | `"Load reminders"` |
+| 📋 [decisions](features/decisions/) | Append-only record of decisions and their reasoning | `"Load decisions"` |
 
 ---
 
@@ -320,10 +341,10 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 
 | Feature | Description | Setup |
 |---------|-------------|-------|
-| 📦 [LRU Project Management](Feature/LRU-Project-Management-System/) | Smart project tracking with auto-archival (10 active slots) | `"install lru projects"` |
-| 🔒 [Auto-Commit](Feature/Auto-Commit-System/) | Structured git commits with session context and vigilant mode | `"Load auto-commit"` |
-| 📋 [Work Plan Execution](Feature/Work-Plan-Execution/) | Plan-to-execution tracking with per-task commits — *best with Auto-Commit* | `"Load work-plan"` |
-| 📚 [Library](Feature/Library-System/) | Reusable knowledge library with 8 format templates — *best with Auto-Commit* | `"Load library"` |
+| 📦 [projects](features/projects/) | Smart project tracking with auto-archival (10 active slots) | `"Load projects"` |
+| 🔒 [git-commit](features/git-commit/) | Structured git commits with session context and vigilant mode | `"Load git-commit"` |
+| 📋 [work-plan](features/work-plan/) | Plan-to-execution tracking with per-task commits — *best with git-commit* | `"Load work-plan"` |
+| 📚 [library](features/library/) | Reusable knowledge library with 8 format templates — *best with git-commit* | `"Load library"` |
 
 ---
 
@@ -331,16 +352,16 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 
 | Feature | Description | Setup |
 |---------|-------------|-------|
-| 🔨 [Forge Self-Improvement](Feature/Forge-Self-Improvement-System/) | AI creates new skills through pattern detection (human-in-the-loop) | `"Load forge"` |
-| 📋 [Session Briefing](Feature/Session-Briefing-System/) | Auto-delivers context brief at session start — *enhanced by Time-Aware + LRU + Reminders* | `"Load session-briefing"` |
-| 🔥 [Post-Mortem](Feature/Post-Mortem-System/) | Failure learning log — auto-detects mistakes, records prevention actions | `"Load post-mortem"` |
-| 👁️ [Observation](Feature/Observation-System/) | 4-tier code awareness — Survey, Investigate, Refine, Audit | `"Load observation"` |
-| 🎨 [Image Prompt](Feature/Image-Prompt-System/) | Composition-aware Midjourney/NijiJourney prompt generation | `"Load image-prompt"` |
-| 🖼️ [Image Generation](Feature/Image-Generation-System/) | Render descriptions into real PNGs via the OpenAI gpt-image API — built from your input, cost-confirmed — *pairs with Image Prompt* | `"Load image-generation"` |
-| 🎬 [Video Generation](Feature/Video-Generation-System/) | Render descriptions into MP4 video via the Seedance API (text & image-to-video, async, cost-gated) — *pairs with Image Generation* | `"Load video-generation"` |
-| 🎵 [Song Creation](Feature/Song-Creation-System/) | Visual-to-musical storytelling — image to concept album with Suno-ready output | `"Load song-creation"` |
-| 🎮 [Interactive Story](Feature/Interactive-Story-System/) | Visual Novel RPG — duo/solo, OP/balanced, 7 world types, cinematic combat | `"Load interactive-story"` |
-| 👁️ [Mulahazah](Feature/Mulahazah-System/) | Instinct-based behavioral learning — passive hook observation + persistent rules | `npx continuous-improvement install` |
+| 🔨 [new-skill](features/new-skill/) | AI creates new skills through pattern detection (human-in-the-loop) | `"Load new-skill"` |
+| 📋 [session-brief](features/session-brief/) | Auto-delivers context brief at session start — *enhanced by time-aware + projects + reminders* | `"Load session-brief"` |
+| 🔥 [postmortem](features/postmortem/) | Failure learning log — auto-detects mistakes, records prevention actions | `"Load postmortem"` |
+| 👁️ [code-audit](features/code-audit/) | 4-tier code awareness — Survey, Investigate, Refine, Audit | `"Load code-audit"` |
+| 🎨 [image-prompt](features/image-prompt/) | Composition-aware Midjourney/NijiJourney prompt generation | `"Load image-prompt"` |
+| 🖼️ [image-gen](features/image-gen/) | Render descriptions into real PNGs via the OpenAI gpt-image API — built from your input, cost-confirmed — *pairs with image-prompt* | `"Load image-gen"` |
+| 🎬 [video-gen](features/video-gen/) | Render descriptions into MP4 video via the Seedance API (text & image-to-video, async, cost-gated) — *pairs with image-gen* | `"Load video-gen"` |
+| 🎵 [music](features/music/) | Visual-to-musical storytelling — image to concept album with Suno-ready output | `"Load music"` |
+| 🎮 [adventure](features/adventure/) | Visual Novel RPG — duo/solo, OP/balanced, 7 world types, cinematic combat | `"Load adventure"` |
+| 👁️ [learned-rules](features/learned-rules/) | Instinct-based behavioral learning — passive hook observation + persistent rules | `npx continuous-improvement install` |
 
 > Each feature has a detailed README inside its folder. Click the feature name to learn more.
 
@@ -355,7 +376,7 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 | 3 | [SherlockianAsh](https://github.com/SherlockianAsh) | Observation System |
 | 4 | [naimkatiman](https://github.com/naimkatiman) | Mulahazah System |
 
-> Want to contribute? Fork the repo, create a feature in `Feature/[Your-Feature]/`, and submit a PR!
+> Want to contribute? Fork the repo, create a feature in `features/[Your-Feature]/`, and submit a PR!
 
 ---
 

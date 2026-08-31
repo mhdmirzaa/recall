@@ -2,7 +2,7 @@
 *Intelligent project tracking with automatic memory management for AI companions*
 
 ## What This Feature Does
-Adds smart project management capabilities to any AI MemoryCore system:
+Adds smart project management capabilities to any Recall system:
 
 - **LRU positioning** for up to 10 active projects
 - **Automatic archiving** when capacity is reached (position #11)
@@ -14,7 +14,7 @@ Adds smart project management capabilities to any AI MemoryCore system:
 ## Quick Integration
 ```bash
 # Install this feature into your AI companion:
-"install lru projects"
+"Load projects"
 ```
 
 ## How It Works After Integration
@@ -141,4 +141,4 @@ Based on production AI companion project management:
 
 ---
 
-*Run `install-lru-projects-core.md` and your AI gains intelligent project memory management!*
+*Run `install.md` and your AI gains intelligent project memory management!*

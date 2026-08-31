@@ -28,7 +28,7 @@ You type a description
         │
         ▼
 Prompt built from YOUR words   ──(optional)──►  pull a saved style/subject
-(no built-in subject/persona)                   from your Library-System
+(no built-in subject/persona)                   from your library
         │
         ▼
 Render script  ──►  POST https://api.openai.com/v1/images/generations
@@ -44,8 +44,8 @@ You can also paste a prompt produced by the **Image Prompt System** and render i
 ## Quick Start
 
 1. Set up your OpenAI key — see `credential-setup.md`
-2. Install the render script — see `install-image-generation.md`
-3. Type: `"Load image-generation"`
+2. Install the render script — see `install.md`
+3. Type: `"Load image-gen"`
 4. Render: `"render an image of a sunset over mountains"`
 
 ---
@@ -102,7 +102,7 @@ never echoed**. The render scripts strip any key pattern from error messages. Se
 
 ## Installation
 
-See `install-image-generation.md` for step-by-step setup.
+See `install.md` for step-by-step setup.
 
 **Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any
 platform without the plugin (load the install protocol manually).

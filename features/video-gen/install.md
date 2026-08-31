@@ -2,20 +2,20 @@
 *Setup for rendering MP4 video from descriptions via the Seedance API*
 
 ## Purpose
-Executed when "Load video-generation" is used — enables your AI to render an actual MP4 from a typed
+Executed when "Load video-gen" is used — enables your AI to render an actual MP4 from a typed
 description (text-to-video) or animate a local image (image-to-video) by calling the Seedance API
 (BytePlus ModelArk). The prompt is always built from what the user types; there is no built-in
 subject or persona.
 
 ## Trigger Command
 ```
-"Load video-generation"
+"Load video-gen"
 ```
 
 ## Prerequisites
 - A **BytePlus ModelArk account + API key** (`ARK_API_KEY`)
 - **PowerShell** (Windows) *or* **bash + `curl` + `jq`** (Mac/Linux/Git Bash)
-- Core memory system installed (`main/` directory, `master-memory.md` accessible)
+- Core memory system installed (`memory/` directory, `recall.md` accessible)
 - Skill Plugin System recommended for auto-triggering (optional)
 - *(Optional)* Image Generation System — generate a still, then animate it here
 - *(Optional)* Library System — pull saved style/subject references into a render
@@ -38,7 +38,7 @@ subject or persona.
 ### Step 3: Create the output folder
 - [ ] Create **`media-generation/video-generation/`** inside your own memory root — this is the
   single fixed home for every rendered clip.
-- [ ] Record its path in `master-memory.md` so the skill always resolves the same default output
+- [ ] Record its path in `recall.md` so the skill always resolves the same default output
   location:
   ```markdown
   ### Video Generation Output
@@ -53,7 +53,7 @@ subject or persona.
   - Inform user: "Video Generation integrated into master memory. Install the Skill Plugin System for auto-triggering."
 
 ### Step 5: Update memory system
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ### Video Generation
   *Render MP4 video from descriptions via the Seedance API (BytePlus ModelArk)*

@@ -5,9 +5,9 @@
 
 Adds a `TONE: <description>` line to every user prompt's context. Your AI receives its current tone register before reading the message, so voice/delivery stays consistent without you ever having to remind it.
 
-**Requires** [`User-Prompt-Hook System`](../User-Prompt-Hook-System/) (Tier 1 framework). This is an **injector pack** — drops a single script into the framework's injectors directory.
+**Requires** [`User-Prompt-Hook System`](../hook-user-prompt/) (Tier 1 framework). This is an **injector pack** — drops a single script into the framework's injectors directory.
 
-- **Registry inside main memory** — your available tones live as a `## Tones` markdown table directly in `main/main-memory.md` (or `main/identity-core.md` pre-consolidation). Part of your AI's documented identity.
+- **Registry inside main memory** — your available tones live as a `## Tones` markdown table directly in `memory/merged.md` (or `memory/identity.md` pre-consolidation). Part of your AI's documented identity.
 - **Fast runtime read** — current active tone is a single line in `~/.claude/user-prompt-injectors/tone-current.txt` (microsecond read on every prompt fire)
 - **Three commands** — `"add tone <name>: <description>"` to grow the registry, `"set tone <name>"` to switch, `"list tones"` to see them all
 - **AI can auto-update** — when your AI senses a tone shift, it writes to current.txt directly (no command needed)
@@ -32,19 +32,19 @@ Master prepends to AI's prompt context
 
 ## Quick Integration
 ```
-"Load tone-prompt-inject"
+"Load inject-tone"
 ```
 
 ## What Happens During Integration
 
 1. **Verify** the User-Prompt-Hook framework is installed — if not, stop and instruct to install it first
-2. **Detect** your main memory file (`main/main-memory.md` post-consolidation, else `main/identity-core.md`)
+2. **Detect** your main memory file (`memory/merged.md` post-consolidation, else `memory/identity.md`)
 3. **Search** that file for existing tone/register/voice mentions and surface them as suggestions
 4. **Confirm** with you which to seed the registry with — accept your edits and additions
 5. **Write** the `## Tones` section as a markdown table directly into main memory
 6. **Seed** `~/.claude/user-prompt-injectors/tone-current.txt` with the first registry entry
 7. **Drop** the personalized injector script into `~/.claude/hooks/user-prompt-injectors/tone.{ps1|sh}`
-8. **Record** the install in `master-memory.md`
+8. **Record** the install in `recall.md`
 
 ## Registry Format
 
@@ -93,19 +93,19 @@ Your AI may decide tone shifted (e.g. you signaled a register change in conversa
 "uninstall tone-prompt-inject"
 ```
 
-Removes the injector script and `tone-current.txt`. Asks whether to keep or strip the `## Tones` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `master-memory.md`. The User-Prompt-Hook framework keeps running for other injectors.
+Removes the injector script and `tone-current.txt`. Asks whether to keep or strip the `## Tones` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `recall.md`. The User-Prompt-Hook framework keeps running for other injectors.
 
 ## Compatibility
 
-- **Pre-consolidation** ✅ — registry written into `main/identity-core.md`
-- **Post-consolidation** ✅ — registry written into `main/main-memory.md`
+- **Pre-consolidation** ✅ — registry written into `memory/identity.md`
+- **Post-consolidation** ✅ — registry written into `memory/merged.md`
 - **Windows / macOS / Linux / Git Bash** ✅
-- **Coexists with Mood-Prompt-Inject-System** ✅ — independent injectors, both can run simultaneously
+- **Coexists with inject-mood** ✅ — independent injectors, both can run simultaneously
 
 ## Tier
 
-**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `User-Prompt-Hook-System` installed first.
+**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `hook-user-prompt` installed first.
 
 ---
 
-*Type `"Load tone-prompt-inject"` to wire your tone vocabulary into every prompt your AI sees.*
+*Type `"Load inject-tone"` to wire your tone vocabulary into every prompt your AI sees.*

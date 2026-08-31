@@ -3,7 +3,7 @@
 
 ## Purpose
 
-Removes the tone injector script and current-state file, optionally strips the `## Tones` section from main memory, and clears the install record from `master-memory.md`. After uninstall, no `TONE:` line is injected into prompts.
+Removes the tone injector script and current-state file, optionally strips the `## Tones` section from main memory, and clears the install record from `recall.md`. After uninstall, no `TONE:` line is injected into prompts.
 
 ## Trigger Command
 ```
@@ -23,7 +23,7 @@ Removes the tone injector script and current-state file, optionally strips the `
 - [ ] Idempotent: skip silently if already absent
 
 ### Step 3: Optionally remove `## Tones` section from main memory
-- [ ] Detect main memory file (`main/main-memory.md` if exists, else `main/identity-core.md`)
+- [ ] Detect main memory file (`memory/merged.md` if exists, else `memory/identity.md`)
 - [ ] Ask user:
   > *"Keep your `## Tones` registry in main memory? (Y/n) — keeping it means you can reinstall later without re-entering all tones, and it stays as documentation even when the injector isn't active."*
 - [ ] IF user says `n` / `no`:
@@ -33,8 +33,8 @@ Removes the tone injector script and current-state file, optionally strips the `
   - Write back
 - [ ] IF user says `y` / `yes` / blank (default) → leave the section as-is
 
-### Step 4: Remove install record from `master-memory.md`
-- [ ] Open `master-memory.md`
+### Step 4: Remove install record from `recall.md`
+- [ ] Open `recall.md`
 - [ ] Delete the entire `### Tone Inject (Installed)` section, from its heading down to (but not including) the next `###` heading or end of Optional Components
 - [ ] Save
 - [ ] Display:
@@ -44,7 +44,7 @@ Removes the tone injector script and current-state file, optionally strips the `
   Injector script:  removed
   Current state:    removed
   Registry:         [kept | removed]
-  master-memory.md: Tone Inject section removed
+  recall.md: Tone Inject section removed
 
   The User-Prompt-Hook framework still runs (other injectors unaffected).
   No `TONE:` line will appear in prompt context until reinstall.
@@ -57,14 +57,14 @@ After uninstall, verify:
 1. [ ] `~/.claude/hooks/user-prompt-injectors/tone.{ps1|sh}` no longer exists
 2. [ ] `~/.claude/user-prompt-injectors/tone-current.txt` no longer exists
 3. [ ] If user chose to remove registry: main memory file no longer contains `## Tones` section
-4. [ ] `master-memory.md` no longer contains `### Tone Inject (Installed)` section
+4. [ ] `recall.md` no longer contains `### Tone Inject (Installed)` section
 5. [ ] Sending a user prompt produces NO `TONE:` line in the system-reminder
 6. [ ] User-Prompt-Hook framework master script still works (other injectors continue to fire)
 
 ## Reinstall
 
 If reinstalling later:
-1. Run `"Load tone-prompt-inject"` again
+1. Run `"Load inject-tone"` again
 2. If you kept the `## Tones` registry → install detects it and offers to reuse (skipping Step 3 search-and-suggest)
 3. If you removed the registry → install runs the full search-and-suggest flow as if first time
 
@@ -75,7 +75,7 @@ If reinstalling later:
 | Injector script already deleted manually | Skip Step 1 silently |
 | Current state file already deleted | Skip Step 2 silently |
 | Main memory file missing | Skip Step 3 silently with note |
-| `master-memory.md` section already removed | Skip Step 4 silently |
+| `recall.md` section already removed | Skip Step 4 silently |
 | User-Prompt-Hook framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
 
 ---

@@ -7,7 +7,7 @@ Adds a failure learning log to your AI companion. The AI auto-detects failure si
 
 ## Prerequisites
 
-- Core memory system installed (`main/` folder must exist)
+- Core memory system installed (`memory/` folder must exist)
 - No other systems required — fully standalone
 
 ---
@@ -19,11 +19,11 @@ Adds a failure learning log to your AI companion. The AI auto-detects failure si
 Copy the Post-Mortem System folder into your memory-core directory:
 
 ```
-Feature/Post-Mortem-System/
+features/postmortem/
 ├── README.md
 ├── SKILL.md
-├── post-mortem-core.md
-└── install-post-mortem.md
+├── protocol.md
+└── install.md
 ```
 
 If you have a `skills/` folder (Skill Plugin System installed):
@@ -33,7 +33,7 @@ If you have a `skills/` folder (Skill Plugin System installed):
 
 ### Step 2: Create the Log File
 
-Create `main/post-mortems.md` with this starter content:
+Create `memory/post-mortems.md` with this starter content:
 
 ```markdown
 # 🔥 Post-Mortems — Failure Learning Log
@@ -48,22 +48,22 @@ Create `main/post-mortems.md` with this starter content:
 
 ---
 
-### Step 3: Update `main/identity-core.md`
+### Step 3: Update `memory/identity.md`
 
-Add the following block to your `main/identity-core.md` under the behavior or protocol section:
+Add the following block to your `memory/identity.md` under the behavior or protocol section:
 
 ```markdown
 ## Post-Mortem Protocol
 When a failure signal is detected (deployment failure, broken tests, wasted time, architecture reversal, security incident, data loss):
 1. Ask: "That didn't go as planned. Worth a post-mortem?"
-2. If yes: follow `Feature/Post-Mortem-System/post-mortem-core.md`
-3. Append entry to `main/post-mortems.md`
-4. When starting work in a domain, check `main/post-mortems.md` for relevant lessons
+2. If yes: follow `features/postmortem/protocol.md`
+3. Append entry to `memory/post-mortems.md`
+4. When starting work in a domain, check `memory/post-mortems.md` for relevant lessons
 ```
 
 ---
 
-### Step 4: Update `master-memory.md` (Recommended)
+### Step 4: Update `recall.md` (Recommended)
 
 Add a reference so it's visible during restoration:
 
@@ -85,14 +85,14 @@ Simulate a failure scenario (e.g., "my deployment just failed") and verify your 
 ### With Session Briefing System
 The Session Briefing System can flag recent post-mortems at session start when you're working in a relevant domain. No extra configuration needed.
 
-### With Decision-Log-System
+### With decisions
 Post-mortems and decisions complement each other:
 - **Decision Log**: records *what you chose* and *why*
 - **Post-Mortem Log**: records *what went wrong* and *what to do differently*
 
 Both are append-only logs — consider linking related entries by date.
 
-### With Save-Diary-System
+### With session-log
 Significant post-mortems (Major severity) are good candidates for diary entries. Log the post-mortem first, then save a diary entry referencing it.
 
 ---
@@ -103,7 +103,7 @@ Significant post-mortems (Major severity) are good candidates for diary entries.
 Edit `SKILL.md` → Auto-Detection Triggers table. Add phrase examples relevant to your workflow.
 
 ### Change the log file location
-Default: `main/post-mortems.md`. To change, update the storage path in `post-mortem-core.md` and `identity-core.md`.
+Default: `memory/post-mortems.md`. To change, update the storage path in `protocol.md` and `identity.md`.
 
 ### Disable auto-detection
-Remove the auto-detection block from `identity-core.md`. The manual trigger (`"post-mortem"`) will still work.
+Remove the auto-detection block from `identity.md`. The manual trigger (`"post-mortem"`) will still work.

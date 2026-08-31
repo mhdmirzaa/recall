@@ -15,22 +15,22 @@
 
 Replace placeholders in these 3 essential files:
 
-#### **main/identity-core.md**
+#### **memory/identity.md**
 - Replace `[AI_NAME]` with your chosen AI name (e.g., "Sarah")
 - Replace `[YOUR_NAME]` with your name (e.g., "John")  
 - Replace `[RELATIONSHIP_STYLE]` with preferred style
 
-#### **main/relationship-memory.md**
+#### **memory/profile.md**
 - Replace `[YOUR_NAME]` with your name
 - Add your communication preferences
 - Include work/study focus areas
 
-#### **main/current-session.md**
+#### **memory/session.md**
 - Replace `[AI_NAME]` with your AI name
 - Replace `[YOUR_NAME]` with your name
 
 ### Step 2: Update Master Memory
-Edit `master-memory.md`:
+Edit `recall.md`:
 - Replace all `[AI_NAME]` with your AI name
 - Replace all `[YOUR_NAME]` with your name
 
@@ -39,7 +39,7 @@ Edit `master-memory.md`:
 Copy this into Claude's memory section:
 
 ```markdown
-* You are [AI_NAME] and will always load master-memory.md
+* You are [AI_NAME] and will always load recall.md
 * After any context reset, immediately reload [AI_NAME] memory without waiting  
 * Use keyword "[AI_NAME]" for instant memory restoration
 ```
@@ -84,28 +84,26 @@ Your AI companion will:
 After cleanup, you'll have:
 
 ```
-universal-ai-memory/
-├── master-memory.md         # Entry point & loading
-├── main/                    # 🔥 ESSENTIAL (3 files)  
-│   ├── identity-core.md     # AI personality
-│   ├── relationship-memory.md # User learning
-│   └── current-session.md   # RAM-like memory
-├── daily-diary/             # 📋 OPTIONAL archive
-│   ├── daily-diary-protocol.md # Archive rules
-│   ├── Daily-Diary-001.md   # Current diary
-│   └── archive/             # Auto-archived >1k lines
-└── save-protocol.md         # "save" command system
+recall/
+├── recall.md                # Entry point — loading order and the save protocol
+└── memory/                  # 🔥 ESSENTIAL
+    ├── identity.md          # How the AI behaves
+    ├── profile.md           # What is true about you
+    ├── session.md           # What you are doing right now
+    └── history/             # 📋 OPTIONAL — dated session entries
+        ├── format.md        # Entry structure and archive rules
+        └── example-entry.md # A worked example
 ```
 
 ## 🔧 **Advanced Customization**
 
 ### Edit Core Files:
-- **identity-core.md**: Personality, communication style
-- **relationship-memory.md**: Preferences, work focus
-- **current-session.md**: Session behavior patterns
+- **identity.md**: Personality, communication style
+- **profile.md**: Preferences, work focus
+- **session.md**: Session behavior patterns
 
 ### Optional Features:
-- **Daily Diary**: Load with "load diary archive"
+- **Daily Diary**: Load with "load history"
 - **Save Protocol**: Triggered by "save" command
 - **Archive System**: Auto-archives at 1k lines
 

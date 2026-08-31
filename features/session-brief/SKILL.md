@@ -17,8 +17,8 @@ Session Briefing
 Fires automatically at the start of every new conversation session, before processing the user's first message.
 
 ## Behavior
-1. Read `main/current-session.md` — extract last session recap (1–2 lines)
-2. Read `main/reminders.md` — count open items (skip section if none)
+1. Read `memory/session.md` — extract last session recap (1–2 lines)
+2. Read `memory/reminders.md` — count open items (skip section if none)
 3. Read project list — identify active project + 🔴/🟡 health flags (if LRU System installed)
 4. Check current time — determine time period (if Time-based-Aware System installed)
 5. Compose and deliver brief (max 12 lines) before responding to user
@@ -30,11 +30,11 @@ Fires automatically at the start of every new conversation session, before proce
 - Deliver before processing the user's first request
 
 ## Companion Skills
-- Time-based-Aware-System → time period + work suggestion
-- LRU-Project-Management-System → active project + health flags
-- Reminders-System → open reminder items
+- time-aware → time period + work suggestion
+- projects → active project + health flags
+- reminders → open reminder items
 
 ## Level History
 - **Lv.1** — Base: session recap + time suggestion
-- **Lv.2** — Reminders integration (requires Reminders-System)
-- **Lv.3** — Project health flags (requires LRU-Project-Management-System)
+- **Lv.2** — Reminders integration (requires reminders)
+- **Lv.3** — Project health flags (requires projects)

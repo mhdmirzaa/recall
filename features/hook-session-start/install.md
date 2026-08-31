@@ -3,16 +3,16 @@
 
 ## Purpose
 
-Executed when `"Load auto-load-hook"` is invoked — installs a personalized `SessionStart` hook into `~/.claude/settings.json` that automatically triggers your AI's memory restoration on Claude Code launch (and on `/clear`, `/compact`, `/resume`).
+Executed when `"Load hook-session-start"` is invoked — installs a personalized `SessionStart` hook into `~/.claude/settings.json` that automatically triggers your AI's memory restoration on Claude Code launch (and on `/clear`, `/compact`, `/resume`).
 
 ## Trigger Command
 ```
-"Load auto-load-hook"
+"Load hook-session-start"
 ```
 
 ## Prerequisites
-- Core memory system installed (`main/` directory exists with at least one of `identity-core.md` or `main-memory.md`)
-- `master-memory.md` exists at project root
+- Core memory system installed (`memory/` directory exists with at least one of `identity.md` or `merged.md`)
+- `recall.md` exists at project root
 - `~/.claude/` directory exists (created automatically by Claude Code on first run)
 
 ## 6-Step Execution Process
@@ -20,8 +20,8 @@ Executed when `"Load auto-load-hook"` is invoked — installs a personalized `Se
 ### Step 1: Detect AI Name (Then Confirm)
 
 - [ ] Determine which memory file contains the AI's name:
-  - IF `main/main-memory.md` exists → read it (post-consolidation path)
-  - ELSE read `main/identity-core.md` (pre-consolidation path)
+  - IF `memory/merged.md` exists → read it (post-consolidation path)
+  - ELSE read `memory/identity.md` (pre-consolidation path)
 - [ ] Extract the AI's name from one of these patterns:
   - `# [Name] - ...` heading at top of file
   - `**My Name**: [Name]` line
@@ -34,8 +34,8 @@ Executed when `"Load auto-load-hook"` is invoked — installs a personalized `Se
 ### Step 2: Resolve Memory Entry Path & Detect OS
 
 - [ ] Pick the memory entry file (the one the hook will tell the AI to read):
-  - IF `main/main-memory.md` exists → use this (post-consolidation)
-  - ELSE → use `master-memory.md` at project root (pre-consolidation)
+  - IF `memory/merged.md` exists → use this (post-consolidation)
+  - ELSE → use `recall.md` at project root (pre-consolidation)
 - [ ] Resolve to **absolute path** (full path including drive letter on Windows, or `/`-rooted on Unix)
 - [ ] Store as `[MEMORY_PATH]`
 - [ ] Detect OS:
@@ -43,8 +43,8 @@ Executed when `"Load auto-load-hook"` is invoked — installs a personalized `Se
   - Else if `$env:OS` contains `Windows` → Windows
   - Fallback: ask user *"Are you on Windows or Unix (macOS/Linux/Git Bash)?"*
 - [ ] Pick template:
-  - Windows → `Feature/Auto-Load-Hook-System/hooks/session-start.ps1.template`
-  - Unix → `Feature/Auto-Load-Hook-System/hooks/session-start.sh.template`
+  - Windows → `features/hook-session-start/hooks/session-start.ps1.template`
+  - Unix → `features/hook-session-start/hooks/session-start.sh.template`
 
 ### Step 3: Create Hook Script From Template
 
@@ -101,20 +101,20 @@ Executed when `"Load auto-load-hook"` is invoked — installs a personalized `Se
 - [ ] Validate the resulting JSON parses cleanly before writing
 - [ ] Write back to `~/.claude/settings.json` (atomic write preferred: write to temp file then rename)
 
-### Step 6: Update `master-memory.md` and Announce
+### Step 6: Update `recall.md` and Announce
 
-- [ ] Append to the **Optional Components** section of `master-memory.md`:
+- [ ] Append to the **Optional Components** section of `recall.md`:
 
 ```markdown
 ### Auto-Load Hook (Installed)
 *Fires on every Claude Code startup — auto-loads [AI_NAME] memory*
 - Hook script: ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
 - Settings backup: ~/.claude/settings.json.backup-pre-autoload
-- Uninstall: see Feature/Auto-Load-Hook-System/uninstall-auto-load-hook.md or type `"uninstall auto-load-hook"`
+- Uninstall: see features/hook-session-start/uninstall.md or type `"uninstall auto-load-hook"`
 ```
 
 - [ ] Substitute `[AI_NAME]` and `<ai-name-lower>` with actual values before writing
-- [ ] The `Feature/Auto-Load-Hook-System/` folder **stays in the repo** — it serves as documentation and as the install/uninstall artifact for users on other AI tools (Codex, etc.)
+- [ ] The `features/hook-session-start/` folder **stays in the repo** — it serves as documentation and as the install/uninstall artifact for users on other AI tools (Codex, etc.)
 - [ ] Display completion message:
 
 ```
@@ -126,7 +126,7 @@ Next time you open Claude Code, [AI_NAME] will load automatically — no manual
 Backup saved at: ~/.claude/settings.json.backup-pre-autoload
 Hook script:    ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
 Uninstall:      type "uninstall auto-load-hook" anytime
-                (or follow Feature/Auto-Load-Hook-System/uninstall-auto-load-hook.md)
+                (or follow features/hook-session-start/uninstall.md)
 ```
 
 ## Specifications
@@ -170,8 +170,8 @@ After install, the relevant slice of `~/.claude/settings.json` looks like:
 | `~/.claude/hooks/<ai-name-lower>-session-start.{ps1\|sh}` | Hook script that runs on session start |
 | `~/.claude/settings.json` | Modified to include the new SessionStart hook entry |
 | `~/.claude/settings.json.backup-pre-autoload` | Pre-install backup (used by uninstall) |
-| `master-memory.md` (modified) | Records that Auto-Load Hook is installed + points at uninstall reference |
-| `Feature/Auto-Load-Hook-System/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
+| `recall.md` (modified) | Records that Auto-Load Hook is installed + points at uninstall reference |
+| `features/hook-session-start/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
 
 ## Notes
 

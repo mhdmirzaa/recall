@@ -46,7 +46,7 @@ Tiers are aware of each other and suggest escalation when appropriate.
 
 ## Cross-Feature Integration
 
-The Observation System integrates with other MemoryCore features when installed:
+The Observation System integrates with other Recall features when installed:
 
 | Feature | Integration |
 |---------|------------|

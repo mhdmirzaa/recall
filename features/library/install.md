@@ -1,5 +1,5 @@
 # Library System Installation Protocol
-*Knowledge library setup for AI MemoryCore companions*
+*Knowledge library setup for Recall companions*
 
 ## Purpose
 Executed when "Load library" command is used — creates a knowledge library skill, sets up the library directory with section folders and format templates, and integrates with your AI companion.
@@ -11,7 +11,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
 *Automatically creates library skill, directory structure, format templates, and registers with your AI*
 
 ## Prerequisites
-- Core memory system installed (`master-memory.md` exists)
+- Core memory system installed (`recall.md` exists)
 - Skill Plugin System recommended for auto-triggering (but not required)
 - Auto-Commit System recommended for commit chain (but not required)
 
@@ -41,7 +41,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
   - Inform user: "The Skill Plugin System is not installed. Library can still work as a manual protocol."
   - Offer two choices:
     1. "Install Skill Plugin System first" (recommended)
-    2. "Continue without auto-triggering" (skill added to master-memory.md as manual protocol)
+    2. "Continue without auto-triggering" (skill added to recall.md as manual protocol)
   - If continuing without plugin: skip Step 3, add protocol directly to main memory in Step 5
 
 ### Step 3: Create Library Skill
@@ -66,7 +66,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
   [LIBRARY_PATH]/workflow/
   ```
 - [ ] Create formats subfolder: `[LIBRARY_PATH]/formats/`
-- [ ] Copy all 8 format templates from `Feature/Library-System/formats/` to `[LIBRARY_PATH]/formats/`:
+- [ ] Copy all 8 format templates from `features/library/formats/` to `[LIBRARY_PATH]/formats/`:
   - `architecture-format.md`
   - `component-format.md`
   - `database-format.md`
@@ -78,7 +78,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
 - [ ] Verify all format files were copied successfully
 
 ### Step 5: Update Master Memory and Cleanup
-- [ ] Add library reference to `master-memory.md` Optional Components section:
+- [ ] Add library reference to `recall.md` Optional Components section:
   ```markdown
   ### [LIBRARY_SKILL_NAME]
   *Auto-triggers when: saving knowledge, searching library, loading patterns*
@@ -112,7 +112,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
   Recommendation:
   - CREATE NEW — no existing entries found
   ```
-- [ ] Remove `Feature/Library-System/` folder (functionality installed)
+- [ ] Remove `features/library/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
   Library System installed successfully!

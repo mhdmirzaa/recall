@@ -3,11 +3,11 @@
 
 ## Purpose
 
-Executed when `"Load user-prompt-hook"` is invoked — installs a master `UserPromptSubmit` hook that enumerates and runs injector scripts from `~/.claude/hooks/user-prompt-injectors/` on every user message. This base framework does nothing on its own until at least one injector is installed.
+Executed when `"Load hook-user-prompt"` is invoked — installs a master `UserPromptSubmit` hook that enumerates and runs injector scripts from `~/.claude/hooks/user-prompt-injectors/` on every user message. This base framework does nothing on its own until at least one injector is installed.
 
 ## Trigger Command
 ```
-"Load user-prompt-hook"
+"Load hook-user-prompt"
 ```
 
 ## Prerequisites
@@ -21,8 +21,8 @@ Executed when `"Load user-prompt-hook"` is invoked — installs a master `UserPr
 - [ ] Else if `$env:OS` contains `Windows` → Windows
 - [ ] Fallback: ask user *"Are you on Windows or Unix (macOS / Linux / Git Bash)?"*
 - [ ] Pick template:
-  - Windows → `Feature/User-Prompt-Hook-System/master-hook/user-prompt-hook.ps1.template`
-  - Unix → `Feature/User-Prompt-Hook-System/master-hook/user-prompt-hook.sh.template`
+  - Windows → `features/hook-user-prompt/master-hook/user-prompt-hook.ps1.template`
+  - Unix → `features/hook-user-prompt/master-hook/user-prompt-hook.sh.template`
 
 ### Step 2: Create Master Hook Script + Injectors Directory
 
@@ -80,9 +80,9 @@ Executed when `"Load user-prompt-hook"` is invoked — installs a master `UserPr
 - [ ] Validate the resulting JSON parses cleanly before writing
 - [ ] Write back to `~/.claude/settings.json` (atomic write preferred: write to temp file then rename)
 
-### Step 5: Update `master-memory.md` and Announce
+### Step 5: Update `recall.md` and Announce
 
-- [ ] Append to the **Optional Components** section of `master-memory.md`:
+- [ ] Append to the **Optional Components** section of `recall.md`:
 
 ```markdown
 ### User-Prompt Hook (Installed)
@@ -90,10 +90,10 @@ Executed when `"Load user-prompt-hook"` is invoked — installs a master `UserPr
 - Master hook: ~/.claude/hooks/user-prompt-hook.{ps1|sh}
 - Injectors dir: ~/.claude/hooks/user-prompt-injectors/ (drop .ps1 or .sh files here — installed via separate inject features)
 - Settings backup: ~/.claude/settings.json.backup-pre-userprompthook
-- Uninstall: see Feature/User-Prompt-Hook-System/uninstall-user-prompt-hook.md or type `"uninstall user-prompt-hook"`
+- Uninstall: see features/hook-user-prompt/uninstall.md or type `"uninstall user-prompt-hook"`
 ```
 
-- [ ] The `Feature/User-Prompt-Hook-System/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
+- [ ] The `features/hook-user-prompt/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
 - [ ] Display completion message:
 
 ```
@@ -104,12 +104,12 @@ Hook fires on every user message and runs any injector scripts in:
 
 Right now there are no injectors installed, so the hook is a no-op.
 Add injectors by installing sibling features:
-  - Time-Prompt-Inject-System    (injects timestamp + period — coming soon)
-  - Tone-Prompt-Inject-System    (injects current AI tone — coming soon)
-  - Or write your own following Feature/User-Prompt-Hook-System/injector-format.md
+  - inject-time    (injects timestamp + period — coming soon)
+  - inject-tone    (injects current AI tone — coming soon)
+  - Or write your own following features/hook-user-prompt/injector-format.md
 
 Uninstall:  type "uninstall user-prompt-hook" anytime
-            (or follow Feature/User-Prompt-Hook-System/uninstall-user-prompt-hook.md)
+            (or follow features/hook-user-prompt/uninstall.md)
 ```
 
 ## Specifications
@@ -152,8 +152,8 @@ After install, the relevant slice of `~/.claude/settings.json`:
 | `~/.claude/hooks/user-prompt-injectors/` | Empty directory — future injector features drop their scripts here |
 | `~/.claude/settings.json` | Modified to include the new UserPromptSubmit hook entry |
 | `~/.claude/settings.json.backup-pre-userprompthook` | Pre-install backup (used by uninstall) |
-| `master-memory.md` (modified) | Records that User-Prompt Hook is installed + points at uninstall reference |
-| `Feature/User-Prompt-Hook-System/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
+| `recall.md` (modified) | Records that User-Prompt Hook is installed + points at uninstall reference |
+| `features/hook-user-prompt/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
 
 ## Notes
 

@@ -34,7 +34,7 @@ mandatory and non-negotiable.
 
 4. **Resolve the output path.**
    - Default folder: `media-generation/video-generation/` inside the user's memory root (created at
-     install; its path is recorded in `master-memory.md`).
+     install; its path is recorded in `recall.md`).
    - Honor an explicit `to [path]` override.
    - Sanitize the filename (strip `< > : " / \ | ? *`, lowercase, hyphenate whitespace) and append a
      `-YYYYMMDD-HHmmss.mp4` timestamp suffix.

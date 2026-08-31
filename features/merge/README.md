@@ -2,9 +2,9 @@
 *Unified memory architecture for faster loading and better context*
 
 ## What This Feature Does
-Upgrades your AI MemoryCore from split memory files to a single unified memory, following the proven architecture pattern from Alice's production system:
+Upgrades your Recall from split memory files to a single unified memory, following the proven architecture pattern from Alice's production system:
 
-- **Merges identity + relationship** into one unified `main-memory.md`
+- **Merges identity + relationship** into one unified `merged.md`
 - **Adds session memory format template** for consistent structure after resets
 - **Adds main memory format template** for consistent structure reference
 - **Adds 500-line limit** to session memory with RAM-style reset
@@ -15,10 +15,10 @@ Upgrades your AI MemoryCore from split memory files to a single unified memory, 
 
 ### Before (Split Architecture)
 ```
-master-memory.md            ← Loader (reads 2 files)
-main/identity-core.md       ← AI personality ONLY
-main/relationship-memory.md ← User preferences ONLY
-main/current-session.md     ← Session RAM (no size limit)
+recall.md            ← Loader (reads 2 files)
+memory/identity.md       ← AI personality ONLY
+memory/profile.md ← User preferences ONLY
+memory/session.md     ← Session RAM (no size limit)
 ```
 **Problems:**
 - 3 separate file reads at startup = slower restoration
@@ -28,11 +28,11 @@ main/current-session.md     ← Session RAM (no size limit)
 
 ### After (Unified Architecture)
 ```
-master-memory.md               ← Loader (reads 1 file)
-main/main-memory.md            ← AI identity + User profile + Relationship (UNIFIED)
-main/current-session.md        ← Session RAM with 500-line limit + reset protocol
-main/main-memory-format.md     ← Permanent format reference for main memory
-main/session-format.md         ← Permanent format reference for session memory
+recall.md               ← Loader (reads 1 file)
+memory/merged.md            ← AI identity + User profile + Relationship (UNIFIED)
+memory/session.md        ← Session RAM with 500-line limit + reset protocol
+memory/memory-format.md     ← Permanent format reference for main memory
+memory/session-format.md         ← Permanent format reference for session memory
 ```
 **Benefits:**
 - Single file load = faster startup
@@ -43,17 +43,17 @@ main/session-format.md         ← Permanent format reference for session memory
 ## Quick Integration
 ```bash
 # Load this feature into your AI companion:
-"Load memory-consolidation"
+"Load merge"
 ```
 
 ## What Happens During Integration
 
-1. **Reads** your existing `identity-core.md` and `relationship-memory.md`
-2. **Merges** both into a single `main/main-memory.md` with unified structure
+1. **Reads** your existing `identity.md` and `profile.md`
+2. **Merges** both into a single `memory/merged.md` with unified structure
 3. **Creates** format templates as permanent structure references
-4. **Updates** `current-session.md` with 500-line limit and reset behavior
-5. **Updates** `master-memory.md` to load the new unified file
-6. **Removes** old split files (`identity-core.md`, `relationship-memory.md`)
+4. **Updates** `session.md` with 500-line limit and reset behavior
+5. **Updates** `recall.md` to load the new unified file
+6. **Removes** old split files (`identity.md`, `profile.md`)
 7. **Self-deletes** this feature folder after successful integration
 
 ## Post-Integration Result
@@ -68,7 +68,7 @@ After running the integration protocol, your system will:
 
 Two sample format files are created during integration:
 
-### `main-memory-format.md` (Sample)
+### `memory-format.md` (Sample)
 Defines the expected structure for the unified main memory:
 - Identity section (who the AI is)
 - User profile section (who the user is)
@@ -82,11 +82,11 @@ Defines the expected structure for session RAM:
 - Session recap (for restart continuity)
 - 500-line limit rule and reset behavior
 
-Both templates are **permanent references** - they are never modified by the AI. The actual live files (`main-memory.md`, `current-session.md`) follow these formats.
+Both templates are **permanent references** - they are never modified by the AI. The actual live files (`merged.md`, `session.md`) follow these formats.
 
 ## Bundled Patch System
 
-After consolidation, outdated file references may remain in other project files (e.g., `save-protocol.md` still referencing `identity-core.md`). The bundled patch system fixes these automatically.
+After consolidation, outdated file references may remain in other project files (e.g., `save-protocol.md` still referencing `identity.md`). The bundled patch system fixes these automatically.
 
 ### How Patches Work
 Patches are AI-executable `.md` files with structured find/replace instructions. Your AI reads the patch, locates exact text in target files, and applies the changes.
@@ -94,7 +94,7 @@ Patches are AI-executable `.md` files with structured find/replace instructions.
 ### Available Patches
 | Patch | Title | Files Affected | Priority |
 |-------|-------|---------------|----------|
-| `PATCH-001` | Fix outdated file references | 5 files (master-memory, save-protocol, daily-diary-protocol, current-session, setup-wizard) | High |
+| `PATCH-001` | Fix outdated file references | 5 files (recall, save-protocol, memory/history/format, session, setup-wizard) | High |
 
 ### Applying Patches
 ```
@@ -119,4 +119,4 @@ Based on Alice's successful memory consolidation:
 
 ---
 
-*Load `consolidation-core.md` to upgrade to unified memory, then `Load patch-system` to fix stale references!*
+*Load `protocol.md` to upgrade to unified memory, then `Load patch-system` to fix stale references!*

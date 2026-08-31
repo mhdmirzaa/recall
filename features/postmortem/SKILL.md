@@ -23,7 +23,7 @@ AI watches for these signals and prompts the user:
 | Data loss | "data is gone", "migration failed", "backup didn't work" |
 
 On detection, AI asks: *"That didn't go as planned. Worth a post-mortem?"*
-User says yes → AI fills out the format from `post-mortem-core.md`.
+User says yes → AI fills out the format from `protocol.md`.
 User says no → move on, no log created.
 
 ## Manual Trigger
@@ -32,13 +32,13 @@ User says `"post-mortem"` or `"log this failure"` → AI immediately starts the 
 ## Behavior
 1. Detect signal (passive) or receive explicit trigger (manual)
 2. Ask: "Worth a post-mortem?" (skip if manual trigger — user already decided)
-3. If yes: fill out format from `post-mortem-core.md`, ask clarifying questions as needed
-4. Append entry to `main/post-mortems.md`
+3. If yes: fill out format from `protocol.md`, ask clarifying questions as needed
+4. Append entry to `memory/post-mortems.md`
 5. Reference entry in future sessions when work touches the same domain
 
 ## Domain Reference Behavior
 When starting work in a domain that has a past post-mortem:
-- Check `main/post-mortems.md` for relevant entries
+- Check `memory/post-mortems.md` for relevant entries
 - Flag: "⚠️ Reminder: [lesson] — see post-mortem [date]"
 
 ## Level History

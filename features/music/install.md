@@ -2,17 +2,17 @@
 *Setup for AI-powered visual-to-musical storytelling*
 
 ## Purpose
-Executed when "Load song-creation" command is used -- enables your AI to create concept albums from images and single songs from descriptions, with Suno-ready style tags and full lyrics.
+Executed when "Load music" command is used -- enables your AI to create concept albums from images and single songs from descriptions, with Suno-ready style tags and full lyrics.
 
 ## Trigger Command
 ```
-"Load song-creation"
+"Load music"
 ```
 *Enables AI song creation with visual inspiration and story-driven albums*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 - Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
 
 ## 3-Step Installation Process
@@ -23,7 +23,7 @@ Executed when "Load song-creation" command is used -- enables your AI to create 
   - Inform user: "Song Creation skill installed -- auto-triggers on 'create album', 'create song', 'muse this'"
 - [ ] If Skill Plugin System does NOT exist:
   - Inform user: "Song Creation integrated into master memory. Install the Skill Plugin System for auto-triggering."
-  - Add song creation protocol reference to `master-memory.md`
+  - Add song creation protocol reference to `recall.md`
 
 ### Step 2: Create Music Directory
 - [ ] Create `music/` directory in project root for album storage:
@@ -31,7 +31,7 @@ Executed when "Load song-creation" command is used -- enables your AI to create 
   music/
   └── (albums will be saved here)
   ```
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ### Song Creation
   *AI-powered visual-to-musical storytelling*
@@ -54,7 +54,7 @@ Executed when "Load song-creation" command is used -- enables your AI to create 
 - [ ] Test Single Song Mode: "create a song about [any topic]"
 - [ ] Confirm lyrics are complete with proper sections ([Verse], [Chorus], etc.)
 - [ ] Confirm style tags are Suno-compatible
-- [ ] Delete this installation file: `rm install-song-creation.md`
+- [ ] Delete this installation file: `rm install.md`
 
 ## Installation Complete
 Your AI can now create concept albums from images and songs from descriptions. Albums are saved to `music/` with organized folders.

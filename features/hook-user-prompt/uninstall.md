@@ -3,7 +3,7 @@
 
 ## Purpose
 
-Restores `~/.claude/settings.json` to its pre-install state, removes the master hook script, and clears the install record from `master-memory.md`. After uninstall, no UserPromptSubmit injection happens via this framework.
+Restores `~/.claude/settings.json` to its pre-install state, removes the master hook script, and clears the install record from `recall.md`. After uninstall, no UserPromptSubmit injection happens via this framework.
 
 > **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall user-prompt-hook"`.
 
@@ -14,7 +14,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 
 ## Prerequisites
 - User-Prompt-Hook framework was previously installed
-- The `### User-Prompt Hook (Installed)` section exists in `master-memory.md`
+- The `### User-Prompt Hook (Installed)` section exists in `recall.md`
 
 ## 5-Step Execution Process
 
@@ -55,9 +55,9 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 - [ ] IF directory is empty → delete it (clean cleanup)
 - [ ] IF directory still has files → leave it untouched (orphan injector scripts stay where they are; user explicitly chose to keep them or didn't notice the Step 1 warning)
 
-### Step 5: Remove Install Record From `master-memory.md`
+### Step 5: Remove Install Record From `recall.md`
 
-- [ ] Open `master-memory.md`
+- [ ] Open `recall.md`
 - [ ] Delete the entire `### User-Prompt Hook (Installed)` section, from its heading line down to (but not including) the next `###` heading or end of Optional Components
 - [ ] Save the file
 - [ ] Display:
@@ -68,7 +68,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 settings.json:    restored from backup-pre-userprompthook
 master script:    ~/.claude/hooks/user-prompt-hook.{ps1|sh} removed
 injectors dir:    [removed (empty) | kept (had N orphan files)]
-master-memory.md: User-Prompt Hook section removed
+recall.md: User-Prompt Hook section removed
 
 Any installed injector features now have no effect — uninstall them too if
 you want full cleanup, OR reinstall this framework to reactivate them.
@@ -80,7 +80,7 @@ After uninstall, verify:
 
 1. [ ] `~/.claude/settings.json` no longer contains a UserPromptSubmit entry referencing `user-prompt-hook.{ps1|sh}` (master script)
 2. [ ] `~/.claude/hooks/user-prompt-hook.{ps1|sh}` no longer exists
-3. [ ] `master-memory.md` no longer contains the `### User-Prompt Hook (Installed)` section
+3. [ ] `recall.md` no longer contains the `### User-Prompt Hook (Installed)` section
 4. [ ] On next user message, no master-hook output appears in the prompt context (Claude Code emits prompt as default)
 5. [ ] If preferred-path backup-restore was used: `settings.json` is byte-identical to the original `settings.json.backup-pre-userprompthook`
 
@@ -88,7 +88,7 @@ After uninstall, verify:
 
 If the user wants to reinstall after uninstalling:
 
-1. Run `"Load user-prompt-hook"` again — full install protocol runs from scratch (Feature folder is already in the repo)
+1. Run `"Load hook-user-prompt"` again — full install protocol runs from scratch (Feature folder is already in the repo)
 2. A fresh `settings.json.backup-pre-userprompthook` will be created (since the previous one was either consumed or renamed)
 3. Any orphan injectors in `~/.claude/hooks/user-prompt-injectors/` (left there from before uninstall) will resume firing immediately — no need to reinstall them
 
@@ -98,7 +98,7 @@ If the user wants to reinstall after uninstalling:
 |-----------|----------|
 | Backup file missing | Use surgical removal fallback in Step 2 |
 | Master script already deleted manually | Skip Step 3 silently |
-| `master-memory.md` section already removed | Skip Step 4 silently |
+| `recall.md` section already removed | Skip Step 4 silently |
 | `settings.json` doesn't exist at all | Inform user nothing to remove; abort early |
 | Injectors still installed and user says "y" to warning | Proceed; injectors orphaned but their scripts preserved on disk |
 

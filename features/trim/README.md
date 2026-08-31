@@ -28,7 +28,7 @@ Think of it like a journal you periodically rewrite — keeping the lessons, dro
 You: "save this"
 AI: "Memory file is at 512/500 lines. Compacting oldest entries before saving."
 AI:
-  1. Snapshots the current file to compaction/snapshots/main-memory-2026-06-06.md
+  1. Snapshots the current file to compaction/snapshots/merged-2026-06-06.md
   2. Reads the oldest 30% of entries
   3. Summarizes them into a dense "Compacted History" block (facts + decisions preserved)
   4. Replaces the verbose originals with the summary
@@ -54,20 +54,20 @@ AI:
 compaction/
 ├── compaction-policy.md             # Active budgets and retention tiers
 └── snapshots/                       # Pre-compaction backups (reversible)
-    └── main-memory-2026-06-06.md
+    └── merged-2026-06-06.md
 ```
 
 ## Quick Integration
 
 ```text
-"Load memory-compaction"
+"Load trim"
 ```
 
 ## What Happens During Integration
 
 1. **Creates** `compaction/` and `compaction/snapshots/` directories
 2. **Creates** `compaction/compaction-policy.md` using `policy-format.md`
-3. **Adds** compaction triggers and budget-check behavior to `master-memory.md`
+3. **Adds** compaction triggers and budget-check behavior to `recall.md`
 4. **Installs as skill** if Skill Plugin System is detected
 5. **Touches no content yet** — first compaction only runs when a file actually exceeds budget
 

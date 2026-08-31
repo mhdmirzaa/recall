@@ -5,7 +5,7 @@
 
 Adds a `<timestamp> | <PERIOD>` line to every user prompt's context. On period transitions (e.g., MORNING → AFTERNOON when the clock crosses noon), prepends a `TIME PERIOD CHANGED: <FROM> to <TO> |` signal so your AI knows the day register just shifted.
 
-**Requires** [`User-Prompt-Hook System`](../User-Prompt-Hook-System/) (Tier 1 framework). This is an **injector pack** — drops a single script into the framework's injectors directory.
+**Requires** [`User-Prompt-Hook System`](../hook-user-prompt/) (Tier 1 framework). This is an **injector pack** — drops a single script into the framework's injectors directory.
 
 - **User-configurable period boundaries** during install — pick your own MORNING/AFTERNOON/EVENING/NIGHT hour cutoffs (defaults: 6 / 12 / 18 / 22)
 - **Period-transition detection** — state file at `~/.claude/user-prompt-injectors/time-period-last.txt` lets the injector emit a one-shot "period changed" signal when the day register flips
@@ -46,7 +46,7 @@ Master prepends to AI's prompt context
 
 ## Quick Integration
 ```
-"Load time-prompt-inject"
+"Load inject-time"
 ```
 
 ## What Happens During Integration
@@ -57,7 +57,7 @@ Master prepends to AI's prompt context
 4. **Substitute** the boundary values into the chosen template
 5. **Drop** the personalized injector into `~/.claude/hooks/user-prompt-injectors/time.{ps1|sh}`
 6. **Initialize** the state file `~/.claude/user-prompt-injectors/time-period-last.txt` with the current period (so the first prompt after install doesn't fire a spurious transition)
-7. **Record** the install in `master-memory.md`
+7. **Record** the install in `recall.md`
 
 ## Period Boundary Configuration
 
@@ -100,7 +100,7 @@ This injector is **set-and-forget** — there are no `add`/`set`/`list` commands
 
 If you want to change period boundaries later, the cleanest path is:
 1. `"uninstall time-prompt-inject"` (preserves state file)
-2. `"Load time-prompt-inject"` (asks for new boundaries, regenerates the script)
+2. `"Load inject-time"` (asks for new boundaries, regenerates the script)
 
 Or manually edit the injector script at `~/.claude/hooks/user-prompt-injectors/time.{ps1|sh}` — the boundary values are at the top of the file as bare integers.
 
@@ -110,11 +110,11 @@ Or manually edit the injector script at `~/.claude/hooks/user-prompt-injectors/t
 "uninstall time-prompt-inject"
 ```
 
-Removes the injector script and the state file. Asks whether to keep the install record line in `master-memory.md` for future reinstall reference (default: remove).
+Removes the injector script and the state file. Asks whether to keep the install record line in `recall.md` for future reinstall reference (default: remove).
 
 ## Compatibility
 
-- **Pre-consolidation** ✅ — install only writes to `master-memory.md`
+- **Pre-consolidation** ✅ — install only writes to `recall.md`
 - **Post-consolidation** ✅ — same path
 - **Windows / macOS / Linux / Git Bash** ✅
 - **Coexists with Tone-Prompt-Inject + Mood-Prompt-Inject** ✅ — independent injectors, all three can fire on every prompt
@@ -133,8 +133,8 @@ The order is whatever filesystem enumeration returns (typically alphabetical: `m
 
 ## Tier
 
-**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `User-Prompt-Hook-System` installed first.
+**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `hook-user-prompt` installed first.
 
 ---
 
-*Type `"Load time-prompt-inject"` to wire time + period awareness into every prompt your AI sees.*
+*Type `"Load inject-time"` to wire time + period awareness into every prompt your AI sees.*

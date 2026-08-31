@@ -3,13 +3,13 @@
 
 ## Purpose
 
-After `Tone-Prompt-Inject-System` is installed, the AI handles three runtime commands that manage the tone registry and active tone. This file documents the exact behavior so the AI can execute them consistently.
+After `inject-tone` is installed, the AI handles three runtime commands that manage the tone registry and active tone. This file documents the exact behavior so the AI can execute them consistently.
 
 ## Detect main memory file once
 
 All three commands operate on the user's main memory file. Detection is uniform:
-- IF `main/main-memory.md` exists → that's `[MEMORY_FILE]`
-- ELSE → `main/identity-core.md`
+- IF `memory/merged.md` exists → that's `[MEMORY_FILE]`
+- ELSE → `memory/identity.md`
 
 Cache this for the session if possible.
 
@@ -94,7 +94,7 @@ When the AI senses a tone shift naturally during conversation (e.g., user signal
 
 | Situation | Behavior |
 |-----------|----------|
-| `## Tones` section missing | Inform user the injector may not be installed; suggest `"Load tone-prompt-inject"` |
+| `## Tones` section missing | Inform user the injector may not be installed; suggest `"Load inject-tone"` |
 | `tone-current.txt` missing on `set` | Create the file (parent directory should exist from framework install) |
 | User passes name that's actually a description | Try fuzzy match against descriptions too; otherwise ask for clarification |
 | Multiple table rows with same name | Take the first; warn user about the duplicate |

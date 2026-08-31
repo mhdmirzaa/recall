@@ -7,7 +7,7 @@ Library items are **pre-made knowledge entries** that follow the Library System'
 
 ## Prerequisites
 
-- **Library System** must be installed first (see `Feature/Library-System/`)
+- **Library System** must be installed first (see `features/library/`)
 - A working `library/` directory with section folders
 
 ## How to Install
@@ -19,7 +19,7 @@ Tell your AI companion:
 ```
 
 The AI will:
-1. Find the item in `library-items/`
+1. Find the item in `features/library/items/`
 2. Show you what it contains
 3. Copy it to your `library/[section]/` folder
 4. Commit the change (if Auto-Commit is installed)
@@ -47,7 +47,7 @@ Each item follows its section's format template (from `library/formats/[section]
 Want to add a new item? Create a `.md` file following the appropriate format template:
 
 1. Pick the right section folder (or create a new one)
-2. Follow the format from `Feature/Library-System/formats/[section]-format.md`
+2. Follow the format from `features/library/formats/[section]-format.md`
 3. Write generic, reusable content — no project-specific references
 4. Include implementation examples for multiple frameworks where applicable
 5. Submit a pull request

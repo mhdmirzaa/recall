@@ -1,19 +1,19 @@
 # 🔒 Auto-Commit Installation Protocol
-*Systematic commit guardian setup for AI MemoryCore companions*
+*Systematic commit guardian setup for Recall companions*
 
 ## Purpose
-Executed when "Load auto-commit" command is used — creates an intelligent commit skill, configures commit format with custom section names, and integrates with your AI companion.
+Executed when "Load git-commit" command is used — creates an intelligent commit skill, configures commit format with custom section names, and integrates with your AI companion.
 
 ## Trigger Command
 ```
-"Load auto-commit"
+"Load git-commit"
 ```
 *Automatically creates commit skill, configures format, and registers with your AI*
 
 ## Prerequisites
 - Git repository initialized in your project (`git init`)
 - Skill Plugin System recommended for auto-triggering (but not required)
-- Core memory system installed (`master-memory.md` exists)
+- Core memory system installed (`recall.md` exists)
 
 ## 6-Step Execution Process
 
@@ -50,7 +50,7 @@ Executed when "Load auto-commit" command is used — creates an intelligent comm
   - Inform user: "The Skill Plugin System is not installed. Auto-Commit can still work as a manual protocol."
   - Offer two choices:
     1. "Install Skill Plugin System first" (recommended)
-    2. "Continue without auto-triggering" (skill added to master-memory.md as manual protocol)
+    2. "Continue without auto-triggering" (skill added to recall.md as manual protocol)
   - If continuing without plugin: skip Step 3, add protocol directly to main memory in Step 5
 
 ### Step 3: Create Auto-Commit Skill
@@ -68,7 +68,7 @@ Executed when "Load auto-commit" command is used — creates an intelligent comm
 - [ ] Inform user: "Commit format is built into the skill — no separate template needed"
 
 ### Step 5: Update Master Memory and Cleanup
-- [ ] Add commit reference to `master-memory.md` Optional Components section:
+- [ ] Add commit reference to `recall.md` Optional Components section:
   ```markdown
   ### [COMMIT_SKILL_NAME]
   *Auto-triggers when: committing code, task completion (Vigilant mode)*
@@ -97,7 +97,7 @@ Executed when "Load auto-commit" command is used — creates an intelligent comm
   === [SECTION_2_NAME] ===
   • Project: [name] | Type: development | Time: ~XX min
   ```
-- [ ] Remove `Feature/Auto-Commit-System/` folder (functionality installed)
+- [ ] Remove `features/git-commit/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
   Auto-Commit System installed successfully!

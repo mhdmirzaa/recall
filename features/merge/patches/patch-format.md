@@ -135,7 +135,7 @@ For patches that need different behavior based on system state (e.g., whether Me
 ```markdown
 ### Change N: [Description] (CONDITIONAL)
 
-**Condition**: IF `main/main-memory.md` exists (post-consolidation)
+**Condition**: IF `memory/merged.md` exists (post-consolidation)
 
 **Action**: replace
 
@@ -151,7 +151,7 @@ For patches that need different behavior based on system state (e.g., whether Me
 
 ---
 
-**Condition**: IF `main/identity-core.md` exists (pre-consolidation)
+**Condition**: IF `memory/identity.md` exists (pre-consolidation)
 
 **Action**: replace
 
@@ -180,7 +180,7 @@ Every patch must end with a verification checklist:
 
 After applying all changes, verify:
 
-1. [ ] [Specific check — e.g., "master-memory.md line 83 now references daily-diary-protocol.md"]
+1. [ ] [Specific check — e.g., "recall.md line 83 now references format.md"]
 2. [ ] [Another check — e.g., "save-protocol.md no longer references critical-thinking.md"]
 3. [ ] No broken markdown formatting in any modified file
 4. [ ] All FIND blocks were located and replaced successfully
@@ -221,7 +221,7 @@ version: 1.0.0
 priority: high
 date: 2026-02-24
 affects:
-  - master-memory.md
+  - recall.md
   - save-protocol.md
 prerequisites:
   - none
@@ -235,7 +235,7 @@ compatibility:
 ## Summary
 Fixes file paths that reference non-existent files.
 
-## File: master-memory.md
+## File: recall.md
 
 ### Change 1: Fix diary format reference
 
@@ -243,13 +243,13 @@ Fixes file paths that reference non-existent files.
 **Action**: replace
 
 #### FIND:
-- Format: daily-diary/diary-entry-format.md
+- Format: memory/history/diary-entry-format.md
 
 #### REPLACE:
-- Format: daily-diary/daily-diary-protocol.md
+- Format: memory/history/format.md
 
 ## Verification
-1. [ ] master-memory.md references correct diary format path
+1. [ ] recall.md references correct diary format path
 2. [ ] No broken markdown formatting
 3. [ ] Record in patches/applied.md
 

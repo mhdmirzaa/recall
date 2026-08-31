@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Tone injector for User-Prompt-Hook framework
-# Generated from Feature/Tone-Prompt-Inject-System/injectors/tone.sh.template
+# Generated from features/inject-tone/injectors/tone.sh.template
 # Reads ~/.claude/user-prompt-injectors/tone-current.txt and emits a single TONE: line.
 #
 # Behavior:

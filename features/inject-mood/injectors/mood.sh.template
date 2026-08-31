@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Mood injector for User-Prompt-Hook framework
-# Generated from Feature/Mood-Prompt-Inject-System/injectors/mood.sh.template
+# Generated from features/inject-mood/injectors/mood.sh.template
 # Reads ~/.claude/user-prompt-injectors/mood-current.txt and emits a single MOOD: line.
 #
 # Behavior:

@@ -2,17 +2,17 @@
 *Setup for Visual Novel RPG adventures with your AI companion*
 
 ## Purpose
-Executed when "Load interactive-story" command is used -- enables your AI to run interactive VN RPG adventures with world generation, cinematic combat, and persistent story saving.
+Executed when "Load adventure" command is used -- enables your AI to run interactive VN RPG adventures with world generation, cinematic combat, and persistent story saving.
 
 ## Trigger Command
 ```
-"Load interactive-story"
+"Load adventure"
 ```
 *Enables AI-powered interactive storytelling with VN RPG mechanics*
 
 ## Prerequisites
-- Core memory system installed (`main/` directory with essential files)
-- `master-memory.md` accessible for integration updates
+- Core memory system installed (`memory/` directory with essential files)
+- `recall.md` accessible for integration updates
 - Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
 
 ## 3-Step Installation Process
@@ -23,7 +23,7 @@ Executed when "Load interactive-story" command is used -- enables your AI to run
   - Inform user: "Interactive Story skill installed -- auto-triggers on 'new adventure', 'load adventure', 'resume adventure'"
 - [ ] If Skill Plugin System does NOT exist:
   - Inform user: "Interactive Story integrated into master memory. Install the Skill Plugin System for auto-triggering."
-  - Add interactive story protocol reference to `master-memory.md`
+  - Add interactive story protocol reference to `recall.md`
 
 ### Step 2: Create Adventure Directory
 - [ ] Create `adventures/` directory in project root for adventure storage:
@@ -31,7 +31,7 @@ Executed when "Load interactive-story" command is used -- enables your AI to run
   adventures/
   └── (adventures will be saved here)
   ```
-- [ ] Add to `master-memory.md`:
+- [ ] Add to `recall.md`:
   ```markdown
   ### Interactive Story
   *Visual Novel RPG adventure system*
@@ -60,7 +60,7 @@ Executed when "Load interactive-story" command is used -- enables your AI to run
 - [ ] Play through a few scenes to verify VN format and combat work
 - [ ] Test save with: "save adventure"
 - [ ] Test resume with: "load adventure"
-- [ ] Delete this installation file: `rm install-interactive-story.md`
+- [ ] Delete this installation file: `rm install.md`
 
 ## Installation Complete
 Your AI can now run interactive VN RPG adventures. Say "new adventure" to begin!

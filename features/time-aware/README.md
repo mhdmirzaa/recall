@@ -2,7 +2,7 @@
 *Instant time intelligence for your AI companion*
 
 ## What This Feature Does
-Adds Alice's proven time-awareness capabilities to any AI MemoryCore system:
+Adds Alice's proven time-awareness capabilities to any Recall system:
 
 - **Time-aware greetings** that adapt to morning/afternoon/evening/night
 - **Dynamic behavior adaptation** based on time of day  
@@ -12,7 +12,7 @@ Adds Alice's proven time-awareness capabilities to any AI MemoryCore system:
 ## Quick Integration
 ```bash
 # Load this feature into your AI companion:
-"Load time-aware-core"
+"Load time-aware"
 ```
 
 ## How It Works After Integration
@@ -80,7 +80,7 @@ Time detection works universally across all platforms using a cascading strategy
 | Windows | CMD | `time /T` |
 
 The AI detects the shell environment automatically and uses the appropriate command.
-See `time-aware-core.md` for the full detection strategy and implementation details.
+See `protocol.md` for the full detection strategy and implementation details.
 
 ### **Automatic Session Memory Integration**
 ```markdown
@@ -127,4 +127,4 @@ Based on Alice's successful time-awareness implementation:
 
 ---
 
-💜 *Load `time-aware-core.md` and your AI instantly becomes time-intelligent like Alice!*
+💜 *Load `protocol.md` and your AI instantly becomes time-intelligent like Alice!*

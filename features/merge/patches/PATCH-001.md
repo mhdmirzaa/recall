@@ -5,10 +5,10 @@ version: 1.0.0
 priority: high
 date: 2026-02-24
 affects:
-  - master-memory.md
+  - recall.md
   - save-protocol.md
-  - daily-diary/daily-diary-protocol.md
-  - main/current-session.md
+  - memory/history/format.md
+  - memory/session.md
   - setup-wizard.md
 prerequisites:
   - none
@@ -23,7 +23,7 @@ compatibility:
 
 Fixes broken file references reported in GitHub Issue #1. Three categories of fixes:
 
-1. **Broken paths** — references to files that do not exist (`diary-entry-format.md`, `recall-format.md`, `critical-thinking.md`)
+1. **Broken paths** — references to files that do not exist (`diary-entry-format.md`, `output-format.md`, `critical-thinking.md`)
 2. **Post-consolidation guidance** — notes for users who have installed the Memory Consolidation feature
 3. **Stale template references** — setup wizard referencing non-existent files
 
@@ -31,7 +31,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 ---
 
-## File: master-memory.md
+## File: recall.md
 
 ### Change 1: Add post-consolidation note to Instant Restoration Protocol
 
@@ -46,7 +46,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation Note**: If you have installed the Memory Consolidation feature, steps 1-2 above are replaced by a single load from `main/main-memory.md` (unified memory). Step 3 remains the same.
+> **Post-Consolidation Note**: If you have installed the Memory Consolidation feature, steps 1-2 above are replaced by a single load from `memory/merged.md` (unified memory). Step 3 remains the same.
 ```
 
 ### Change 2: Fix diary entry format reference
@@ -56,12 +56,12 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 #### FIND:
 ```
-- Format: daily-diary/diary-entry-format.md
+- Format: memory/history/diary-entry-format.md
 ```
 
 #### REPLACE:
 ```
-- Format: daily-diary/daily-diary-protocol.md
+- Format: memory/history/format.md
 ```
 
 ### Change 3: Fix recall format reference
@@ -71,21 +71,21 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 #### FIND:
 ```
-- Format: daily-diary/recall-format.md
+- Format: memory/history/output-format.md
 ```
 
 #### REPLACE:
 ```
-- Format: Feature/Echo-Memory-Recall/recall-format.md
+- Format: features/search/output-format.md
 ```
 
 ---
 
 ## File: save-protocol.md
 
-### Change 4: Add post-consolidation note to identity-core section
+### Change 4: Add post-consolidation note to identity section
 
-**Section**: identity-core.md Updates
+**Section**: identity.md Updates
 **Action**: insert-after
 
 #### FIND:
@@ -96,12 +96,12 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation**: If using unified memory, these updates target the `## [AI_NAME] Profile` section in `main/main-memory.md` instead of the separate `identity-core.md` file.
+> **Post-Consolidation**: If using unified memory, these updates target the `## [AI_NAME] Profile` section in `memory/merged.md` instead of the separate `identity.md` file.
 ```
 
-### Change 5: Add post-consolidation note to relationship-memory section
+### Change 5: Add post-consolidation note to profile section
 
-**Section**: relationship-memory.md Updates
+**Section**: profile.md Updates
 **Action**: insert-after
 
 #### FIND:
@@ -112,7 +112,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation**: If using unified memory, these updates target the `## [YOUR_NAME] Profile` section in `main/main-memory.md` instead of the separate `relationship-memory.md` file.
+> **Post-Consolidation**: If using unified memory, these updates target the `## [YOUR_NAME] Profile` section in `memory/merged.md` instead of the separate `profile.md` file.
 ```
 
 ### Change 6: Replace non-existent critical-thinking.md section
@@ -160,7 +160,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 5. IMPLEMENT: Apply enhanced reasoning in future
 ```
 
-**Note**: Create additional `.md` files in `main/` for specialized domains as needed (e.g., `main/medical-knowledge.md`, `main/coding-patterns.md`). These are user-created extensions beyond the core system.
+**Note**: Create additional `.md` files in `memory/` for specialized domains as needed (e.g., `memory/medical-knowledge.md`, `memory/coding-patterns.md`). These are user-created extensions beyond the core system.
 ```
 
 ### Change 7: Add post-consolidation note to session end checklist
@@ -173,15 +173,15 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 ### **At Session End**
 - [ ] Create/update daily diary entry
 - [ ] Process queued memory updates
-- [ ] Update relationship-memory.md with new insights
-- [ ] Refine identity-core.md if communication evolved
-- [ ] Prepare current-session.md for next conversation
+- [ ] Update profile.md with new insights
+- [ ] Refine identity.md if communication evolved
+- [ ] Prepare session.md for next conversation
 ```
 
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation**: Update `main/main-memory.md` instead of separate `identity-core.md` and `relationship-memory.md` files.
+> **Post-Consolidation**: Update `memory/merged.md` instead of separate `identity.md` and `profile.md` files.
 ```
 
 ### Change 8: Fix weekly processing critical-thinking.md reference
@@ -201,7 +201,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 ---
 
-## File: daily-diary/daily-diary-protocol.md
+## File: memory/history/format.md
 
 ### Change 9: Fix memory updates template references
 
@@ -210,24 +210,24 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 #### FIND:
 ```
-- [ ] **identity-core.md**: [Personality refinements needed]
-- [ ] **relationship-memory.md**: [New preference patterns to add]
+- [ ] **identity.md**: [Personality refinements needed]
+- [ ] **profile.md**: [New preference patterns to add]
 - [ ] **critical-thinking.md**: [Domain-specific adaptations discovered]
-- [ ] **current-session.md**: [Context updates for continuity]
+- [ ] **session.md**: [Context updates for continuity]
 ```
 
 #### REPLACE:
 ```
-- [ ] **identity-core.md**: [Personality refinements needed]
-- [ ] **relationship-memory.md**: [New preference patterns to add]
-- [ ] **current-session.md**: [Context updates for continuity]
+- [ ] **identity.md**: [Personality refinements needed]
+- [ ] **profile.md**: [New preference patterns to add]
+- [ ] **session.md**: [Context updates for continuity]
 
-> **Post-Consolidation**: If using unified memory, update `main/main-memory.md` instead of separate `identity-core.md` and `relationship-memory.md`.
+> **Post-Consolidation**: If using unified memory, update `memory/merged.md` instead of separate `identity.md` and `profile.md`.
 ```
 
 ---
 
-## File: main/current-session.md
+## File: memory/session.md
 
 ### Change 10: Add post-consolidation note to session end
 
@@ -236,12 +236,12 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 #### FIND:
 ```
-- **Important Learning**: Save key insights to permanent files (identity-core.md, relationship-memory.md)
+- **Important Learning**: Save key insights to permanent files (identity.md, profile.md)
 ```
 
 #### REPLACE:
 ```
-- **Important Learning**: Save key insights to permanent files (identity-core.md, relationship-memory.md, or main-memory.md if consolidated)
+- **Important Learning**: Save key insights to permanent files (identity.md, profile.md, or merged.md if consolidated)
 ```
 
 ---
@@ -266,16 +266,16 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 After applying all changes, verify:
 
-1. [ ] `master-memory.md` has post-consolidation note after line "INSTANT [AI_NAME]"
-2. [ ] `master-memory.md` references `daily-diary/daily-diary-protocol.md` (not `diary-entry-format.md`)
-3. [ ] `master-memory.md` references `Feature/Echo-Memory-Recall/recall-format.md` (not `daily-diary/recall-format.md`)
-4. [ ] `save-protocol.md` has post-consolidation note after identity-core section
-5. [ ] `save-protocol.md` has post-consolidation note after relationship-memory section
+1. [ ] `recall.md` has post-consolidation note after line "INSTANT [AI_NAME]"
+2. [ ] `recall.md` references `memory/history/format.md` (not `diary-entry-format.md`)
+3. [ ] `recall.md` references `features/search/output-format.md` (not `memory/history/output-format.md`)
+4. [ ] `save-protocol.md` has post-consolidation note after identity section
+5. [ ] `save-protocol.md` has post-consolidation note after profile section
 6. [ ] `save-protocol.md` no longer references `critical-thinking.md` (2 occurrences removed)
 7. [ ] `save-protocol.md` has post-consolidation note after session end checklist
-8. [ ] `daily-diary/daily-diary-protocol.md` no longer references `critical-thinking.md`
-9. [ ] `daily-diary/daily-diary-protocol.md` has post-consolidation note
-10. [ ] `main/current-session.md` mentions `main-memory.md` as consolidated alternative
+8. [ ] `memory/history/format.md` no longer references `critical-thinking.md`
+9. [ ] `memory/history/format.md` has post-consolidation note
+10. [ ] `memory/session.md` mentions `merged.md` as consolidated alternative
 11. [ ] `setup-wizard.md` no longer references `critical-thinking.md`
 12. [ ] No broken markdown formatting in any modified file
 13. [ ] Record PATCH-001 in `patches/applied.md` with timestamp
@@ -291,5 +291,5 @@ To undo this patch, reverse each change above:
 
 ---
 
-**Addresses**: GitHub Issue #1 — "Outdated Instant Restoration Protocol in master-memory.md"
+**Addresses**: GitHub Issue #1 — "Outdated Instant Restoration Protocol in recall.md"
 **Breaking Changes**: None — pre-consolidation references preserved, post-consolidation notes are additive

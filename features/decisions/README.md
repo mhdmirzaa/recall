@@ -27,7 +27,7 @@ immutable record that future sessions can reference.
 ## Quick Integration
 ```bash
 # Load this feature into your AI companion:
-"Load decision-log"
+"Load decisions"
 ```
 
 ## How It Works After Integration
@@ -87,10 +87,10 @@ The append-only constraint is deliberate:
 
 ## Post-Integration Structure
 ```
-main/
-├── identity-core.md          # Existing
-├── relationship-memory.md    # Existing
-├── current-session.md        # Existing
+memory/
+├── identity.md          # Existing
+├── profile.md    # Existing
+├── session.md        # Existing
 └── decisions.md              # NEW: append-only decision log
 ```
 

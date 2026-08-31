@@ -25,14 +25,14 @@ When this skill activates, output:
 ## Protocol
 
 ### Step 1: Monthly Archive Check
-- [ ] Scan `daily-diary/current/` for files from previous months
+- [ ] Scan `memory/history/current/` for files from previous months
 - [ ] For each file where month != current month:
-  - Create `daily-diary/archived/YYYY-MM/` folder if not exists
+  - Create `memory/history/archived/YYYY-MM/` folder if not exists
   - Move the file/folder from `current/` to `archived/YYYY-MM/`
 - [ ] Continue with diary write
 
 ### Step 2: Find or Create Today's File
-- [ ] Check if `daily-diary/current/YYYY-MM-DD.md` exists
+- [ ] Check if `memory/history/current/YYYY-MM-DD.md` exists
 - [ ] If exists: use it (will append new entry)
 - [ ] If not: create new file with header:
   ```markdown
@@ -45,7 +45,7 @@ When this skill activates, output:
 ### Step 3: Compose and Append Diary Entry
 - [ ] Get current timestamp via system command
 - [ ] Analyze current session for key content
-- [ ] Write structured entry following `daily-diary/daily-diary-protocol.md` format:
+- [ ] Write structured entry following `memory/history/format.md` format:
   - Session timestamp and theme
   - Main topics discussed
   - Key insights and learning
@@ -56,7 +56,7 @@ When this skill activates, output:
 - [ ] APPEND entry to today's file (never overwrite existing content)
 
 ### Step 4: Update Session Memory
-- [ ] Update `main/current-session.md` with:
+- [ ] Update `memory/session.md` with:
   - Session recap and key achievements
   - Current working state for continuity
   - Next steps identified
@@ -68,7 +68,7 @@ When this skill activates, output:
 3. **Use real timestamps** — get current time via platform-appropriate command (`date +"%H:%M"` on bash, `Get-Date` on PowerShell, `time /T` on CMD)
 4. **Archive first** — run monthly archive check before every write
 5. **Evidence-based** — document actual session content, not generic summaries
-6. **Follow existing protocol** — use `daily-diary/daily-diary-protocol.md` for entry structure
+6. **Follow existing protocol** — use `memory/history/format.md` for entry structure
 
 ## Edge Cases
 
@@ -78,7 +78,7 @@ When this skill activates, output:
 | Second+ entry same day | Append with `---` separator |
 | No significant content | Create brief entry noting session type |
 | "review diary" command | Read and present recent entries from current/ |
-| No daily-diary/ folder | Create `daily-diary/current/` and `daily-diary/archived/` first |
+| No memory/history/ folder | Create `memory/history/current/` and `memory/history/archived/` first |
 
 ## Level History
 - **Lv.1** — Base: 4-step diary write protocol with monthly archival, append-only entries, session memory update, and existing protocol reference for entry format.

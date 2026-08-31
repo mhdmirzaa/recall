@@ -3,26 +3,26 @@
 
 ## Activation
 
-When the user says `Load memory-compaction`, install the Memory Compaction System into the active MemoryCore.
+When the user says `Load trim`, install the Memory Compaction System into the active Recall.
 
 ## Prerequisites
 
-- Existing MemoryCore root with `master-memory.md`
+- Existing Recall root with `recall.md`
 - Optional but recommended: Skill Plugin System
 - Optional companion features: Memory Consolidation System, Topic Diary System
 
 ## Installation Steps
 
-### Step 1: Confirm MemoryCore Root
+### Step 1: Confirm Recall Root
 
-Locate the active MemoryCore root. It should contain:
+Locate the active Recall root. It should contain:
 
 ```text
-master-memory.md
-main/
+recall.md
+memory/
 ```
 
-If the user's MemoryCore uses customized folder names, ask for confirmation before writing files.
+If the user's Recall uses customized folder names, ask for confirmation before writing files.
 
 ### Step 2: Create Compaction Directories
 
@@ -44,8 +44,8 @@ Default budgets (the user can adjust):
 ```markdown
 | File | Budget | Newest tier (verbatim) |
 |------|--------|------------------------|
-| main/main-memory.md | 500 lines | last 20 entries |
-| main/relationship-memory.md | 400 lines | last 15 entries |
+| memory/merged.md | 500 lines | last 20 entries |
+| memory/profile.md | 400 lines | last 15 entries |
 | topic-diary/topics/*.md | 300 lines each | last 10 entries |
 ```
 
@@ -53,7 +53,7 @@ If the policy file exists, append a short installation note instead of replacing
 
 ### Step 4: Add Master Memory References
 
-Update `master-memory.md` with:
+Update `recall.md` with:
 
 ```markdown
 ### Memory Compaction System
@@ -78,7 +78,7 @@ If Skill Plugin System is installed:
 2. Preserve existing skill files
 3. Confirm the trigger phrases are available
 
-If no Skill Plugin System is installed, leave the feature folder in place and record the manual commands in `master-memory.md`.
+If no Skill Plugin System is installed, leave the feature folder in place and record the manual commands in `recall.md`.
 
 ### Step 6: Dry-Run Check
 
@@ -86,8 +86,8 @@ Do **not** compact anything during installation. Instead, report current status:
 
 ```text
 Memory Compaction installed. Current budgets:
-- main-memory.md: 312/500 lines (OK)
-- relationship-memory.md: 188/400 lines (OK)
+- merged.md: 312/500 lines (OK)
+- profile.md: 188/400 lines (OK)
 No file is over budget. Compaction will run automatically when one is.
 ```
 
@@ -126,7 +126,7 @@ When a file exceeds its budget:
 
 To uninstall manually:
 
-1. Remove Memory Compaction references from `master-memory.md`
+1. Remove Memory Compaction references from `recall.md`
 2. Remove the installed `memory-compaction` skill from the plugin folder
 3. Keep `compaction/snapshots/` unless the user explicitly wants to delete backups
 
