@@ -239,11 +239,8 @@ recall/
 │   │   │   ├── theme-format.md
 │   │   │   └── workflow-format.md
 │   │   ├── items/            # Ready-made entries you can install
-│   │   │   ├── integration/
-│   │   │   │   └── toyyibpay-payment-gateway.md
 │   │   │   ├── security/
-│   │   │   │   ├── security-headers.md
-│   │   │   │   └── toyyibpay-webhook-verification.md
+│   │   │   │   └── security-headers.md
 │   │   │   └── README.md
 │   │   ├── install.md
 │   │   ├── README.md
