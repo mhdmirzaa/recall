@@ -8,6 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Recall starts at 1.0.0. It began as a fork but is a new project, not a
 continuation of any earlier version number.
 
+## [Unreleased]
+
+### Removed
+
+- **The two inherited ToyyibPay library items** —
+  `integration/toyyibpay-payment-gateway.md` and
+  `security/toyyibpay-webhook-verification.md`. 1,100 lines of personal
+  integration notes for one Malaysian payment gateway, shipped in a catalogue
+  meant to hold patterns any project can reuse. `security/security-headers.md`
+  is now the sole example item, and the `integration/` section folder goes with
+  them.
+- **`AUDIT.md`.** It recorded the pre-rebuild state and the old file paths —
+  scaffolding for the restructure, not documentation a user reads. Now
+  gitignored. The 1.0.0 entry below no longer links to it.
+
 ## [1.0.0] - 2026-08-31
 
 First release of Recall as a standalone project. Everything below is relative
@@ -109,4 +124,5 @@ to the inherited state the rebuild started from.
   are not enforced controls, and they do not stop an attacker with filesystem
   write access.
 
+[Unreleased]: https://github.com/mhdmirzaa/recall/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/mhdmirzaa/recall/releases/tag/v1.0.0
