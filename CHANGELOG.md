@@ -11,7 +11,7 @@ continuation of any earlier version number.
 ## [1.0.0] - 2026-08-31
 
 First release of Recall as a standalone project. Everything below is relative
-to the inherited state recorded in [AUDIT.md](AUDIT.md).
+to the inherited state the rebuild started from.
 
 ### Added
 

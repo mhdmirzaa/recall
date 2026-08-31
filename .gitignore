@@ -9,3 +9,6 @@
 
 # Local credentials — never commit real API keys
 .env
+
+# Pre-rebuild audit scaffolding — not user documentation
+AUDIT.md

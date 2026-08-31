@@ -357,7 +357,6 @@ recall/
 ├── scripts/                  # Repo tooling
 │   └── validate.mjs          # npm run validate
 ├── AGENTS.md                 # Instructions for agents changing this repo
-├── AUDIT.md                  # Pre-restructure audit, kept as the historical record
 ├── CHANGELOG.md              # Release history
 ├── CONTRIBUTING.md           # Instructions for humans changing this repo
 ├── LICENSE                   # MIT
