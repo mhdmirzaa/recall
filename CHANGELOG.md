@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Recall starts at 1.0.0. It began as a fork but is a new project, not a
 continuation of any earlier version number.
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-08-31
 
 First release of Recall as a standalone project. Everything below is relative
 to the inherited state recorded in [AUDIT.md](AUDIT.md).
