@@ -77,9 +77,9 @@ layout the user creates at install time, so they should be inline code, not link
 
 ## 3. Unreplaced template placeholders
 
-20 files ship `[AI_NAME]`, `[USER_NAME]` or `[YOUR_NAME]` tokens — 109 occurrences.
+20 files ship `AI_NAME`, `USER_NAME` or `YOUR_NAME` placeholder tokens — 109 occurrences.
 Six of these are genuine templates the user personalises at setup. The other **14 are
-feature documentation**, where a literal `[AI_NAME]` is just a bug: it means the docs were
+feature documentation**, where a literal `AI_NAME` token is just a bug: it means the docs were
 copy-pasted from the template and never generalised.
 
 | File | Count | Template? |

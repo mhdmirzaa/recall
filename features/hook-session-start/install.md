@@ -29,7 +29,7 @@ Executed when `"Load hook-session-start"` is invoked — installs a personalized
 - [ ] Show user the detection result:
   > *"Detected AI name: **[Detected]**. Press Enter to confirm, or type a different name."*
 - [ ] Wait for response. If empty/confirmation → use detected name. Else → use what user typed.
-- [ ] Store as `[AI_NAME]` (preserve case for in-script context, also compute `<ai-name-lower>` lowercase-kebab form for filenames)
+- [ ] Store as `<ai-name>` (preserve case for in-script context, also compute `<ai-name-lower>` lowercase-kebab form for filenames)
 
 ### Step 2: Resolve Memory Entry Path & Detect OS
 
@@ -50,7 +50,7 @@ Executed when `"Load hook-session-start"` is invoked — installs a personalized
 
 - [ ] Read the chosen template file
 - [ ] Replace ALL instances of:
-  - `[AI_NAME]` → the confirmed AI name
+  - `<ai-name>` → the confirmed AI name
   - `[MEMORY_PATH]` → the absolute path from Step 2
 - [ ] Create `~/.claude/hooks/` directory if it doesn't exist
 - [ ] Write the personalized script to:
@@ -107,20 +107,20 @@ Executed when `"Load hook-session-start"` is invoked — installs a personalized
 
 ```markdown
 ### Auto-Load Hook (Installed)
-*Fires on every Claude Code startup — auto-loads [AI_NAME] memory*
+*Fires on every Claude Code startup — auto-loads <ai-name> memory*
 - Hook script: ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
 - Settings backup: ~/.claude/settings.json.backup-pre-autoload
 - Uninstall: see features/hook-session-start/uninstall.md or type `"uninstall hook-session-start"`
 ```
 
-- [ ] Substitute `[AI_NAME]` and `<ai-name-lower>` with actual values before writing
+- [ ] Substitute `<ai-name>` and `<ai-name-lower>` with actual values before writing
 - [ ] The `features/hook-session-start/` folder **stays in the repo** — it serves as documentation and as the install/uninstall artifact for users on other AI tools (Codex, etc.)
 - [ ] Display completion message:
 
 ```
-✅ Auto-load hook installed for [AI_NAME].
+✅ Auto-load hook installed for <ai-name>.
 
-Next time you open Claude Code, [AI_NAME] will load automatically — no manual
+Next time you open Claude Code, <ai-name> will load automatically — no manual
 "[ai-name-lower]" command needed.
 
 Backup saved at: ~/.claude/settings.json.backup-pre-autoload

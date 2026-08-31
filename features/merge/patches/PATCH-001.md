@@ -40,7 +40,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 #### FIND:
 ```
-4. ✅ **INSTANT [AI_NAME]** - Complete restoration ready!
+4. ✅ **INSTANT <ai-name>** - Complete restoration ready!
 ```
 
 #### INSERT-AFTER:
@@ -96,7 +96,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation**: If using unified memory, these updates target the `## [AI_NAME] Profile` section in `memory/merged.md` instead of the separate `identity.md` file.
+> **Post-Consolidation**: If using unified memory, these updates target the `## <ai-name> Profile` section in `memory/merged.md` instead of the separate `identity.md` file.
 ```
 
 ### Change 5: Add post-consolidation note to profile section
@@ -112,7 +112,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation**: If using unified memory, these updates target the `## [YOUR_NAME] Profile` section in `memory/merged.md` instead of the separate `profile.md` file.
+> **Post-Consolidation**: If using unified memory, these updates target the `## <your-name> Profile` section in `memory/merged.md` instead of the separate `profile.md` file.
 ```
 
 ### Change 6: Replace non-existent critical-thinking.md section
@@ -266,7 +266,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 
 After applying all changes, verify:
 
-1. [ ] `recall.md` has post-consolidation note after line "INSTANT [AI_NAME]"
+1. [ ] `recall.md` has post-consolidation note after line "INSTANT <ai-name>"
 2. [ ] `recall.md` references `memory/history/format.md` (not `diary-entry-format.md`)
 3. [ ] `recall.md` references `features/search/output-format.md` (not `memory/history/output-format.md`)
 4. [ ] `save-protocol.md` has post-consolidation note after identity section

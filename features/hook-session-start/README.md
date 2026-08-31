@@ -25,7 +25,7 @@ Claude: [now loads memory, becomes your AI]
 ### After (Auto-Load Hook Installed)
 ```
 You: claude
-Claude Code → SessionStart hook fires → injects "You are [AI_NAME], read memory now"
+Claude Code → SessionStart hook fires → injects "You are <ai-name>, read memory now"
 Claude: [reads memory file, becomes your AI, greets you immediately]
 ```
 **Benefit**: One step. The AI is already itself the moment you open the terminal.
@@ -67,8 +67,8 @@ cat > /dev/null                         # Bash
 
 **2. Writes a context line** that Claude Code injects into the AI's session:
 ```
-AUTOLOAD: You are [AI_NAME]. Immediately read [MEMORY_PATH] and execute the
-[AI_NAME] greeting/restoration protocol described inside. Do NOT wait for the
+AUTOLOAD: You are <ai-name>. Immediately read [MEMORY_PATH] and execute the
+<ai-name> greeting/restoration protocol described inside. Do NOT wait for the
 user to type the name — this is the automatic startup load.
 ```
 

@@ -60,13 +60,13 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 - [ ] Display:
 
 ```
-✅ Auto-load hook uninstalled for [AI_NAME].
+✅ Auto-load hook uninstalled for <ai-name>.
 
 settings.json:    restored from backup-pre-autoload
 hook script:      ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh} removed
 recall.md: Auto-Load Hook section removed
 
-[AI_NAME] will now require manual "[ai-name-lower]" command on the next
+<ai-name> will now require manual "[ai-name-lower]" command on the next
 Claude Code session start.
 
 To reinstall later: restore features/hook-session-start/ from git

@@ -22,12 +22,12 @@ Executed when "Load merge" command is used - merges split memory files into unif
 
 ### Step 2: Create Unified Main Memory
 - [ ] Create `memory/merged.md` with unified structure
-- [ ] Merge identity content into `## [AI_NAME] Profile` section:
+- [ ] Merge identity content into `## <ai-name> Profile` section:
   - Identity declaration and core parameters
   - Personality traits and communication style
   - Behavioral patterns (work vs personal)
   - Growth philosophy
-- [ ] Merge relationship content into `## [YOUR_NAME] Profile` section:
+- [ ] Merge relationship content into `## <your-name> Profile` section:
   - User profile and communication preferences
   - Work/study patterns and focus areas
   - Personal preferences and motivators
@@ -68,7 +68,7 @@ Executed when "Load merge" command is used - merges split memory files into unif
     ```markdown
     1. Load unified memory from memory/merged.md
     2. Restore session context from memory/session.md
-    3. INSTANT [AI_NAME] - Complete restoration ready!
+    3. INSTANT <ai-name> - Complete restoration ready!
     ```
   - Update Core Components list to reflect unified architecture
   - Add format template references to Optional Components:
@@ -88,16 +88,16 @@ Executed when "Load merge" command is used - merges split memory files into unif
 
 ### **Unified Main Memory Structure (memory/merged.md)**
 ```markdown
-# [AI_NAME] - Main Memory
+# <ai-name> - Main Memory
 *Unified identity, relationship, and personality*
 
 ## Identity & Relationship
 [Merged bond declaration from both files]
 
-## [AI_NAME] Profile
+## <ai-name> Profile
 [All content from identity.md]
 
-## [YOUR_NAME] Profile
+## <your-name> Profile
 [All content from profile.md]
 
 ## Communication Style
@@ -110,10 +110,10 @@ Executed when "Load merge" command is used - merges split memory files into unif
 ### **Updated Loading Protocol (recall.md)**
 ```markdown
 ### Loading memory
-When you type "[AI_NAME]" in any conversation:
+When you type "<ai-name>" in any conversation:
 1. Load unified memory from memory/merged.md
 2. Restore session context from memory/session.md
-3. INSTANT [AI_NAME] - Complete restoration ready!
+3. INSTANT <ai-name> - Complete restoration ready!
 ```
 
 ### **Session Memory with Limit (memory/session.md)**

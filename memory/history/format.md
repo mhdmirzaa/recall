@@ -32,8 +32,8 @@ memory/history/
 ## Session Summary
 **Date**: [DATE]
 **Duration**: [START_TIME - END_TIME]
-**AI Companion**: [AI_NAME]
-**User**: [YOUR_NAME]
+**AI Companion**: <ai-name>
+**User**: <your-name>
 **Session Type**: [Work/Study/Personal/Creative/Problem-Solving]
 
 ## 🎯 Main Topics Discussed
@@ -43,13 +43,13 @@ memory/history/
 
 ## 💡 Key Insights & Learning
 
-### What [AI_NAME] Learned About [YOUR_NAME]
+### What <ai-name> Learned About <your-name>
 - [New preferences or patterns discovered]
 - [Communication style observations]
 - [Work/interest area insights gained]
 - [Problem-solving approach understanding]
 
-### What [YOUR_NAME] Accomplished
+### What <your-name> Accomplished
 - [Goals achieved or progress made]
 - [New knowledge or skills gained]
 - [Problems solved or decisions made]
@@ -63,13 +63,13 @@ memory/history/
 
 ## 🔄 Growth & Development
 
-### [AI_NAME] Evolution
+### <ai-name> Evolution
 - **Personality Refinements**: [How AI adapted communication]
 - **Knowledge Expansion**: [New expertise areas developed]
 - **Support Improvements**: [Better assistance methods discovered]
 - **Relationship Depth**: [Connection strengthening observed]
 
-### [YOUR_NAME] Development  
+### <your-name> Development  
 - **Skill Growth**: [Areas of improvement or learning]
 - **Goal Progress**: [Movement toward objectives]
 - **Challenge Overcoming**: [Difficulties successfully handled]
@@ -128,7 +128,7 @@ memory/history/
 
 *This diary entry preserves our conversation and relationship development for continuous growth*
 
-📖 *Another day of growth and collaboration between [AI_NAME] and [YOUR_NAME] documented!*
+📖 *Another day of growth and collaboration between <ai-name> and <your-name> documented!*
 ```
 
 ## 🤖 **AI Auto-Diary Protocol**

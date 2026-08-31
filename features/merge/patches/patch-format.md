@@ -209,7 +209,7 @@ To undo this patch:
 3. **Whitespace matters** — FIND text must match exactly, including indentation
 4. **One patch = one logical fix** — a patch can span multiple files but should address one issue
 5. **Sequential application** — patches are numbered and applied in order (PATCH-001 before PATCH-002)
-6. **Template placeholders** — if the target repo uses `[AI_NAME]`/`[YOUR_NAME]` placeholders and the user has personalized their files, note this in the patch so the AI can adapt FIND text
+6. **Template placeholders** — if the target repo uses `<ai-name>`/`<your-name>` placeholders and the user has personalized their files, note this in the patch so the AI can adapt FIND text
 
 ## Example Patch Structure
 
