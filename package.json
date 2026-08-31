@@ -8,7 +8,7 @@
   "author": "Muhd Mirza",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mhdmirzaaa/recall.git"
+    "url": "https://github.com/mhdmirzaa/recall.git"
   },
   "scripts": {
     "validate": "node scripts/validate.mjs"

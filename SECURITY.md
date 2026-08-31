@@ -13,7 +13,7 @@ release.
 ## Reporting a vulnerability
 
 Report privately through GitHub's **[private vulnerability
-reporting](https://github.com/mhdmirzaaa/recall/security/advisories/new)** —
+reporting](https://github.com/mhdmirzaa/recall/security/advisories/new)** —
 the Security tab on the repository. Please do not open a public issue for
 anything exploitable.
 

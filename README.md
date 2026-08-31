@@ -28,7 +28,7 @@ in the four files with your AI's name and your preferences. About 30 seconds.
 **2. Add the marketplace.**
 
 ```
-/plugin marketplace add mhdmirzaaa/recall
+/plugin marketplace add mhdmirzaa/recall
 ```
 
 **3. Install what you want.**

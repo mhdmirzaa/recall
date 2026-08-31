@@ -4,10 +4,10 @@
   "description": "Installs a SessionStart hook so memory loads the moment Claude Code opens, without typing the AI name first. Fully reversible.",
   "author": {
     "name": "Muhd Mirza",
-    "url": "https://github.com/mhdmirzaaa"
+    "url": "https://github.com/mhdmirzaa"
   },
-  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/hook-session-start",
-  "repository": "https://github.com/mhdmirzaaa/recall",
+  "homepage": "https://github.com/mhdmirzaa/recall/tree/main/features/hook-session-start",
+  "repository": "https://github.com/mhdmirzaa/recall",
   "license": "MIT",
   "keywords": [
     "hook",

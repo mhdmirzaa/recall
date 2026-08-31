@@ -4,10 +4,10 @@
   "description": "Detects patterns handled ad hoc three or more times and proposes a new skill for them, with a human approving every one.",
   "author": {
     "name": "Muhd Mirza",
-    "url": "https://github.com/mhdmirzaaa"
+    "url": "https://github.com/mhdmirzaa"
   },
-  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/new-skill",
-  "repository": "https://github.com/mhdmirzaaa/recall",
+  "homepage": "https://github.com/mhdmirzaa/recall/tree/main/features/new-skill",
+  "repository": "https://github.com/mhdmirzaa/recall",
   "license": "MIT",
   "keywords": [
     "skills",

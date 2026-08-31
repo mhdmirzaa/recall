@@ -109,4 +109,4 @@ to the inherited state recorded in [AUDIT.md](AUDIT.md).
   are not enforced controls, and they do not stop an attacker with filesystem
   write access.
 
-[1.0.0]: https://github.com/mhdmirzaaa/recall/releases/tag/v1.0.0
+[1.0.0]: https://github.com/mhdmirzaa/recall/releases/tag/v1.0.0

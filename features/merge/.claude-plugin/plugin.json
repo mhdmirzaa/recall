@@ -4,10 +4,10 @@
   "description": "Collapses identity and profile into one memory file so a session loads once instead of twice, and ships a patch system for stale references.",
   "author": {
     "name": "Muhd Mirza",
-    "url": "https://github.com/mhdmirzaaa"
+    "url": "https://github.com/mhdmirzaa"
   },
-  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/merge",
-  "repository": "https://github.com/mhdmirzaaa/recall",
+  "homepage": "https://github.com/mhdmirzaa/recall/tree/main/features/merge",
+  "repository": "https://github.com/mhdmirzaa/recall",
   "license": "MIT",
   "keywords": [
     "memory",

@@ -4,10 +4,10 @@
   "description": "Renders a description or a still image into MP4 video through the Seedance API. Cost-gated and asynchronous. Needs an API key.",
   "author": {
     "name": "Muhd Mirza",
-    "url": "https://github.com/mhdmirzaaa"
+    "url": "https://github.com/mhdmirzaa"
   },
-  "homepage": "https://github.com/mhdmirzaaa/recall/tree/main/features/video-gen",
-  "repository": "https://github.com/mhdmirzaaa/recall",
+  "homepage": "https://github.com/mhdmirzaa/recall/tree/main/features/video-gen",
+  "repository": "https://github.com/mhdmirzaa/recall",
   "license": "MIT",
   "keywords": [
     "video",
