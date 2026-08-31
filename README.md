@@ -164,7 +164,7 @@ recall/
 │   │   ├── install.md
 │   │   ├── README.md
 │   │   └── SKILL.md
-│   ├── Skill-Plugin-System/  # Legacy manual skill installer — replaced by the marketplace
+│   ├── skill-plugin/  # Legacy manual skill installer — replaced by the marketplace
 │   │   ├── install.md
 │   │   ├── README.md
 │   │   └── skill-format.md
@@ -314,7 +314,7 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 | Feature | Description | Setup |
 |---------|-------------|-------|
 | 🔄 [merge](features/merge/) | Unified memory architecture — merge split files into one, faster loading | `"Load merge"` |
-| 🔌 [Skill Plugin System](features/Skill-Plugin-System/) | Auto-triggered skills for Claude Code — drop a SKILL.md and it's live | `"Load skill-plugin"` |
+| 🔌 [Skill Plugin System](features/skill-plugin/) | Auto-triggered skills for Claude Code — drop a SKILL.md and it's live | `"Load skill-plugin"` |
 | ⏰ [time-aware](features/time-aware/) | Time-intelligent greetings, energy-adapted behavior | `"Load time-aware"` |
 | ⚡ [hook-session-start](features/hook-session-start/) | Auto-loads your AI on Claude Code startup — no manual name-typing | `"Load hook-session-start"` |
 | 💬 [hook-user-prompt](features/hook-user-prompt/) | Generic UserPromptSubmit hook framework with plug-and-play injector pattern | `"Load hook-user-prompt"` |

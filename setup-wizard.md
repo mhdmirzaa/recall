@@ -56,7 +56,7 @@ Your AI companion is ready! Here's the recommended path to unlock more features:
    → Navigate to `features/merge/` and type: "Load merge"
 
 2. **Skill Plugin System** — Enable auto-triggered skills for your AI
-   → Navigate to `features/Skill-Plugin-System/` and type: "Load skill-plugin"
+   → Navigate to `features/skill-plugin/` and type: "Load skill-plugin"
 
 3. **Time-based Aware System** — Add time-intelligent greetings and behavior
    → Navigate to `features/time-aware/` and type: "Load time-aware"

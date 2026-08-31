@@ -106,7 +106,7 @@ Executed when "Load skill-plugin" command is used — creates a complete plugin 
   ```markdown
   "create skill [name]" → Create a new skill from template
   ```
-- [ ] Remove `features/Skill-Plugin-System/` folder (functionality installed)
+- [ ] Remove `features/skill-plugin/` folder (functionality installed)
 - [ ] Document successful installation with completion timestamp
 
 ## Post-Installation Structure
