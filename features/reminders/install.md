@@ -70,11 +70,11 @@ integrates with session lifecycle, and optionally installs as a skill.
   ```
 
 ### Step 4: Install Skill and Cleanup
-- [ ] If Skill Plugin System exists:
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/check-reminders/SKILL.md`
   - Inform user: "Reminder skill installed -- auto-triggers on session start and 'remind me'"
-- [ ] If Skill Plugin System does not exist:
-  - Inform user: "Reminders integrated into the index. Install the Skill Plugin System for auto-triggering."
+- [ ] If plugin marketplace does not exist:
+  - Inform user: "Reminders integrated into the index. Install it from the plugin marketplace for auto-triggering."
 - [ ] Remove `features/reminders/` folder (functionality installed)
 - [ ] Display completion confirmation
 

@@ -10,7 +10,7 @@ Adds a **size-aware compaction layer** to your AI companion. When a memory file 
 - **Signal-preserving** — verified facts, user preferences, and decisions survive; chatter and redundancy are dropped
 - **Tiered retention** — recent entries stay verbatim, mid-age entries get light summarization, old entries get heavy compaction
 - **Reversible by design** — a pre-compaction snapshot is written to `compaction/snapshots/` before any rewrite
-- **Skill auto-install** if Skill Plugin System is detected
+- **Skill auto-install** if this feature is installed as a plugin
 
 ## How It Works
 
@@ -68,7 +68,7 @@ compaction/
 1. **Creates** `compaction/` and `compaction/snapshots/` directories
 2. **Creates** `compaction/compaction-policy.md` using `policy-format.md`
 3. **Adds** compaction triggers and budget-check behavior to `recall.md`
-4. **Installs as skill** if Skill Plugin System is detected
+4. **Installs as skill** if this feature is installed as a plugin
 5. **Touches no content yet** — first compaction only runs when a file actually exceeds budget
 
 ## Post-Integration Result

@@ -8,7 +8,7 @@ When the user says `Load trim`, install the Memory Compaction System into the ac
 ## Prerequisites
 
 - Existing Recall root with `recall.md`
-- Optional but recommended: Skill Plugin System
+- Optional but recommended: install from the plugin marketplace
 - Optional companion features: Memory Consolidation System, Topic Diary System
 
 ## Installation Steps
@@ -70,15 +70,15 @@ Before writing a "save", check the target file against compaction/compaction-pol
 If it exceeds budget, run the compaction protocol (snapshot, compact oldest tier, then save).
 ```
 
-### Step 5: Install Skill Plugin
+### Step 5: Install as a plugin
 
-If Skill Plugin System is installed:
+If this feature is installed as a plugin:
 
 1. Copy `SKILL.md` into the configured skills/plugin folder as `memory-compaction/SKILL.md`
 2. Preserve existing skill files
 3. Confirm the trigger phrases are available
 
-If no Skill Plugin System is installed, leave the feature folder in place and record the manual commands in `recall.md`.
+If this feature is not installed as a plugin, leave the feature folder in place and record the manual commands in `recall.md`.
 
 ### Step 6: Dry-Run Check
 

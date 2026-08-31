@@ -52,13 +52,10 @@ After successful setup, these files are no longer needed:
 Your AI companion is ready! Here's the recommended path to unlock more features:
 
 ### Recommended First Steps
-1. **Memory Consolidation** — Upgrade to unified memory architecture (faster loading)
+1. **merge** — Upgrade to unified memory architecture (faster loading)
    → Navigate to `features/merge/` and type: "Load merge"
 
-2. **Skill Plugin System** — Enable auto-triggered skills for your AI
-   → Navigate to `features/skill-plugin/` and type: "Load skill-plugin"
-
-3. **Time-based Aware System** — Add time-intelligent greetings and behavior
+2. **time-aware** — Add time-intelligent greetings and behavior
    → Navigate to `features/time-aware/` and type: "Load time-aware"
 
 ### Then Explore More

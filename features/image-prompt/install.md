@@ -13,16 +13,16 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
 ## Prerequisites
 - Core memory system installed (`memory/` directory with essential files)
 - `recall.md` accessible for integration updates
-- Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
+- Installing from the plugin marketplace gives auto-triggering (optional but recommended)
 
 ## 3-Step Installation Process
 
 ### Step 1: Install Image Prompt Skill
-- [ ] If Skill Plugin System exists:
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-prompt/SKILL.md`
   - Inform user: "Image Prompt skill installed -- auto-triggers on 'create a prompt', 'midjourney prompt', 'image prompt'"
-- [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Image Prompt integrated into the index. Install the Skill Plugin System for auto-triggering."
+- [ ] If this feature is not installed as a plugin:
+  - Inform user: "Image Prompt integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add prompt generation protocol reference to `recall.md`
 
 ### Step 2: Update Memory System

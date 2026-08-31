@@ -130,7 +130,7 @@ Result: clean revert. Your AI's prompt context goes back to whatever Claude Code
 
 ## Tier
 
-**Tier 1 — Foundation**, alongside Memory Consolidation, Skill Plugin, Time-Aware, Auto-Load-Hook. No dependencies; install in any order.
+**Tier 1 — Foundation**, alongside merge, time-aware and hook-session-start. No dependencies; install in any order.
 
 ---
 

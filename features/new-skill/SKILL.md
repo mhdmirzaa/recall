@@ -118,7 +118,7 @@ Draft ready -- approve to forge?
 
 After forging, update relevant system files:
 - `recall.md` -- add new skill command or update existing
-- Skill Plugin System manifest if applicable
+- plugin manifest if applicable
 - Note the forge in current session memory
 
 ### Step 7: Confirm
@@ -232,7 +232,7 @@ Each level should add **one meaningful capability** -- not multiple changes bund
 
 | Situation | Behavior |
 |-----------|----------|
-| No Skill Plugin System installed | Inform user that forged skills work best with the plugin; offer to create as standalone protocol |
+| Not installed as a plugin | Inform user that forged skills work best with the plugin; offer to create as standalone protocol |
 | Proposed skill overlaps existing | Suggest level-up to existing skill instead of creating duplicate |
 | User rejects proposal | Note rejection reason, do not re-propose same skill in current session |
 | Insufficient evidence (< 2 examples) | Wait for more evidence before proposing -- don't force it |
@@ -242,7 +242,7 @@ Each level should add **one meaningful capability** -- not multiple changes bund
 
 | Feature | Integration |
 |---------|-------------|
-| **Skill Plugin System** | Forge creates skills in the plugin's skill folder structure |
+| **Plugin marketplace** | Forge creates skills in the plugin's skill folder structure |
 | **Auto-Commit System** | After forging, commit the new/updated skill file |
 | **Decision Log System** | Log the decision to create/level-up a skill with rationale |
 | **Save Diary System** | Document the forge event in the session diary |

@@ -99,6 +99,6 @@ All companions are optional — the Image Prompt System works independently.
 
 See `install.md` for step-by-step setup.
 
-**Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
+**Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any platform without the plugin (load install protocol manually).
 
 *Based on proven prompt generation systems in production AI companions*

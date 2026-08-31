@@ -137,7 +137,7 @@ Based on production AI companion project management:
 - **File Discipline**: 1000-line cap prevents project file bloat
 - **User Control**: Explicit save commands, no surprises
 
-**Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
+**Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any platform without the plugin (load install protocol manually).
 
 ---
 

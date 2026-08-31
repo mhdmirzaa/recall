@@ -12,7 +12,7 @@ Executed when "Load git-commit" command is used — creates an intelligent commi
 
 ## Prerequisites
 - Git repository initialized in your project (`git init`)
-- Skill Plugin System recommended for auto-triggering (but not required)
+- Installing from the plugin marketplace gives auto-triggering (not required)
 - Core memory system installed (`recall.md` exists)
 
 ## 6-Step Execution Process
@@ -47,9 +47,9 @@ Executed when "Load git-commit" command is used — creates an intelligent commi
 - [ ] If plugin system is found:
   - Continue to Step 3 (create as auto-triggered skill)
 - [ ] If plugin system is NOT found:
-  - Inform user: "The Skill Plugin System is not installed. Auto-Commit can still work as a manual protocol."
+  - Inform user: "This feature is not installed as a plugin. Auto-Commit can still work as a manual protocol."
   - Offer two choices:
-    1. "Install Skill Plugin System first" (recommended)
+    1. "Install from the plugin marketplace first" (recommended)
     2. "Continue without auto-triggering" (skill added to recall.md as manual protocol)
   - If continuing without plugin: skip Step 3, add protocol directly to main memory in Step 5
 

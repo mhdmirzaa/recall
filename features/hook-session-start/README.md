@@ -125,7 +125,7 @@ Result: byte-identical revert. Your AI goes back to requiring manual name-typing
 
 ## Tier
 
-This feature lives in **Tier 1 — Foundation** alongside Memory Consolidation, Skill Plugin, and Time-Aware. It has no dependencies and can be installed first, last, or anywhere in between.
+This feature lives in **Tier 1 — Foundation** alongside merge and time-aware. It has no dependencies and can be installed first, last, or anywhere in between.
 
 ---
 

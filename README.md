@@ -28,6 +28,8 @@
 ### **File Structure**
 ```
 recall/
+├── .claude-plugin/           # Marketplace manifest — one entry per feature
+│   └── marketplace.json
 ├── features/                 # Optional. Install only what you need.
 │   ├── adventure/            # Visual-novel RPG sessions
 │   │   ├── install.md
@@ -164,10 +166,6 @@ recall/
 │   │   ├── install.md
 │   │   ├── README.md
 │   │   └── SKILL.md
-│   ├── skill-plugin/  # Legacy manual skill installer — replaced by the marketplace
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── skill-format.md
 │   ├── time-aware/           # Time-of-day awareness in greetings and behaviour
 │   │   ├── protocol.md
 │   │   └── README.md
@@ -215,10 +213,43 @@ recall/
 
 ## 🚀 **Quick Start**
 
-1. **Setup**: Run `setup-wizard.md` for automated setup (30 seconds)
-2. **Configure**: Add the memory instructions to Claude
-3. **Activate**: Type your AI's name to load personality
-4. **Use**: Your AI learns and grows through conversation
+**1. Set up memory.** Run `setup-wizard.md` and answer the questions — it fills
+in the four memory files with your AI's name and your preferences. Takes about
+30 seconds.
+
+**2. Add the marketplace.**
+
+```
+/plugin marketplace add mhdmirzaaa/recall
+```
+
+**3. Install the features you want.**
+
+```
+/plugin install session-log@recall
+/plugin install search@recall
+/plugin install git-commit@recall
+```
+
+Each feature is a plugin. `session-log` writes a dated entry when you say
+"save diary", `search` answers "do you remember when we…" from those entries,
+and `git-commit` writes commits that carry session context. Browse the rest in
+the tables below, or run `/plugin` to see them all.
+
+Then type your AI's name to load it, and it learns from there.
+
+### Manual install (no marketplace)
+
+The marketplace is a convenience, not a requirement. Every feature still ships
+a `README.md` and an `install.md` that any agent can execute directly:
+
+```
+"Load session-log"
+```
+
+Your AI reads `features/session-log/install.md` and follows it. This is the
+path to use on Codex, Cursor, Gemini CLI or anything else that is not Claude
+Code — nothing here is Claude-specific except the plugin packaging.
 
 ## 📚 **Communication Protocols**
 
@@ -299,9 +330,13 @@ Your AI companion can specialize in:
 
 Features are organized into **tiers** based on dependencies. Install Tier 1 first, then work your way up. Within each tier, install in any order unless noted.
 
+Every feature is installable two ways. `/plugin install <name>@recall` is the
+short path; the `"Load <name>"` command in the Setup column is the manual
+equivalent, and works on any AI tool.
+
 | Path | What You Get | Features |
 |------|-------------|----------|
-| **Minimal** (10 min) | Foundation only | merge + Skill Plugin |
+| **Minimal** (10 min) | Foundation only | merge |
 | **Productive** (30 min) | Foundation + documentation + git | Tier 1 + session-log + git-commit + work-plan |
 | **Complete** (1-2 hrs) | Full AI companion | All tiers, top to bottom |
 
@@ -314,7 +349,6 @@ Features are organized into **tiers** based on dependencies. Install Tier 1 firs
 | Feature | Description | Setup |
 |---------|-------------|-------|
 | 🔄 [merge](features/merge/) | Unified memory architecture — merge split files into one, faster loading | `"Load merge"` |
-| 🔌 [Skill Plugin System](features/skill-plugin/) | Auto-triggered skills for Claude Code — drop a SKILL.md and it's live | `"Load skill-plugin"` |
 | ⏰ [time-aware](features/time-aware/) | Time-intelligent greetings, energy-adapted behavior | `"Load time-aware"` |
 | ⚡ [hook-session-start](features/hook-session-start/) | Auto-loads your AI on Claude Code startup — no manual name-typing | `"Load hook-session-start"` |
 | 💬 [hook-user-prompt](features/hook-user-prompt/) | Generic UserPromptSubmit hook framework with plug-and-play injector pattern | `"Load hook-user-prompt"` |

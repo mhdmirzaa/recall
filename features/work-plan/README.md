@@ -160,11 +160,11 @@ Without Auto-Commit, Work still tracks progress in the plan file and marks check
 
 ## Requirements
 - Core memory system installed (`recall.md` exists)
-- **Skill Plugin System** recommended for auto-triggering
+- **Plugin marketplace** install recommended for auto-triggering
 - **Auto-Commit System** optional but recommended for per-task commit discipline
 
 ## Platform Note
-Requires **Claude Code** (Anthropic's CLI tool) with the Skill Plugin System for auto-triggering. The plan file itself is platform-agnostic — it's plain markdown that works on any system. On other AI platforms, the SKILL.md can be loaded as a manual protocol.
+Requires **Claude Code** with this feature installed from the plugin marketplace for auto-triggering. The plan file itself is platform-agnostic — it's plain markdown that works on any system. On other AI platforms, the SKILL.md can be loaded as a manual protocol.
 
 ---
 

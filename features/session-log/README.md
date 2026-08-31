@@ -8,7 +8,7 @@ Adds a structured history system to your AI companion, enabling **session-by-ses
 - **Append-only entries** — one file per day, multiple session entries per file, never overwrite
 - **Monthly auto-archival** — previous month entries automatically move to `memory/history/archived/YYYY-MM/`
 - **Session memory updates** — automatically update `memory/session.md` with session recap
-- **Skill auto-install** — if Skill Plugin System is detected, installs `save-diary` as an auto-triggered skill
+- **Skill auto-install** — if this feature is installed as a plugin, installs `save-diary` as an auto-triggered skill
 
 ## How It Works
 
@@ -88,7 +88,7 @@ End of January → February 1st diary save triggers:
 1. **Asks** for your diary system name (defaults to "Session Diary" — customize to match your AI)
 2. **Creates** `memory/history/current/` and `memory/history/archived/` directories
 3. **Creates** your first diary entry documenting the installation session
-4. **Installs as skill** — if Skill Plugin System is detected, copies `SKILL.md` into your plugin
+4. **Installs as skill** — if this feature is installed as a plugin, copies `SKILL.md` into your plugin
 5. **Updates** `recall.md` with diary commands and references
 6. **Self-deletes** this feature folder after successful integration
 
@@ -98,7 +98,7 @@ After running the integration protocol:
 - Every "save diary" command creates a structured session entry
 - Monthly archival runs automatically before each diary write
 - Session memory updates with recap after each entry
-- If Skill Plugin System installed: diary saves auto-trigger on "save diary"
+- If installed as a plugin: diary saves auto-trigger on "save diary"
 
 ## Entry Sections (from format.md)
 
@@ -120,7 +120,7 @@ After running the integration protocol:
 - **Clean organization** — monthly archival keeps workspace organized automatically
 
 ## Platform Note
-Works with any AI system. Uses `date` command on macOS/Linux or `Get-Date` on Windows for timestamps. The diary files are plain markdown — human-readable and portable across any platform. Auto-triggered skill requires Claude Code with the Skill Plugin System.
+Works with any AI system. Uses `date` command on macOS/Linux or `Get-Date` on Windows for timestamps. The diary files are plain markdown — human-readable and portable across any platform. Auto-triggering requires Claude Code with this feature installed from the plugin marketplace.
 
 ---
 

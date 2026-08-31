@@ -105,7 +105,7 @@ never echoed**. The render scripts strip any `ark-`/`sk-` key pattern from error
 
 See `install.md` for step-by-step setup.
 
-**Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any
+**Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any
 platform without the plugin (load the install protocol manually).
 
 **Tier:** Tier 4 — Intelligence & Awareness. Pairs with the Image Generation System.

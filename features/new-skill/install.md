@@ -13,16 +13,16 @@ Executed when "Load new-skill" command is used -- enables your AI to detect impr
 ## Prerequisites
 - Core memory system installed (`memory/` directory with essential files)
 - `recall.md` accessible for integration updates
-- Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
+- Installing from the plugin marketplace gives auto-triggering (optional but recommended)
 
 ## 3-Step Installation Process
 
 ### Step 1: Install Forge Skill
-- [ ] If Skill Plugin System exists:
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/forge-skill/SKILL.md`
   - Inform user: "Forge skill installed -- auto-triggers on pattern detection and 'create skill', 'level up'"
-- [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Forge integrated into the index. Install the Skill Plugin System for auto-triggering."
+- [ ] If this feature is not installed as a plugin:
+  - Inform user: "Forge integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add forge protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
@@ -82,7 +82,7 @@ Remember: AI always proposes, you always approve. Human-in-the-loop!
 - Forge requires conversation context to detect patterns -- it does not run in the background
 - All proposals need user approval before any files are created or modified
 - Start with Lv.1 skills -- complexity is added organically through level-ups
-- Works best with Skill Plugin System for auto-triggering and proper skill folder structure
+- Works best with plugin marketplace for auto-triggering and proper skill folder structure
 - Each forged skill follows a standard template for consistency
 
 ---

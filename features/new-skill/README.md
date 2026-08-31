@@ -110,7 +110,7 @@ After running the integration protocol, your AI will:
 
 | Feature | Integration |
 |---------|-------------|
-| **Skill Plugin System** | Forge creates skills in the plugin's folder structure |
+| **Plugin marketplace** | Forge creates skills in the plugin's folder structure |
 | **Auto-Commit System** | After forging, commit the new/updated skill file |
 | **Decision Log System** | Log the decision to create/level-up with rationale |
 | **Save Diary System** | Document forge events in session diary |
@@ -129,7 +129,7 @@ Based on production AI companion self-improvement:
 - **Organized skills** -- standard format, proper triggers, level tracking
 - **Compound growth** -- each skill makes the next session more productive
 
-**Platform Note:** Includes `SKILL.md` for auto-triggering via the Skill Plugin System. Works on any platform without the plugin (load install protocol manually).
+**Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any platform without the plugin (load install protocol manually).
 
 ---
 

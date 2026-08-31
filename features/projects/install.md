@@ -9,7 +9,7 @@
 ## Prerequisites
 - Core memory system installed (`memory/` directory with essential files)
 - `recall.md` accessible for integration updates
-- Skill Plugin System recommended for auto-triggering (optional)
+- Installing from the plugin marketplace gives auto-triggering (optional)
 
 ## 4-Step Installation Process
 
@@ -38,12 +38,12 @@
   - **Last Updated**: [Install Date]
   ```
 
-### Step 2: Install Skill (If Skill Plugin System Exists)
-- [ ] If Skill Plugin System is installed:
+### Step 2: Install as a plugin
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/manage-project/SKILL.md`
   - Inform user: "Project management skill installed -- auto-triggers on 'new project', 'load project', 'save project', 'list projects'"
-- [ ] If Skill Plugin System is NOT installed:
-  - Inform user: "Project management integrated into the index. Install the Skill Plugin System for auto-triggering."
+- [ ] If this feature is not installed as a plugin:
+  - Inform user: "Project management integrated into the index. Install it from the plugin marketplace for auto-triggering."
 
 ### Step 3: Update Memory System
 - [ ] Add to `recall.md`:

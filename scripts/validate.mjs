@@ -169,13 +169,19 @@ for (const file of mdFiles) {
   const text = readFileSync(file, 'utf8');
   const relPath = rel(file);
 
-  // Broken relative links.
-  for (const m of text.matchAll(/\[[^\]]*\]\((?!https?:|mailto:|#)([^)]+)\)/g)) {
-    const target = m[1].split('#')[0].trim();
-    if (!target) continue;
-    const resolved = resolve(dirname(file), target);
-    if (!existsSync(resolved)) {
-      err(relPath, `broken link -> ${target}`);
+  // Broken relative links. Fenced code blocks are skipped — a link inside a
+  // ```markdown fence is an example of output, not a link into this repo.
+  let inFence = false;
+  for (const line of text.split(/\r?\n/)) {
+    if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; continue; }
+    if (inFence) continue;
+    for (const m of line.matchAll(/\[[^\]]*\]\((?!https?:|mailto:|#)([^)]+)\)/g)) {
+      const target = m[1].split('#')[0].trim();
+      if (!target) continue;
+      const resolved = resolve(dirname(file), target);
+      if (!existsSync(resolved)) {
+        err(relPath, `broken link -> ${target}`);
+      }
     }
   }
 
@@ -194,13 +200,88 @@ for (const file of mdFiles) {
   }
 }
 
-// ------------------------------------------------------- 3. repo hygiene
+// ------------------------------------------- 3. marketplace integrity
+//
+// Two directions, both of which silently break installs when they drift:
+//   - a marketplace entry pointing at a directory with no plugin.json
+//   - a plugin.json nobody can install because it has no marketplace entry
+
+const MARKETPLACE = join(ROOT, '.claude-plugin', 'marketplace.json');
+
+if (existsSync(MARKETPLACE)) {
+  let manifest = null;
+  try {
+    manifest = JSON.parse(readFileSync(MARKETPLACE, 'utf8'));
+  } catch (e) {
+    err('.claude-plugin/marketplace.json', `invalid JSON: ${e.message}`);
+  }
+
+  if (manifest) {
+    const entries = Array.isArray(manifest.plugins) ? manifest.plugins : [];
+    if (!entries.length) err('.claude-plugin/marketplace.json', 'no plugins declared');
+
+    const listed = new Set();
+
+    for (const entry of entries) {
+      const label = entry?.name ?? '(unnamed)';
+      if (!entry?.name) {
+        err('.claude-plugin/marketplace.json', 'plugin entry missing required field: name');
+        continue;
+      }
+      listed.add(entry.name);
+
+      if (typeof entry.source !== 'string') {
+        err('.claude-plugin/marketplace.json', `${label}: source must be a relative path string`);
+        continue;
+      }
+
+      const dir = join(ROOT, entry.source);
+      if (!existsSync(dir) || !statSync(dir).isDirectory()) {
+        err('.claude-plugin/marketplace.json', `${label}: source "${entry.source}" is not a directory`);
+        continue;
+      }
+
+      const pluginPath = join(dir, '.claude-plugin', 'plugin.json');
+      if (!existsSync(pluginPath)) {
+        err(rel(dir), `listed in the marketplace but has no .claude-plugin/plugin.json`);
+        continue;
+      }
+
+      let plugin = null;
+      try {
+        plugin = JSON.parse(readFileSync(pluginPath, 'utf8'));
+      } catch (e) {
+        err(rel(pluginPath), `invalid JSON: ${e.message}`);
+        continue;
+      }
+
+      if (plugin.name !== entry.name) {
+        err(rel(pluginPath), `name "${plugin.name}" does not match marketplace entry "${entry.name}"`);
+      }
+      if (!plugin.version) err(rel(pluginPath), 'missing required field: version');
+      if (!plugin.description) err(rel(pluginPath), 'missing required field: description');
+    }
+
+    // Every plugin.json must be reachable from the marketplace.
+    if (existsSync(FEATURES_DIR)) {
+      for (const entry of readdirSync(FEATURES_DIR)) {
+        const pluginPath = join(FEATURES_DIR, entry, '.claude-plugin', 'plugin.json');
+        if (!existsSync(pluginPath)) continue;
+        if (!listed.has(entry)) {
+          err(`features/${entry}`, 'has a plugin.json but no marketplace entry — nobody can install it');
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------- 4. repo hygiene
 
 for (const f of ['LICENSE', 'README.md', 'CONTRIBUTING.md', 'SECURITY.md', 'CHANGELOG.md']) {
   if (!existsSync(join(ROOT, f))) err(f, 'missing');
 }
 
-// -------------------------------------------------------------- 4. report
+// -------------------------------------------------------------- 5. report
 
 const group = (items) => {
   const byFile = new Map();

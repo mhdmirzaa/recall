@@ -15,7 +15,7 @@ types; there is no built-in subject or persona.
 - An **OpenAI account + API key** with image access
 - **PowerShell** (Windows) *or* **bash + `curl` + `jq`** (Mac/Linux/Git Bash)
 - Core memory system installed (`memory/` directory, `recall.md` accessible)
-- Skill Plugin System recommended for auto-triggering (optional)
+- Installing from the plugin marketplace gives auto-triggering (optional)
 - *(Optional)* Library System — lets users pull saved style/subject references into a render
 
 ## Installation Steps
@@ -43,11 +43,11 @@ types; there is no built-in subject or persona.
   ```
 
 ### Step 4: Register the skill
-- [ ] If the Skill Plugin System exists:
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-generation/SKILL.md`
   - Inform user: "Image Generation skill installed — auto-triggers on 'render an image', 'generate image', 'render this prompt'"
 - [ ] If it does NOT exist:
-  - Inform user: "Image Generation integrated into the index. Install the Skill Plugin System for auto-triggering."
+  - Inform user: "Image Generation integrated into the index. Install it from the plugin marketplace for auto-triggering."
 
 ### Step 5: Update memory system
 - [ ] Add to `recall.md`:

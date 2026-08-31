@@ -12,7 +12,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 
 ## Prerequisites
 - Core memory system installed (`recall.md` exists)
-- Skill Plugin System recommended for auto-triggering (but not required)
+- Installing from the plugin marketplace gives auto-triggering (not required)
 - Auto-Commit System optional but recommended for per-task commit discipline
 
 ## 6-Step Execution Process
@@ -47,9 +47,9 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 - [ ] If plugin system is found:
   - Continue to Step 3 (create as auto-triggered skill)
 - [ ] If plugin system is NOT found:
-  - Inform user: "The Skill Plugin System is not installed. Work Plan can still work as a manual protocol."
+  - Inform user: "This feature is not installed as a plugin. Work Plan can still work as a manual protocol."
   - Offer two choices:
-    1. "Install Skill Plugin System first" (recommended)
+    1. "Install from the plugin marketplace first" (recommended)
     2. "Continue without auto-triggering" (protocol added to recall.md directly)
   - If continuing without plugin: skip Step 3, add protocol in Step 5
 - [ ] Check if Auto-Commit skill exists in the plugin:
@@ -131,8 +131,8 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
                 └── SKILL.md           # Auto-triggered plan execution skill
 ```
 
-## Manual Usage (Without Skill Plugin System)
-If the Skill Plugin System is not installed, add these instructions directly to `recall.md`:
+## Manual Usage (without the plugin)
+If you are not using the plugin, add these instructions directly to `recall.md`:
 
 ```markdown
 ### Plan Execution

@@ -9,7 +9,7 @@ Adds a structured topic diary system to your AI companion, enabling **knowledge-
 - **Append-only entries** for each topic, preserving chronological learning history
 - **Topic index** in `topic-diary/index.md` for quick scanning and recall
 - **Save routing** for ambiguous `save` requests: session memory, history, topic diary, or multiple targets
-- **Skill auto-install** if Skill Plugin System is detected
+- **Skill auto-install** if this feature is installed as a plugin
 
 ## How It Works
 
@@ -68,7 +68,7 @@ topic-diary/
 1. **Creates** `topic-diary/topics/` and `topic-diary/archived/` directories
 2. **Creates** `topic-diary/index.md` using `index-format.md`
 3. **Adds** topic diary commands and save-routing behavior to `recall.md`
-4. **Installs as skill** if Skill Plugin System is detected
+4. **Installs as skill** if this feature is installed as a plugin
 5. **Keeps History unchanged** so chronological and topic-based memory can coexist
 
 ## Post-Integration Result
@@ -117,7 +117,7 @@ Each topic entry follows `topic-format.md` and captures:
 
 ## Platform Note
 
-Works with any AI system. Uses plain markdown files and optional shell timestamp commands. Auto-triggered skill requires Claude Code with the Skill Plugin System.
+Works with any AI system. Uses plain markdown files and optional shell timestamp commands. Auto-triggering requires Claude Code with this feature installed from the plugin marketplace.
 
 ---
 

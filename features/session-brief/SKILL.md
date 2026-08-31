@@ -6,7 +6,7 @@ description: "Auto-triggers at the start of every session, before the first
              did we leave off'. Suppressed for the current session by 'skip
              brief'."
 ---
-# 📋 Session Briefing — Skill Plugin
+# 📋 Session Briefing
 
 ## Skill Name
 session-brief

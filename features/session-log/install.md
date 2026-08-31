@@ -44,15 +44,15 @@ Executed when "Load session-log" command is used — creates diary infrastructur
 - [ ] Compose initial diary entry documenting the installation session
 - [ ] Follow `memory/history/format.md` for entry structure
 
-### Step 4: Install as Skill (If Skill Plugin System Exists)
-- [ ] Check if `plugins/` directory exists (Skill Plugin System installed)
+### Step 4: Install as a plugin
+- [ ] Check if `plugins/` directory exists (installed as a plugin)
 - [ ] If plugin system exists:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/save-diary/SKILL.md`
   - Replace `[DIARY_NAME]` in the skill file with the name chosen in Step 1
   - Inform user: "Diary skill installed — auto-triggers on 'save diary'"
 - [ ] If plugin system does not exist:
   - Add diary commands directly to recall.md (Step 5)
-  - Inform user: "Install the Skill Plugin System for auto-triggered diary saves"
+  - Inform user: "Install it from the plugin marketplace for auto-triggered diary saves"
 
 ### Step 5: Update Index and Cleanup
 - [ ] Add diary reference to `recall.md` Optional Components:

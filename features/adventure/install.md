@@ -13,16 +13,16 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
 ## Prerequisites
 - Core memory system installed (`memory/` directory with essential files)
 - `recall.md` accessible for integration updates
-- Skill Plugin System recommended for full auto-triggering (optional but enhances experience)
+- Installing from the plugin marketplace gives auto-triggering (optional but recommended)
 
 ## 3-Step Installation Process
 
 ### Step 1: Install Interactive Story Skill
-- [ ] If Skill Plugin System exists:
+- [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/interactive-story/SKILL.md`
   - Inform user: "Interactive Story skill installed -- auto-triggers on 'new adventure', 'load adventure', 'resume adventure'"
-- [ ] If Skill Plugin System does NOT exist:
-  - Inform user: "Interactive Story integrated into the index. Install the Skill Plugin System for auto-triggering."
+- [ ] If this feature is not installed as a plugin:
+  - Inform user: "Interactive Story integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add interactive story protocol reference to `recall.md`
 
 ### Step 2: Create Adventure Directory

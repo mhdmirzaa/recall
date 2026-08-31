@@ -7,7 +7,7 @@ description: "MUST use when user says 'post-mortem', 'postmortem', 'log this
              dead end, an exposed secret, or data loss — at which point it asks
              whether the failure is worth recording before writing anything."
 ---
-# 🔥 Post-Mortem — Skill Plugin
+# 🔥 Post-Mortem
 
 ## Skill Name
 postmortem

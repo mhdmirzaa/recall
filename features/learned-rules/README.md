@@ -79,7 +79,7 @@ Rules that keep being reinforced stay. Rules without evidence decay.
 | **Save Diary** | Session learning summary included in diary entries |
 | **Decision Log** | Rules applied during sessions logged as behavioral decisions |
 | **Memory Consolidation** | Triggers review of rules.md for stale entries |
-| **Skill Plugin System** | Mulahazah activates via SKILL.md auto-trigger |
+| **Plugin marketplace** | Mulahazah activates via SKILL.md auto-trigger |
 
 ---
 

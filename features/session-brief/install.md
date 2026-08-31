@@ -26,7 +26,7 @@ features/session-brief/
 └── install.md
 ```
 
-If you have a `skills/` folder (Skill Plugin System installed):
+If this feature is installed as a plugin:
 - Also copy `SKILL.md` → `skills/session-briefing.md`
 
 ---

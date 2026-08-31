@@ -135,12 +135,12 @@ Without Auto-Commit, the library still works — entries are saved to files, but
 - **Deduplication** — AI scans before saving, preventing redundant entries
 
 ## Requirements
-- **Skill Plugin System** recommended for auto-triggering (install first for best experience)
-- Works without Skill Plugin System as a manual protocol loaded via `recall.md`
+- **Plugin marketplace** install recommended for auto-triggering
+- Works without the plugin as a manual protocol loaded via `recall.md`
 - **Auto-Commit System** recommended for automatic commits after library saves
 
 ## Platform Note
-Requires **Claude Code** (Anthropic's CLI tool) with the Skill Plugin System for auto-triggering. On other AI platforms, the SKILL.md can be loaded as a manual protocol — the library workflow works the same way, just triggered manually.
+Requires **Claude Code** with this feature installed from the plugin marketplace for auto-triggering. On other AI platforms, the SKILL.md can be loaded as a manual protocol — the library workflow works the same way, just triggered manually.
 
 ---
 
