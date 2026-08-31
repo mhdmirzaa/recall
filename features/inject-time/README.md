@@ -138,3 +138,13 @@ The order is whatever filesystem enumeration returns (typically alphabetical: `m
 ---
 
 *Type `"Load inject-time"` to wire time + period awareness into every prompt your AI sees.*
+
+## ⚠️ Security note
+
+This injector runs on every message you send and its output is prepended to
+your prompt. Its content is pure local clock arithmetic — it reads no user
+content and makes no network calls — but it is still an executable script in
+your hooks directory, and anything able to overwrite it controls one line of
+every prompt.
+
+See [SECURITY.md](../../SECURITY.md).

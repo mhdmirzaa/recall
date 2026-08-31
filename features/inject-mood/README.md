@@ -109,3 +109,16 @@ Removes the injector script and `mood-current.txt`. Asks whether to keep or stri
 ---
 
 *Type `"Load inject-mood"` to wire your mood vocabulary into every prompt your AI sees.*
+
+## ⚠️ Security note
+
+This injector runs on every message you send and its output is prepended to
+your prompt. It emits the **description text** from the `## Moods` registry in
+your memory file verbatim — so whatever is in that table reaches the model on
+every turn.
+
+Treat the registry as trusted input: text placed there is injected
+indefinitely, not just once. Review it if a mood was added by anything other
+than you.
+
+See [SECURITY.md](../../SECURITY.md).

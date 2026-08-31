@@ -135,3 +135,16 @@ Result: clean revert. Your AI's prompt context goes back to whatever Claude Code
 ---
 
 *Type `"Load hook-user-prompt"` to wire the framework. Then layer injectors as you build them.*
+
+## ⚠️ Security note
+
+This feature is the highest-privilege thing in the repository. Every script in
+`~/.claude/hooks/user-prompt-injectors/` runs on **every message you send**, and
+its output is prepended to your prompt before the model sees it.
+
+- An injector can inject anything, on every turn, invisibly.
+- Only install injectors you have read. They are a few lines each.
+- Anything able to write into that directory owns your prompt context.
+- The install backs up `settings.json`; keep the backup.
+
+See [SECURITY.md](../../SECURITY.md).

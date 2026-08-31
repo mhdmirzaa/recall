@@ -238,6 +238,15 @@ the tables below, or run `/plugin` to see them all.
 
 Then type your AI's name to load it, and it learns from there.
 
+### Security
+
+Memory files are trusted and loaded every session, so a line written into one
+influences every future session — which is what makes them worth attacking.
+[SECURITY.md](SECURITY.md) covers the threat model, which features can move
+external content into memory, and how to audit a memory file you do not trust.
+The short version: **commit `memory/` to git**, so every write is a reviewable
+diff.
+
 ### Working on Recall itself
 
 If you are pointing an AI agent at this repository to change it, read

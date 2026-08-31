@@ -130,3 +130,18 @@ This feature lives in **Tier 1 — Foundation** alongside merge and time-aware. 
 ---
 
 *Type `"Load hook-session-start"` to never type your AI's name on startup again.*
+
+## ⚠️ Security note
+
+This feature writes an executable script into `~/.claude/hooks/` and edits
+`~/.claude/settings.json`. That script runs automatically **every time Claude
+Code starts**, before you type anything, and its output is injected into the
+session.
+
+- Read the generated script before you let it run. It is short — it drains
+  stdin and echoes one instruction line.
+- The install backs up `settings.json`; keep the backup.
+- Anything able to write to `~/.claude/hooks/` can influence every session you
+  start. Treat that directory as sensitive.
+
+See [SECURITY.md](../../SECURITY.md).

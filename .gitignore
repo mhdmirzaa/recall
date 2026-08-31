@@ -6,3 +6,6 @@
 .claude/settings.local.json
 # macOS
 .DS_Store
+
+# Local credentials — never commit real API keys
+.env

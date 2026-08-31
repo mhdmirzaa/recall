@@ -115,3 +115,19 @@ platform without the plugin (load the install protocol manually).
 *Not shipped here (private / out of scope): prepaid-plan token-quota tracking, identity-canon
 character templates, and reference-video / reference-audio inputs (a possible later iteration —
 v1 is text-to-video + image-to-video).*
+
+## ⚠️ Security note
+
+**API key.** This feature reads `ARK_API_KEY` from your environment or a local
+`.env`. Never commit the real key — `.env` belongs in `.gitignore`. The shipped
+`.env.example` contains a placeholder only.
+
+**Cost.** Video is the most expensive thing in this repo to run, and the API is
+asynchronous, so a submitted job costs money whether or not you wait for it.
+The protocol confirms cost before submitting; do not remove that step.
+
+**External content.** API responses and error text come from outside the
+conversation. If a response or a library reference is written into memory, it
+must be confirmed by you first and tagged `external`.
+
+See [SECURITY.md](../../SECURITY.md).

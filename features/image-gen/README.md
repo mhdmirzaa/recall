@@ -113,3 +113,18 @@ platform without the plugin (load the install protocol manually).
 
 *Not shipped here (private / out of scope): moderation-calibration data, identity-canon character
 templates (that's the Image Prompt System's domain), and video generation.*
+
+## ⚠️ Security note
+
+**API key.** This feature reads `OPENAI_API_KEY` from your environment or a
+local `.env`. Never commit the real key — `.env` belongs in `.gitignore`. The
+shipped `.env.example` contains a placeholder only.
+
+**Cost.** Every render spends real money. The protocol confirms cost before
+calling the API; do not remove that step.
+
+**External content.** API responses and error text come from outside the
+conversation. If a response or a library reference is written into memory, it
+must be confirmed by you first and tagged `external`.
+
+See [SECURITY.md](../../SECURITY.md).
