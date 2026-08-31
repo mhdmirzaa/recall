@@ -1,221 +1,29 @@
-# 🧠 **Recall** - Universal AI Memory Architecture
-*A simple template for creating persistent AI companions that remember you*
+# 🧠 Recall
 
-## 🎯 **What This Does**
+**Persistent memory for AI coding agents, made of markdown files you can read.**
 
-**Recall** helps you create AI companions that maintain memory across conversations. Using simple `.md files` as a database, your AI can remember your preferences, learn your communication style, and provide consistent interactions.
+Your AI forgets everything when the session ends. Recall gives it four files it
+reads at the start of every conversation and writes back to as it learns — so
+it remembers your preferences, your stack, and what you were doing last
+Thursday. No runtime, no database, no dependencies. Just files you own.
 
-## ✨ **Key Features**
+| File | Holds | Lifetime |
+|------|-------|----------|
+| `memory/identity.md` | How the AI behaves — personality, rules, tone | Permanent |
+| `memory/profile.md` | What's true about you — preferences, stack | Grows over time |
+| `memory/history/` | What happened — dated session entries | Archived monthly |
+| `memory/session.md` | What you're doing right now | Resets each session |
 
-- **Persistent Memory**: AI remembers conversations across sessions
-- **Personal Learning**: Adapts to your communication style and preferences
-- **Time Intelligence**: Dynamic greetings and behavior based on time of day
-- **Simple Setup**: 30-second automated setup or manual customization
-- **Markdown Database**: Human-readable `.md files` store all memory
-- **Session Continuity**: Working memory for smooth conversation flow
-- **Self-Maintaining**: Updates memory through natural conversation
+Everything else is optional. 27 features add diary writing, memory search,
+structured commits, project tracking and more — each one installable on its
+own.
 
-## 📊 **System Specifications**
+---
 
-### **Architecture Overview**
-- **Storage**: Markdown files (.md) as database
-- **Memory Types**: Essential files + optional components + working memory
-- **Setup**: 30 seconds automated or 2-5 minutes manual
-- **Core Files**: 4 essential files + optional diary system
-- **Updates**: Through natural conversation
-- **Compatibility**: Claude and other AI systems with memory support
+## Quick start
 
-### **File Structure**
-```
-recall/
-├── .claude-plugin/           # Marketplace manifest — one entry per feature
-│   └── marketplace.json
-├── features/                 # Optional. Install only what you need.
-│   ├── adventure/            # Visual-novel RPG sessions
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── code-audit/           # Four-tier code review: survey, investigate, refine, audit
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── decisions/            # Append-only log of decisions and their reasoning
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── git-commit/           # Structured commits with session context
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── hook-session-start/   # Loads memory automatically when Claude Code starts
-│   │   ├── hooks/
-│   │   │   ├── session-start.ps1.template
-│   │   │   └── session-start.sh.template
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── uninstall.md
-│   ├── hook-user-prompt/     # UserPromptSubmit hook framework the inject-* features plug into
-│   │   ├── examples/
-│   │   │   ├── example-timestamp-injector.ps1.template
-│   │   │   └── example-timestamp-injector.sh.template
-│   │   ├── master-hook/
-│   │   │   ├── user-prompt-hook.ps1.template
-│   │   │   └── user-prompt-hook.sh.template
-│   │   ├── injector-format.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── uninstall.md
-│   ├── image-gen/            # Render PNGs via the OpenAI image API — needs a key, costs money
-│   │   ├── .env.example
-│   │   ├── credential-setup.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── image-prompt/         # Write Midjourney / NijiJourney prompts
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── inject-mood/          # Adds MOOD: to every prompt — needs hook-user-prompt
-│   │   ├── injectors/
-│   │   │   ├── mood.ps1.template
-│   │   │   └── mood.sh.template
-│   │   ├── commands.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── uninstall.md
-│   ├── inject-time/          # Adds a timestamp and period to every prompt — needs hook-user-prompt
-│   │   ├── injectors/
-│   │   │   ├── time.ps1.template
-│   │   │   └── time.sh.template
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── uninstall.md
-│   ├── inject-tone/          # Adds TONE: to every prompt — needs hook-user-prompt
-│   │   ├── injectors/
-│   │   │   ├── tone.ps1.template
-│   │   │   └── tone.sh.template
-│   │   ├── commands.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── uninstall.md
-│   ├── learned-rules/        # Behavioural rules the AI accumulates from its own mistakes
-│   │   ├── config.json
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   ├── rules-format.md
-│   │   └── SKILL.md
-│   ├── library/              # Reusable knowledge entries in eight fixed formats
-│   │   ├── formats/          # One template per entry type
-│   │   │   ├── architecture-format.md
-│   │   │   ├── component-format.md
-│   │   │   ├── database-format.md
-│   │   │   ├── diagram-format.md
-│   │   │   ├── integration-format.md
-│   │   │   ├── security-format.md
-│   │   │   ├── theme-format.md
-│   │   │   └── workflow-format.md
-│   │   ├── items/            # Ready-made entries you can install
-│   │   │   ├── integration/
-│   │   │   │   └── toyyibpay-payment-gateway.md
-│   │   │   ├── security/
-│   │   │   │   ├── security-headers.md
-│   │   │   │   └── toyyibpay-webhook-verification.md
-│   │   │   └── README.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── merge/                # Collapse identity + profile into one file for faster loading
-│   │   ├── patches/          # Versioned fixes to memory files
-│   │   │   ├── install.md
-│   │   │   ├── PATCH-001.md
-│   │   │   └── patch-format.md
-│   │   ├── memory-format.md
-│   │   ├── protocol.md
-│   │   ├── README.md
-│   │   └── session-format.md
-│   ├── music/                # Turn an image into a concept album with Suno-ready lyrics
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── new-skill/            # The AI proposes new skills from patterns it notices
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── postmortem/           # Failure log — what broke and what prevents it next time
-│   │   ├── install.md
-│   │   ├── protocol.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── projects/             # Ten active project slots, least-recently-used archived
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── reminders/            # Follow-ups that survive across sessions
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── search/               # Search past sessions and answer in narrative
-│   │   ├── install.md
-│   │   ├── output-format.md
-│   │   └── README.md
-│   ├── session-brief/        # Context briefing delivered at session start
-│   │   ├── install.md
-│   │   ├── protocol.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── session-log/          # Write a dated entry into memory/history/
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── time-aware/           # Time-of-day awareness in greetings and behaviour
-│   │   ├── protocol.md
-│   │   └── README.md
-│   ├── topic-notes/          # Subject-based notes that outlive the calendar
-│   │   ├── index-format.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   ├── SKILL.md
-│   │   └── topic-format.md
-│   ├── trim/                 # Budget-aware compaction — summarise instead of delete
-│   │   ├── install.md
-│   │   ├── policy-format.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   ├── video-gen/            # Render MP4 via the Seedance API — needs a key, costs money
-│   │   ├── .env.example
-│   │   ├── credential-setup.md
-│   │   ├── install.md
-│   │   ├── README.md
-│   │   └── SKILL.md
-│   └── work-plan/            # Plan-to-execution tracking with per-task commits
-│       ├── install.md
-│       ├── plan-format.md
-│       ├── README.md
-│       └── SKILL.md
-├── memory/                   # The four memory files. This is the whole database.
-│   ├── history/              # What happened — dated entries, archived monthly
-│   │   ├── example-entry.md  # A worked example
-│   │   └── format.md         # Entry structure and archive rules
-│   ├── identity.md           # How the AI behaves — permanent
-│   ├── profile.md            # What's true about you — grows over time
-│   └── session.md            # What you are doing right now — resets each session
-├── README.md                 # Start here
-├── recall.md                 # Entry point — loading order and the save protocol
-├── setup-guide.md            # Manual setup (2-5 min)
-└── setup-wizard.md           # Guided setup (30 sec)
-```
-
-### **Core Components**
-1. **Index** - System entry point and command center
-2. **Identity** - AI personality and communication style
-3. **Profile** - User preferences and learning patterns
-4. **Working memory** - What you are doing right now (resets each session)
-5. **History** - Optional conversation history with auto-archiving
-
-## 🚀 **Quick Start**
-
-**1. Set up memory.** Run `setup-wizard.md` and answer the questions — it fills
-in the four memory files with your AI's name and your preferences. Takes about
-30 seconds.
+**1. Set up memory.** Run `setup-wizard.md` and answer the questions. It fills
+in the four files with your AI's name and your preferences. About 30 seconds.
 
 **2. Add the marketplace.**
 
@@ -223,143 +31,46 @@ in the four memory files with your AI's name and your preferences. Takes about
 /plugin marketplace add mhdmirzaaa/recall
 ```
 
-**3. Install the features you want.**
+**3. Install what you want.**
 
 ```
-/plugin install session-log@recall
-/plugin install search@recall
-/plugin install git-commit@recall
+/plugin install session-log@recall     # write a dated entry when you say "save diary"
+/plugin install search@recall          # answer "do you remember when we…" from those entries
+/plugin install git-commit@recall      # commits that carry session context
 ```
 
-Each feature is a plugin. `session-log` writes a dated entry when you say
-"save diary", `search` answers "do you remember when we…" from those entries,
-and `git-commit` writes commits that carry session context. Browse the rest in
-the tables below, or run `/plugin` to see them all.
+Then type your AI's name. It loads its memory and picks up where you left off.
 
-Then type your AI's name to load it, and it learns from there.
+Run `/plugin` to browse the other 24, or read the tables below.
 
-### Security
+### Manual install — any AI tool
 
-Memory files are trusted and loaded every session, so a line written into one
-influences every future session — which is what makes them worth attacking.
-[SECURITY.md](SECURITY.md) covers the threat model, which features can move
-external content into memory, and how to audit a memory file you do not trust.
-The short version: **commit `memory/` to git**, so every write is a reviewable
-diff.
-
-### Working on Recall itself
-
-If you are pointing an AI agent at this repository to change it, read
-[AGENTS.md](AGENTS.md) — the cross-tool standard read natively by Codex,
-Cursor, Copilot, Gemini CLI and Windsurf. It carries the exact commands, the
-feature contract, and the boundaries not to cross. Humans should read
-[CONTRIBUTING.md](CONTRIBUTING.md).
-
-### Manual install (no marketplace)
-
-The marketplace is a convenience, not a requirement. Every feature still ships
-a `README.md` and an `install.md` that any agent can execute directly:
+The marketplace is a convenience, not a requirement. Every feature also ships a
+plain install protocol that any agent can execute:
 
 ```
 "Load session-log"
 ```
 
-Your AI reads `features/session-log/install.md` and follows it. This is the
-path to use on Codex, Cursor, Gemini CLI or anything else that is not Claude
-Code — nothing here is Claude-specific except the plugin packaging.
-
-## 📚 **Communication Protocols**
-
-### **Basic Commands**
-```
-<ai-name>     → Load AI personality and memory
-save          → Save current progress to files
-update memory → Refresh AI's learning
-review growth → Check AI's development
-```
-
-### **Creating Custom Protocols**
-
-**Step 1: Define the Protocol**
-Create a new `.md file` with your protocol rules:
-```markdown
-# My Custom Protocol
-## When to Use: [trigger conditions]
-## What It Does: [specific actions]
-## How It Works: [step-by-step process]
-```
-
-**Step 2: Add to Index**
-Edit `recall.md` and add your protocol to the "Optional Components" section:
-```markdown
-### My Custom Feature
-*Load when you say: "load my feature"*
-- [Brief description]
-- [Usage instructions]
-```
-
-**Step 3: Train Your AI**
-Tell your AI about the new protocol:
-```
-"I've created a new protocol in [filename]. When I say '[trigger phrase]', 
-load that protocol and follow its instructions."
-```
-
-### **Communication Tutorial**
-
-**Effective AI Training:**
-1. **Be Specific**: "I prefer short responses" vs "communicate better"
-2. **Give Examples**: Show what you want, not just describe it
-3. **Use Consistent Language**: Same terms for same concepts
-4. **Provide Feedback**: "That was perfect" or "try a different approach"
-
-**Memory Management:**
-- Use `save` after important conversations
-- Your AI updates files automatically during conversation
-- Daily diary is optional but helpful for long-term memory
-
-**Customization Tips:**
-- Edit files gradually, test changes
-- Start with small personality adjustments
-- Add domain expertise through conversation
-- Use the protocol system for specialized features
-
-## 🎯 **Common Use Cases**
-
-Your AI companion can specialize in:
-- **Professional**: Business analysis, project management, strategic planning
-- **Educational**: Tutoring, study assistance, curriculum development
-- **Creative**: Writing support, brainstorming, artistic collaboration  
-- **Personal**: Life coaching, goal tracking, decision support
-- **Technical**: Code review, troubleshooting, system design
-
-## 🛠️ **Advanced Features**
-
-- **Auto-Archive**: Diary files automatically archive at 1k lines
-- **Working memory**: Temporary memory that resets each conversation
-- **Protocol System**: Create custom AI behaviors and responses
-- **Self-Update**: AI modifies its own memory through conversation
-- **Modular Design**: Add or remove features as needed
-
-## 🌟 **Available Feature Extensions**
-
-### 📖 Installation Guide
-
-Features are organized into **tiers** based on dependencies. Install Tier 1 first, then work your way up. Within each tier, install in any order unless noted.
-
-Every feature is installable two ways. `/plugin install <name>@recall` is the
-short path; the `"Load <name>"` command in the Setup column is the manual
-equivalent, and works on any AI tool.
-
-| Path | What You Get | Features |
-|------|-------------|----------|
-| **Minimal** (10 min) | Foundation only | merge |
-| **Productive** (30 min) | Foundation + documentation + git | Tier 1 + session-log + git-commit + work-plan |
-| **Complete** (1-2 hrs) | Full AI companion | All tiers, top to bottom |
-
-> **New features from contributors** slot into the appropriate tier — no renumbering needed.
+Your AI reads `features/session-log/install.md` and follows it. This is the path
+on Codex, Cursor, Gemini CLI or anything else — nothing here is Claude-specific
+except the packaging.
 
 ---
+
+## Features
+
+Features are grouped into **tiers** by dependency. Install Tier 1 first, then
+work up. Within a tier, order does not matter unless noted.
+
+| Path | What you get | Features |
+|------|--------------|----------|
+| **Minimal** (10 min) | Foundation only | `merge` |
+| **Productive** (30 min) | Foundation + documentation + git | Tier 1 + `session-log` + `git-commit` + `work-plan` |
+| **Complete** (1–2 hrs) | Everything | All tiers, top to bottom |
+
+The Setup column shows the manual command. The marketplace equivalent is always
+`/plugin install <name>@recall`.
 
 ### 🏗️ Tier 1 — Foundation (Start Here)
 
@@ -418,23 +129,70 @@ equivalent, and works on any AI tool.
 
 ---
 
-## 🤝 Contributors
+## Commands
 
-| # | Contributor | Features |
-|---|------------|----------|
-| 1 | [Faiz Khairi](https://github.com/faizkhairi) | Reminders System, Decision Log System |
-| 2 | [logando-al](https://github.com/logando-al) | Session Briefing System, Post-Mortem System |
-| 3 | [SherlockianAsh](https://github.com/SherlockianAsh) | Observation System |
-| 4 | [naimkatiman](https://github.com/naimkatiman) | Mulahazah System |
+Once memory is set up, these work in any conversation:
 
-> Want to contribute? Fork the repo, create a feature in `features/[Your-Feature]/`, and submit a PR!
+```
+<ai-name>     → load personality and memory
+save          → resolve what this session learned into memory
+update memory → refresh knowledge and preferences
+review growth → check development over time
+```
 
----
+`save` does not blindly append. Each fact is compared against what memory
+already holds and resolved to **ADD**, **UPDATE**, **DELETE** or **NOOP** —
+which is what stops "prefers short answers" from ending up three lines below
+"prefers detailed explanations". Superseded lines are struck through and dated,
+not deleted. See [`recall.md`](recall.md).
 
-**Version**: 4.2 - Compact feature tables with contributor credits
-**Created by**: Kiyoraka Ken & Alice
-**License**: Open Source Community Project
-**Last Updated**: April 8, 2026
-**Purpose**: Simple, effective AI memory for everyone
+## Adding your own protocol
 
-*Transform basic AI conversations into meaningful, growing relationships*
+You do not need to write a feature to extend this. Create a markdown file with
+your rules, add it to the Optional Components section of `recall.md` with a
+trigger phrase, and tell your AI it exists:
+
+```markdown
+### My Custom Feature
+*Load when you say: "load my feature"*
+- What it does
+- How to use it
+```
+
+If it turns out to be generally useful, [CONTRIBUTING.md](CONTRIBUTING.md)
+explains how to turn it into a real feature.
+
+## Security
+
+Memory files are trusted and loaded every session, so a line written into one
+influences every future session — which is exactly what makes them worth
+attacking. [SECURITY.md](SECURITY.md) covers the threat model (OWASP ASI06),
+which features can move external content into memory, and how to audit a memory
+file you do not trust.
+
+The short version: **commit `memory/` to git.** Then every write is a reviewable
+diff.
+
+## Documentation
+
+| Document | For |
+|----------|-----|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | How it fits together, and the full file tree |
+| [AGENTS.md](AGENTS.md) | Pointing an AI agent at this repo to change it |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributing a feature |
+| [SECURITY.md](SECURITY.md) | Threat model and reporting |
+| [CHANGELOG.md](CHANGELOG.md) | Release history |
+
+## Contributing
+
+Features are markdown. If you can write a clear protocol, you can write one.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the feature contract, then:
+
+```bash
+npm run validate            # must exit 0 before you open a PR
+claude plugin validate .    # if you touched a plugin or the marketplace
+```
+
+## License
+
+[MIT](LICENSE) © 2026 Muhd Mirza
