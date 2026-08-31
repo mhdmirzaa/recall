@@ -1,9 +1,9 @@
-# Mulahazah Installation Protocol
+# learned-rules Installation Protocol
 *Systematic setup for behavioral learning from session observations*
 
 ## Purpose
 
-Executed when setting up the Mulahazah instinct learning system -- creates directory infrastructure, wires hooks into Claude Code, fetches analysis scripts, and activates the `/continuous-improvement` command. After installation, your AI companion silently observes every tool call and learns from the patterns.
+Executed when setting up the learned-rules instinct learning system -- creates directory infrastructure, wires hooks into Claude Code, fetches analysis scripts, and activates the `/continuous-improvement` command. After installation, your AI companion silently observes every tool call and learns from the patterns.
 
 ## Trigger Command
 
@@ -127,7 +127,7 @@ Default configuration:
 ## Installation Complete Message
 
 ```
-Mulahazah installed successfully.
+learned-rules installed successfully.
 
   Hooks: PreToolUse + PostToolUse → observe.sh
   Analysis: ~/.claude/mulahazah/bin/analyze.sh (Haiku-powered)

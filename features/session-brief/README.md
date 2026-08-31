@@ -1,4 +1,4 @@
-# 📋 Session Briefing System
+# 📋 session-brief
 
 A proactive session-start intelligence layer that delivers a concise brief at the beginning of every conversation — covering where you left off, open reminders, active project status, and a time-aware work suggestion.
 
@@ -6,10 +6,10 @@ A proactive session-start intelligence layer that delivers a concise brief at th
 
 ## What It Does
 
-At every session start, the Session Briefing System automatically delivers a structured brief (under 12 lines) before processing the user's first request:
+At every session start, the session-brief automatically delivers a structured brief (under 12 lines) before processing the user's first request:
 
 - **Where we left off** — last session recap from `session.md`
-- **Open reminders** — items from Reminders System (only if items exist)
+- **Open reminders** — items from reminders (only if items exist)
 - **Active project** — LRU #1 status from Project Management System
 - **Attention flags** — idle or stale projects worth noting (max 3)
 - **Time-adaptive suggestion** — work type recommendation based on time of day
@@ -57,8 +57,8 @@ Can be used standalone with just `memory/session.md`.
 ## Requirements
 
 - `memory/session.md` — required (last session recap source)
-- `memory/reminders.md` — optional (Reminders System)
-- Project list file — optional (LRU Project Management System)
+- `memory/reminders.md` — optional (reminders)
+- Project list file — optional (projects)
 - Time detection — optional (Time-based-Aware System)
 
 ---

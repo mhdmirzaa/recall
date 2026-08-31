@@ -3,7 +3,7 @@ name: trim
 description: "MUST use when user says 'compact memory', 'compact [file]', 'check budgets', 'set budget', 'restore compaction', or before any 'save' whose target memory file exceeds its budget in compaction/compaction-policy.md."
 ---
 
-# Memory Compaction — Budget-Aware Memory Skill
+# trim — Budget-Aware Memory Skill
 *Keep memory small without making it forget.*
 
 ## Activation

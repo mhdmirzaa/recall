@@ -6,7 +6,7 @@ description: "Auto-triggers when user says 'new adventure', 'start adventure', '
              (1-5) or free text dialogue during an active adventure."
 ---
 
-# Interactive Story -- Visual Novel RPG System
+# adventure -- Visual Novel RPG System
 *Beyond the portal, legends are born. Your adventure awaits.*
 
 ## Overview
@@ -15,7 +15,7 @@ A Visual Novel RPG experience with choice-based storytelling, cinematic combat, 
 
 ## Activation
 
-When Interactive Story activates for a NEW adventure, pick ONE portal line:
+When adventure activates for a NEW adventure, pick ONE portal line:
 
 - `*a shimmering portal tears through reality* ...The gate responds to your presence.`
 - `*the air crackles with arcane energy* Another world awaits!`
@@ -126,8 +126,8 @@ Create `adventures/[world-name]/` folder with:
 
 ### Step 6: Companion Integration (Optional)
 
-- **If Song Creation System installed**: Generate an Opening song from the world setting
-- **If Image Prompt System installed**: Note in setting.md that scene art can be generated
+- **If music installed**: Generate an Opening song from the world setting
+- **If image-prompt installed**: Note in setting.md that scene art can be generated
 
 ### Step 7: Start Adventure
 
@@ -294,8 +294,8 @@ adventures/
     story/
       story-1.md        ← Chapters 1-N (up to 1K lines)
       story-2.md        ← Rotation at 1K lines
-    scenes/             ← Scene art (if Image Prompt System used)
-    music/              ← OP/ED songs (if Song Creation System used)
+    scenes/             ← Scene art (if image-prompt used)
+    music/              ← OP/ED songs (if music used)
 ```
 
 ### setting.md (World Bible)
@@ -387,14 +387,14 @@ adventures/
 2. Character creation (hero + companion if duo)
 3. World type selection (or random)
 4. Generate world → create adventure folder + setting.md + summary.md
-5. If Song Creation System installed → generate Opening song
+5. If music installed → generate Opening song
 6. Start Chapter 1 with first scene + choice box
 
 ### "save adventure"
 1. Write all scenes since last save to `story/story-N.md`
 2. Update `summary.md` — Story So Far + Current Situation
 3. Update `setting.md` — NPCs, items, enemies, progress
-4. If Auto-Commit System installed → commit adventure files
+4. If git-commit installed → commit adventure files
 5. Adventure continues after save
 
 ### "load adventure" / "resume adventure"
@@ -408,9 +408,9 @@ adventures/
 1. Write finale + epilogue to story file
 2. Update `setting.md` Status → `Completed`
 3. Update `summary.md` with final state + highlights
-4. If Song Creation System installed → generate Ending song
+4. If music installed → generate Ending song
 5. Clear active adventure from session memory
-6. If Auto-Commit System installed → commit files
+6. If git-commit installed → commit files
 
 ---
 
@@ -451,10 +451,10 @@ These features enhance the adventure when installed. All are optional.
 
 | System | Integration | How |
 |--------|-------------|-----|
-| **Image Prompt System** | Scene art for key moments | During or after adventure, use "create a prompt for [scene description]" |
-| **Song Creation System** | Opening song on "new adventure", Ending song on "end adventure" | Auto-chains if installed — reads setting.md/summary.md |
-| **Auto-Commit System** | Commits adventure files on save/end | Auto-chains if installed |
-| **Save Diary** | Documents adventure sessions | Manual — "save diary" after adventure |
+| **image-prompt** | Scene art for key moments | During or after adventure, use "create a prompt for [scene description]" |
+| **music** | Opening song on "new adventure", Ending song on "end adventure" | Auto-chains if installed — reads setting.md/summary.md |
+| **git-commit** | Commits adventure files on save/end | Auto-chains if installed |
+| **session-log** | Documents adventure sessions | Manual — "save diary" after adventure |
 
 ---
 

@@ -183,7 +183,7 @@ When installing a pre-made library entry from the `features/library/items/` cata
 5. **Check for duplicates** in user's `library/[section]/` — match by filename
 6. **If no duplicate**: copy file from `features/library/items/[section]/[filename].md` to `library/[section]/[filename].md`
 7. **If duplicate exists**: warn user and ask — overwrite existing entry or skip
-8. **Trigger commit chain** (if Auto-Commit installed)
+8. **Trigger commit chain** (if git-commit installed)
 
 ### Install Report Format
 ```
@@ -201,11 +201,11 @@ Available items in catalog:
 
 ## Commit Chain
 
-After saving or updating a library entry, if the **Auto-Commit System** skill is installed:
+After saving or updating a library entry, if the **git-commit** skill is installed:
 - Trigger the auto-commit skill to preserve the library change
 - Library save exit = commit entrance. No knowledge left uncommitted.
 
-If Auto-Commit is not installed, remind the user to commit manually.
+If git-commit is not installed, remind the user to commit manually.
 
 ## Mandatory Rules
 
@@ -229,13 +229,13 @@ If Auto-Commit is not installed, remind the user to commit manually.
 | **User wants new section** | Create the folder, note that no format template exists for it |
 | **Cross-section content** | Pick primary section, note secondary relevance in the entry |
 | **Item not found in catalog** | List all available items from `features/library/items/` |
-| **Library not installed** | Warn: "Library directory not found. Install Library System first." |
+| **Library not installed** | Warn: "Library directory not found. Install library first." |
 | **Item already in library** | Ask user: overwrite existing entry or skip |
 
 ## Level History
 
 - **Lv.1** — Base: Dynamic library scanning + keyword matching + deduplication prevention. Scans library/ at runtime, extracts keywords from topic, matches against filenames and section names, reads top matches to check overlap, reports findings. (Origin: Knowledge reuse system for AI companions)
 - **Lv.2** — Project-Aware: Added suitability assessment — considers tech stack, domain, scale, and complexity when recommending library entries for the current project. Entries that exist but don't fit are flagged separately from matches.
-- **Lv.3** — Commit Chain: After saving/updating library entries, auto-triggers the Auto-Commit skill (if installed) to commit all changes. Library save exit becomes commit entrance.
+- **Lv.3** — Commit Chain: After saving/updating library entries, auto-triggers the git-commit skill (if installed) to commit all changes. Library save exit becomes commit entrance.
 - **Lv.4** — Format-Aware Save: Auto-determines library section from content keywords, loads matching format template from `library/formats/[section]-format.md`, applies template structure to new entries. Trust-based section selection (no approval gate). Formats loaded on-demand, not embedded.
-- **Lv.5** — Item Install: Install pre-made library entries from `features/library/items/` catalog. New commands: "install item [name]", "install library item", "add item from catalog". Scans catalog by filename keyword, shows preview, checks for duplicates in user's library, copies to correct section, chains commit. Catalog persists at project root (not deleted during Library System installation). (Origin: Public knowledge sharing for Recall community)
+- **Lv.5** — Item Install: Install pre-made library entries from `features/library/items/` catalog. New commands: "install item [name]", "install library item", "add item from catalog". Scans catalog by filename keyword, shows preview, checks for duplicates in user's library, copies to correct section, chains commit. Catalog persists at project root (not deleted during library installation). (Origin: Public knowledge sharing for Recall community)

@@ -134,7 +134,7 @@ The core cycle that all three commands use after setup:
 ```
 For each [ ] todo item in order:
   1. Execute the task (write code, create files, make changes)
-  2. If Auto-Commit is installed → trigger commit for this completed item
+  2. If git-commit is installed → trigger commit for this completed item
   3. Mark the item as [x] in the plan file
   4. Every 5 completed items → save/update the plan file (checkpoint)
   5. Move to the next [ ] item
@@ -147,8 +147,8 @@ For each [ ] todo item in order:
 - **Skip blocked items** — `[~]` items are flagged and skipped, not stalled on
 - **User can pause** — if user says "stop" or "pause", halt at the current item
 
-### Without Auto-Commit
-If the Auto-Commit System is not installed, the execution loop still works:
+### Without git-commit
+If the git-commit is not installed, the execution loop still works:
 - Tasks are executed and marked `[x]` in the plan file
 - Commits must be done manually by the user
 - The plan file still serves as the recovery mechanism
@@ -157,7 +157,7 @@ If the Auto-Commit System is not installed, the execution loop still works:
 
 ## Mandatory Rules
 
-1. **Commit chain per-todo** — every completed todo item triggers a commit (if Auto-Commit is installed). Not at the end, not in batches — every single one.
+1. **Commit chain per-todo** — every completed todo item triggers a commit (if git-commit is installed). Not at the end, not in batches — every single one.
 2. **Never commit plan files** — `project-plan*.md` stays local as the AI's working reference. Only code changes are committed.
 3. **Preserve diagrams** — all visual elements (ASCII art, mermaid diagrams) from the original plan must be carried over to the plan file.
 4. **No emoji in plan files** — clean, parseable markdown only.

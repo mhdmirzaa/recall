@@ -1,4 +1,4 @@
-# Rules Format -- Mulahazah Learning Output
+# Rules Format -- learned-rules Learning Output
 *The structure of rules.md and how rules are created, read, and maintained.*
 
 ## Overview
@@ -10,7 +10,7 @@ Rules are stored in `~/.claude/mulahazah/rules.md`. This file is written by `ana
 ```markdown
 # Learned Rules
 
-Rules extracted from session observations by Mulahazah.
+Rules extracted from session observations by learned-rules.
 Remove any rule that causes problems. Keep what helps.
 
 ---

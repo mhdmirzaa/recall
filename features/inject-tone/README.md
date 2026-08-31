@@ -1,5 +1,5 @@
-# 🎭 Tone-Prompt-Inject System
-*Plug-and-play tone injector for the User-Prompt-Hook framework*
+# 🎭 inject-tone
+*Plug-and-play tone injector for the hook-user-prompt framework*
 
 ## What This Feature Does
 
@@ -19,7 +19,7 @@ Adds a `TONE: <description>` line to every user prompt's context. Your AI receiv
 ```
 Every user prompt fires UserPromptSubmit
         ↓
-User-Prompt-Hook master script enumerates injectors
+hook-user-prompt master script enumerates injectors
         ↓
 ~/.claude/hooks/user-prompt-injectors/tone.{ps1|sh}    ← installed by THIS feature
         ↓
@@ -37,7 +37,7 @@ Master prepends to AI's prompt context
 
 ## What Happens During Integration
 
-1. **Verify** the User-Prompt-Hook framework is installed — if not, stop and instruct to install it first
+1. **Verify** the hook-user-prompt framework is installed — if not, stop and instruct to install it first
 2. **Detect** your main memory file (`memory/merged.md` post-consolidation, else `memory/identity.md`)
 3. **Search** that file for existing tone/register/voice mentions and surface them as suggestions
 4. **Confirm** with you which to seed the registry with — accept your edits and additions
@@ -93,7 +93,7 @@ Your AI may decide tone shifted (e.g. you signaled a register change in conversa
 "uninstall inject-tone"
 ```
 
-Removes the injector script and `tone-current.txt`. Asks whether to keep or strip the `## Tones` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `recall.md`. The User-Prompt-Hook framework keeps running for other injectors.
+Removes the injector script and `tone-current.txt`. Asks whether to keep or strip the `## Tones` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `recall.md`. The hook-user-prompt framework keeps running for other injectors.
 
 ## Compatibility
 
@@ -104,7 +104,7 @@ Removes the injector script and `tone-current.txt`. Asks whether to keep or stri
 
 ## Tier
 
-**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `hook-user-prompt` installed first.
+**Tier 1 — Foundation** (extension pack for hook-user-prompt). Requires `hook-user-prompt` installed first.
 
 ---
 

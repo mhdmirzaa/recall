@@ -1,4 +1,4 @@
-# 🎭 Tone-Prompt-Inject — Runtime Commands
+# 🎭 inject-tone — Runtime Commands
 *Reference for `add tone`, `set tone`, `list tones` — used by the AI when these phrases fire*
 
 ## Purpose

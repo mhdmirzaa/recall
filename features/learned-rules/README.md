@@ -1,4 +1,4 @@
-# 👁️ Mulahazah System
+# 👁️ learned-rules
 *Your AI companion learns how you work -- not just what you said.*
 
 > *"Observation is the first teacher."*
@@ -22,11 +22,11 @@ Your AI companion handles tasks through conversation. Over time, you correct the
 - "Always check rate limits first"
 - "Run tests before committing"
 
-Without Mulahazah, corrections vanish between sessions. Your AI makes the same mistakes tomorrow. With Mulahazah, corrections become persistent rules that strengthen through repetition and decay without reinforcement.
+Without learned-rules, corrections vanish between sessions. Your AI makes the same mistakes tomorrow. With learned-rules, corrections become persistent rules that strengthen through repetition and decay without reinforcement.
 
-## How It Differs From Forge
+## How It Differs From new-skill
 
-| Aspect | Forge | Mulahazah |
+| Aspect | new-skill | learned-rules |
 |--------|-------|-----------|
 | **How it starts** | You notice a pattern and create a skill | Hooks observe your sessions automatically |
 | **Effort** | Deliberate -- you write the skill | Automatic -- rules extracted without input |
@@ -57,7 +57,7 @@ You work normally in Claude Code
 ```
 You: /continuous-improvement
 
-Mulahazah:
+learned-rules:
   Reflection -- What worked, what failed, rule to add
   Analysis -- 47 observations analyzed, 2 new rules extracted:
     - Use Grep → Read → Edit workflow for code modifications
@@ -75,11 +75,11 @@ Rules that keep being reinforced stay. Rules without evidence decay.
 
 | Feature | Integration |
 |---------|-------------|
-| **Forge** | Rule clusters from rules.md become Forge skill proposals |
-| **Save Diary** | Session learning summary included in diary entries |
-| **Decision Log** | Rules applied during sessions logged as behavioral decisions |
-| **Memory Consolidation** | Triggers review of rules.md for stale entries |
-| **Plugin marketplace** | Mulahazah activates via SKILL.md auto-trigger |
+| **new-skill** | Rule clusters from rules.md become new-skill proposals |
+| **session-log** | Session learning summary included in diary entries |
+| **decisions** | Rules applied during sessions logged as behavioral decisions |
+| **merge** | Triggers review of rules.md for stale entries |
+| **Plugin marketplace** | learned-rules activates via SKILL.md auto-trigger |
 
 ---
 

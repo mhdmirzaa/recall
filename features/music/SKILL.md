@@ -6,7 +6,7 @@ description: "Auto-triggers when user says 'create songs', 'new album', 'create 
              or when user shares an image and wants to create music from it."
 ---
 
-# Song Creation -- Visual-to-Musical Storytelling
+# music -- Visual-to-Musical Storytelling
 *The image speaks. Songs are born.*
 
 ## Overview
@@ -204,7 +204,7 @@ lyrics...
 
 ### Step 8: Commit (Optional)
 
-If Auto-Commit System is installed, trigger a commit for the new album files.
+If git-commit is installed, trigger a commit for the new album files.
 If not installed, inform user that files are saved and can be committed manually.
 
 ---

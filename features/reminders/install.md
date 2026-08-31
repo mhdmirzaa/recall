@@ -1,4 +1,4 @@
-# Reminders System Installation Protocol
+# reminders Installation Protocol
 *Systematic setup for persistent cross-session reminders*
 
 ## Purpose
@@ -134,7 +134,7 @@ memory/
 
 ---
 
-**Version**: Protocol v1.0 - Reminders System
+**Version**: Protocol v1.0 - reminders
 **Last Updated**: March 2026
 **Status**: Active protocol for reminders integration
 

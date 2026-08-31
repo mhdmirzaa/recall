@@ -1,4 +1,4 @@
-# Topic Diary Index Format
+# topic-notes Index Format
 *Canonical format for `topic-diary/index.md`*
 
 Use this format to catalog available topic diaries and make recall easier.
@@ -6,7 +6,7 @@ Use this format to catalog available topic diaries and make recall easier.
 ## File Template
 
 ```markdown
-# Topic Diary Index
+# topic-notes Index
 *Catalog of subject-based memory journals.*
 
 ## Active Topics

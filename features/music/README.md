@@ -1,4 +1,4 @@
-# 🎵 Song Creation System
+# 🎵 music
 *The image speaks. Your AI listens. Songs are born.*
 
 ---
@@ -107,12 +107,12 @@ Track count maps to narrative arc complexity:
 
 | System | Enhancement |
 |--------|-------------|
-| **Auto-Commit System** | Auto-commits album files after creation |
-| **Save Diary** | Document creative sessions and album inspirations |
-| **Library System** | Save successful style tag patterns for reuse |
-| **Image Prompt System** | Generate album cover art with Midjourney/NijiJourney |
+| **git-commit** | Auto-commits album files after creation |
+| **session-log** | Document creative sessions and album inspirations |
+| **library** | Save successful style tag patterns for reuse |
+| **image-prompt** | Generate album cover art with Midjourney/NijiJourney |
 
-All companions are optional — the Song Creation System works independently.
+All companions are optional — the music works independently.
 
 ---
 

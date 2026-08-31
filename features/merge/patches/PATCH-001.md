@@ -24,7 +24,7 @@ compatibility:
 Fixes broken file references reported in GitHub Issue #1. Three categories of fixes:
 
 1. **Broken paths** — references to files that do not exist (`diary-entry-format.md`, `output-format.md`, `critical-thinking.md`)
-2. **Post-consolidation guidance** — notes for users who have installed the Memory Consolidation feature
+2. **Post-consolidation guidance** — notes for users who have installed the merge feature
 3. **Stale template references** — setup wizard referencing non-existent files
 
 **Impact**: 10 changes across 5 files. No breaking changes for pre-consolidation users.
@@ -46,7 +46,7 @@ Fixes broken file references reported in GitHub Issue #1. Three categories of fi
 #### INSERT-AFTER:
 ```
 
-> **Post-Consolidation Note**: If you have installed the Memory Consolidation feature, steps 1-2 above are replaced by a single load from `memory/merged.md` (unified memory). Step 3 remains the same.
+> **Post-Consolidation Note**: If you have installed the merge feature, steps 1-2 above are replaced by a single load from `memory/merged.md` (unified memory). Step 3 remains the same.
 ```
 
 ### Change 2: Fix diary entry format reference

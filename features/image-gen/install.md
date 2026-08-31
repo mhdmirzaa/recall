@@ -1,4 +1,4 @@
-# Image Generation System Installation Protocol
+# image-gen Installation Protocol
 *Setup for rendering images from descriptions via the OpenAI gpt-image API*
 
 ## Purpose
@@ -16,7 +16,7 @@ types; there is no built-in subject or persona.
 - **PowerShell** (Windows) *or* **bash + `curl` + `jq`** (Mac/Linux/Git Bash)
 - Core memory system installed (`memory/` directory, `recall.md` accessible)
 - Installing from the plugin marketplace gives auto-triggering (optional)
-- *(Optional)* Library System — lets users pull saved style/subject references into a render
+- *(Optional)* library — lets users pull saved style/subject references into a render
 
 ## Installation Steps
 
@@ -38,25 +38,25 @@ types; there is no built-in subject or persona.
 - [ ] Record its path in `recall.md` so the skill always resolves the same default output
   location:
   ```markdown
-  ### Image Generation Output
+  ### image-gen Output
   - **Folder**: media-generation/image-generation/  (all rendered PNGs land here)
   ```
 
 ### Step 4: Register the skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-generation/SKILL.md`
-  - Inform user: "Image Generation skill installed — auto-triggers on 'render an image', 'generate image', 'render this prompt'"
+  - Inform user: "image-gen skill installed — auto-triggers on 'render an image', 'generate image', 'render this prompt'"
 - [ ] If it does NOT exist:
-  - Inform user: "Image Generation integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "image-gen integrated into the index. Install it from the plugin marketplace for auto-triggering."
 
 ### Step 5: Update memory system
 - [ ] Add to `recall.md`:
   ```markdown
-  ### Image Generation
+  ### image-gen
   *Render images from descriptions via the OpenAI gpt-image API*
   - **Trigger**: "render an image", "generate image", "render this prompt"
   - **What it does**: Builds a prompt from what you type (no built-in persona), confirms cost, calls the API, saves a PNG to media-generation/image-generation/
-  - **Companion**: Image Prompt System (craft the prompt), Library System (optional saved references)
+  - **Companion**: image-prompt (craft the prompt), library (optional saved references)
   ```
 
 ## Post-Installation

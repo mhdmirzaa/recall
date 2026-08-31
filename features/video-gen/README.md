@@ -1,16 +1,16 @@
-# 🎬 Video Generation System
+# 🎬 video-gen
 *Render the motion you describe into real MP4 video via the Seedance API*
 
 ---
 
 ## What It Does
 
-The motion sibling of the **Image Generation System**. You describe a scene in plain language; this
+The motion sibling of the **image-gen**. You describe a scene in plain language; this
 feature builds the prompt **from your words** and renders an actual **MP4** by calling the **Seedance
 API** (BytePlus ModelArk). It is fully subject-agnostic — there is no built-in character or persona.
 
 - **Text-to-video** — describe a scene and motion, get a clip
-- **Image-to-video** — animate a local still (e.g. one from the Image Generation System) as the
+- **Image-to-video** — animate a local still (e.g. one from the image-gen) as the
   first/last frame or a style reference
 - **Prompt built from your input** — extracts subject, scene, camera move, pacing, and mood
 - **Cross-platform** — PowerShell *and* Bash (curl + jq) render scripts
@@ -84,11 +84,11 @@ Every clip is saved to **`media-generation/video-generation/`** inside your own 
 
 | System | Enhancement |
 |--------|-------------|
-| **Image Generation System** | Generate a still, then animate it here (image-to-video) |
-| **Image Prompt System** | Craft a composition-aware base prompt, then render it as motion |
-| **Library System** | *(optional)* Save reusable style/subject references and pull them into a render |
+| **image-gen** | Generate a still, then animate it here (image-to-video) |
+| **image-prompt** | Craft a composition-aware base prompt, then render it as motion |
+| **library** | *(optional)* Save reusable style/subject references and pull them into a render |
 
-All companions are optional — the Video Generation System works on its own with just a typed
+All companions are optional — the video-gen works on its own with just a typed
 description.
 
 ---
@@ -108,7 +108,7 @@ See `install.md` for step-by-step setup.
 **Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any
 platform without the plugin (load the install protocol manually).
 
-**Tier:** Tier 4 — Intelligence & Awareness. Pairs with the Image Generation System.
+**Tier:** Tier 4 — Intelligence & Awareness. Pairs with the image-gen.
 
 ---
 

@@ -3,12 +3,12 @@ name: video-gen
 description: MUST use when the user wants to RENDER or GENERATE an actual video / MP4 from a description, or ANIMATE a local image. Triggers on "render a video", "generate video", "make a video", "create a video", "animate this", "animate this image", "bring this to life". Builds the motion prompt from what the user types (subject-agnostic, no built-in persona), optionally pulls a saved reference from the Library System, supports text-to-video and image-to-video, confirms cost (video is expensive), then calls the Seedance API (async submit/poll/download) and saves an MP4.
 ---
 
-# Video Generation System — Render descriptions into real MP4 video
+# video-gen — Render descriptions into real MP4 video
 
 ## Overview
 
 This skill renders an actual video by calling the Seedance API (BytePlus ModelArk) through an async
-submit → poll → download flow. It is the motion companion to the Image Generation System. It is
+submit → poll → download flow. It is the motion companion to the image-gen. It is
 **subject-agnostic**: it builds the prompt from whatever the user types and has **no built-in
 character, persona, or stored identity**. Whatever the user describes is what gets animated.
 
@@ -22,13 +22,13 @@ mandatory and non-negotiable.
    **pacing** (calm drift vs energetic), and mood. The prompt is built *from their words only* —
    never from a stored character profile, an "appearance" file, or any baked-in identity.
 
-2. **(Optional) Consult the Library System.** IF the Library System feature is installed AND the user
+2. **(Optional) Consult the library.** IF the library feature is installed AND the user
    references a saved entry (e.g. *"use my noir style"*), read that user-authored entry and fold it
    into the prompt. This is the only persisted source the skill reads, and it is 100% user-owned
    content — never a shipped persona.
 
 3. **(Optional) Image-to-video.** IF the user wants to animate a local still (e.g. one produced by
-   the Image Generation System), pass it to the helper as `-FirstFrame` (opening frame),
+   the image-gen), pass it to the helper as `-FirstFrame` (opening frame),
    `-LastFrame` (closing frame), or `-ReferenceImages` (style/subject anchors). The helper base64's
    local files automatically — no hosting needed. URLs are also accepted.
 

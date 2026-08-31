@@ -34,7 +34,7 @@ compatibility:
 | `date` | Yes | Date the patch was created (YYYY-MM-DD) |
 | `affects` | Yes | List of files modified by this patch |
 | `prerequisites` | Yes | List of patch IDs that must be applied first, or `none` |
-| `compatibility` | Yes | Whether patch works with pre/post Memory Consolidation states |
+| `compatibility` | Yes | Whether patch works with pre/post merge states |
 
 ## Patch Body Structure
 
@@ -130,7 +130,7 @@ Text to remove entirely from the file
 
 ## Conditional Sections
 
-For patches that need different behavior based on system state (e.g., whether Memory Consolidation has been run):
+For patches that need different behavior based on system state (e.g., whether merge has been run):
 
 ```markdown
 ### Change N: [Description] (CONDITIONAL)

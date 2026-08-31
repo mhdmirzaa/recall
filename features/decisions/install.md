@@ -1,4 +1,4 @@
-# Decision Log Installation Protocol
+# decisions Installation Protocol
 *Systematic setup for append-only decision tracking*
 
 ## Purpose
@@ -17,10 +17,10 @@ integrates with the AI's behavior, and cleans up installation files.
 
 ## 3-Step Execution Process
 
-### Step 1: Create Decision Log File
+### Step 1: Create decisions File
 - [ ] Create `memory/decisions.md` with the following template:
   ```markdown
-  # Decision Log
+  # decisions
   *Append-only record of non-obvious decisions.*
   *Only log decisions where future-us would wonder "why did we do it this way?"*
 
@@ -51,7 +51,7 @@ integrates with the AI's behavior, and cleans up installation files.
   ```
 - [ ] Update `recall.md` Optional Components:
   ```markdown
-  ### Decision Log
+  ### decisions
   *Append-only record of non-obvious decisions*
   - Location: memory/decisions.md
   - Format: Context + Decision + Rationale per entry
@@ -129,7 +129,7 @@ memory/
 
 ---
 
-**Version**: Protocol v1.0 - Decision Log System
+**Version**: Protocol v1.0 - decisions
 **Last Updated**: March 2026
 **Status**: Active protocol for decision log integration
 

@@ -10,7 +10,7 @@ description: "MUST use when user says 'survey project', 'scan project', 'check h
              'review what I changed', 'check for issues'."
 ---
 
-# Observation System — Tiered Code Awareness
+# code-audit — Tiered Code Awareness
 *"See clearly before you act. Act only on what you see."*
 
 ## Activation
@@ -141,7 +141,7 @@ Detect from project files:
 
 ### Step 6: Domain Lesson Check
 
-Cross-reference project against past incidents (if Post-Mortem System is installed):
+Cross-reference project against past incidents (if postmortem is installed):
 - [ ] Scan post-mortem records for entries matching this project's domain
 - [ ] Show max 3 most relevant lessons
 - [ ] If same failure type appears 2+ times: flag as recurring
@@ -222,7 +222,7 @@ Hidden Pattern:
   Logout doesn't invalidate ALL refresh tokens for a user —
   only the current one. Multi-device login leaves stale tokens.
 
-Related library entries: [jwt-refresh-token-pattern] (if Library System installed)
+Related library entries: [jwt-refresh-token-pattern] (if library installed)
 ```
 
 ### Mode B: Topic Investigation
@@ -286,7 +286,7 @@ Findings:
 Hidden Patterns:
   [Non-obvious behavior or undocumented assumptions]
 
-Related: [library entries if Library System installed]
+Related: [library entries if library installed]
 Escalate: investigate <deeper area> | audit (if systemic)
 ```
 
@@ -427,7 +427,7 @@ Full system audit — ALL connections, dependencies, data flows, and their conse
 ### Step 2: Load Full Context
 
 - [ ] Read project context files (if session tracking is configured)
-- [ ] Search library/knowledge base for related entries (if Library System installed)
+- [ ] Search library/knowledge base for related entries (if library installed)
 - [ ] Check recent session history with this project (if diary/session system is configured)
 
 This is the only tier that loads FULL available context before analysis. Skip any context sources that are not configured.
@@ -524,7 +524,7 @@ RECOMMENDATIONS (prioritized)
 
 ### Step 8: Knowledge Connections
 
-Link findings to existing library entries (if Library System installed):
+Link findings to existing library entries (if library installed):
 - [ ] Search library for entries related to audit findings
 - [ ] Suggest library entries to reference or create
 - [ ] Flag if audit reveals knowledge gaps worth documenting
@@ -562,15 +562,15 @@ All tiers start with a dependency scan. This is deliberate — observation skill
 
 ## Cross-Feature Integration
 
-### Library System
-When the Library System is installed, observation tiers integrate with it:
+### library
+When the library is installed, observation tiers integrate with it:
 - **Survey**: Check library for domain-related entries
 - **Investigate**: Reference relevant library entries in findings
 - **Audit**: Link findings to library knowledge, suggest new entries for undocumented patterns
 - **Refine**: Check if existing utilities exist in library before suggesting new abstractions
 
-### Post-Mortem System
-When the Post-Mortem System is installed:
+### postmortem
+When the postmortem is installed:
 - **Survey**: Cross-reference project against past post-mortem entries (domain lesson check)
 - **Investigate (bug mode)**: Check if similar bugs were documented before
 - **Audit**: Surface recurring failure patterns across post-mortems
@@ -580,7 +580,7 @@ When the Post-Mortem System is installed:
 - **Refine** after each work-plan task → quality gate before commit
 - **Audit** after major milestones → systemic health check
 
-### Auto-Commit System
+### git-commit
 - **Refine** → fixes applied → auto-commit (if installed)
 
 ---
@@ -627,7 +627,7 @@ The key insight: **frequent cheap observation prevents expensive deep audits**. 
 4. **Escalate, don't skip tiers** — if Survey reveals complexity, suggest Investigate or Audit; don't try to deep-dive in a Survey
 5. **Refine always asks permission before fixing** — present findings first, apply fixes only after user approval
 6. **Compact output for Survey** — should fit on one screen; deeper tiers can be verbose
-7. **Link to library when available** — if Library System is installed, connect findings to existing knowledge entries; skip gracefully if not installed
+7. **Link to library when available** — if library is installed, connect findings to existing knowledge entries; skip gracefully if not installed
 8. **Report format consistency** — use the output templates defined in each tier for recognizable, parseable output
 
 ## Edge Cases
@@ -639,8 +639,8 @@ The key insight: **frequent cheap observation prevents expensive deep audits**. 
 | **Only backend or only frontend** | Skip irrelevant dependency scans; adapt output format |
 | **No git history** | Skip Recent Activity and git-diff-based Refine scope; note in output |
 | **User asks for "review"** | Disambiguate: code review → Investigate (review mode) or quality pass → Refine |
-| **Library System not installed** | Skip library cross-references; observation still works independently |
-| **Post-Mortem System not installed** | Skip domain lesson check in Survey; no past incident references |
+| **library not installed** | Skip library cross-references; observation still works independently |
+| **postmortem not installed** | Skip domain lesson check in Survey; no past incident references |
 | **Refine finds no issues** | Report clean: "No issues found. Code is sharp." |
 | **Audit of very large project** | Warn about time requirement; offer to audit specific subsystems instead |
 | **Cross audit with no shared patterns** | Report divergences as the finding — diversity isn't a problem unless it causes maintenance burden |
@@ -648,4 +648,4 @@ The key insight: **frequent cheap observation prevents expensive deep audits**. 
 ## Level History
 
 - **Lv.1** — Base: Four-tier observation system (Survey, Investigate, Refine, Audit) with escalation paths between tiers. Survey scans project health in 30 seconds. Investigate traces bugs, reviews code, and maps data flows. Refine reviews changed code and fixes issues with permission. Audit performs full system audit with architecture mapping, dependency analysis, risk assessment, and recommendations. (Origin: Developed and refined across multiple production projects)
-- **Lv.2** — Cross-Feature: Integration with Library System (knowledge connections), Post-Mortem System (domain lesson check), Work-Plan Execution (quality gates), and Auto-Commit System (refine-then-commit chain). Observation becomes aware of the broader skill ecosystem.
+- **Lv.2** — Cross-Feature: Integration with library (knowledge connections), postmortem (domain lesson check), Work-Plan Execution (quality gates), and git-commit (refine-then-commit chain). Observation becomes aware of the broader skill ecosystem.

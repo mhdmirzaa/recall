@@ -1,4 +1,4 @@
-# 🔨 Forge Self-Improvement System
+# 🔨 new-skill
 *Teach your AI to improve itself through pattern detection and skill creation*
 
 ## What This Feature Does
@@ -18,7 +18,7 @@ Your AI companion handles many tasks through natural conversation. Over time, pa
 - A multi-step workflow could be automated into a single command
 - An existing skill could handle more cases with a small addition
 
-Without Forge, these patterns go unnoticed. The AI handles each case ad-hoc, never learning from repetition. With Forge, the AI recognizes these patterns and proposes permanent improvements -- creating new skills or leveling up existing ones.
+Without new-skill, these patterns go unnoticed. The AI handles each case ad-hoc, never learning from repetition. With new-skill, the AI recognizes these patterns and proposes permanent improvements -- creating new skills or leveling up existing ones.
 
 ## Quick Integration
 ```bash
@@ -33,17 +33,17 @@ Your AI monitors conversations for improvement opportunities:
 
 ```
 Pattern Detected: AI has formatted commit messages manually 4 times
-  -> Forge proposes: "Create an auto-commit skill to handle this automatically"
+  -> new-skill proposes: "Create an auto-commit skill to handle this automatically"
 
 Mistake Detected: AI forgot to check git status before committing (twice)
-  -> Forge proposes: "Add pre-flight check to commit skill (Level-up)"
+  -> new-skill proposes: "Add pre-flight check to commit skill (Level-up)"
 
 Workflow Detected: AI runs the same 5-step deployment process each time
-  -> Forge proposes: "Create a deploy skill to automate these steps"
+  -> new-skill proposes: "Create a deploy skill to automate these steps"
 ```
 
 ### **Manual Trigger**
-You can also trigger Forge directly:
+You can also trigger new-skill directly:
 
 ```
 "create skill" / "new skill" / "forge this"
@@ -56,10 +56,10 @@ You can also trigger Forge directly:
   -> AI reviews recent sessions for any improvement opportunities
 ```
 
-### **The Forge Flow**
+### **The new-skill Flow**
 
 ```
-AI detects pattern or user triggers Forge
+AI detects pattern or user triggers new-skill
         |
         v
 AI gathers evidence (2+ concrete examples required)
@@ -98,7 +98,7 @@ After running the integration protocol, your AI will:
 - Always ask for approval before creating or modifying any files
 - Track skill evolution through a permanent level history
 
-## Forge Principles
+## new-skill Principles
 1. **Human-in-the-loop** -- AI proposes, user approves. Always
 2. **Evidence-based** -- 2+ concrete examples before proposing
 3. **Origin stories** -- every skill traces back to a real moment
@@ -110,10 +110,10 @@ After running the integration protocol, your AI will:
 
 | Feature | Integration |
 |---------|-------------|
-| **Plugin marketplace** | Forge creates skills in the plugin's folder structure |
-| **Auto-Commit System** | After forging, commit the new/updated skill file |
-| **Decision Log System** | Log the decision to create/level-up with rationale |
-| **Save Diary System** | Document forge events in session diary |
+| **Plugin marketplace** | new-skill creates skills in the plugin's folder structure |
+| **git-commit** | After forging, commit the new/updated skill file |
+| **decisions** | Log the decision to create/level-up with rationale |
+| **session-log** | Document forge events in session diary |
 
 ## Proven System
 Based on production AI companion self-improvement:

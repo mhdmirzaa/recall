@@ -1,4 +1,4 @@
-# Reminders System
+# reminders
 *Persistent cross-session reminders that survive memory resets*
 
 ## What This Feature Does
@@ -17,7 +17,7 @@ Session memory (`session.md`) resets every session. If you tell your AI
 session ends. Important follow-ups, pending tasks, and deferred decisions
 disappear into the void.
 
-The Reminders System creates a dedicated file that your AI checks at the start
+The reminders creates a dedicated file that your AI checks at the start
 of every session and updates at the end. Nothing gets lost.
 
 ## Quick Integration

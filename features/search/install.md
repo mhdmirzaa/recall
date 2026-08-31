@@ -1,4 +1,4 @@
-# 🔍 Echo Memory Recall Installation Protocol
+# 🔍 search Installation Protocol
 *Systematic memory recall setup for Recall companions*
 
 ## Purpose
@@ -142,7 +142,7 @@ From matched diary excerpts, compose natural response:
 
 ---
 
-**Version**: Protocol v1.0 - Echo Memory Recall Installation Workflow
+**Version**: Protocol v1.0 - search Installation Workflow
 **Last Updated**: February 2026
 **Status**: Active protocol for memory recall setup
 

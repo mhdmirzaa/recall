@@ -1,4 +1,4 @@
-# ⏱️ Time-Prompt-Inject — Uninstall Protocol
+# ⏱️ inject-time — Uninstall Protocol
 *Cleanly removes the time injector and its state file*
 
 ## Purpose
@@ -40,7 +40,7 @@ Removes the time injector script and the period-state file, and clears the insta
   State file:       removed
   Install record:   [kept | removed]
 
-  The User-Prompt-Hook framework still runs (other injectors unaffected).
+  The hook-user-prompt framework still runs (other injectors unaffected).
   No `<timestamp> | <PERIOD>` line will appear in prompt context until reinstall.
   ```
 
@@ -52,7 +52,7 @@ After uninstall, verify:
 2. [ ] `~/.claude/user-prompt-injectors/time-period-last.txt` no longer exists
 3. [ ] `recall.md` no longer contains `### Time Inject (Installed)` section (if user chose remove)
 4. [ ] Sending a user prompt produces NO timestamp/period line in the system-reminder
-5. [ ] User-Prompt-Hook framework master script still works (other injectors continue to fire)
+5. [ ] hook-user-prompt framework master script still works (other injectors continue to fire)
 
 ## Reinstall
 
@@ -68,10 +68,10 @@ If reinstalling later:
 | Injector script already deleted manually | Skip Step 1 silently |
 | State file already deleted | Skip Step 2 silently |
 | `recall.md` section already removed | Skip Step 4 silently |
-| User-Prompt-Hook framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
+| hook-user-prompt framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
 
 ---
 
-**Version**: Protocol v1.0 — Time-Prompt-Inject Uninstall Workflow
+**Version**: Protocol v1.0 — inject-time Uninstall Workflow
 
 *Reversibility is a feature, not an afterthought.*

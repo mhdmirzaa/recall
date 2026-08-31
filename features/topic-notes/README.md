@@ -1,4 +1,4 @@
-# Topic Diary System
+# topic-notes
 *Topic-based memory journals for discoveries, fixes, and reusable knowledge*
 
 ## What This Feature Does
@@ -17,7 +17,7 @@ Adds a structured topic diary system to your AI companion, enabling **knowledge-
 
 History answers: **What happened today?**
 
-Topic Diary answers: **What have we learned about this subject over time?**
+topic-notes answers: **What have we learned about this subject over time?**
 
 The system turns repeated discoveries into living notebooks. Instead of losing Docker fixes, project setup details, debugging patterns, or research insights inside dated session entries, your AI appends them to a focused topic file.
 
@@ -36,7 +36,7 @@ AI:
 
 ### How It Differs From History
 
-| Aspect | History | Topic Diary |
+| Aspect | History | topic-notes |
 |--------|-------------|-------------|
 | **Primary question** | What happened today? | What have we learned about this topic? |
 | **Organization** | By date | By subject |
@@ -79,7 +79,7 @@ After running the integration protocol:
 - Every topic save appends to a focused markdown journal
 - The index tracks available topics, aliases, latest updates, and recall keywords
 - History remains available for session storytelling
-- Echo Memory Recall can use topic files as high-signal recall sources
+- search can use topic files as high-signal recall sources
 
 ## Save Routing
 
@@ -112,7 +112,7 @@ Each topic entry follows `topic-format.md` and captures:
 - **Faster recall** — recurring subjects have one focused knowledge file
 - **Less noise** — reusable facts do not get buried in date-based diary entries
 - **Better debugging memory** — commands, root causes, and verified fixes stay together
-- **Works with existing Recall** — complements History, Working memory, and Echo Recall
+- **Works with existing Recall** — complements History, Working memory, and search
 - **Portable** — plain markdown files, human-readable and AI-readable
 
 ## Platform Note

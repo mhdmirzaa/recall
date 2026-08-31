@@ -1,15 +1,15 @@
-# Install Memory Compaction System
+# Install trim
 *Integration protocol for budget-aware memory compression*
 
 ## Activation
 
-When the user says `Load trim`, install the Memory Compaction System into the active Recall.
+When the user says `Load trim`, install the trim into the active Recall.
 
 ## Prerequisites
 
 - Existing Recall root with `recall.md`
 - Optional but recommended: install from the plugin marketplace
-- Optional companion features: Memory Consolidation System, Topic Diary System
+- Optional companion features: merge, topic-notes
 
 ## Installation Steps
 
@@ -56,7 +56,7 @@ If the policy file exists, append a short installation note instead of replacing
 Update `recall.md` with:
 
 ```markdown
-### Memory Compaction System
+### trim
 *Runs automatically before "save" when a target memory file exceeds its budget.*
 - Budgets defined in `compaction/compaction-policy.md`
 - Snapshots written to `compaction/snapshots/` before any rewrite
@@ -85,7 +85,7 @@ If this feature is not installed as a plugin, leave the feature folder in place 
 Do **not** compact anything during installation. Instead, report current status:
 
 ```text
-Memory Compaction installed. Current budgets:
+trim installed. Current budgets:
 - merged.md: 312/500 lines (OK)
 - profile.md: 188/400 lines (OK)
 No file is over budget. Compaction will run automatically when one is.
@@ -126,7 +126,7 @@ When a file exceeds its budget:
 
 To uninstall manually:
 
-1. Remove Memory Compaction references from `recall.md`
+1. Remove trim references from `recall.md`
 2. Remove the installed `memory-compaction` skill from the plugin folder
 3. Keep `compaction/snapshots/` unless the user explicitly wants to delete backups
 

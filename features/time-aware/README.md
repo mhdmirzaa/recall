@@ -1,4 +1,4 @@
-# ⏰ Time-based Aware System
+# ⏰ time-aware
 *Instant time intelligence for your AI companion*
 
 ## What This Feature Does
@@ -17,7 +17,7 @@ Adds Alice's proven time-awareness capabilities to any Recall system:
 
 ## How It Works After Integration
 
-### **Time-Aware Greetings**
+### **time-aware Greetings**
 Your AI automatically generates contextual greetings:
 
 **Morning (6 AM - 11:59 AM)**
@@ -84,7 +84,7 @@ See `protocol.md` for the full detection strategy and implementation details.
 
 ### **Automatic Session Memory Integration**
 ```markdown
-## Time-Aware Session Context
+## time-aware Session Context
 - **Session Start**: [Timestamp from platform-appropriate command]
 - **Time Mode**: [Morning/Afternoon/Evening/Night]
 - **Energy Level**: [3-10 scale based on time]

@@ -1,4 +1,4 @@
-# Observation System
+# code-audit
 *Tiered code awareness — see clearly before you act*
 
 ## What This Feature Does
@@ -46,16 +46,16 @@ Tiers are aware of each other and suggest escalation when appropriate.
 
 ## Cross-Feature Integration
 
-The Observation System integrates with other Recall features when installed:
+The code-audit integrates with other Recall features when installed:
 
 | Feature | Integration |
 |---------|------------|
-| **Library System** | Link findings to knowledge entries; suggest new entries for undocumented patterns |
-| **Post-Mortem System** | Cross-reference project against past incidents during Survey |
+| **library** | Link findings to knowledge entries; suggest new entries for undocumented patterns |
+| **postmortem** | Cross-reference project against past incidents during Survey |
 | **Work-Plan Execution** | Survey before planning; Refine after each task; Audit at milestones |
-| **Auto-Commit System** | Refine → fix → auto-commit chain |
+| **git-commit** | Refine → fix → auto-commit chain |
 
-All integrations are optional — the Observation System works independently.
+All integrations are optional — the code-audit works independently.
 
 ## Cost Awareness
 
@@ -88,4 +88,4 @@ Developed and refined across multiple production projects. Every protocol step e
 
 ---
 
-*Observation System v1.0*
+*code-audit v1.0*

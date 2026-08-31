@@ -1,4 +1,4 @@
-# 📖 Save Diary Installation Protocol
+# 📖 session-log Installation Protocol
 *Systematic diary system setup for Recall companions*
 
 ## Purpose
@@ -124,7 +124,7 @@ memory/history/
 
 ---
 
-**Version**: Protocol v1.0 - Save Diary Installation Workflow
+**Version**: Protocol v1.0 - session-log Installation Workflow
 **Last Updated**: February 2026
 **Status**: Active protocol for diary system setup
 

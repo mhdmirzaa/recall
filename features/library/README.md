@@ -1,4 +1,4 @@
-# 📚 Library System
+# 📚 library
 *Reusable knowledge library — save patterns once, use them across every project*
 
 ## What This Feature Does
@@ -9,20 +9,20 @@ Adds a **knowledge library system** to your AI companion, enabling it to save, s
 - **Project-aware recommendations** — suggests entries that fit your current tech stack and scale
 - **Format-aware saves** — applies structured templates when creating new entries
 - **Deduplication prevention** — scans existing entries before creating new ones
-- **Commit chain** — auto-commits library changes when paired with Auto-Commit System
+- **Commit chain** — auto-commits library changes when paired with git-commit
 
 ## How It Works
 
 ### The Concept
 The problem: You solve the same problems across projects. Authentication patterns, API integrations, database schemas — rebuilt from scratch every time. Knowledge lives in scattered files, old projects, or just memory.
 
-The Library System solves this by giving your AI companion a structured knowledge base. When you encounter a reusable pattern, save it to the library. Next time you need it, the AI searches the library first and suggests existing solutions before writing new code.
+The library solves this by giving your AI companion a structured knowledge base. When you encounter a reusable pattern, save it to the library. Next time you need it, the AI searches the library first and suggests existing solutions before writing new code.
 
 The key principle: **solve it once, reuse it forever**.
 
 ### Example: Before vs After
 
-**Without Library System:**
+**Without library:**
 ```
 "How do we handle file uploads?"
 → AI writes a new implementation from scratch
@@ -30,7 +30,7 @@ The key principle: **solve it once, reuse it forever**.
 → Past solutions lost in old codebases
 ```
 
-**With Library System:**
+**With library:**
 ```
 "How do we handle file uploads?"
 → AI searches library → finds integration/digitalocean-spaces.md
@@ -80,7 +80,7 @@ After running the integration protocol:
 - Every "save library" command searches for duplicates before creating entries
 - Project-aware recommendations match entries to your current tech stack
 - Format templates are applied automatically when saving new entries
-- If Auto-Commit installed: library saves auto-trigger a commit
+- If git-commit installed: library saves auto-trigger a commit
 
 **Post-Installation Structure:**
 ```
@@ -121,10 +121,10 @@ After running the integration protocol:
 | `search library` | Search library without saving |
 | `check library` | Check if a pattern already exists |
 
-## Synergy: Works Best With Auto-Commit
-When both **Auto-Commit** and **Library** are installed, library saves automatically chain into commits — every knowledge entry is version-controlled the moment it's saved. Your library growth is tracked in git history.
+## Synergy: Works Best With git-commit
+When both **git-commit** and **Library** are installed, library saves automatically chain into commits — every knowledge entry is version-controlled the moment it's saved. Your library growth is tracked in git history.
 
-Without Auto-Commit, the library still works — entries are saved to files, but commits are done manually.
+Without git-commit, the library still works — entries are saved to files, but commits are done manually.
 
 ## Benefits
 - **Never solve the same problem twice** — proven patterns saved and searchable
@@ -137,7 +137,7 @@ Without Auto-Commit, the library still works — entries are saved to files, but
 ## Requirements
 - **Plugin marketplace** install recommended for auto-triggering
 - Works without the plugin as a manual protocol loaded via `recall.md`
-- **Auto-Commit System** recommended for automatic commits after library saves
+- **git-commit** recommended for automatic commits after library saves
 
 ## Platform Note
 Requires **Claude Code** with this feature installed from the plugin marketplace for auto-triggering. On other AI platforms, the SKILL.md can be loaded as a manual protocol — the library workflow works the same way, just triggered manually.

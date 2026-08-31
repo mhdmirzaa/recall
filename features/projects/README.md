@@ -1,4 +1,4 @@
-# 📦 LRU Project Management System
+# 📦 projects
 *Intelligent project tracking with automatic memory management for AI companions*
 
 ## What This Feature Does
@@ -6,7 +6,7 @@ Adds smart project management capabilities to any Recall system:
 
 - **LRU positioning** for up to 10 active projects
 - **Automatic archiving** when capacity is reached (position #11)
-- **Duration tracking** that accumulates time from Auto-Commit messages
+- **Duration tracking** that accumulates time from git-commit messages
 - **Line limit enforcement** (1000 lines max with auto-summarization)
 - **Seamless context switching** between different projects
 - **Fuzzy search** for loading projects by partial name
@@ -42,7 +42,7 @@ Adds smart project management capabilities to any Recall system:
 "save project"
   Saves current project only (NOT AI memory)
   Updates progress log with session work
-  Accumulates duration from Auto-Commit time data
+  Accumulates duration from git-commit time data
   Enforces 1000-line limit with auto-summarization
 ```
 
@@ -74,10 +74,10 @@ Result: [Database, API, Website, Docs, Blog, App, Tool, SDK, CLI, Bot]
 
 ### **Duration Tracking**
 Automatically tracks time spent on each project:
-- Parses `Time: ~XX min` from Auto-Commit System commit messages
+- Parses `Time: ~XX min` from git-commit commit messages
 - Accumulates across sessions into total project duration
 - Progressive display: minutes -> hours -> days -> months
-- Works best with Auto-Commit System installed (falls back to manual estimates)
+- Works best with git-commit installed (falls back to manual estimates)
 
 ### **Line Limit Enforcement**
 Keeps project files lean and readable:
@@ -110,17 +110,17 @@ After running the integration protocol, your AI will:
 ## Command Separation Philosophy
 **Clean, purposeful commands:**
 - `save project` -- Saves current project progress only
-- `save diary` -- Saves session documentation (Save Diary System)
+- `save diary` -- Saves session documentation (session-log)
 - No ambiguity, no redundancy, explicit user control
 
 ## Synergy with Other Features
 
 | Feature | Integration |
 |---------|-------------|
-| **Auto-Commit System** | Duration tracking parses time from commit messages |
-| **Save Diary System** | Diary captures daily narrative; projects capture project-specific progress |
-| **Reminders System** | "Revisit this project next week" becomes a reminder |
-| **Decision Log System** | Project decisions can reference the decision log |
+| **git-commit** | Duration tracking parses time from commit messages |
+| **session-log** | Diary captures daily narrative; projects capture project-specific progress |
+| **reminders** | "Revisit this project next week" becomes a reminder |
+| **decisions** | Project decisions can reference the decision log |
 
 ## Proven System
 Based on production AI companion project management:

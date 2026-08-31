@@ -1,4 +1,4 @@
-# 📋 Work Plan Installation Protocol
+# 📋 work-plan Installation Protocol
 *Systematic plan execution setup for Recall companions*
 
 ## Purpose
@@ -13,7 +13,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 ## Prerequisites
 - Core memory system installed (`recall.md` exists)
 - Installing from the plugin marketplace gives auto-triggering (not required)
-- Auto-Commit System optional but recommended for per-task commit discipline
+- git-commit optional but recommended for per-task commit discipline
 
 ## 6-Step Execution Process
 
@@ -41,25 +41,25 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
   - Resume Plan message: default `"Resuming plan execution..."`
 - [ ] Execute `Get-Date` (Windows) or `date` (macOS/Linux) for current timestamp
 
-### Step 2: Verify Plugin System and Auto-Commit
+### Step 2: Verify Plugin System and git-commit
 - [ ] Check if `plugins/` directory exists in the project
 - [ ] Identify the plugin folder (look for `[ai-name]-skills/` or similar)
 - [ ] If plugin system is found:
   - Continue to Step 3 (create as auto-triggered skill)
 - [ ] If plugin system is NOT found:
-  - Inform user: "This feature is not installed as a plugin. Work Plan can still work as a manual protocol."
+  - Inform user: "This feature is not installed as a plugin. work-plan can still work as a manual protocol."
   - Offer two choices:
     1. "Install from the plugin marketplace first" (recommended)
     2. "Continue without auto-triggering" (protocol added to recall.md directly)
   - If continuing without plugin: skip Step 3, add protocol in Step 5
-- [ ] Check if Auto-Commit skill exists in the plugin:
+- [ ] Check if git-commit skill exists in the plugin:
   - If found: note `[COMMIT_CHAIN] = Yes` (per-task commits will be automatic)
   - If not found: note `[COMMIT_CHAIN] = No` (commits will be manual)
   - Inform user of the status:
-    - If Yes: "Auto-Commit detected! Each completed todo will trigger a structured commit."
-    - If No: "Auto-Commit not installed. Plan tracking will work, but commits will be manual. Consider installing Auto-Commit System for full per-task commit discipline."
+    - If Yes: "git-commit detected! Each completed todo will trigger a structured commit."
+    - If No: "git-commit not installed. Plan tracking will work, but commits will be manual. Consider installing git-commit for full per-task commit discipline."
 
-### Step 3: Create Work Plan Skill
+### Step 3: Create work-plan Skill
 - [ ] Create `plugins/[plugin-name]/skills/[WORK_NAME]/` directory
 - [ ] Create `SKILL.md` inside with all placeholders replaced:
   - Replace `[WORK_NAME]` with chosen skill name
@@ -81,7 +81,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
   - Plan location: [PLAN_LOCATION]/project-plan.md
   - Plan source: [PLAN_SOURCE_PATH]
   - Line limit: [LINE_LIMIT] lines (auto-rotates)
-  - Commit chain: [Yes/No — based on Auto-Commit installation]
+  - Commit chain: [Yes/No — based on git-commit installation]
   ```
 - [ ] Add plan commands to Simple Commands section:
   ```
@@ -89,9 +89,9 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
   "append plan" → Add new plan steps to existing plan
   "resume plan" → Resume plan execution after context reset
   ```
-- [ ] If Auto-Commit is installed: add note about commit chain integration:
+- [ ] If git-commit is installed: add note about commit chain integration:
   ```markdown
-  *Commit Chain: Each completed todo automatically triggers Auto-Commit*
+  *Commit Chain: Each completed todo automatically triggers git-commit*
   ```
 
 ### Step 6: Test and Cleanup
@@ -111,7 +111,7 @@ Executed when "Load work-plan" command is used — creates a plan execution skil
 - [ ] Remove `features/work-plan/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
-  Work Plan Execution installed successfully!
+  work-plan installed successfully!
   Skill: [WORK_NAME]
   Plan location: [PLAN_LOCATION]/project-plan.md
   Commit chain: [Yes/No]
@@ -143,28 +143,28 @@ When user says "copy plan", "append plan", or "resume plan":
 4. Commit after each completed task (if using git)
 ```
 
-## Pairing with Auto-Commit
+## Pairing with git-commit
 
-When both Auto-Commit and Work Plan are installed, they chain together:
+When both git-commit and work-plan are installed, they chain together:
 
 ```
-Execute task → Auto-Commit fires → [x] marked → next task
+Execute task → git-commit fires → [x] marked → next task
 ```
 
 **The result:** Your git history maps directly to your project plan. Each commit corresponds to a specific todo item, making it easy to trace what was built, when, and why.
 
-**Without Auto-Commit:** Work still tracks progress with checkboxes and checkpoint saves — you just commit manually when ready.
+**Without git-commit:** Work still tracks progress with checkboxes and checkpoint saves — you just commit manually when ready.
 
 ## Notes
 - Plan files (`project-plan*.md`) are never committed — they are the AI's working reference
-- All code changes from executing plan tasks ARE committed (via Auto-Commit or manually)
+- All code changes from executing plan tasks ARE committed (via git-commit or manually)
 - The plan file is the single source of truth for recovery after context resets
 - Diagrams and architecture notes from the original plan are preserved in the plan file
 - Works with any project type, any programming language, any workflow
 
 ---
 
-**Version**: Protocol v1.0 - Work Plan Installation Workflow
+**Version**: Protocol v1.0 - work-plan Installation Workflow
 **Last Updated**: February 2026
 **Status**: Active protocol for plan execution setup
 

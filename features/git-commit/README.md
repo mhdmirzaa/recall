@@ -1,4 +1,4 @@
-# 🔒 Auto-Commit System
+# 🔒 git-commit
 *Intelligent git commits that document your work as history, not just file changes*
 
 ## What This Feature Does
@@ -16,20 +16,20 @@ Adds an **automated commit system** to your AI companion, enabling it to analyze
 ### The Concept
 The problem: Manual commits lose context. A commit message like "fix bug" tells you nothing about what was happening, why the fix matters, or how long it took. Weeks later, your git history is unreadable.
 
-Auto-Commit solves this by making your AI companion the commit guardian. It reads the actual code changes, understands the session context, and drafts structured commit messages that tell the full story — then commits automatically so no work is ever left behind.
+git-commit solves this by making your AI companion the commit guardian. It reads the actual code changes, understands the session context, and drafts structured commit messages that tell the full story — then commits automatically so no work is ever left behind.
 
 The key principle: **every commit should tell the story of the session, not just the diff**.
 
 ### Example: Before vs After
 
-**Without Auto-Commit:**
+**Without git-commit:**
 ```
 fix stuff
 update files
 more changes
 ```
 
-**With Auto-Commit:**
+**With git-commit:**
 ```
 Add user authentication with JWT tokens - secure login system
 

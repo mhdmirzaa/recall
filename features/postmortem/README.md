@@ -1,4 +1,4 @@
-# 🔥 Post-Mortem System
+# 🔥 postmortem
 
 A failure learning log that helps your AI companion detect, record, and reference mistakes — so the same problem never costs you twice.
 
@@ -8,7 +8,7 @@ A failure learning log that helps your AI companion detect, record, and referenc
 
 ## What It Does
 
-When something goes wrong — a failed deployment, a broken test suite, wasted hours on a dead end — the Post-Mortem System:
+When something goes wrong — a failed deployment, a broken test suite, wasted hours on a dead end — the postmortem:
 
 1. **Auto-detects** failure signals in the conversation
 2. **Asks** whether it's worth logging (you always decide)
@@ -63,7 +63,7 @@ You always decide whether to log it. The AI only asks.
 
 | System | Integration |
 |--------|-------------|
-| **Session Briefing System** | Flags recent post-mortems when starting work in the same domain |
+| **session-brief** | Flags recent post-mortems when starting work in the same domain |
 | **decisions** | Post-mortems complement decisions — one records why, the other records what went wrong |
 | **session-log** | Post-mortem entries can be referenced in diary entries |
 

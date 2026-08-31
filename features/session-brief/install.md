@@ -1,4 +1,4 @@
-# 📋 Session Briefing System — Installation Guide
+# 📋 session-brief — Installation Guide
 
 ## Overview
 Adds a proactive session-start brief to your AI companion. Delivers a concise summary of where you left off, open reminders, active projects, and a time-aware work suggestion — every session, automatically.
@@ -16,7 +16,7 @@ Adds a proactive session-start brief to your AI companion. Delivers a concise su
 
 ### Step 1: Copy Files
 
-Copy the Session Briefing System folder into your memory-core directory:
+Copy the session-brief folder into your memory-core directory:
 
 ```
 features/session-brief/
@@ -47,11 +47,11 @@ At the start of every session, before responding to the first message:
 
 ### Step 3: Update `recall.md` (Recommended)
 
-Add a reference to the Session Briefing System so it's visible during restoration:
+Add a reference to the session-brief so it's visible during restoration:
 
 ```markdown
 ## Active Features
-- 📋 Session Briefing System — auto-brief at every session start
+- 📋 session-brief — auto-brief at every session start
 ```
 
 ---

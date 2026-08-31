@@ -1,4 +1,4 @@
-# 🎮 Interactive Story System
+# 🎮 adventure
 *Beyond the portal, legends are born. Your adventure awaits.*
 
 ---
@@ -114,8 +114,8 @@ adventures/
     summary.md      ← Story summary (for resuming across sessions)
     story/
       story-1.md    ← Full light-novel chapters (1K line rotation)
-    scenes/         ← Scene art (if Image Prompt System installed)
-    music/          ← OP/ED songs (if Song Creation System installed)
+    scenes/         ← Scene art (if image-prompt installed)
+    music/          ← OP/ED songs (if music installed)
 ```
 
 ---
@@ -136,12 +136,12 @@ adventures/
 
 | System | Enhancement |
 |--------|-------------|
-| **Image Prompt System** | Generate scene art during adventures (NijiJourney/Midjourney prompts) |
-| **Song Creation System** | Generate Opening and Ending songs for your adventures |
-| **Auto-Commit System** | Auto-commit adventure files on save/end |
-| **Save Diary** | Document adventure sessions in your diary |
+| **image-prompt** | Generate scene art during adventures (NijiJourney/Midjourney prompts) |
+| **music** | Generate Opening and Ending songs for your adventures |
+| **git-commit** | Auto-commit adventure files on save/end |
+| **session-log** | Document adventure sessions in your diary |
 
-All companions are optional — the Interactive Story System works independently.
+All companions are optional — the adventure works independently.
 
 ---
 

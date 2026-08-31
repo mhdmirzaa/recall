@@ -1,4 +1,4 @@
-# Memory Compaction System
+# trim
 *Intelligent memory compression that summarizes old entries instead of deleting them*
 
 ## What This Feature Does
@@ -18,7 +18,7 @@ Adds a **size-aware compaction layer** to your AI companion. When a memory file 
 
 Most memory systems handle growth by **truncation** — when the file gets too big, they delete the oldest content. That loses knowledge permanently.
 
-Memory Compaction takes a different path: when a file exceeds its budget, the AI **reads the oldest entries, distills them into a concise summary, and replaces the verbose originals with that summary**. The file stays small, but the knowledge survives.
+trim takes a different path: when a file exceeds its budget, the AI **reads the oldest entries, distills them into a concise summary, and replaces the verbose originals with that summary**. The file stays small, but the knowledge survives.
 
 Think of it like a journal you periodically rewrite — keeping the lessons, dropping the noise.
 
@@ -38,7 +38,7 @@ AI:
 
 ### How It Differs From Existing Features
 
-| Aspect | Memory Consolidation | Session Memory Limit | Memory Compaction |
+| Aspect | merge | Session Memory Limit | trim |
 |--------|----------------------|----------------------|-------------------|
 | **Purpose** | Merge split files into one | Cap working memory size | Keep growing files within budget |
 | **Method** | Structural merge | Hard reset, preserve recap | Summarize old entries, preserve knowledge |
@@ -46,7 +46,7 @@ AI:
 | **Knowledge loss** | None (merge) | High (detail discarded) | Minimal (summarized, snapshotted) |
 | **Runs** | Once (architecture upgrade) | Every session reset | Continuously, when budget exceeded |
 
-> **Companion, not replacement.** Memory Consolidation unifies *which* files exist. Session Memory Limit caps *working memory*. Memory Compaction keeps *long-lived files* (main memory, profile, topic diaries) within budget without losing what they learned.
+> **Companion, not replacement.** merge unifies *which* files exist. Session Memory Limit caps *working memory*. trim keeps *long-lived files* (main memory, profile, topic diaries) within budget without losing what they learned.
 
 ## Directory Structure
 

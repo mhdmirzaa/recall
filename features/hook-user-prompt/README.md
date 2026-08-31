@@ -1,4 +1,4 @@
-# 💬 User-Prompt-Hook System
+# 💬 hook-user-prompt
 *Generic UserPromptSubmit hook framework — plug-and-play context injection on every user message*
 
 ## What This Feature Does
@@ -126,7 +126,7 @@ Result: clean revert. Your AI's prompt context goes back to whatever Claude Code
 - **Post-consolidation** ✅ — same path
 - **Windows / macOS / Linux / Git Bash** ✅ — both `.ps1` and `.sh` master scripts ship
 - **Coexists with hook-session-start** ✅ — different hook events (SessionStart vs UserPromptSubmit)
-- **Coexists with time-aware** ✅ — Time-Aware tells the AI how to query time on demand; this framework + a Time-Inject injector pre-injects time without the AI having to ask
+- **Coexists with time-aware** ✅ — time-aware tells the AI how to query time on demand; this framework + a Time-Inject injector pre-injects time without the AI having to ask
 
 ## Tier
 

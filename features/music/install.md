@@ -1,4 +1,4 @@
-# Song Creation System Installation Protocol
+# music Installation Protocol
 *Setup for AI-powered visual-to-musical storytelling*
 
 ## Purpose
@@ -17,12 +17,12 @@ Executed when "Load music" command is used -- enables your AI to create concept 
 
 ## 3-Step Installation Process
 
-### Step 1: Install Song Creation Skill
+### Step 1: Install music Skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/song-creation/SKILL.md`
-  - Inform user: "Song Creation skill installed -- auto-triggers on 'create album', 'create song', 'muse this'"
+  - Inform user: "music skill installed -- auto-triggers on 'create album', 'create song', 'muse this'"
 - [ ] If this feature is not installed as a plugin:
-  - Inform user: "Song Creation integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "music integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add song creation protocol reference to `recall.md`
 
 ### Step 2: Create Music Directory
@@ -33,7 +33,7 @@ Executed when "Load music" command is used -- enables your AI to create concept 
   ```
 - [ ] Add to `recall.md`:
   ```markdown
-  ### Song Creation
+  ### music
   *AI-powered visual-to-musical storytelling*
   - **Trigger**: "create album", "create song", "muse this", "write a song"
   - **What it does**: Creates concept albums from images or single songs from descriptions

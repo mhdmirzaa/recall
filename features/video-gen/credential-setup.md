@@ -1,5 +1,5 @@
 # Credential Setup — BytePlus ModelArk API Key
-*How to give the Video Generation System a key, safely*
+*How to give the video-gen a key, safely*
 
 The render scripts need a BytePlus ModelArk API key (`ARK_API_KEY`) to call the Seedance endpoint.
 They look for it in this order:

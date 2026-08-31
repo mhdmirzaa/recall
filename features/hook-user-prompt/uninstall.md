@@ -1,5 +1,5 @@
-# 💬 User-Prompt-Hook — Uninstall Protocol
-*Cleanly reverses the User-Prompt-Hook framework installation*
+# 💬 hook-user-prompt — Uninstall Protocol
+*Cleanly reverses the hook-user-prompt framework installation*
 
 ## Purpose
 
@@ -13,8 +13,8 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 ```
 
 ## Prerequisites
-- User-Prompt-Hook framework was previously installed
-- The `### User-Prompt Hook (Installed)` section exists in `recall.md`
+- hook-user-prompt framework was previously installed
+- The `### hook-user-prompt (Installed)` section exists in `recall.md`
 
 ## 5-Step Execution Process
 
@@ -58,7 +58,8 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 ### Step 5: Remove Install Record From `recall.md`
 
 - [ ] Open `recall.md`
-- [ ] Delete the entire `### User-Prompt Hook (Installed)` section, from its heading line down to (but not including) the next `###` heading or end of Optional Components
+- [ ] Delete the entire `### hook-user-prompt (Installed)` section
+      *(installs made before v1.0.0 used the heading `### User-Prompt Hook (Installed)` — check for that too)*, from its heading line down to (but not including) the next `###` heading or end of Optional Components
 - [ ] Save the file
 - [ ] Display:
 
@@ -68,7 +69,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 settings.json:    restored from backup-pre-userprompthook
 master script:    ~/.claude/hooks/user-prompt-hook.{ps1|sh} removed
 injectors dir:    [removed (empty) | kept (had N orphan files)]
-recall.md: User-Prompt Hook section removed
+recall.md: hook-user-prompt section removed
 
 Any installed injector features now have no effect — uninstall them too if
 you want full cleanup, OR reinstall this framework to reactivate them.
@@ -80,7 +81,7 @@ After uninstall, verify:
 
 1. [ ] `~/.claude/settings.json` no longer contains a UserPromptSubmit entry referencing `user-prompt-hook.{ps1|sh}` (master script)
 2. [ ] `~/.claude/hooks/user-prompt-hook.{ps1|sh}` no longer exists
-3. [ ] `recall.md` no longer contains the `### User-Prompt Hook (Installed)` section
+3. [ ] `recall.md` no longer contains the `### hook-user-prompt (Installed)` section
 4. [ ] On next user message, no master-hook output appears in the prompt context (Claude Code emits prompt as default)
 5. [ ] If preferred-path backup-restore was used: `settings.json` is byte-identical to the original `settings.json.backup-pre-userprompthook`
 
@@ -104,7 +105,7 @@ If the user wants to reinstall after uninstalling:
 
 ---
 
-**Version**: Protocol v1.0 — User-Prompt Hook Uninstall Workflow
+**Version**: Protocol v1.0 — hook-user-prompt Uninstall Workflow
 **Status**: Active protocol for clean reversal
 
 *Reversibility is a feature, not an afterthought.*

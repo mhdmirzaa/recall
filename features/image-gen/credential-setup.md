@@ -1,5 +1,5 @@
 # Credential Setup — OpenAI API Key
-*How to give the Image Generation System a key, safely*
+*How to give the image-gen a key, safely*
 
 The render scripts need an OpenAI API key to call the gpt-image endpoint. They look for it in this
 order:

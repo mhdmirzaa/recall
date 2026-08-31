@@ -1,4 +1,4 @@
-# Library System Installation Protocol
+# library Installation Protocol
 *Knowledge library setup for Recall companions*
 
 ## Purpose
@@ -13,7 +13,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
 ## Prerequisites
 - Core memory system installed (`recall.md` exists)
 - Installing from the plugin marketplace gives auto-triggering (not required)
-- Auto-Commit System recommended for commit chain (but not required)
+- git-commit recommended for commit chain (but not required)
 
 ## 6-Step Execution Process
 
@@ -85,7 +85,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
   - Library path: [LIBRARY_PATH]
   - Sections: architecture, component, database, diagram, integration, security, theme, workflow
   - Format templates: [LIBRARY_PATH]/formats/
-  - Commit chain: auto-commits after save (if Auto-Commit installed)
+  - Commit chain: auto-commits after save (if git-commit installed)
   ```
 - [ ] Add library commands to Simple Commands section:
   ```
@@ -115,7 +115,7 @@ Executed when "Load library" command is used — creates a knowledge library ski
 - [ ] Remove `features/library/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
-  Library System installed successfully!
+  library installed successfully!
   Skill: [LIBRARY_SKILL_NAME]
   Library: [LIBRARY_PATH] (8 sections + format templates)
   Activation: [ACTIVATION_MESSAGE]
@@ -163,8 +163,8 @@ Optionally add a format template: `[LIBRARY_PATH]/formats/devops-format.md`
 ### Adding Format Templates
 Create `[LIBRARY_PATH]/formats/[section]-format.md` following the pattern of existing templates. The library skill loads these automatically when saving to that section.
 
-### Pairing with Auto-Commit
-If you install the **Auto-Commit System** feature, library saves automatically chain into commits. Your knowledge base changes are always version-controlled.
+### Pairing with git-commit
+If you install the **git-commit** feature, library saves automatically chain into commits. Your knowledge base changes are always version-controlled.
 
 ## Notes
 - The library is project-agnostic — entries should be generic and reusable across projects
@@ -175,7 +175,7 @@ If you install the **Auto-Commit System** feature, library saves automatically c
 
 ---
 
-**Version**: Protocol v1.0 - Library System Installation Workflow
+**Version**: Protocol v1.0 - library Installation Workflow
 **Last Updated**: March 2026
 **Status**: Active protocol for knowledge library setup
 

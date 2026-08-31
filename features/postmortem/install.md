@@ -1,4 +1,4 @@
-# 🔥 Post-Mortem System — Installation Guide
+# 🔥 postmortem — Installation Guide
 
 ## Overview
 Adds a failure learning log to your AI companion. The AI auto-detects failure signals, asks whether to log them, and references past lessons when you work in the same domain again.
@@ -16,7 +16,7 @@ Adds a failure learning log to your AI companion. The AI auto-detects failure si
 
 ### Step 1: Copy Files
 
-Copy the Post-Mortem System folder into your memory-core directory:
+Copy the postmortem folder into your memory-core directory:
 
 ```
 features/postmortem/
@@ -69,7 +69,7 @@ Add a reference so it's visible during restoration:
 
 ```markdown
 ## Active Features
-- 🔥 Post-Mortem System — failure learning log, auto-detected
+- 🔥 postmortem — failure learning log, auto-detected
 ```
 
 ---
@@ -82,12 +82,12 @@ Simulate a failure scenario (e.g., "my deployment just failed") and verify your 
 
 ## Companion System Integration
 
-### With Session Briefing System
-The Session Briefing System can flag recent post-mortems at session start when you're working in a relevant domain. No extra configuration needed.
+### With session-brief
+The session-brief can flag recent post-mortems at session start when you're working in a relevant domain. No extra configuration needed.
 
 ### With decisions
 Post-mortems and decisions complement each other:
-- **Decision Log**: records *what you chose* and *why*
+- **decisions**: records *what you chose* and *why*
 - **Post-Mortem Log**: records *what went wrong* and *what to do differently*
 
 Both are append-only logs — consider linking related entries by date.

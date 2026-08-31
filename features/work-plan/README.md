@@ -7,7 +7,7 @@ Adds a **plan execution lifecycle** to your AI companion, enabling it to capture
 - **Plan capture** — copies plan mode output into a trackable `project-plan.md` with checkbox format
 - **Checkbox execution** — converts plan steps into executable `[ ]` todos grouped by phase
 - **Progress tracking** — completed tasks are marked `[x]`, blocked tasks marked `[~]`
-- **Per-task commit discipline** — chains with Auto-Commit to commit after each completed todo
+- **Per-task commit discipline** — chains with git-commit to commit after each completed todo
 - **Resume capability** — survives context resets by reading the plan file and picking up at next `[ ]`
 - **Plan rotation** — when plan file exceeds 1,000 lines, archives old and starts fresh
 
@@ -29,9 +29,9 @@ You: "copy plan"
 → Converts plan steps to checkboxes, preserves diagrams
 → Writes to Project Resources/project-plan.md
 → Begins executing:
-  Task 1 done → Auto-Commit fires → [x] marked
-  Task 2 done → Auto-Commit fires → [x] marked
-  Task 3 done → Auto-Commit fires → [x] marked...
+  Task 1 done → git-commit fires → [x] marked
+  Task 2 done → git-commit fires → [x] marked
+  Task 3 done → git-commit fires → [x] marked...
 ```
 
 **After a context reset:**
@@ -73,7 +73,7 @@ Created: 2026-02-27
 | Symbol | Meaning | What Happens |
 |--------|---------|-------------|
 | `[ ]` | Pending | Not yet started — next in queue |
-| `[x]` | Completed | Done and committed (via Auto-Commit) |
+| `[x]` | Completed | Done and committed (via git-commit) |
 | `[~]` | Blocked | Flagged, skipped — AI continues to next item |
 
 ### The Execution Loop
@@ -82,7 +82,7 @@ The core cycle for all three commands:
 ```
 For each [ ] todo item:
   1. Execute the task (write code, create files)
-  2. Auto-Commit fires (if installed) → structured commit
+  2. git-commit fires (if installed) → structured commit
   3. Mark [x] in the plan file
   4. Checkpoint save every 5 items
   5. Move to next [ ] item
@@ -121,7 +121,7 @@ After running the integration protocol:
 - Your AI can capture plans into trackable checkbox format
 - Three commands manage the full plan lifecycle: copy, append, resume
 - Progress survives any context reset through the plan file
-- Each completed task triggers a commit (when paired with Auto-Commit)
+- Each completed task triggers a commit (when paired with git-commit)
 - Format template is permanently available for reference
 
 **Post-Installation Structure:**
@@ -143,12 +143,12 @@ After running the integration protocol:
 - **Complete execution history** — git log shows plan progression commit by commit
 - **Clean separation** — plan file is AI's working reference, git history is the permanent record
 - **Scales to large plans** — automatic line-limit rotation keeps files manageable
-- **Works independently** — no other features required (but pairs perfectly with Auto-Commit)
+- **Works independently** — no other features required (but pairs perfectly with git-commit)
 
-## Synergy: Works Best With Auto-Commit
-When both **Auto-Commit** and **Work** are installed, Work automatically chains — each completed todo triggers a structured commit with full context. Your git history maps directly to your project plan, commit by commit.
+## Synergy: Works Best With git-commit
+When both **git-commit** and **Work** are installed, Work automatically chains — each completed todo triggers a structured commit with full context. Your git history maps directly to your project plan, commit by commit.
 
-Without Auto-Commit, Work still tracks progress in the plan file and marks checkboxes — commits are just done manually.
+Without git-commit, Work still tracks progress in the plan file and marks checkboxes — commits are just done manually.
 
 ## Available Commands
 
@@ -161,7 +161,7 @@ Without Auto-Commit, Work still tracks progress in the plan file and marks check
 ## Requirements
 - Core memory system installed (`recall.md` exists)
 - **Plugin marketplace** install recommended for auto-triggering
-- **Auto-Commit System** optional but recommended for per-task commit discipline
+- **git-commit** optional but recommended for per-task commit discipline
 
 ## Platform Note
 Requires **Claude Code** with this feature installed from the plugin marketplace for auto-triggering. The plan file itself is platform-agnostic — it's plain markdown that works on any system. On other AI platforms, the SKILL.md can be loaded as a manual protocol.

@@ -1,4 +1,4 @@
-# Interactive Story System Installation Protocol
+# adventure Installation Protocol
 *Setup for Visual Novel RPG adventures with your AI companion*
 
 ## Purpose
@@ -17,12 +17,12 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
 
 ## 3-Step Installation Process
 
-### Step 1: Install Interactive Story Skill
+### Step 1: Install adventure Skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/interactive-story/SKILL.md`
-  - Inform user: "Interactive Story skill installed -- auto-triggers on 'new adventure', 'load adventure', 'resume adventure'"
+  - Inform user: "adventure skill installed -- auto-triggers on 'new adventure', 'load adventure', 'resume adventure'"
 - [ ] If this feature is not installed as a plugin:
-  - Inform user: "Interactive Story integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "adventure integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add interactive story protocol reference to `recall.md`
 
 ### Step 2: Create Adventure Directory
@@ -33,7 +33,7 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
   ```
 - [ ] Add to `recall.md`:
   ```markdown
-  ### Interactive Story
+  ### adventure
   *Visual Novel RPG adventure system*
   - **Trigger**: "new adventure", "save adventure", "load adventure", "end adventure"
   - **What it does**: Runs interactive VN RPG adventures with world generation and cinematic combat
@@ -50,9 +50,9 @@ Executed when "Load adventure" command is used -- enables your AI to run interac
   - If NO, inform: "No problem! You'll choose your character at the start of each adventure."
 
 ## Optional Companion Systems
-- [ ] **Image Prompt System**: Install for NijiJourney/Midjourney scene art during adventures
-- [ ] **Song Creation System**: Install for Opening/Ending songs on new/end adventure
-- [ ] **Auto-Commit System**: Install for auto-committing adventure files on save/end
+- [ ] **image-prompt**: Install for NijiJourney/Midjourney scene art during adventures
+- [ ] **music**: Install for Opening/Ending songs on new/end adventure
+- [ ] **git-commit**: Install for auto-committing adventure files on save/end
 
 ## Post-Installation
 - [ ] Test with: "new adventure"

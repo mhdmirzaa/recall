@@ -1,4 +1,4 @@
-# Topic Diary Format
+# topic-notes Format
 *Canonical format for `topic-diary/topics/[topic].md` files*
 
 Use this format for every topic diary file.
@@ -17,7 +17,7 @@ topic-diary/topics/writing-style.md
 ## File Template
 
 ```markdown
-# [Topic Name] Topic Diary
+# [Topic Name] topic-notes
 *Reusable discoveries, fixes, decisions, and lessons for this subject.*
 
 ## Topic Metadata

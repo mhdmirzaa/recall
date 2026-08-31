@@ -1,4 +1,4 @@
-# ⏰ Time-Aware Integration Protocol
+# ⏰ time-aware Integration Protocol
 *Systematic time intelligence integration for Recall systems*
 
 ## Purpose
@@ -130,7 +130,7 @@ date /T
 
 ### **Session Memory Template (Add to memory/session.md)**
 ```markdown
-## Time-Aware Session Context
+## time-aware Session Context
 - **Session Start**: [Timestamp from platform-appropriate command]
 - **Time Mode**: [Morning/Afternoon/Evening/Night]
 - **Energy Level**: [3-10 scale based on time]

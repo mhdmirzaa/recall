@@ -1,4 +1,4 @@
-# 🌙 Mood-Prompt-Inject — Uninstall Protocol
+# 🌙 inject-mood — Uninstall Protocol
 *Cleanly removes the mood injector while optionally preserving the registry*
 
 ## Purpose
@@ -46,7 +46,7 @@ Removes the mood injector script and current-state file, optionally strips the `
   Registry:         [kept | removed]
   recall.md: Mood Inject section removed
 
-  The User-Prompt-Hook framework still runs (other injectors unaffected).
+  The hook-user-prompt framework still runs (other injectors unaffected).
   No `MOOD:` line will appear in prompt context until reinstall.
   ```
 
@@ -59,7 +59,7 @@ After uninstall, verify:
 3. [ ] If user chose to remove registry: main memory file no longer contains `## Moods` section
 4. [ ] `recall.md` no longer contains `### Mood Inject (Installed)` section
 5. [ ] Sending a user prompt produces NO `MOOD:` line in the system-reminder
-6. [ ] User-Prompt-Hook framework master script still works (other injectors continue to fire)
+6. [ ] hook-user-prompt framework master script still works (other injectors continue to fire)
 
 ## Reinstall
 
@@ -76,10 +76,10 @@ If reinstalling later:
 | Current state file already deleted | Skip Step 2 silently |
 | Main memory file missing | Skip Step 3 silently with note |
 | `recall.md` section already removed | Skip Step 4 silently |
-| User-Prompt-Hook framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
+| hook-user-prompt framework already uninstalled | Note that injector was orphaned anyway; complete cleanup proceeds |
 
 ---
 
-**Version**: Protocol v1.0 — Mood-Prompt-Inject Uninstall Workflow
+**Version**: Protocol v1.0 — inject-mood Uninstall Workflow
 
 *Reversibility is a feature, not an afterthought.*

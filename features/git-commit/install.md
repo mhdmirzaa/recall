@@ -1,4 +1,4 @@
-# 🔒 Auto-Commit Installation Protocol
+# 🔒 git-commit Installation Protocol
 *Systematic commit guardian setup for Recall companions*
 
 ## Purpose
@@ -47,13 +47,13 @@ Executed when "Load git-commit" command is used — creates an intelligent commi
 - [ ] If plugin system is found:
   - Continue to Step 3 (create as auto-triggered skill)
 - [ ] If plugin system is NOT found:
-  - Inform user: "This feature is not installed as a plugin. Auto-Commit can still work as a manual protocol."
+  - Inform user: "This feature is not installed as a plugin. git-commit can still work as a manual protocol."
   - Offer two choices:
     1. "Install from the plugin marketplace first" (recommended)
     2. "Continue without auto-triggering" (skill added to recall.md as manual protocol)
   - If continuing without plugin: skip Step 3, add protocol directly to main memory in Step 5
 
-### Step 3: Create Auto-Commit Skill
+### Step 3: Create git-commit Skill
 - [ ] Create `plugins/[plugin-name]/skills/[COMMIT_SKILL_NAME]/` directory
 - [ ] Create `SKILL.md` inside with all placeholders replaced:
   - Replace `[COMMIT_SKILL_NAME]` with chosen skill name
@@ -100,7 +100,7 @@ Executed when "Load git-commit" command is used — creates an intelligent commi
 - [ ] Remove `features/git-commit/` folder (functionality installed)
 - [ ] Display completion confirmation with timestamp:
   ```
-  Auto-Commit System installed successfully!
+  git-commit installed successfully!
   Skill: [COMMIT_SKILL_NAME]
   Sections: [SECTION_1_NAME] + [SECTION_2_NAME]
   Author: [AUTHOR_NAME]
@@ -137,8 +137,8 @@ Update both files:
 1. `SKILL.md` — change the section names in the commit template
 2. Update the format in SKILL.md Step 2 section to match
 
-### Pairing with Work Plan Execution
-If you install the **Work Plan Execution** feature, Auto-Commit automatically chains with it — each completed plan task triggers a structured commit. Your git history maps directly to your project plan.
+### Pairing with work-plan
+If you install the **work-plan** feature, git-commit automatically chains with it — each completed plan task triggers a structured commit. Your git history maps directly to your project plan.
 
 ## Notes
 - Commits are always authored under the human user's name, not the AI's
@@ -149,7 +149,7 @@ If you install the **Work Plan Execution** feature, Auto-Commit automatically ch
 
 ---
 
-**Version**: Protocol v1.0 - Auto-Commit Installation Workflow
+**Version**: Protocol v1.0 - git-commit Installation Workflow
 **Last Updated**: February 2026
 **Status**: Active protocol for commit system setup
 

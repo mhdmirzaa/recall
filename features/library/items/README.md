@@ -3,11 +3,11 @@
 
 ## What Are Library Items?
 
-Library items are **pre-made knowledge entries** that follow the Library System's format templates. Instead of building your library from scratch, install proven patterns instantly and start using them in your projects right away.
+Library items are **pre-made knowledge entries** that follow the library's format templates. Instead of building your library from scratch, install proven patterns instantly and start using them in your projects right away.
 
 ## Prerequisites
 
-- **Library System** must be installed first (see `features/library/`)
+- **library** must be installed first (see `features/library/`)
 - A working `library/` directory with section folders
 
 ## How to Install
@@ -22,7 +22,7 @@ The AI will:
 1. Find the item in `features/library/items/`
 2. Show you what it contains
 3. Copy it to your `library/[section]/` folder
-4. Commit the change (if Auto-Commit is installed)
+4. Commit the change (if git-commit is installed)
 
 You can also browse items manually and copy any `.md` file directly into your `library/[section]/` folder.
 

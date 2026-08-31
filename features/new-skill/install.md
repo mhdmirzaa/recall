@@ -1,4 +1,4 @@
-# Forge Self-Improvement Installation Protocol
+# new-skill Installation Protocol
 *Systematic setup for AI self-improvement through skill creation*
 
 ## Purpose
@@ -17,12 +17,12 @@ Executed when "Load new-skill" command is used -- enables your AI to detect impr
 
 ## 3-Step Installation Process
 
-### Step 1: Install Forge Skill
+### Step 1: Install new-skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/forge-skill/SKILL.md`
-  - Inform user: "Forge skill installed -- auto-triggers on pattern detection and 'create skill', 'level up'"
+  - Inform user: "new-skill installed -- auto-triggers on pattern detection and 'create skill', 'level up'"
 - [ ] If this feature is not installed as a plugin:
-  - Inform user: "Forge integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "new-skill integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add forge protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
@@ -55,7 +55,7 @@ Executed when "Load new-skill" command is used -- enables your AI to detect impr
 
 ## Installation Complete Message
 ```
-Forge Self-Improvement Installed Successfully!
+new-skill Installed Successfully!
 
 Your AI can now:
   Detect repeated patterns and propose new skills
@@ -79,7 +79,7 @@ Remember: AI always proposes, you always approve. Human-in-the-loop!
 5. **Human Control** - AI proposes, user approves. Never autonomous
 
 ## Notes
-- Forge requires conversation context to detect patterns -- it does not run in the background
+- new-skill requires conversation context to detect patterns -- it does not run in the background
 - All proposals need user approval before any files are created or modified
 - Start with Lv.1 skills -- complexity is added organically through level-ups
 - Works best with plugin marketplace for auto-triggering and proper skill folder structure
@@ -87,7 +87,7 @@ Remember: AI always proposes, you always approve. Human-in-the-loop!
 
 ---
 
-**Version**: Protocol v1.0 - Forge Self-Improvement System
+**Version**: Protocol v1.0 - new-skill
 **Last Updated**: March 2026
 **Status**: Active protocol for AI self-improvement
 

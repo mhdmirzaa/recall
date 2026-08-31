@@ -160,7 +160,7 @@ current.
 
 ### Session Diary
 *Load when you say: "Load session-log"*
-- [Save Diary System](./features/session-log/) - Daily session documentation
+- [session-log](./features/session-log/) - Daily session documentation
 - Location: memory/history/current/ (active), memory/history/archived/ (past months)
 - Format: memory/history/diary-entry-format.md
 - Auto-archive: Monthly archival of previous month entries
@@ -168,7 +168,7 @@ current.
 
 ### Memory Recall
 *Auto-triggers on: "do you remember", "recall", "when did we", etc.*
-- [Echo Memory Recall](./features/search/) - Search past sessions
+- [search](./features/search/) - Search past sessions
 - Searches: memory/history/current/ and memory/history/archived/
 - Output: Narrative presentation (not raw search)
 - Fallback: Asks user when nothing found

@@ -1,4 +1,4 @@
-# Decision Log System
+# decisions
 *Append-only record of non-obvious decisions your AI companion helps you make*
 
 ## What This Feature Does
@@ -21,7 +21,7 @@ Without a log, these decisions exist only in conversation history, which gets
 compacted, archived, or lost. Weeks later, you wonder "why did we do it this
 way?" and nobody remembers.
 
-The Decision Log captures the WHY behind non-obvious choices, creating an
+The decisions captures the WHY behind non-obvious choices, creating an
 immutable record that future sessions can reference.
 
 ## Quick Integration
@@ -105,10 +105,10 @@ Based on production AI companion systems with 4+ months of daily use:
 
 | Feature | Synergy |
 |---------|---------|
-| **Echo Memory Recall** | Search decision log with "do you remember why we chose X?" |
-| **Save Diary System** | Diary captures what happened; decision log captures why |
-| **Auto-Commit System** | Decision log entries can trigger a commit for version tracking |
-| **Reminders System** | "Revisit this decision in 2 weeks" becomes a reminder |
+| **search** | Search decision log with "do you remember why we chose X?" |
+| **session-log** | Diary captures what happened; decision log captures why |
+| **git-commit** | Decision log entries can trigger a commit for version tracking |
+| **reminders** | "Revisit this decision in 2 weeks" becomes a reminder |
 
 ## Benefits
 - **Institutional memory** across sessions and context resets

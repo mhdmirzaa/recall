@@ -1,5 +1,5 @@
-# ⚡ Auto-Load Hook — Uninstall Protocol
-*Cleanly reverses the Auto-Load Hook installation*
+# ⚡ hook-session-start — Uninstall Protocol
+*Cleanly reverses the hook-session-start installation*
 
 ## Purpose
 
@@ -13,15 +13,16 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 ```
 
 ## Prerequisites
-- Auto-Load Hook was previously installed
-- The "Auto-Load Hook (Installed)" section exists in `recall.md`
+- hook-session-start was previously installed
+- The "hook-session-start (Installed)" section exists in `recall.md`
 
 ## 5-Step Execution Process
 
 ### Step 1: Read Install Record From `recall.md`
 
 - [ ] Open `recall.md`
-- [ ] Locate the `### Auto-Load Hook (Installed)` section
+- [ ] Locate the `### hook-session-start (Installed)` section
+      *(installs made before v1.0.0 used the heading `### Auto-Load Hook (Installed)` — check for that too)*
 - [ ] Extract:
   - The AI name (used in script filename)
   - The hook script path (`~/.claude/hooks/<ai-name>-session-start.{ps1|sh}`)
@@ -52,7 +53,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 ### Step 4: Remove Install Record From `recall.md`
 
 - [ ] Open `recall.md`
-- [ ] Delete the entire `### Auto-Load Hook (Installed)` section, from its heading line down to (but not including) the next `###` heading or end-of-Optional-Components section
+- [ ] Delete the entire `### hook-session-start (Installed)` section, from its heading line down to (but not including) the next `###` heading or end-of-Optional-Components section
 - [ ] Save the file
 
 ### Step 5: Confirm to User
@@ -64,7 +65,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the persona
 
 settings.json:    restored from backup-pre-autoload
 hook script:      ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh} removed
-recall.md: Auto-Load Hook section removed
+recall.md: hook-session-start section removed
 
 <ai-name> will now require manual "[ai-name-lower]" command on the next
 Claude Code session start.
@@ -80,7 +81,7 @@ After uninstall, verify:
 
 1. [ ] `~/.claude/settings.json` no longer contains a SessionStart entry referencing `<ai-name>-session-start`
 2. [ ] `~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}` no longer exists
-3. [ ] `recall.md` no longer contains the `### Auto-Load Hook (Installed)` section
+3. [ ] `recall.md` no longer contains the `### hook-session-start (Installed)` section
 4. [ ] On next Claude Code launch, the AI does NOT auto-greet — it waits for the user to type the AI name first
 5. [ ] If preferred-path backup-restore was used: `settings.json` is byte-identical to the original `settings.json.backup-pre-autoload`
 
@@ -103,7 +104,7 @@ If the user wants to reinstall after uninstalling:
 
 ---
 
-**Version**: Protocol v1.0 — Auto-Load Hook Uninstall Workflow
+**Version**: Protocol v1.0 — hook-session-start Uninstall Workflow
 **Status**: Active protocol for clean reversal
 
 *Reversibility is a feature, not an afterthought.*

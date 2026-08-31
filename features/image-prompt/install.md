@@ -1,4 +1,4 @@
-# Image Prompt System Installation Protocol
+# image-prompt Installation Protocol
 *Setup for AI-powered image prompt generation*
 
 ## Purpose
@@ -17,18 +17,18 @@ Executed when "Load image-prompt" command is used -- enables your AI to generate
 
 ## 3-Step Installation Process
 
-### Step 1: Install Image Prompt Skill
+### Step 1: Install image-prompt Skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/image-prompt/SKILL.md`
-  - Inform user: "Image Prompt skill installed -- auto-triggers on 'create a prompt', 'midjourney prompt', 'image prompt'"
+  - Inform user: "image-prompt skill installed -- auto-triggers on 'create a prompt', 'midjourney prompt', 'image prompt'"
 - [ ] If this feature is not installed as a plugin:
-  - Inform user: "Image Prompt integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "image-prompt integrated into the index. Install it from the plugin marketplace for auto-triggering."
   - Add prompt generation protocol reference to `recall.md`
 
 ### Step 2: Update Memory System
 - [ ] Add to `recall.md`:
   ```markdown
-  ### Image Prompt Generation
+  ### image-prompt Generation
   *AI-powered prompt creation for Midjourney/NijiJourney*
   - **Trigger**: "create a prompt", "midjourney prompt", "niji prompt", "image prompt", "reference sheet"
   - **What it does**: Generates optimized image prompts with composition-aware framing

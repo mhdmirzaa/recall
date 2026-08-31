@@ -3,12 +3,12 @@ name: image-gen
 description: MUST use when the user wants to RENDER or GENERATE an actual image from a description (not just craft prompt text). Triggers on "render an image", "render this", "generate image", "render image", "make an image of", "render the prompt", "render this prompt". Builds the prompt from what the user types (subject-agnostic, no built-in persona), optionally pulls a saved reference from the Library System, confirms cost, then calls the OpenAI gpt-image API and saves a PNG.
 ---
 
-# Image Generation System — Render descriptions into real PNGs
+# image-gen — Render descriptions into real PNGs
 
 ## Overview
 
 This skill renders an actual image by calling the OpenAI gpt-image API. It is the rendering
-companion to the Image Prompt System (which only crafts prompt text). The skill is **subject-
+companion to the image-prompt (which only crafts prompt text). The skill is **subject-
 agnostic**: it builds the prompt from whatever the user types and has **no built-in character,
 persona, or stored identity**. Whatever the user describes is what gets drawn.
 
@@ -18,14 +18,14 @@ persona, or stored identity**. Whatever the user describes is what gets drawn.
    style, mood, and any composition cues. The prompt is built *from their words only* — never from a
    stored character profile, an "appearance" file, a current outfit, or any baked-in identity.
 
-2. **(Optional) Consult the Library System.** IF the Library System feature is installed AND the user
+2. **(Optional) Consult the library.** IF the library feature is installed AND the user
    references a saved entry (e.g. *"use my cyberpunk preset"*, *"render with my forest-scene
    reference"*), read that user-authored library entry and fold it into the prompt. This is the only
    persisted source the skill ever reads, and it is 100% user-owned content — never a shipped
    persona. If no library entry is referenced, the prompt comes purely from the typed text.
 
 3. **Build the final prompt** from step 1 (+ optional step 2) — OR, if the user pasted a ready-made
-   prompt (e.g. *"render this prompt: …"* from the Image Prompt System), use it verbatim.
+   prompt (e.g. *"render this prompt: …"* from the image-prompt), use it verbatim.
 
 4. **Resolve the output path.**
    - Default folder: `media-generation/image-generation/` inside the user's memory root (created at

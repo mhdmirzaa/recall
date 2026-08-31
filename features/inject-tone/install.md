@@ -1,5 +1,5 @@
-# 🎭 Tone-Prompt-Inject — Installation Protocol
-*Wires a tone injector into the User-Prompt-Hook framework, seeded from main memory*
+# 🎭 inject-tone — Installation Protocol
+*Wires a tone injector into the hook-user-prompt framework, seeded from main memory*
 
 ## Purpose
 
@@ -11,16 +11,16 @@ Executed when `"Load inject-tone"` is invoked — installs an injector that emit
 ```
 
 ## Prerequisites
-- **User-Prompt-Hook framework must be installed** (`~/.claude/hooks/user-prompt-hook.{ps1|sh}` exists)
+- **hook-user-prompt framework must be installed** (`~/.claude/hooks/user-prompt-hook.{ps1|sh}` exists)
 - Main memory file exists (`memory/merged.md` or `memory/identity.md`)
 
 ## 6-Step Execution Process
 
-### Step 1: Verify User-Prompt-Hook framework is installed
+### Step 1: Verify hook-user-prompt framework is installed
 - [ ] Check `~/.claude/hooks/user-prompt-hook.ps1` (Windows) or `user-prompt-hook.sh` (Unix) exists
 - [ ] Check `~/.claude/hooks/user-prompt-injectors/` directory exists
 - [ ] IF either missing → STOP. Display:
-  > *"Tone-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
+  > *"inject-tone requires the hook-user-prompt framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
 
 ### Step 2: Detect main memory file
 - [ ] IF `memory/merged.md` exists → use it (post-consolidation path)
@@ -102,7 +102,7 @@ Executed when `"Load inject-tone"` is invoked — installs an injector that emit
   Current:  [first-entry-name] — [first-entry-description]
   
   Send any message — your AI will see "TONE: [first-entry-description]" 
-  prepended via the User-Prompt-Hook framework.
+  prepended via the hook-user-prompt framework.
 
   Add more:  "add tone <name>: <description>"
   Switch:    "set tone <name>"
@@ -141,7 +141,7 @@ Executed when `"Load inject-tone"` is invoked — installs an injector that emit
 
 ---
 
-**Version**: Protocol v1.0 — Tone-Prompt-Inject Install Workflow
+**Version**: Protocol v1.0 — inject-tone Install Workflow
 **Status**: Active protocol for tone context injection
 
 *Your AI's voice, woven into every prompt it sees.*

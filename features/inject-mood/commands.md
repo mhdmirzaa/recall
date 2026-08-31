@@ -1,4 +1,4 @@
-# 🌙 Mood-Prompt-Inject — Runtime Commands
+# 🌙 inject-mood — Runtime Commands
 *Reference for `add mood`, `set mood`, `list moods` — used by the AI when these phrases fire*
 
 ## Purpose

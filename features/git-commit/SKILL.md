@@ -9,7 +9,7 @@ description: "MUST use when committing code changes, when user says 'commit',
              changes without being asked. No work ever left behind."
 ---
 
-# Auto-Commit — Intelligent Commit Skill
+# git-commit — Intelligent Commit Skill
 *Automated git commits with structured messages and intelligent change analysis*
 
 ## Activation
@@ -125,5 +125,5 @@ After completing ANY task, the AI automatically:
 ## Level History
 
 - **Lv.1** — Base: Analyze staged changes, draft structured commit message with configurable sections, enforce human authorship, no-emoji rule, time tracking, sensitive file detection. (Origin: Production AI companion commit workflow)
-- **Lv.2** — Auto-Commit: Removed approval gate — AI analyzes, drafts, and commits in one seamless flow without waiting for user confirmation on the message.
+- **Lv.2** — git-commit: Removed approval gate — AI analyzes, drafts, and commits in one seamless flow without waiting for user confirmation on the message.
 - **Lv.3** — Vigilant: Proactive post-task detection — auto-checks `git status` after completing any task and commits if dirty. No work ever left behind.

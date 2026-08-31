@@ -7,20 +7,20 @@ description: "MUST use when user says 'continuous-improvement', 'instinct status
              patterns Claude has observed."
 ---
 
-# Mulahazah -- Behavioral Learning System
+# learned-rules -- Behavioral Learning System
 *The AI that remembers how you work.*
 
 ## Activation
 
 When this skill activates, output:
 
-`Mulahazah active -- reading learned rules for this project...`
+`learned-rules active -- reading learned rules for this project...`
 
 Then execute the protocol below.
 
 ## Overview
 
-Mulahazah is a passive observation layer built into your AI companion. It captures every tool call as structured data, analyzes patterns with Haiku, and writes actionable rules to `rules.md`. Those rules persist across sessions -- silently shaping how your AI works with you, without needing to be reminded each time.
+learned-rules is a passive observation layer built into your AI companion. It captures every tool call as structured data, analyzes patterns with Haiku, and writes actionable rules to `rules.md`. Those rules persist across sessions -- silently shaping how your AI works with you, without needing to be reminded each time.
 
 ## Context Guard
 
@@ -31,7 +31,7 @@ Mulahazah is a passive observation layer built into your AI companion. It captur
 | **User says "what have you learned"** | ACTIVE -- full protocol |
 | **User wants to see rule summary** | ACTIVE -- full protocol |
 | **General coding conversation** | DORMANT -- follow rules.md silently |
-| **User is explicitly asking about Forge skills** | DORMANT -- use Forge skill instead |
+| **User is explicitly asking to create a skill** | DORMANT -- use new-skill instead |
 
 ## Protocol
 
@@ -88,20 +88,20 @@ Read `~/.claude/mulahazah/rules.md` and display:
 | Situation | Behavior |
 |-----------|----------|
 | **No rules.md yet** | Report "No rules yet for this project. Run `/continuous-improvement` after your first work session." |
-| **Mulahazah not installed** | Output: "Mulahazah is not installed. See features/learned-rules/install.md to get started." |
+| **learned-rules not installed** | Output: "learned-rules is not installed. See features/learned-rules/install.md to get started." |
 | **Observer not running** | Note it is optional and show start command. Do not block skill execution. |
 | **analyze.sh not found** | Report the missing path and remind user to re-run install steps. |
 | **Fewer than 5 observations** | Note more tool calls are needed before patterns can be extracted. |
 
 ## Synergy with Other Features
 
-| Feature | How Mulahazah Interacts |
+| Feature | How learned-rules Interacts |
 |---------|-------------------------|
-| **Forge** | Rule clusters from rules.md with repeated patterns become Forge skill proposals. |
-| **Save Diary** | Active rules from rules.md are summarized in the session diary. |
-| **Memory Consolidation** | Triggers review of rules.md for stale or contradictory entries. |
-| **Decision Log** | Rules applied during a session are logged as behavioral decisions. |
+| **new-skill** | Rule clusters from rules.md with repeated patterns become new-skill proposals. |
+| **session-log** | Active rules from rules.md are summarized in the session diary. |
+| **merge** | Triggers review of rules.md for stale or contradictory entries. |
+| **decisions** | Rules applied during a session are logged as behavioral decisions. |
 
 ## Level History
 
-- **Lv.1** -- Base: rules.md persistence, session reflection, observation capture via `observe.sh`, Haiku-powered analysis via `analyze.sh`, `/continuous-improvement` command. Background observer optional. (Origin: continuous-improvement v2.0, ported to Recall as Mulahazah System. Tested end-to-end: observations captured, analyze.sh extracted "Grep → Read → Edit workflow" rule.)
+- **Lv.1** -- Base: rules.md persistence, session reflection, observation capture via `observe.sh`, Haiku-powered analysis via `analyze.sh`, `/continuous-improvement` command. Background observer optional. (Origin: continuous-improvement v2.0, ported to Recall as learned-rules. Tested end-to-end: observations captured, analyze.sh extracted "Grep → Read → Edit workflow" rule.)

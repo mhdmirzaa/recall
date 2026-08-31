@@ -7,7 +7,7 @@ description: "Auto-triggers when user asks for a Midjourney or NijiJourney image
              Generates optimized AI image prompts with composition-aware framing."
 ---
 
-# Image Prompt -- Composition-Aware Prompt Generation
+# image-prompt -- Composition-Aware Prompt Generation
 *The right frame changes everything. See before you create.*
 
 ## Overview

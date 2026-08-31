@@ -1,11 +1,11 @@
-# 🖼️ Image Generation System
+# 🖼️ image-gen
 *Render the images you describe into real PNGs via the OpenAI gpt-image API*
 
 ---
 
 ## What It Does
 
-The companion to the **Image Prompt System**. Where that feature *crafts prompt text*, this feature
+The companion to the **image-prompt**. Where that feature *crafts prompt text*, this feature
 *renders an actual image* — it calls the OpenAI **gpt-image** API and saves a PNG to disk.
 
 You describe what you want in plain language; the system builds the prompt **from your words** and
@@ -14,7 +14,7 @@ type is what gets drawn.
 
 - **Renders anything you describe** — characters, landscapes, products, concepts, abstract art
 - **Prompt built from your input** — type a description and it extracts the subject, scene, and style
-- **Chains with Image Prompt System** — craft a prompt there, hand it here to render
+- **Chains with image-prompt** — craft a prompt there, hand it here to render
 - **Cross-platform** — PowerShell *and* Bash (curl + jq) render scripts
 - **Cost-aware** — confirms the per-image cost before every paid render
 - **One tidy output folder** — every image lands in `media-generation/image-generation/`
@@ -37,7 +37,7 @@ Render script  ──►  POST https://api.openai.com/v1/images/generations
 Base64 response decoded ──► PNG saved to media-generation/image-generation/
 ```
 
-You can also paste a prompt produced by the **Image Prompt System** and render it verbatim.
+You can also paste a prompt produced by the **image-prompt** and render it verbatim.
 
 ---
 
@@ -56,7 +56,7 @@ You can also paste a prompt produced by the **Image Prompt System** and render i
 |---------|--------|
 | `"render an image of [description]"` | Build a prompt from your words and render it |
 | `"generate image [description]"` | Same as above (alternative trigger) |
-| `"render this prompt: [prompt]"` | Render a prompt verbatim (e.g. from Image Prompt System) |
+| `"render this prompt: [prompt]"` | Render a prompt verbatim (e.g. from image-prompt) |
 | `"render [description] to [path]"` | Render and save to a specific path |
 
 ---
@@ -83,11 +83,11 @@ Every render is saved to **`media-generation/image-generation/`** inside your ow
 
 | System | Enhancement |
 |--------|-------------|
-| **Image Prompt System** | Craft a composition-aware prompt there, then render it here |
-| **Library System** | *(optional)* Save reusable style/subject references and pull them into a render |
-| **Save Diary** | Document which prompts produced the best images |
+| **image-prompt** | Craft a composition-aware prompt there, then render it here |
+| **library** | *(optional)* Save reusable style/subject references and pull them into a render |
+| **session-log** | Document which prompts produced the best images |
 
-All companions are optional — the Image Generation System works on its own with just a typed
+All companions are optional — the image-gen works on its own with just a typed
 description.
 
 ---
@@ -107,12 +107,12 @@ See `install.md` for step-by-step setup.
 **Platform Note:** Includes `SKILL.md`, which auto-triggers when installed from the plugin marketplace. Works on any
 platform without the plugin (load the install protocol manually).
 
-**Tier:** Tier 4 — Intelligence & Awareness. Pairs with the Image Prompt System.
+**Tier:** Tier 4 — Intelligence & Awareness. Pairs with the image-prompt.
 
 ---
 
 *Not shipped here (private / out of scope): moderation-calibration data, identity-canon character
-templates (that's the Image Prompt System's domain), and video generation.*
+templates (that's the image-prompt's domain), and video generation.*
 
 ## ⚠️ Security note
 

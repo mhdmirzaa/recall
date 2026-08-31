@@ -1,9 +1,9 @@
 # 💬 Injector Format Specification
-*Canonical contract for any script that plugs into the User-Prompt-Hook framework*
+*Canonical contract for any script that plugs into the hook-user-prompt framework*
 
 ## Purpose
 
-This document defines the contract for **injector scripts** — the small per-purpose programs that plug into the User-Prompt-Hook framework. Each injector emits one line of context that gets prepended to every user prompt. Time injection, tone injection, mood injection, project-status injection — all follow this same format.
+This document defines the contract for **injector scripts** — the small per-purpose programs that plug into the hook-user-prompt framework. Each injector emits one line of context that gets prepended to every user prompt. Time injection, tone injection, mood injection, project-status injection — all follow this same format.
 
 ## Where Injectors Live
 
@@ -121,7 +121,7 @@ A future inject feature (e.g. `inject-time`) follows this shape:
    - Step 2: Read any user-configurable values (e.g. period boundaries for time-inject)
    - Step 3: Substitute placeholders in template, write to `~/.claude/hooks/user-prompt-injectors/<name>.{ps1|sh}`
    - Step 4: Update `recall.md` with install record
-   - Step 5: Verify the User-Prompt-Hook framework is installed (warn if not — injector won't fire without the framework)
+   - Step 5: Verify the hook-user-prompt framework is installed (warn if not — injector won't fire without the framework)
 4. **Uninstall protocol** (3 steps):
    - Delete the injector script
    - Remove install record from `recall.md`

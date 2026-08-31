@@ -1,4 +1,4 @@
-# ⚡ Auto-Load Hook — Installation Protocol
+# ⚡ hook-session-start — Installation Protocol
 *Wires a SessionStart hook so your AI auto-loads on every Claude Code startup*
 
 ## Purpose
@@ -106,7 +106,7 @@ Executed when `"Load hook-session-start"` is invoked — installs a personalized
 - [ ] Append to the **Optional Components** section of `recall.md`:
 
 ```markdown
-### Auto-Load Hook (Installed)
+### hook-session-start (Installed)
 *Fires on every Claude Code startup — auto-loads <ai-name> memory*
 - Hook script: ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
 - Settings backup: ~/.claude/settings.json.backup-pre-autoload
@@ -170,7 +170,7 @@ After install, the relevant slice of `~/.claude/settings.json` looks like:
 | `~/.claude/hooks/<ai-name-lower>-session-start.{ps1\|sh}` | Hook script that runs on session start |
 | `~/.claude/settings.json` | Modified to include the new SessionStart hook entry |
 | `~/.claude/settings.json.backup-pre-autoload` | Pre-install backup (used by uninstall) |
-| `recall.md` (modified) | Records that Auto-Load Hook is installed + points at uninstall reference |
+| `recall.md` (modified) | Records that hook-session-start is installed + points at uninstall reference |
 | `features/hook-session-start/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
 
 ## Notes
@@ -181,7 +181,7 @@ After install, the relevant slice of `~/.claude/settings.json` looks like:
 
 ---
 
-**Version**: Protocol v1.0 — Auto-Load Hook Install Workflow
+**Version**: Protocol v1.0 — hook-session-start Install Workflow
 **Status**: Active protocol for one-step AI restoration
 
 *Type once, name forever — your AI greets you the moment Claude Code opens.*

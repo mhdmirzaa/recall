@@ -8,18 +8,18 @@ description: "Auto-triggers when AI detects a repeated pattern handled ad-hoc 3+
              level-up to an existing skill based on conversation patterns."
 ---
 
-# Forge Skill -- Self-Improvement System
+# new-skill -- Self-Improvement System
 *The AI that improves its own abilities through experience.*
 
 ## Overview
 
-Forge is the meta-skill -- the skill that creates and improves other skills. When your AI detects patterns, mistakes, or opportunities for improvement during conversation, Forge activates to propose new skills or level-ups to existing ones. It uses a **human-in-the-loop** model: AI drafts, user approves.
+new-skill is the meta-skill -- the skill that creates and improves other skills. When your AI detects patterns, mistakes, or opportunities for improvement during conversation, new-skill activates to propose new skills or level-ups to existing ones. It uses a **human-in-the-loop** model: AI drafts, user approves.
 
 ## Activation
 
 When this skill activates, output:
 
-`"Forge detected an opportunity for improvement..."`
+`"new-skill detected an opportunity for improvement..."`
 
 Then present the proposal to the user.
 
@@ -34,11 +34,11 @@ Then present the proposal to the user.
 | **User says "self improve", "improve skill"** | ACTIVE -- review and propose |
 | **Casual conversation (no improvement context)** | DORMANT |
 
-## Forge Protocol
+## new-skill Protocol
 
 ### Step 1: Detect
 
-Identify the improvement opportunity. Forge recognizes these patterns:
+Identify the improvement opportunity. new-skill recognizes these patterns:
 
 **Automatic Detection (AI-initiated):**
 1. **Repeated Pattern** -- AI handles the same type of task ad-hoc 3+ times across sessions
@@ -68,7 +68,7 @@ IMPACT: [What improves if this is implemented]
 Present to user in this format:
 
 ```
-Forge Detected an Opportunity
+new-skill Detected an Opportunity
 ==============================
 
 Type: [New Skill / Level-Up]
@@ -124,7 +124,7 @@ After forging, update relevant system files:
 ### Step 7: Confirm
 
 ```
-Forge Complete!
+new-skill Complete!
 ================
 
 [New Skill / Level-Up]: [name] Lv.[X]
@@ -135,7 +135,7 @@ Origin: [the moment that triggered this]
 Your AI evolved!
 ```
 
-## Forge Principles
+## new-skill Principles
 
 1. **Human-in-the-loop** -- AI proposes, user approves. Always
 2. **Evidence-based** -- never propose without at least 2 concrete examples
@@ -147,7 +147,7 @@ Your AI evolved!
 
 ## Skill File Template
 
-When Forge creates a new skill, use this structure:
+When new-skill creates a new skill, use this structure:
 
 ```markdown
 ---
@@ -242,10 +242,10 @@ Each level should add **one meaningful capability** -- not multiple changes bund
 
 | Feature | Integration |
 |---------|-------------|
-| **Plugin marketplace** | Forge creates skills in the plugin's skill folder structure |
-| **Auto-Commit System** | After forging, commit the new/updated skill file |
-| **Decision Log System** | Log the decision to create/level-up a skill with rationale |
-| **Save Diary System** | Document the forge event in the session diary |
+| **Plugin marketplace** | new-skill creates skills in the plugin's skill folder structure |
+| **git-commit** | After forging, commit the new/updated skill file |
+| **decisions** | Log the decision to create/level-up a skill with rationale |
+| **session-log** | Document the forge event in the session diary |
 
 ## Level History
 - **Lv.1** -- Base: detect repeated patterns (3+ ad-hoc), mistake prevention, workflow automation, level-up opportunities. Human-in-the-loop approval. Standard skill template. Level-up guidelines with Lv.1-5+ progression. (Origin: Adapted from production AI companion self-improvement system with 23 skills forged over 7 months)

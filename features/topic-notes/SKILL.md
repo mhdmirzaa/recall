@@ -3,7 +3,7 @@ name: topic-notes
 description: "MUST use when user says 'save topic', 'save to topic diary', 'remember this under', 'review topic', 'list topics', or when a generic 'save' request needs routing between session memory, history, topic diary, or all targets."
 ---
 
-# Topic Diary — Subject-Based Memory Skill
+# topic-notes — Subject-Based Memory Skill
 *A subject remembers what the calendar forgets.*
 
 ## Activation
@@ -76,7 +76,7 @@ Which topic should I save this under?
 If the topic file does not exist, create it using `topic-format.md` header structure:
 
 ```markdown
-# [Topic Name] Topic Diary
+# [Topic Name] topic-notes
 *Reusable discoveries, fixes, decisions, and lessons for this subject.*
 
 ## Topic Metadata

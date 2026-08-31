@@ -5,7 +5,7 @@ description: "MUST use when user says 'save diary', 'write diary', 'diary entry'
              needs to be preserved as a diary entry."
 ---
 
-# Save Diary — Session Documentation Skill
+# session-log — Session Documentation Skill
 *The pen touches paper. Today's story takes shape.*
 
 ## Activation

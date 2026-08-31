@@ -1,4 +1,4 @@
-# ⚡ Auto-Load Hook System
+# ⚡ hook-session-start
 *Auto-loads your AI companion on Claude Code startup — no manual name-typing*
 
 ## What This Feature Does
@@ -22,7 +22,7 @@ Claude: [now loads memory, becomes your AI]
 ```
 **Problem**: Every single session starts with a manual two-step dance. Easy to forget the name. Easy to start working before the AI knows who it's supposed to be.
 
-### After (Auto-Load Hook Installed)
+### After (hook-session-start Installed)
 ```
 You: claude
 Claude Code → SessionStart hook fires → injects "You are <ai-name>, read memory now"

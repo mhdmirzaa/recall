@@ -1,15 +1,15 @@
-# Install Topic Diary System
+# Install topic-notes
 *Integration protocol for topic-based memory journals*
 
 ## Activation
 
-When the user says `Load topic-notes`, install the Topic Diary System into the active Recall.
+When the user says `Load topic-notes`, install the topic-notes into the active Recall.
 
 ## Prerequisites
 
 - Existing Recall root with `recall.md`
 - Optional but recommended: install from the plugin marketplace
-- Optional companion features: Save Diary System and Echo Memory Recall
+- Optional companion features: session-log and search
 
 ## Installation Steps
 
@@ -24,7 +24,7 @@ memory/
 
 If the user's Recall uses customized folder names, ask for confirmation before writing files.
 
-### Step 2: Create Topic Diary Directories
+### Step 2: Create topic-notes Directories
 
 Create these directories if missing:
 
@@ -47,7 +47,7 @@ If it exists, append a short installation note instead of replacing it.
 Update `recall.md` with:
 
 ```markdown
-### Topic Diary System
+### topic-notes
 *Load when user says: "save topic", "save to topic diary", "remember this under [topic]", or when reusable knowledge should be preserved by subject.*
 - Stores long-term knowledge in `topic-diary/topics/[topic].md`
 - Uses `topic-diary/index.md` for topic aliases and recall keywords
@@ -77,7 +77,7 @@ Ask whether the user wants to create a first topic entry.
 Suggested prompt:
 
 ```text
-Topic Diary is installed. Do you want to create a first topic entry now, or leave it ready for the next save?
+topic-notes is installed. Do you want to create a first topic entry now, or leave it ready for the next save?
 ```
 
 ## Commands After Installation
@@ -104,10 +104,10 @@ Topic Diary is installed. Do you want to create a first topic entry now, or leav
 
 To uninstall manually:
 
-1. Remove Topic Diary references from `recall.md`
+1. Remove topic-notes references from `recall.md`
 2. Remove the installed `topic-diary` skill from the plugin folder
 3. Keep `topic-diary/` unless the user explicitly wants to delete saved knowledge
 
 ---
 
-*Topic Diary installs as a companion to memory, not a replacement for it.*
+*topic-notes installs as a companion to memory, not a replacement for it.*

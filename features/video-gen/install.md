@@ -1,4 +1,4 @@
-# Video Generation System Installation Protocol
+# video-gen Installation Protocol
 *Setup for rendering MP4 video from descriptions via the Seedance API*
 
 ## Purpose
@@ -17,8 +17,8 @@ subject or persona.
 - **PowerShell** (Windows) *or* **bash + `curl` + `jq`** (Mac/Linux/Git Bash)
 - Core memory system installed (`memory/` directory, `recall.md` accessible)
 - Installing from the plugin marketplace gives auto-triggering (optional)
-- *(Optional)* Image Generation System — generate a still, then animate it here
-- *(Optional)* Library System — pull saved style/subject references into a render
+- *(Optional)* image-gen — generate a still, then animate it here
+- *(Optional)* library — pull saved style/subject references into a render
 
 ## Installation Steps
 
@@ -41,25 +41,25 @@ subject or persona.
 - [ ] Record its path in `recall.md` so the skill always resolves the same default output
   location:
   ```markdown
-  ### Video Generation Output
+  ### video-gen Output
   - **Folder**: media-generation/video-generation/  (all rendered MP4s land here)
   ```
 
 ### Step 4: Register the skill
 - [ ] If this feature is installed as a plugin:
   - Copy `SKILL.md` to `plugins/[plugin-name]/skills/video-generation/SKILL.md`
-  - Inform user: "Video Generation skill installed — auto-triggers on 'render a video', 'generate video', 'animate this image'"
+  - Inform user: "video-gen skill installed — auto-triggers on 'render a video', 'generate video', 'animate this image'"
 - [ ] If it does NOT exist:
-  - Inform user: "Video Generation integrated into the index. Install it from the plugin marketplace for auto-triggering."
+  - Inform user: "video-gen integrated into the index. Install it from the plugin marketplace for auto-triggering."
 
 ### Step 5: Update memory system
 - [ ] Add to `recall.md`:
   ```markdown
-  ### Video Generation
+  ### video-gen
   *Render MP4 video from descriptions via the Seedance API (BytePlus ModelArk)*
   - **Trigger**: "render a video", "generate video", "animate this image"
   - **What it does**: Builds a prompt from what you type (no built-in persona), supports text-to-video and image-to-video, confirms cost, runs the async submit/poll/download flow, saves an MP4 to media-generation/video-generation/
-  - **Companion**: Image Generation (animate a still), Image Prompt System (craft the prompt), Library System (optional saved references)
+  - **Companion**: image-gen (animate a still), image-prompt (craft the prompt), library (optional saved references)
   ```
 
 ## Post-Installation

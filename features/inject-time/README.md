@@ -1,5 +1,5 @@
-# ⏱️ Time-Prompt-Inject System
-*Plug-and-play time + period injector for the User-Prompt-Hook framework*
+# ⏱️ inject-time
+*Plug-and-play time + period injector for the hook-user-prompt framework*
 
 ## What This Feature Does
 
@@ -32,7 +32,7 @@ The `TIME PERIOD CHANGED:` prefix is a one-shot signal — any AI personality sy
 ```
 Every user prompt fires UserPromptSubmit
         ↓
-User-Prompt-Hook master script enumerates injectors
+hook-user-prompt master script enumerates injectors
         ↓
 ~/.claude/hooks/user-prompt-injectors/time.{ps1|sh}    ← installed by THIS feature
         ↓
@@ -51,7 +51,7 @@ Master prepends to AI's prompt context
 
 ## What Happens During Integration
 
-1. **Verify** the User-Prompt-Hook framework is installed — if not, stop and instruct to install it first
+1. **Verify** the hook-user-prompt framework is installed — if not, stop and instruct to install it first
 2. **Detect OS** — pick the right injector template (`.ps1` for Windows, `.sh` for Unix)
 3. **Ask** for period boundaries (defaults: MORNING 6, AFTERNOON 12, EVENING 18, NIGHT 22) — user can accept defaults or customize for lark/night-owl preferences
 4. **Substitute** the boundary values into the chosen template
@@ -117,7 +117,7 @@ Removes the injector script and the state file. Asks whether to keep the install
 - **Pre-consolidation** ✅ — install only writes to `recall.md`
 - **Post-consolidation** ✅ — same path
 - **Windows / macOS / Linux / Git Bash** ✅
-- **Coexists with Tone-Prompt-Inject + Mood-Prompt-Inject** ✅ — independent injectors, all three can fire on every prompt
+- **Coexists with inject-tone + inject-mood** ✅ — independent injectors, all three can fire on every prompt
 
 ## Sample Output In Practice
 
@@ -133,7 +133,7 @@ The order is whatever filesystem enumeration returns (typically alphabetical: `m
 
 ## Tier
 
-**Tier 1 — Foundation** (extension pack for User-Prompt-Hook). Requires `hook-user-prompt` installed first.
+**Tier 1 — Foundation** (extension pack for hook-user-prompt). Requires `hook-user-prompt` installed first.
 
 ---
 

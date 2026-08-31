@@ -1,4 +1,4 @@
-# 💬 User-Prompt-Hook — Installation Protocol
+# 💬 hook-user-prompt — Installation Protocol
 *Wires a UserPromptSubmit hook framework into Claude Code, ready for plug-and-play injectors*
 
 ## Purpose
@@ -85,7 +85,7 @@ Executed when `"Load hook-user-prompt"` is invoked — installs a master `UserPr
 - [ ] Append to the **Optional Components** section of `recall.md`:
 
 ```markdown
-### User-Prompt Hook (Installed)
+### hook-user-prompt (Installed)
 *Fires on every user message — runs all injectors in ~/.claude/hooks/user-prompt-injectors/ and prepends their output to the prompt context*
 - Master hook: ~/.claude/hooks/user-prompt-hook.{ps1|sh}
 - Injectors dir: ~/.claude/hooks/user-prompt-injectors/ (drop .ps1 or .sh files here — installed via separate inject features)
@@ -152,7 +152,7 @@ After install, the relevant slice of `~/.claude/settings.json`:
 | `~/.claude/hooks/user-prompt-injectors/` | Empty directory — future injector features drop their scripts here |
 | `~/.claude/settings.json` | Modified to include the new UserPromptSubmit hook entry |
 | `~/.claude/settings.json.backup-pre-userprompthook` | Pre-install backup (used by uninstall) |
-| `recall.md` (modified) | Records that User-Prompt Hook is installed + points at uninstall reference |
+| `recall.md` (modified) | Records that hook-user-prompt is installed + points at uninstall reference |
 | `features/hook-user-prompt/` | **Stays in repo** — install/uninstall protocols and templates remain accessible for users on other AI tools |
 
 ## Notes
@@ -163,7 +163,7 @@ After install, the relevant slice of `~/.claude/settings.json`:
 
 ---
 
-**Version**: Protocol v1.0 — User-Prompt Hook Framework Install Workflow
+**Version**: Protocol v1.0 — hook-user-prompt Framework Install Workflow
 **Status**: Active protocol for plug-and-play prompt context injection
 
 *Lay the rails once, layer injectors as you build them.*

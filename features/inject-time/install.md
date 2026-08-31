@@ -1,5 +1,5 @@
-# ⏱️ Time-Prompt-Inject — Installation Protocol
-*Wires a time + period injector into the User-Prompt-Hook framework, with user-configurable boundaries*
+# ⏱️ inject-time — Installation Protocol
+*Wires a time + period injector into the hook-user-prompt framework, with user-configurable boundaries*
 
 ## Purpose
 
@@ -11,15 +11,15 @@ Executed when `"Load inject-time"` is invoked — installs an injector that emit
 ```
 
 ## Prerequisites
-- **User-Prompt-Hook framework must be installed** (`~/.claude/hooks/user-prompt-hook.{ps1|sh}` exists)
+- **hook-user-prompt framework must be installed** (`~/.claude/hooks/user-prompt-hook.{ps1|sh}` exists)
 
 ## 6-Step Execution Process
 
-### Step 1: Verify User-Prompt-Hook framework is installed
+### Step 1: Verify hook-user-prompt framework is installed
 - [ ] Check `~/.claude/hooks/user-prompt-hook.ps1` (Windows) or `user-prompt-hook.sh` (Unix) exists
 - [ ] Check `~/.claude/hooks/user-prompt-injectors/` directory exists
 - [ ] IF either missing → STOP. Display:
-  > *"Time-Prompt-Inject requires the User-Prompt-Hook framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
+  > *"inject-time requires the hook-user-prompt framework. Install it first with `"Load hook-user-prompt"`, then re-run this command."*
 
 ### Step 2: Detect OS and pick template
 - [ ] Try `uname` → `Darwin`/`Linux` → Unix
@@ -125,7 +125,7 @@ Executed when `"Load inject-time"` is invoked — installs an injector that emit
 
 ---
 
-**Version**: Protocol v1.0 — Time-Prompt-Inject Install Workflow
+**Version**: Protocol v1.0 — inject-time Install Workflow
 **Status**: Active protocol for time + period context injection
 
 *Your AI knows what time it is, every prompt, no asking.*

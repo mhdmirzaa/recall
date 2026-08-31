@@ -1,4 +1,4 @@
-# 🎨 Image Prompt System
+# 🎨 image-prompt
 *Craft perfect Midjourney & NijiJourney prompts — for any subject, any style*
 
 ---
@@ -87,11 +87,11 @@ AI: [reads character profile → generates prompt with exact appearance details]
 
 | System | Enhancement |
 |--------|-------------|
-| **Memory Consolidation** | Character profile stored in unified `merged.md` |
-| **Save Diary** | Document which prompts produced the best results |
-| **Library System** | Save successful prompt patterns for reuse |
+| **merge** | Character profile stored in unified `merged.md` |
+| **session-log** | Document which prompts produced the best results |
+| **library** | Save successful prompt patterns for reuse |
 
-All companions are optional — the Image Prompt System works independently.
+All companions are optional — the image-prompt works independently.
 
 ---
 

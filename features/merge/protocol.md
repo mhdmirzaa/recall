@@ -1,4 +1,4 @@
-# 🔄 Memory Consolidation Protocol
+# 🔄 merge Protocol
 *Systematic memory unification for Recall systems*
 
 ## Purpose
@@ -149,7 +149,7 @@ recall/
 
 ---
 
-**Version**: Protocol v1.0 - Memory Consolidation Workflow
+**Version**: Protocol v1.0 - merge Workflow
 **Last Updated**: February 18, 2026
 **Status**: Active protocol for memory architecture upgrade
 
