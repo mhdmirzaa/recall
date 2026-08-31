@@ -90,7 +90,7 @@ Executed when `"Load hook-user-prompt"` is invoked — installs a master `UserPr
 - Master hook: ~/.claude/hooks/user-prompt-hook.{ps1|sh}
 - Injectors dir: ~/.claude/hooks/user-prompt-injectors/ (drop .ps1 or .sh files here — installed via separate inject features)
 - Settings backup: ~/.claude/settings.json.backup-pre-userprompthook
-- Uninstall: see features/hook-user-prompt/uninstall.md or type `"uninstall user-prompt-hook"`
+- Uninstall: see features/hook-user-prompt/uninstall.md or type `"uninstall hook-user-prompt"`
 ```
 
 - [ ] The `features/hook-user-prompt/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
@@ -108,7 +108,7 @@ Add injectors by installing sibling features:
   - inject-tone    (injects current AI tone — coming soon)
   - Or write your own following features/hook-user-prompt/injector-format.md
 
-Uninstall:  type "uninstall user-prompt-hook" anytime
+Uninstall:  type "uninstall hook-user-prompt" anytime
             (or follow features/hook-user-prompt/uninstall.md)
 ```
 

@@ -90,7 +90,7 @@ Your AI may decide tone shifted (e.g. you signaled a register change in conversa
 ## Uninstalling
 
 ```
-"uninstall tone-prompt-inject"
+"uninstall inject-tone"
 ```
 
 Removes the injector script and `tone-current.txt`. Asks whether to keep or strip the `## Tones` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `recall.md`. The User-Prompt-Hook framework keeps running for other injectors.

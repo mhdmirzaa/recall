@@ -1,7 +1,15 @@
+---
+name: session-brief
+description: "Auto-triggers at the start of every session, before the first
+             response, to deliver a short context brief. Also triggers on
+             'brief', 'session brief', 'what did we do last time', and 'where
+             did we leave off'. Suppressed for the current session by 'skip
+             brief'."
+---
 # 📋 Session Briefing — Skill Plugin
 
 ## Skill Name
-Session Briefing
+session-brief
 
 ## Trigger Words
 - Session start (automatic — fires before first response)
@@ -19,8 +27,8 @@ Fires automatically at the start of every new conversation session, before proce
 ## Behavior
 1. Read `memory/session.md` — extract last session recap (1–2 lines)
 2. Read `memory/reminders.md` — count open items (skip section if none)
-3. Read project list — identify active project + 🔴/🟡 health flags (if LRU System installed)
-4. Check current time — determine time period (if Time-based-Aware System installed)
+3. Read project list — identify active project + 🔴/🟡 health flags (if projects is installed)
+4. Check current time — determine time period (if time-aware is installed)
 5. Compose and deliver brief (max 12 lines) before responding to user
 
 ## Output Rules

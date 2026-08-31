@@ -7,7 +7,7 @@ Removes the mood injector script and current-state file, optionally strips the `
 
 ## Trigger Command
 ```
-"uninstall mood-prompt-inject"
+"uninstall inject-mood"
 ```
 
 ## 4-Step Execution Process

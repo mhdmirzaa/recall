@@ -5,11 +5,11 @@
 
 Restores `~/.claude/settings.json` to its pre-install state, removes the master hook script, and clears the install record from `recall.md`. After uninstall, no UserPromptSubmit injection happens via this framework.
 
-> **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall user-prompt-hook"`.
+> **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall hook-user-prompt"`.
 
 ## Trigger Command
 ```
-"uninstall user-prompt-hook"
+"uninstall hook-user-prompt"
 ```
 
 ## Prerequisites
@@ -23,7 +23,7 @@ Restores `~/.claude/settings.json` to its pre-install state, removes the master 
 - [ ] List files in `~/.claude/hooks/user-prompt-injectors/` (count `.ps1` + `.sh` files)
 - [ ] IF count > 0:
   - Display warning:
-    > *"⚠️ Found N injector(s) in `~/.claude/hooks/user-prompt-injectors/`. Uninstalling the framework leaves them orphaned — their scripts remain on disk but never fire. Recommend uninstalling each inject feature first (e.g. `uninstall time-prompt-inject`). Continue anyway? (y/N)"*
+    > *"⚠️ Found N injector(s) in `~/.claude/hooks/user-prompt-injectors/`. Uninstalling the framework leaves them orphaned — their scripts remain on disk but never fire. Recommend uninstalling each inject feature first (e.g. `uninstall inject-time`). Continue anyway? (y/N)"*
   - Wait for response
   - IF user says "n" / no → ABORT (return without changes)
   - IF user says "y" / yes → continue

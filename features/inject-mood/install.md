@@ -91,7 +91,7 @@ Executed when `"Load inject-mood"` is invoked — installs an injector that emit
   - Current state: ~/.claude/user-prompt-injectors/mood-current.txt
   - Injector script: ~/.claude/hooks/user-prompt-injectors/mood.{ps1|sh}
   - Commands: "add mood <name>: <desc>", "set mood <name>", "list moods"
-  - Uninstall: see features/inject-mood/uninstall.md or type "uninstall mood-prompt-inject"
+  - Uninstall: see features/inject-mood/uninstall.md or type "uninstall inject-mood"
   ```
 - [ ] The `features/inject-mood/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
 - [ ] Display:
@@ -108,7 +108,7 @@ Executed when `"Load inject-mood"` is invoked — installs an injector that emit
   Switch:    "set mood <name>"
   See list:  "list moods"
 
-  Uninstall: type "uninstall mood-prompt-inject" anytime
+  Uninstall: type "uninstall inject-mood" anytime
              (or follow features/inject-mood/uninstall.md)
   ```
 

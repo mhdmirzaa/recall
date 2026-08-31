@@ -99,7 +99,7 @@ If you delete this file manually, the next prompt will treat it as "first instal
 This injector is **set-and-forget** — there are no `add`/`set`/`list` commands. The output is computed from the system clock and the install-time boundaries.
 
 If you want to change period boundaries later, the cleanest path is:
-1. `"uninstall time-prompt-inject"` (preserves state file)
+1. `"uninstall inject-time"` (preserves state file)
 2. `"Load inject-time"` (asks for new boundaries, regenerates the script)
 
 Or manually edit the injector script at `~/.claude/hooks/user-prompt-injectors/time.{ps1|sh}` — the boundary values are at the top of the file as bare integers.
@@ -107,7 +107,7 @@ Or manually edit the injector script at `~/.claude/hooks/user-prompt-injectors/t
 ## Uninstalling
 
 ```
-"uninstall time-prompt-inject"
+"uninstall inject-time"
 ```
 
 Removes the injector script and the state file. Asks whether to keep the install record line in `recall.md` for future reinstall reference (default: remove).

@@ -1,7 +1,16 @@
+---
+name: postmortem
+description: "MUST use when user says 'post-mortem', 'postmortem', 'log this
+             failure', 'write a post-mortem', or 'what went wrong'. Also triggers
+             passively when the AI detects a failure signal — a deployment
+             crash, a test regression, an architecture reversal, hours lost to a
+             dead end, an exposed secret, or data loss — at which point it asks
+             whether the failure is worth recording before writing anything."
+---
 # 🔥 Post-Mortem — Skill Plugin
 
 ## Skill Name
-Post-Mortem System
+postmortem
 
 ## Trigger Words
 - `"post-mortem"`

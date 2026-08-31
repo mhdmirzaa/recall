@@ -7,7 +7,7 @@ Removes the time injector script and the period-state file, and clears the insta
 
 ## Trigger Command
 ```
-"uninstall time-prompt-inject"
+"uninstall inject-time"
 ```
 
 ## 4-Step Execution Process

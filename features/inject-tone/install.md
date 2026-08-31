@@ -91,7 +91,7 @@ Executed when `"Load inject-tone"` is invoked — installs an injector that emit
   - Current state: ~/.claude/user-prompt-injectors/tone-current.txt
   - Injector script: ~/.claude/hooks/user-prompt-injectors/tone.{ps1|sh}
   - Commands: "add tone <name>: <desc>", "set tone <name>", "list tones"
-  - Uninstall: see features/inject-tone/uninstall.md or type "uninstall tone-prompt-inject"
+  - Uninstall: see features/inject-tone/uninstall.md or type "uninstall inject-tone"
   ```
 - [ ] The `features/inject-tone/` folder **stays in the repo** — install/uninstall protocols and templates remain accessible for users on other AI tools
 - [ ] Display:
@@ -108,7 +108,7 @@ Executed when `"Load inject-tone"` is invoked — installs an injector that emit
   Switch:    "set tone <name>"
   See list:  "list tones"
 
-  Uninstall: type "uninstall tone-prompt-inject" anytime
+  Uninstall: type "uninstall inject-tone" anytime
              (or follow features/inject-tone/uninstall.md)
   ```
 

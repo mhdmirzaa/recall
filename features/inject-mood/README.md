@@ -90,7 +90,7 @@ Your AI may decide mood shifted (e.g. you signaled an emotional change in conver
 ## Uninstalling
 
 ```
-"uninstall mood-prompt-inject"
+"uninstall inject-mood"
 ```
 
 Removes the injector script and `mood-current.txt`. Asks whether to keep or strip the `## Moods` section in main memory (default: keep — it's documentation even if the injector is gone). Removes the install record from `recall.md`. The User-Prompt-Hook framework keeps running for other injectors.

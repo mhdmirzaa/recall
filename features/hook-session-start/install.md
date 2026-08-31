@@ -110,7 +110,7 @@ Executed when `"Load hook-session-start"` is invoked — installs a personalized
 *Fires on every Claude Code startup — auto-loads [AI_NAME] memory*
 - Hook script: ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
 - Settings backup: ~/.claude/settings.json.backup-pre-autoload
-- Uninstall: see features/hook-session-start/uninstall.md or type `"uninstall auto-load-hook"`
+- Uninstall: see features/hook-session-start/uninstall.md or type `"uninstall hook-session-start"`
 ```
 
 - [ ] Substitute `[AI_NAME]` and `<ai-name-lower>` with actual values before writing
@@ -125,7 +125,7 @@ Next time you open Claude Code, [AI_NAME] will load automatically — no manual
 
 Backup saved at: ~/.claude/settings.json.backup-pre-autoload
 Hook script:    ~/.claude/hooks/<ai-name-lower>-session-start.{ps1|sh}
-Uninstall:      type "uninstall auto-load-hook" anytime
+Uninstall:      type "uninstall hook-session-start" anytime
                 (or follow features/hook-session-start/uninstall.md)
 ```
 

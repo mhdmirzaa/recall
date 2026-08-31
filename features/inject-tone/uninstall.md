@@ -7,7 +7,7 @@ Removes the tone injector script and current-state file, optionally strips the `
 
 ## Trigger Command
 ```
-"uninstall tone-prompt-inject"
+"uninstall inject-tone"
 ```
 
 ## 4-Step Execution Process

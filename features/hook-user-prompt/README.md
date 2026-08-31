@@ -107,7 +107,7 @@ After install, the relevant slice of `~/.claude/settings.json`:
 
 After install, type:
 ```
-"uninstall user-prompt-hook"
+"uninstall hook-user-prompt"
 ```
 
 If you have injectors installed, the uninstall will **warn first** — uninstalling the framework leaves their scripts orphan (still on disk, never fire). Recommend uninstalling each injector feature before the framework.

@@ -5,11 +5,11 @@
 
 Restores `~/.claude/settings.json` to its pre-install state, removes the personalized hook script, and clears the install record from `recall.md`. After uninstall, the AI requires manual `[ai-name]` command on startup again.
 
-> **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall auto-load-hook"`.
+> **Note**: The Feature folder stays in the repo after install (so users on other AI tools like Codex can still reference it). This file is the canonical uninstall protocol — the AI reads it directly when you type `"uninstall hook-session-start"`.
 
 ## Trigger Command
 ```
-"uninstall auto-load-hook"
+"uninstall hook-session-start"
 ```
 
 ## Prerequisites

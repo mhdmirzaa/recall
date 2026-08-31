@@ -106,7 +106,7 @@ Once installed, your `~/.claude/settings.json` will contain (merged into existin
 
 After install, type:
 ```
-"uninstall auto-load-hook"
+"uninstall hook-session-start"
 ```
 
 Your AI reads `features/hook-session-start/uninstall.md` and:

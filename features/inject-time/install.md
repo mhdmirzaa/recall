@@ -73,7 +73,7 @@ Executed when `"Load inject-time"` is invoked — installs an injector that emit
   - State file: ~/.claude/user-prompt-injectors/time-period-last.txt
   - Period boundaries: MORNING [MORNING_START] / AFTERNOON [AFTERNOON_START] / EVENING [EVENING_START] / NIGHT [NIGHT_START]
   - To change boundaries: uninstall + reinstall, or edit the injector script directly
-  - Uninstall: see features/inject-time/uninstall.md or type "uninstall time-prompt-inject"
+  - Uninstall: see features/inject-time/uninstall.md or type "uninstall inject-time"
   ```
 - [ ] Substitute the actual boundary values before writing
 - [ ] The `features/inject-time/` folder **stays in the repo** (cross-tool compatibility)
@@ -94,7 +94,7 @@ Executed when `"Load inject-time"` is invoked — installs an injector that emit
   "TIME PERIOD CHANGED: <from> to <to> |" prefix.
 
   To change boundaries later: uninstall + reinstall.
-  Uninstall: type "uninstall time-prompt-inject" anytime
+  Uninstall: type "uninstall inject-time" anytime
              (or follow features/inject-time/uninstall.md)
   ```
 
