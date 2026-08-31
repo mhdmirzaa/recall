@@ -1,0 +1,19 @@
+{
+  "name": "recall",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persistent, file-based memory for AI coding agents. Markdown only — no runtime, no dependencies.",
+  "license": "MIT",
+  "author": "Muhd Mirza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhdmirzaaa/recall.git"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
