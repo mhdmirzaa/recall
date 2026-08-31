@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Recall starts at 1.0.0. It began as a fork but is a new project, not a
 continuation of any earlier version number.
 
-## [Unreleased]
+## [1.0.1] - 2026-09-01
 
 ### Removed
 
@@ -124,5 +124,5 @@ to the inherited state the rebuild started from.
   are not enforced controls, and they do not stop an attacker with filesystem
   write access.
 
-[Unreleased]: https://github.com/mhdmirzaa/recall/compare/v1.0.0...HEAD
+[1.0.1]: https://github.com/mhdmirzaa/recall/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/mhdmirzaa/recall/releases/tag/v1.0.0

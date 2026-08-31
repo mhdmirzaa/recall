@@ -333,7 +333,7 @@
       "name": "library",
       "source": "./features/library",
       "description": "Reusable knowledge entries in eight fixed formats. Save a pattern once and install it into any project.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Muhd Mirza",
         "url": "https://github.com/mhdmirzaa"
